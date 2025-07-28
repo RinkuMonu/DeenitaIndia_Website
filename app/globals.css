@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+.home-hero-section {
+  background-image: url("/images/vector2.png");
+  background-color: #E4EEF480;
+}
+.home-img-height {
+  height: 528px !important;
+  width: 667px !important;
+}
+
+.theme-text{
+  color: #115D8E;
+}
+.container{
+  padding-left: 156px;
+  padding-right: 156px;
+}
+.heading{
+  font-size: 48px;
+}

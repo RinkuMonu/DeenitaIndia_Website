@@ -1,9 +1,102 @@
-import React from 'react'
+"use client"
+import Link from 'next/link'
+import React, { useState } from 'react'
 
 function header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-     
+
+
+      <nav className=" fixed top-3 left-0 w-full z-50  container">
+        <div className=" flex  items-center justify-between mx-auto p-4  bg-[#0423820D] h-[54px] rounded-xl">
+          <Link href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
+          </Link>
+          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-2">
+            <button type="button" className="font-medium bg-white rounded-lg text-xs px-3 text-center text-[#39464F] h-[38px]">Login</button>
+          <button type="button" className="text-white  bg-[#115D8E]  rounded-lg text-xs px-4 text-center  h-[38px]">Join</button>
+            <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 " aria-controls="navbar-cta" aria-expanded="false"  onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <span className="sr-only">Open main menu</span>
+              <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor"  d="M1 1h15M1 7h15M1 13h15" />
+              </svg>
+            </button>
+          </div>
+          <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 ">
+            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
+              <li>
+                <Link href="/" className="block py-2 px-3 md:p-0  text-xs text-[#115D8E]" aria-current="page">Home</Link>
+              </li>
+              <li>
+                <Link href="/about" className="block py-2 px-3 md:p-0  text-xs hover:text-[#115D8E]  ">About</Link>
+              </li>
+              <li>
+                <details className="relative group">
+                  <summary className="cursor-pointer hover:text-[#115D8E] text-xs flex items-center">
+                    Services
+                    <svg
+                      className="w-3 h-3 ml-1 transition-transform group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="absolute mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-40 z-50">
+                    <Link href="/services/web-development" className="block px-4 py-2 text-xs">Web Development</Link>
+                    <Link href="/services/mobile-apps" className="block px-4 py-2 text-xs">Mobile Apps</Link>
+                    <Link href="/services/seo" className="block px-4 py-2 text-xs">SEO</Link>
+                  </div>
+                </details>
+              </li>
+               <li>
+                <Link href="/blog" className="block py-2 px-3 md:p-0 text-xs hover:text-[#115D8E] ">Blog</Link>
+              </li>
+              <li>
+                <Link href="/contact" className="block py-2 px-3 md:p-0 text-xs hover:text-[#115D8E] ">Contact us</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+         <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'block' : 'hidden'
+          } bg-white rounded-b-xl shadow-md relative z-0`}
+        >
+          <ul className="flex flex-col font-medium p-4 space-y-2">
+            <li>
+              <Link href="/" className="block text-xs text-[#115D8E]">Home</Link>
+            </li>
+            <li>
+              <Link href="/about" className="block text-xs hover:text-[#115D8E]">About</Link>
+            </li>
+            <li>
+              <details className="group">
+                <summary className="cursor-pointer text-xs hover:text-[#115D8E] flex items-center justify-between">
+                  Services
+                  <svg className="w-3 h-3 ml-1 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="pl-4 mt-2 space-y-1">
+                  <Link href="/services/web-development" className="block text-xs">Web Development</Link>
+                  <Link href="/services/mobile-apps" className="block text-xs">Mobile Apps</Link>
+                  <Link href="/services/seo" className="block text-xs">SEO</Link>
+                </div>
+              </details>
+            </li>
+            <li>
+              <Link href="/blog" className="block text-xs hover:text-[#115D8E]">Blog</Link>
+            </li>
+            <li>
+              <Link href="/contact" className="block text-xs hover:text-[#115D8E]">Contact us</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
     </>
   )
 }
