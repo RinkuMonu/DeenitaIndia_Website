@@ -19,18 +19,36 @@
 .heading{
   font-size: 48px;
 }
+
+@media (max-width: 1085px) {
+  .banner-overlaid-img {
+    display: none;
+  }
+}
+
+@media (max-width: 1056px) {
+  .banner-overlaid-img {
+    height: 300px;
+    width: 100px;
+   }
+  }
+
+
+
+
+
 .swiper-pagination-bullet {
   width: 40px !important;
   height: 8px !important;
   border-radius: 4px !important;
-  background: rgba(217 ,217 ,217, 1) !important; 
+  background: rgba(217 ,217 ,217, 1) !important;
   opacity: 1 !important;
   transition: background 0.3s ease !important;
     margin: 0 4px !important;
 }
 
 .swiper-pagination-bullet-active {
-  background: rgba(17 ,93 ,142 ,1) !important; 
+  background: rgba(17 ,93 ,142 ,1) !important;
 }
 .swiper-pagination {
   position: relative !important;
