@@ -3,10 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link'
 import React, { useState } from 'react'
 import LoginModal from './Login';
+import { usePathname } from 'next/navigation';
 
 function header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const pathname = usePathname();
+
   return (
     <>
       <nav className=" fixed top-3 left-0 w-full z-50  container bg-transparent ">
@@ -39,14 +42,21 @@ function header() {
           <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 ">
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
               <li>
-                <Link href="/" className="block py-2 px-3 md:p-0  text-xs text-[#115D8E]" aria-current="page">Home</Link>
+                <Link href="/" className="block py-2 px-3 md:p-0  text-xs " aria-current="page">Home</Link>
               </li>
               <li>
-                <Link href="/about" className="block py-2 px-3 md:p-0  text-xs hover:text-[#115D8E]  ">About</Link>
+                <Link
+                  href="/about"
+                  className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/about' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
+                    }`}>About</Link>
               </li>
               <li>
                 <div className="relative group">
-                  <div className="cursor-pointer hover:text-[#115D8E] text-xs flex items-center">
+                  <div
+                    className={`text-xs flex items-center appearance-none list-none cursor-pointer transition-colors duration-300 ${pathname.startsWith('/services')
+                        ? 'text-[#115D8E]'
+                        : 'text-black hover:text-[#115D8E]'
+                      }`}>
                     Services
                     <svg
                       className="w-3 h-3 ml-1 transition-transform group-hover:rotate-180"
@@ -85,10 +95,18 @@ function header() {
 
               </li>
               <li>
-                <Link href="/blog" className="block py-2 px-3 md:p-0 text-xs hover:text-[#115D8E] ">Blog</Link>
+                <Link
+                  href="/blog"
+                  className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/blog' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
+                    }`}
+                >Blog</Link>
               </li>
               <li>
-                <Link href="/contact" className="block py-2 px-3 md:p-0 text-xs hover:text-[#115D8E] ">Contact us</Link>
+                <Link
+                  href="/contact"
+                  className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/contact' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
+                    }`}
+                >Contact us</Link>
               </li>
             </ul>
           </div>
@@ -99,36 +117,50 @@ function header() {
         >
           <ul className="flex flex-col font-medium p-4 space-y-2">
             <li>
-              <Link href="/" className="block text-xs text-[#115D8E]">Home</Link>
+              <Link
+                href="/"
+                 onClick={() => setIsMenuOpen(false)}
+                className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
+                  }`}
+              >Home</Link>
             </li>
             <li>
-              <Link href="/about" className="block text-xs hover:text-[#115D8E]">About</Link>
+              <Link
+                href="/about"
+                 onClick={() => setIsMenuOpen(false)}
+                className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/about' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
+                  }`}
+              >About</Link>
             </li>
             <li>
               <details className="group">
-                <summary className="cursor-pointer text-xs hover:text-[#115D8E] flex items-center justify-between">
-                  Services
+                <summary
+                  className={`text-xs flex px-3 py-2 items-center appearance-none list-none cursor-pointer transition-colors duration-300 ${pathname.startsWith('/services')
+                      ? 'text-[#115D8E]'
+                      : 'text-black hover:text-[#115D8E]'
+                    }`}
+                >Services
                   <svg className="w-3 h-3 ml-1 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
                 <div className="pl-4 mt-2 space-y-1 group-open:block hidden">
-                  <Link href="/services/switch" className="block px-4 py-1 text-xs hover-underline">
+                  <Link href="/services/switch"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
                     Switch Service
                   </Link>
-                  <Link href="/services/aigf" className="block px-4 py-1 text-xs hover-underline">
+                  <Link href="/services/aigf"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
                     AIGF License Assistance
                   </Link>
-                  <Link href="/services/escrow" className="block px-4 py-1 text-xs hover-underline">
+                  <Link href="/services/escrow"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
                     Escrow Service
                   </Link>
-                  <Link href="/services/legal-compliance" className="block px-4 py-1 text-xs hover-underline">
+                  <Link href="/services/legal-compliance"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
                     Legal & Compliance Services
                   </Link>
-                  <Link href="/services/connected-banking" className="block px-4 py-1 text-xs hover-underline">
+                  <Link href="/services/connected-banking"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
                     Connected Banking
                   </Link>
-                  <Link href="/services/utility" className="block px-4 py-1 text-xs hover-underline">
+                  <Link href="/services/utility"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
                     Utility Services
                   </Link>
                 </div>
@@ -136,22 +168,34 @@ function header() {
 
             </li>
             <li>
-              <Link href="/blog" className="block text-xs hover:text-[#115D8E]">Blog</Link>
+              <Link
+                href="/blog"
+                className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/blog' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
+                  }`}
+                   onClick={() => setIsMenuOpen(false)}
+              >Blog</Link>
             </li>
             <li>
-              <Link href="/contact" className="block text-xs hover:text-[#115D8E]">Contact us</Link>
+              <Link
+                href="/contact"
+                 onClick={() => setIsMenuOpen(false)}
+                className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/contact' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
+                  }`}
+              >Contact us</Link>
             </li>
             <li>
               <button
                 type="button"
-                onClick={() => setIsModalOpen(true)}
-                className="block text-xs hover:text-[#115D8E]"
+                onClick={() => {setIsModalOpen(true)
+                   setIsMenuOpen(false);}
+                }
+                className="block text-xs px-3 py-2 hover:text-[#115D8E]"
               >
                 Login
               </button>
             </li>
             <li>
-              <Link href="/contact" className="block text-xs hover:text-[#115D8E]">Join</Link>
+              <Link href="/contact" className="block text-xs px-3 py-2 hover:text-[#115D8E]">Join</Link>
             </li>
           </ul>
         </div>

@@ -35,6 +35,10 @@ html, body {
   font-size: 30px;
 }
 }
+
+    .container {
+         max-width: 100vw;
+    }
 @media (max-width: 1025px){
   .container{
   padding-left: 30px;
@@ -174,6 +178,28 @@ html, body {
     --gradient-angle: 360deg;
   }
 }
+@keyframes floatTag {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-6px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.animate-float-tag {
+  animation: floatTag 3.5s ease-in-out infinite;
+}
+
 @keyframes float {
     0% {
       transform: translate(0px, 0px);

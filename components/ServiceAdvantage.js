@@ -8,7 +8,7 @@ export default function ServiceAdvantage({ sections }) {
             {sections.map((section, idx) => (
                 <div
                     key={idx}
-                    className="flex flex-col lg:flex-row items-center lg:items-stretch mb-6"
+                    className="flex flex-col md:flex-row items-center lg:items-stretch mb-6"
                 >
                     <div className="flex-1 flex items-center ">
                         <Image
@@ -20,25 +20,24 @@ export default function ServiceAdvantage({ sections }) {
                         />
                     </div>
                     <div className="flex-1 flex flex-col justify-center px-4">
-                        <p className="text-4xl font-bold text-[#0A223D] max-w-md">
-                            {section.title.split(",").map((word, i, arr) => (
-                                <span
-                                    key={i}
-                                    className={
-                                        arr.length === 2
-                                            ? i === 0
-                                                ? "text-[#115D8E] "
-                                                : ""
-                                            : i < 2
-                                                ? "text-[#115D8E]"
-                                                : ""
-                                    }
-                                >
-                                    {word}
-                                    {i < arr.length - 1 && ","}{" "}
-                                </span>
-                            ))}
+                        <p className="text-4xl font-bold max-w-md">
+                            {section.title.split(" ").map((word, i, arr) => {
+                                const shouldHighlight =
+                                    (arr.length === 1 && i === 0) ||
+                                    (arr.length === 2 && i === 0) ||
+                                    (arr.length > 2 && i < 2);
+
+                                return (
+                                    <span
+                                        key={i}
+                                        className={shouldHighlight ? "text-[#115D8E]" : "text-[#0A223D]"}
+                                    >
+                                        {word}{" "}
+                                    </span>
+                                );
+                            })}
                         </p>
+
                         <p className="mt-4 text-[#3A4F66] text-lg leading-relaxed">
                             {section.description}
                         </p>
