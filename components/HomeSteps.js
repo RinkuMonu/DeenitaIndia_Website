@@ -18,7 +18,7 @@ function HomeSteps() {
 
     useEffect(() => {
         AOS.init({
-            duration: 800,   
+            duration: 500,   
             once: false
         });
     }, []);
@@ -33,21 +33,21 @@ function HomeSteps() {
                     <div className="max-w-3xl mx-auto mt-7" key={index}>
                         <div
 
-                            className={`rounded-full max-w-lg bg-[#ECF5FB] shadow-[0_3px_3px_rgba(141,220,251)]  ${index % 2 === 0 ? "ms-auto me-12" : "mr-auto"}`}
+                            className={`rounded-4xl md:rounded-full max-w-lg bg-[#ECF5FB] shadow-[0_3px_3px_rgba(141,220,251)]  ${index % 2 === 0 ? "ms-auto md:me-12" : "md:mr-auto"}`}
                             data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
                         >
                             <div
-                                className={`flex justify-between items-center p-5 theme-text 
+                                className={` md:flex justify-between items-center p-5 theme-text 
           ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}
                             >
-                                <p className="text-2xl font-semibold max-w-[250px] text-center">{step.label}</p>
-                                <div className="text-9xl"><Image src={step.icon} width={60} height={60} alt="sevice-icons" /></div>
+                                <p className="text-2xl font-semibold lg:max-w-[250px] text-center">{step.label}</p>
+                                <div className="text-9xl"><Image src={step.icon} width={60} height={60} alt="sevice-icons" className="mx-auto"/></div>
 
                             </div>
                         </div>
                     </div>
                 ))}
-                <div className=" left-[46%] top-24 absolute ">
+                <div className=" left-[46%] top-24 absolute hidden lg:block">
                     <div className="flex flex-col items-center ">
                         {numbers.map((num) => (
                             <div key={num}

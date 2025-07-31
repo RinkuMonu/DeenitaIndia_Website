@@ -2,9 +2,10 @@
 import { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
 
-export default function ContactPage() {
+export default function contact() {
 
 const [formData, setFormData] = useState({
     fullName: '',
@@ -20,6 +21,7 @@ const [formData, setFormData] = useState({
     message: '',
     agreedToTerms: ''
   });
+   const router = useRouter();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -27,8 +29,6 @@ const [formData, setFormData] = useState({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
@@ -53,24 +53,16 @@ const [formData, setFormData] = useState({
     };
 
     setErrors(newErrors);
-
-    // Check if any errors exist
     if (Object.values(newErrors).some(error => error !== "")) {
       isValid = false;
     }
 
     if (isValid) {
-      // Submit form logic here
-      console.log("Form submitted:", formData);
+     router.push('/');
     }
   };
-
-
-
-
   return (
     <section className="pt-20 md:pt-32 relative before:content-[''] before:absolute before:inset-0 before:backdrop-blur-[100px] before:z-[-1] z-1 overflow-x-hidden">
-      {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
         <div className="w-full bg-[#eaf4fa] rounded-xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row">
           <div className="w-full md:w-3/5">
@@ -86,8 +78,7 @@ const [formData, setFormData] = useState({
                 We're here to answer your questions and provide the support you
                 need.
               </p>
-
-             <Link href="/contactpage">
+             <Link href="/contact">
               <button className="flex mt-8 md:mt-16 bg-[#115d8e] hover:bg-[#006c9d] text-white font-semibold px-6 py-2 md:px-8 md:py-3 rounded-md shadow-[2px_2px_20px_0px_#8AADBB]">
                 Connect
                 <Image
@@ -114,11 +105,8 @@ const [formData, setFormData] = useState({
           </div>
         </div>
       </div>
-
-      {/* Contact Form Section */}
       <section className="mt-8 lg:mt-40">
         <div className="bg-white flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          {/* Contact Form */}
           <div className="w-full lg:max-w-md bg-white rounded-2xl shadow-[1px_4px_10px_2px_rgba(0,0,0,0.25)] p-6 md:p-8 transform transition duration-300 hover:scale-105 hover:shadow-xl">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">Contact Us</h2>
 
@@ -131,7 +119,7 @@ const [formData, setFormData] = useState({
           <input
             type="text"
             name="fullName"
-            placeholder="Kanak Sharma"
+            placeholder="Your name"
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-1 shadow-[1px_1px_6px_0px_#E5E5E5]"
             value={formData.fullName}
             onChange={handleChange}
@@ -149,7 +137,7 @@ const [formData, setFormData] = useState({
           <input
             type="email"
             name="email"
-            placeholder="email@company.com"
+            placeholder="Your email"
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 shadow-[1px_1px_6px_0px_#E5E5E5]"
             value={formData.email}
             onChange={handleChange}
@@ -158,8 +146,6 @@ const [formData, setFormData] = useState({
             <p className="text-red-500 text-xs mt-1">{errors.email}</p>
           )}
         </div>
-
-        {/* Mobile Number Field */}
         <div>
           <label className="block text-sm font-medium text-[#115D8E] mb-1">
             Mobile Number
@@ -167,7 +153,7 @@ const [formData, setFormData] = useState({
           <input
             type="tel"
             name="mobile"
-            placeholder="4856545165"
+            placeholder="Your phone number"
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 shadow-[1px_1px_6px_0px_#E5E5E5]"
             value={formData.mobile}
             onChange={handleChange}
@@ -186,15 +172,13 @@ const [formData, setFormData] = useState({
             <p className="text-red-500 text-xs mt-1">{errors.mobile}</p>
           )}
         </div>
-
-        {/* Message Field */}
         <div>
           <label className="block text-sm font-medium text-[#115D8E] mb-1">
             Message
           </label>
           <textarea
             name="message"
-            placeholder="Tell us about your needs.."
+            placeholder="Your message"
             rows="4"
             className="w-full border border-gray-300 rounded-md px-4 py-2 resize-none focus:outline-none focus:ring-2 shadow-[1px_1px_6px_0px_#E5E5E5]"
             value={formData.message}

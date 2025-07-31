@@ -1,67 +1,121 @@
 "use client";
 
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { X } from "lucide-react";
-
 
 export default function LoginModal({ onClose }) {
   const [rememberMe, setRememberMe] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({ email: "", password: "" });
+  const router = useRouter();
+
+  const validate = () => {
+    let valid = true;
+    let newErrors = { email: "", password: "" };
+
+    if (!email) {
+      newErrors.email = "Email is required.";
+      valid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Email is invalid.";
+      valid = false;
+    }
+
+    if (!password) {
+      newErrors.password = "Password is required.";
+      valid = false;
+    } else if (password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters.";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+       router.push('/');
+    }
+  };
 
   return (
-     <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
-      <div className="bg-white rounded-xl shadow-lg w-full max-w-sm p-6 relative">
-        {/* Close Button */}
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[rgba(82,93,101,0.6)]">
+      <div className="relative w-full max-w-md bg-white rounded-xl shadow-lg p-6">
         <button
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl"
           onClick={onClose}
         >
-          <X className="w-5 h-5" />
+          &times;
         </button>
 
-        {/* Header */}
         <h2 className="text-xl font-semibold text-center mb-1">
-          Welcome back to <span className="text-blue-600 font-bold">Deenita India</span>
+          Welcome back to <span className="text-[#115D8E] font-bold">Deenita India</span>
         </h2>
         <p className="text-center text-gray-500 text-sm mb-6">
           Your data stays protected while you stay connected.
         </p>
 
-        {/* Form */}
-        <form className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-600 mb-1">Email</label>
+        <form className="space-y-4" onSubmit={handleSubmit}>
+          <div className="relative w-full">
+            <label
+              htmlFor="email"
+              className="absolute font-semibold left-4 top-2 text-sm text-[#115D8E] pointer-events-none"
+            >
+              Email
+            </label>
             <input
               type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="email@company.com"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full pt-6 pb-2 px-4 border border-[#115D8E] text-gray-900 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#115D8E] focus:shadow-[0_4px_30px_rgba(138,173,187)]"
             />
+            {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-600 mb-1">Password</label>
+          <div className="relative w-full">
+            <label
+              htmlFor="password"
+              className="absolute left-4 top-2 text-sm font-semibold text-[#115D8E] pointer-events-none"
+            >
+              Password
+            </label>
             <input
               type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="*************"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full pt-6 pb-2 px-4 text-gray-900 border border-[#115D8E] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#115D8E]  focus:shadow-[0_0_6px_2px_rgba(17,93,142,0.4)]"
             />
+            {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
           </div>
 
-          <div className="flex items-center justify-between text-sm">
-            <a href="#" className="text-blue-600 hover:underline">Forget password ?</a>
-            <label className="flex items-center gap-2 text-gray-700">
-              <input
-                type="checkbox"
-                checked={rememberMe}
-                onChange={() => setRememberMe(!rememberMe)}
-                className="form-checkbox accent-blue-500"
+          <Link href="/" className="text-[#115D8E] text-sm font-semibold hover:underline">
+            Forget password?
+          </Link>
+
+          <div className="flex justify-between gap-2 mt-1">
+            <span className="text-gray-700 text-sm">Remember sign in details</span>
+            <button
+              type="button"
+              onClick={() => setRememberMe(!rememberMe)}
+              className={`w-10 h-5 flex items-center rounded-full p-1 transition-colors duration-300 ${rememberMe ? 'bg-[#115D8E]' : 'bg-gray-300'}`}
+            >
+              <div
+                className={`w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 ${rememberMe ? 'translate-x-5' : 'translate-x-0'}`}
               />
-              Rember sign in details
-            </label>
+            </button>
           </div>
 
           <button
             type="submit"
-            className="w-full py-2 rounded-lg text-white font-semibold bg-gradient-to-r from-gray-600 to-blue-600 hover:opacity-90 transition"
+            className="w-full py-2 rounded-4xl text-white font-semibold bg-gradient-to-r from-[#777777] to-[#115D8E] hover:opacity-90 transition"
           >
             Log in
           </button>
@@ -78,7 +132,8 @@ export default function LoginModal({ onClose }) {
         </button>
 
         <p className="text-center text-sm mt-4 text-gray-600">
-          Don’t have an account? <a href="#" className="text-blue-600 font-semibold hover:underline">Sign up</a>
+          Don’t have an account?{" "}
+          <a href="#" className="text-[#115D8E] font-semibold hover:underline">Sign up</a>
         </p>
       </div>
     </div>

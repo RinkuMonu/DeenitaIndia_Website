@@ -31,17 +31,17 @@ deleniti atque corrupti quos dolores et quas`,
                 </p>
                 <div className="space-y-8 pt-10">
                     {sections.map((section, index) => (
-                        <div key={index} className="group grid grid-cols-4 border-b-3 pb-4 border-[#2E709B]">
-                            <div className='col-span-1 flex items-center justify-center text-center border-r-2  border-[#2E709B]'>
+                        <div key={index} className="group md:grid md:grid-cols-4 border-b-3 pb-4 border-[#2E709B]">
+                            <div className='col-span-1 md:flex items-center justify-center md:text-center md:border-r-2  border-[#2E709B]'>
                                 <p className="text-3xl font-bold text-gray-800 r">{section.title}</p>
                             </div>
-                           <div className='col-span-2 flex items-center justify-center border-r-2 border-[#2E709B]'>
-                                <p className="text-gray-600 lg:px-14">
+                           <div className='col-span-2 flex items-center justify-center md:border-r-2 border-[#2E709B]'>
+                                <p className="text-gray-600 md:px-6 lg:px-14">
                                     {section.content}
                                 </p>
                             </div>
-                              <div className='col-span-1 mx-auto '>
-                                <Link href="/" className="group inline-flex flex-col items-center justify-center px-2 py-6 text-[#2E709B] bg-white text-xs border-2 border-[#2E709B] font-medium rounded-full transition-all duration-300 ease-in-out hover:bg-[#2E709B] hover:text-white">
+                              <div className='col-span-1 mx-auto mt-1 md:mt-0 '>
+                                <Link href="/" className="group inline-flex flex-col items-center justify-center px-2 py-1 md:py-6 text-[#2E709B] bg-white text-xs border-2 border-[#2E709B] font-medium rounded-2xl md:rounded-full transition-all duration-300 ease-in-out hover:bg-[#2E709B] hover:text-white">
                                 <MdArrowOutward  className="text-xl mx-auto" />
                                 View Details
                             </Link></div>

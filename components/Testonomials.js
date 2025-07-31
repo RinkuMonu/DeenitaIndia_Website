@@ -77,20 +77,18 @@ export default function Testonomials() {
                 {testimonials.map((testimonial, index) => (
                     <SwiperSlide key={index} className="group peer pt-12 px-3 transition-all duration-300">
                        <div
-            className={`relative h-80 bg-white rounded-xl p-6 shadow-[0_8px_40px_rgba(138,173,187,0.5)]
+            className={`relative lg:h-80 bg-white rounded-xl p-6 shadow-[0_8px_40px_rgba(138,173,187,0.5)]
 border border-gray-50 flex flex-col justify-between transition-transform duration-500 ease-in-out ${
               index === activeIndex ? "scale-105 z-10" : "scale-95 "
             }`}
           >
-            {/* Quotation mark icon */}
             {index === activeIndex && (
               <span className="absolute -top-4 -left-4 text-[6rem] flex text-[#115D8E] font-serif leading-none">
                 <img src="/images/vector6.png" width={20} height={20} alt="comma" />
                 <img src="/images/vector6.png" width={20} height={20} alt="comma" />
               </span>
             )}
-
-                            <div className="flex items-center gap-4">
+                            <div className="lg:flex items-center lg:gap-4">
                                 <Image
                                     src={testimonial.image}
                                     alt={testimonial.name}

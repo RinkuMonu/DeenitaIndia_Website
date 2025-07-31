@@ -2,22 +2,37 @@
 import Image from 'next/image';
 import Link from 'next/link'
 import React, { useState } from 'react'
+import LoginModal from './Login';
 
 function header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <nav className=" fixed top-3 left-0 w-full z-50  container bg-transparent ">
         <div className=" flex  items-center justify-between mx-auto p-4  bg-[#0423820D] h-[54px] rounded-xl backdrop-blur-2xl">
           <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <Image src="/images/logo.png" width={50} height={50}  className="h-8" alt="Flowbite Logo" />
+            <Image src="/images/logo.png" width={50} height={50} className="h-8" alt="Flowbite Logo" />
           </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-2">
-            <button type="button" className="font-medium bg-white rounded-lg text-xs px-3 text-center text-[#39464F] h-[38px]">Login</button>
-          <button type="button" className="text-white  bg-[#115D8E]  rounded-lg text-xs px-4 text-center  h-[38px]">Join</button>
-            <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 " aria-controls="navbar-cta" aria-expanded="false"  onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button
+              type="button"
+              className="font-medium hidden md:block bg-white rounded-lg text-xs px-3 text-center text-[#39464F] h-[38px]"
+              onClick={() => setIsModalOpen(true)}
+            >
+              Login
+            </button>
+            <Link
+              href="/contact"
+              type="button"
+              className="text-white bg-[#115D8E] hidden md:flex items-center justify-center rounded-lg text-xs px-4 h-[38px]"
+            >
+              Join
+            </Link>
+
+            <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 " aria-controls="navbar-cta" aria-expanded="false" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor"  d="M1 1h15M1 7h15M1 13h15" />
+                <path stroke="currentColor" d="M1 1h15M1 7h15M1 13h15" />
               </svg>
             </button>
           </div>
@@ -30,46 +45,46 @@ function header() {
                 <Link href="/about" className="block py-2 px-3 md:p-0  text-xs hover:text-[#115D8E]  ">About</Link>
               </li>
               <li>
-               <div className="relative group">
-  <div className="cursor-pointer hover:text-[#115D8E] text-xs flex items-center">
-    Services
-    <svg
-      className="w-3 h-3 ml-1 transition-transform group-hover:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-    </svg>
-  </div>
+                <div className="relative group">
+                  <div className="cursor-pointer hover:text-[#115D8E] text-xs flex items-center">
+                    Services
+                    <svg
+                      className="w-3 h-3 ml-1 transition-transform group-hover:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
 
-  <div
-    className="absolute mt-3 left-0 bg-white border border-gray-200 rounded-xl shadow-[0_8px_30px_rgba(138,173,187)] 
+                  <div
+                    className="absolute mt-3 left-0 bg-white border border-gray-200 rounded-xl shadow-[0_8px_30px_rgba(138,173,187)] 
     w-96 z-50 grid grid-cols-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
-  >
-    <Link href="/services/switch" className="block px-4 py-3 text-xs hover-underline">
-      Switch Service
-    </Link>
-    <Link href="/services/aigf" className="block px-4 py-3 text-xs hover-underline">
-      AIGF License Assistance
-    </Link>
-    <Link href="/services/escrow" className="block px-4 py-3 text-xs hover-underline">
-      Escrow Service
-    </Link>
-    <Link href="/services/legal-compliance" className="block px-4 py-3 text-xs hover-underline">
-      Legal & Compliance Services
-    </Link>
-    <Link href="/services/connected-banking" className="block px-4 py-3 text-xs hover-underline">
-      Connected Banking
-    </Link>
-    <Link href="/services/utility" className="block px-4 py-3 text-xs hover-underline">
-      Utility Services
-    </Link>
-  </div>
-</div>
+                  >
+                    <Link href="/services/switch" className="block px-4 py-3 text-xs hover-underline">
+                      Switch Service
+                    </Link>
+                    <Link href="/services/aigf" className="block px-4 py-3 text-xs hover-underline">
+                      AIGF License Assistance
+                    </Link>
+                    <Link href="/services/escrow" className="block px-4 py-3 text-xs hover-underline">
+                      Escrow Service
+                    </Link>
+                    <Link href="/services/legal-compliance" className="block px-4 py-3 text-xs hover-underline">
+                      Legal & Compliance Services
+                    </Link>
+                    <Link href="/services/connected-banking" className="block px-4 py-3 text-xs hover-underline">
+                      Connected Banking
+                    </Link>
+                    <Link href="/services/utility" className="block px-4 py-3 text-xs hover-underline">
+                      Utility Services
+                    </Link>
+                  </div>
+                </div>
 
               </li>
-               <li>
+              <li>
                 <Link href="/blog" className="block py-2 px-3 md:p-0 text-xs hover:text-[#115D8E] ">Blog</Link>
               </li>
               <li>
@@ -78,10 +93,9 @@ function header() {
             </ul>
           </div>
         </div>
-         <div
-          className={`md:hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? 'block' : 'hidden'
-          } bg-white rounded-b-xl shadow-md relative z-0`}
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'block' : 'hidden'
+            } bg-white rounded-b-xl shadow-md relative z-0`}
         >
           <ul className="flex flex-col font-medium p-4 space-y-2">
             <li>
@@ -98,12 +112,28 @@ function header() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
-                <div className="pl-4 mt-2 space-y-1">
-                  <Link href="/services/web-development" className="block text-xs">Web Development</Link>
-                  <Link href="/services/mobile-apps" className="block text-xs">Mobile Apps</Link>
-                  <Link href="/services/seo" className="block text-xs">SEO</Link>
+                <div className="pl-4 mt-2 space-y-1 group-open:block hidden">
+                  <Link href="/services/switch" className="block px-4 py-1 text-xs hover-underline">
+                    Switch Service
+                  </Link>
+                  <Link href="/services/aigf" className="block px-4 py-1 text-xs hover-underline">
+                    AIGF License Assistance
+                  </Link>
+                  <Link href="/services/escrow" className="block px-4 py-1 text-xs hover-underline">
+                    Escrow Service
+                  </Link>
+                  <Link href="/services/legal-compliance" className="block px-4 py-1 text-xs hover-underline">
+                    Legal & Compliance Services
+                  </Link>
+                  <Link href="/services/connected-banking" className="block px-4 py-1 text-xs hover-underline">
+                    Connected Banking
+                  </Link>
+                  <Link href="/services/utility" className="block px-4 py-1 text-xs hover-underline">
+                    Utility Services
+                  </Link>
                 </div>
               </details>
+
             </li>
             <li>
               <Link href="/blog" className="block text-xs hover:text-[#115D8E]">Blog</Link>
@@ -111,10 +141,23 @@ function header() {
             <li>
               <Link href="/contact" className="block text-xs hover:text-[#115D8E]">Contact us</Link>
             </li>
+            <li>
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
+                className="block text-xs hover:text-[#115D8E]"
+              >
+                Login
+              </button>
+            </li>
+            <li>
+              <Link href="/contact" className="block text-xs hover:text-[#115D8E]">Join</Link>
+            </li>
           </ul>
         </div>
       </nav>
 
+      {isModalOpen && <LoginModal onClose={() => setIsModalOpen(false)} />}
     </>
   )
 }
