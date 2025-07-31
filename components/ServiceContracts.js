@@ -40,7 +40,7 @@ const ServiceContracts = ({ contracts }) => {
       <div className="flex justify-center">
         <Link
           href="/contact"
-          className="inline-flex items-center gap-2 hover:bg-[#115D8E] text-[#115D8E] border-2 border-gray-200  hover:text-white font-medium text-sm px-2 py-1 rounded-4xl transition"
+          className="inline-flex items-center gap-2 hover:bg-[#115D8E] text-[#115D8E] border-2 border-gray-200  hover:text-white font-medium text-sm px-4 py-2 rounded-4xl transition"
         >
           Connect
           <MdArrowOutward className="ml-1 text-bold" />
