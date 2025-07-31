@@ -3,22 +3,30 @@
 import Image from "next/image";
 import Cta from "@/components/Cta";
 import Link from "next/link";
-import AOS from "aos";
+// import AOS from "aos";
 import "aos/dist/aos.css";
 
 
-const images = [
-  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[240px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[120px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[120px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[160px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[240px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[160px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[160px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[160px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[160px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[120px]" },
-];
+const images1 = [
+  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[240px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[269px]" },
+]
+const images2 = [
+{ src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[120px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[160px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[240px]" },
+]
+const images3 = [
+  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[160px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[160px]" },
+]
+
+const images4 = [
+ { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[269px]" },
+
+]
+
+
 
 export default function CompanySection() {
   return (
@@ -93,7 +101,7 @@ export default function CompanySection() {
                 </div>
               </div>
 
-              <Link href="/contactpage" className="mt-4 md:mt-6 bg-[#115d8e] hover:bg-[#006c9d] text-white font-semibold px-6 py-2 rounded-md shadow-md">
+              <Link href="/contact" className="mt-4 md:mt-6 bg-[#115d8e] hover:bg-[#006c9d] text-white font-semibold px-6 py-2 rounded-md shadow-md">
                 Get started
               </Link>
             </div>
@@ -329,7 +337,7 @@ export default function CompanySection() {
       </section>
 
       {/* Media Highlights Section */}
-      <section className="bg-white py-12 md:py-20 px-4 sm:px-6">
+      <section className="bg-white py-12 lg:px-32 md:py-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           {/* Heading and Description */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 md:mb-10">
@@ -345,18 +353,35 @@ export default function CompanySection() {
           </div>
 
 
-          <div className="grid grid-cols-4 place-items-center">
-      {/* Media text card */}
-      <div className="w-[160px] h-[240px] bg-[#0E2A38]/80 text-white rounded-xl p-4 backdrop-blur-lg flex flex-col justify-center shadow-md">
+         <div className="flex gap-3 align-item-center">
+
+      {/* <div className="w-[160px] h-[240px] bg-[#0E2A38]/80 text-white rounded-xl p-4 backdrop-blur-lg flex flex-col justify-center shadow-md">
         <h2 className="text-2xl font-bold mb-1">Media</h2>
         <p className="text-sm">
           Consolidate your projects, clients and team into Consolidate your
           projects, clients and team into
         </p>
-      </div>
+      </div> */}
 
-      {/* Image cards */}
-      {images.map((img, idx) => (
+
+     <div className="grid grid-cols-1">
+       {images1.map((img, idx) => (
+        <div
+          key={idx}
+          className={`relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 ${img.w} ${img.h}`}
+        >
+          <Image
+            src={img.src}
+            alt={`Media ${idx + 1}`}
+            width={500}
+            height={500}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ))}
+     </div>
+  <div className="grid grid-cols-1">
+{images2.map((img, idx) => (
         <div
           key={idx}
           className={`relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ${img.w} ${img.h}`}
@@ -370,6 +395,39 @@ export default function CompanySection() {
           />
         </div>
       ))}
+</div>
+ <div className="grid grid-cols-1">
+      {images3.map((img, idx) => (
+        <div
+          key={idx}
+          className={`relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ${img.w} ${img.h}`}
+        >
+          <Image
+            src={img.src}
+            alt={`Media ${idx + 1}`}
+            width={500}
+            height={500}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ))}
+      </div>
+ <div className="grid grid-cols-1">
+      {images4.map((img, idx) => (
+        <div
+          key={idx}
+          className={`relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ${img.w} ${img.h}`}
+        >
+          <Image
+            src={img.src}
+            alt={`Media ${idx + 1}`}
+            width={500}
+            height={500}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ))}
+      </div>
     </div>
 
           <div className="mt-8 md:mt-12 text-center">
