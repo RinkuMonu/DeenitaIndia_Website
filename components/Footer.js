@@ -7,10 +7,10 @@ import { IoMdCall } from "react-icons/io";
 
 function Footer() {
   return (
-    <footer className="relative">
+  <footer className="relative shadow-[1px_-2px_4px_0px_#00000040]">
       <div className="relative w-full">
         <Image
-          className="object-cover rounded-md p-0"
+          className="object-cover rounded-md"
           src="/Image/footer-bg.png"
           fill
           alt="footer-bg image"
@@ -21,7 +21,7 @@ function Footer() {
         <div className="relative z-10 flex flex-col px-12 md:px-12 py-12">
           <div className="mb-16">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12">
-              <div className="lg:col-span-2">
+              <div className="lg:col-span-2 lg:pl-20">
                 <Image
                   src="/Image/deenita-logo.png"
                   alt="Deenita Logo"
