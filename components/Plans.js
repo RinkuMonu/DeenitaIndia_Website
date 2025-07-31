@@ -18,7 +18,7 @@ export default function Plans({ plans }) {
   return (
     <section className="py-15 px-4 bg-white text-gray-800">
       <div className=" mb-10">
-       <div className='flex justify-between align-middle'>
+       <div className='md:flex justify-between align-middle'>
                         <p className="heading font-semibold ">
 <span className="theme-text">Plan </span>  <br></br>  & Pricing Info
                         </p>
@@ -29,7 +29,7 @@ export default function Plans({ plans }) {
       <div className="flex mb-8 ">
         <button
           onClick={() => setBillingCycle("monthly")}
-          className={`px-7 py-2 rounded transition font-semibold ${
+          className={` px-4 md:px-7 py-2 rounded transition font-semibold ${
             billingCycle === "monthly"
               ? "bg-[#115D8E] text-white"
               : "bg-[#E4EDF3] text-gray-700"
@@ -45,7 +45,9 @@ export default function Plans({ plans }) {
               : "bg-[#E4EDF3] text-gray-700"
           }`}
         >
-          Annual (Save 50%)
+          Annual <span className="hidden md:block">
+            (Save 50%)
+          </span>
         </button>
       </div>
 

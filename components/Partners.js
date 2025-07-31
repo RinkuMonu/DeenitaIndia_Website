@@ -13,7 +13,7 @@ const partnerLogos = [
 
 export default function Partners() {
   return (
-    <div className="w-full py-12 bg-white">
+    <div className="py-12 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-10">
           <div className="max-w-md">
@@ -25,16 +25,14 @@ export default function Partners() {
               Explore expert articles, tips, and thought leadership.
             </p>
           </div>
-     <div className="w-full max-w-2xl">
-          <Marquee pauseOnHover gradient={false} speed={40} className="gap-6">
+     <div className="w-full ">
+          <Marquee pauseOnHover gradient={false} speed={40} className="gap-6 max-w-xl">
         {partnerLogos.map((logo, i) => (
           <div
             key={i}
             className="group relative mx-4 w-32 h-24 border border-gray-200 rounded-lg bg-white transition-all duration-500 hover:bg-[#2E709B] flex items-center justify-center"
           >
-            {/* Background visible through transparent PNGs */}
             <div className="relative w-[70px] h-[60px]">
-              {/* Default */}
               <Image
                 src={logo.default}
                 alt={`Partner ${i + 1}`}

@@ -39,7 +39,7 @@ function Blog() {
         <>
             <section className='my-10'>
                 <div className='container'>
-                    <div className='flex justify-between align-middle'>
+                    <div className='md:flex justify-between align-middle'>
                         <p className="heading font-semibold ">
                             Recent <span className="theme-text">Articles</span>
                         </p>

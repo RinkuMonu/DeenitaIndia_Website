@@ -18,7 +18,6 @@ const Cta = () => {
     <>
 
       <div ref={sectionRef} className="cta_bg relative overflow-hidden ">
-        {/* Moving Circles */}
         <motion.div
           style={{ y: circleY1 }}
           className="absolute -top-3 -left-10 w-30 h-30 border-3 border-[#115D8E]  rounded-full  z-99"
@@ -27,8 +26,8 @@ const Cta = () => {
           style={{ y: circleY2 }}
           className="absolute bottom-5 -right-6 w-30 h-30 border-4 border-[#115D8E] rounded-full  z-99"
         />
-        <div className='container py-20'>
-          <div className=" mx-auto relative px-10 md:px-0">
+        <div className='container py-10 md:py-20'>
+          <div className=" mx-auto relative px-2 md:px-0">
             <div className='max-w-3xl'>
 
               <p className="text-4xl theme-text font-bold mb-4">

@@ -57,7 +57,7 @@ export default function ServiceAdvantage({ sections }) {
                 {sections[0].features.map((feature, idx) => (
                     <div
                         key={idx}
-                        className="flex flex-col py-6 "
+                        className="flex flex-col md:py-6 "
                     >
                         <Image
                             src={feature.icon}
