@@ -3,18 +3,21 @@
 import Image from "next/image";
 import Cta from "@/components/Cta";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const images = [
-  { src: "/Image/Rectangle 61.png", width: 800, height: 600 },
-  { src: "/Image/Rectangle 61.png", width: 600, height: 800 },
-  { src: "/Image/Rectangle 61.png", width: 90, height: 600 },
-  { src: "/Image/Rectangle 61.png", width: 700, height: 700 },
-  { src: "/Image/Rectangle 61.png", width: 800, height: 600 },
-  { src: "/Image/Rectangle 61.png", width: 600, height: 800 },
-  { src: "/Image/Rectangle 61.png", width: 90, height: 60 },
-  { src: "/Image/Rectangle 61.png", width: 700, height: 700 },
-  { src: "/Image/Rectangle 61.png", width: 800, height: 600 },
-  { src: "/Image/Rectangle 61.png", width: 600, height: 800 },
+  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[240px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[120px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[120px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[160px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[240px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[160px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[160px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[160px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[160px]" },
+  { src: "/Image/Rectangle 61.png", w: "w-[160px]", h: "h-[120px]" },
 ];
 
 export default function CompanySection() {
@@ -37,7 +40,7 @@ export default function CompanySection() {
               </p>
 
               <div className="flex flex-wrap gap-3 md:gap-4 mb-6">
-                <div className="bg-white p-3 md:p-4 rounded-xl shadow-md w-full sm:w-40 text-center">
+                <div className="bg-white p-3 md:p-4 rounded-xl shadow-md w-full sm:w-40 text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
                   <Image
                     src="/Image/distribution 1.png"
                     alt="Icon"
@@ -54,7 +57,7 @@ export default function CompanySection() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-white p-3 md:p-4 rounded-xl shadow-md w-full sm:w-40 text-center">
+                <div className="bg-white p-3 md:p-4 rounded-xl shadow-md w-full sm:w-40 text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
                   <Image
                     src="/Image/region 1.png"
                     alt="Icon"
@@ -71,7 +74,7 @@ export default function CompanySection() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-white p-3 md:p-4 rounded-xl shadow-md w-full sm:w-40 text-center">
+                <div className="bg-white p-3 md:p-4 rounded-xl shadow-md w-full sm:w-40 text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
                   <Image
                     src="/Image/shop 1.png"
                     alt="Icon"
@@ -95,7 +98,7 @@ export default function CompanySection() {
               </Link>
             </div>
 
-            <div className="hidden md:block md:absolute right-10 lg:right-40 top-[90px]">
+            <div className="hidden md:block md:absolute right-10 lg:right-40 top-[90px] transform transition duration-300 hover:scale-105 hover:shadow-xl">
               <div className="rounded-xl overflow-hidden shadow-xl">
                 <Image
                   src="/Image/Rectangle 45.png"
@@ -110,8 +113,7 @@ export default function CompanySection() {
         </div>
       </section>
 
-<div className="backdrop-blur-3xl">
-</div>
+<div className="backdrop-blur-3xl bg-[#115D8E]"></div>
 
 
 
@@ -121,44 +123,47 @@ export default function CompanySection() {
           <span className="text-gray-700">Vision & Mission</span>
         </h3>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-0 md:px-10">
-          <div className="bg-[#166599] text-white p-6 md:p-8 rounded-xl shadow-lg">
-            <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-              <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 pl-10">
-                <Image
-                  src="/Image/vision.png"
-                  alt="Icon"
-                  width={32}
-                  height={36}
-                />
-                Vision
-              </h3>
-            </div>
-            <p className="text-sm md:text-base leading-relaxed mx-0 md:mx-10 text-center md:text-left">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas.
-            </p>
-          </div>
+  {/* Vision Card */}
+  <div className="bg-[#166599] text-white p-6 md:p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+    <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+      <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 pl-10">
+        <Image
+          src="/Image/vision.png"
+          alt="Icon"
+          width={32}
+          height={36}
+        />
+        Vision
+      </h3>
+    </div>
+    <p className="text-sm md:text-base leading-relaxed mx-0 md:mx-10 text-center md:text-left">
+      At vero eos et accusamus et iusto odio dignissimos ducimus qui
+      blanditiis praesentium voluptatum deleniti atque corrupti quos
+      dolores et quas.
+    </p>
+  </div>
 
-          <div className="bg-white border border-gray-200 text-[#166599] p-6 md:p-8 rounded-xl shadow-md">
-            <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-              <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 pl-10">
-                <Image
-                  src="/Image/Mission.png"
-                  alt="Icon"
-                  width={32}
-                  height={36}
-                />
-                Mission
-              </h3>
-            </div>
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed mx-0 md:mx-10 text-center md:text-left">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas.
-            </p>
-          </div>
-        </div>
+  {/* Mission Card */}
+  <div className="bg-white border border-gray-200 text-[#166599] p-6 md:p-8 rounded-xl shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#f9f9f9]">
+    <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+      <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 pl-10">
+        <Image
+          src="/Image/Mission.png"
+          alt="Icon"
+          width={32}
+          height={36}
+        />
+        Mission
+      </h3>
+    </div>
+    <p className="text-sm md:text-base text-gray-600 leading-relaxed mx-0 md:mx-10 text-center md:text-left">
+      At vero eos et accusamus et iusto odio dignissimos ducimus qui
+      blanditiis praesentium voluptatum deleniti atque corrupti quos
+      dolores et quas.
+    </p>
+  </div>
+</div>
+
       </div>
 
       {/* Journey Section */}
@@ -171,7 +176,7 @@ export default function CompanySection() {
             <div className="absolute top-0 left-0 h-full w-2 md:w-7 bg-[#115d8e]" />
             <div className="absolute top-0 right-0 h-full w-2 md:w-7 bg-[#115d8e]" />
             <div className="w-full md:w-[40%] flex justify-center">
-              <div className="relative rounded-xl overflow-hidden md:left-10 w-full max-w-[400px]">
+              <div className="relative rounded-xl overflow-hidden md:left-10 w-full max-w-[400px] transform transition duration-300 hover:scale-105 hover:shadow-xl">
                 <Image
                   src="/Image/Rectangle 52.png"
                   alt="CEO"
@@ -217,14 +222,12 @@ export default function CompanySection() {
 
   <Cta/>
 
-
-
       {/* Achievements Section */}
       <section className="py-12 md:py-16 px-4 sm:px-6 bg-white">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Text Section */}
           <div>
-            <h3 className="text-3xl md:text-[48px] font-bold text-gray-800 leading-snug">
+            <h3  className="text-3xl md:text-[48px] font-bold text-gray-800 leading-snug">
               Proud Moments & <br />
               <span className="text-[#2E709B]">Achievements</span>
             </h3>
@@ -236,7 +239,7 @@ export default function CompanySection() {
           </div>
 
           {/* Right Grid Box */}
-          <div className="grid grid-cols-2 gap-4 md:gap-8 p-4 md:p-8 border-0.9 rounded-xl shadow-sm">
+          <div  className="grid grid-cols-2 gap-4 md:gap-8 p-4 md:p-8 border-0.9 rounded-xl shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-xl">
             {[
               { value: "9+", label: "Years" },
               { value: "99%", label: "Certified" },
@@ -244,8 +247,8 @@ export default function CompanySection() {
               { value: "100+", label: "Projects" },
             ].map((item, index) => (
               <div key={index} className="p-2 md:p-0">
-                <span className="flex items-center">
-                  <h4 className="text-xl md:text-2xl font-semibold text-[#115D8E]">
+                <span className="flex items-center transform transition duration-300 hover:scale-110">
+                  <h4 className="text-xl md:text-2xl font-semibold text-[#115D8E] ">
                     {item.value}
                   </h4>
                   <h4 className="text-xl md:text-2xl font-semibold text-gray-600 pl-2">
@@ -286,10 +289,10 @@ export default function CompanySection() {
             {[1, 2, 3, 4].map((item) => (
               <div
                 key={item}
-                className="bg-white rounded-2xl p-4 md:p-6 text-left border border-gray-100 hover:shadow-md transition shadow-[1px_1px_100px_1px_#115D8E2E] w-full mx-auto max-w-xs"
+                className="bg-white rounded-2xl p-4 md:p-6 text-left border border-gray-100 hover:shadow-md transition shadow-[1px_1px_100px_1px_#115D8E2E] w-full mx-auto max-w-xs transform duration-300 hover:scale-110"
               >
                 <div className="mb-1">
-                  <div className="w-8 h-8 md:w-10 md:h-10">
+                  <div className="w-8 h-8 md:w-10 md:h-10 transform transition duration-300 hover:scale-120">
                     <Image
                       src="/Image/folder.png"
                       alt="Icon"
@@ -310,7 +313,7 @@ export default function CompanySection() {
           </div>
 
           {/* Button */}
-          <div className="mt-8 md:mt-12 w-[max-content] mx-auto">
+          <div className="mt-8 md:mt-12 w-[max-content] mx-auto transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <Link href="/contactpage" className="bg-[#115D8E] text-white px-6 md:px-10 py-2 rounded-lg font-semibold shadow-md transition flex items-center justify-center gap-2">
               Get started
               <Image
@@ -341,25 +344,34 @@ export default function CompanySection() {
             </p>
           </div>
 
-          {/* Image Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 px-0 sm:px-4 md:px-8">
-            {images.slice(0, 5).map((img, idx) => (
-              <div
-                key={idx}
-                className="relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer aspect-square"
-              >
-                <Image
-                  src={img.src}
-                  alt={`Media ${idx + 1}`}
-                  width={img.width}
-                  height={img.height}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
 
-          {/* Contact Button */}
+          <div className="grid grid-cols-4 place-items-center">
+      {/* Media text card */}
+      <div className="w-[160px] h-[240px] bg-[#0E2A38]/80 text-white rounded-xl p-4 backdrop-blur-lg flex flex-col justify-center shadow-md">
+        <h2 className="text-2xl font-bold mb-1">Media</h2>
+        <p className="text-sm">
+          Consolidate your projects, clients and team into Consolidate your
+          projects, clients and team into
+        </p>
+      </div>
+
+      {/* Image cards */}
+      {images.map((img, idx) => (
+        <div
+          key={idx}
+          className={`relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ${img.w} ${img.h}`}
+        >
+          <Image
+            src={img.src}
+            alt={`Media ${idx + 1}`}
+            width={500}
+            height={500}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ))}
+    </div>
+
           <div className="mt-8 md:mt-12 text-center">
             <Link href="/contactpage">
             <button className="px-6 md:px-8 py-2 md:py-3 rounded-lg bg-white border border-gray-300 shadow-[2px_2px_20px_0px_#8AADBB] hover:shadow-lg transition font-semibold flex items-center justify-center gap-2 mx-auto">
@@ -371,7 +383,8 @@ export default function CompanySection() {
                 height={20}
                 className="w-4 h-4 md:w-5 md:h-5"
               />
-            </button></Link>
+            </button>
+            </Link>
           </div>
         </div>
       </section>

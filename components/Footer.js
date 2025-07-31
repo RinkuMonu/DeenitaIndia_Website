@@ -4,6 +4,7 @@ import { FaInstagram, FaFacebook } from 'react-icons/fa';
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { IoMdCall } from "react-icons/io";
+import Link from "next/link"
 
 function Footer() {
   return (
@@ -45,10 +46,17 @@ function Footer() {
               <div>
                 <h3 className="font-semibold text-base mb-4">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
-                  {["About Us", "Services", "API's", "Blog", "Our Team", "Careers", "Gallery"].map((text) => (
-                    <li key={text}><a href="#" className="block hover:text-[#1476ad]">{text}</a></li>
-                  ))}
-                </ul>
+
+    <li><Link href="/about" className="hover:text-[#0E91C9]">About Us</Link></li>
+    <li><Link href="" className="hover:text-[#0E91C9]">Services</Link></li>
+    <li><Link href="" className="hover:text-[#0E91C9]">API's</Link></li>
+    <li><Link href="/blog" className="hover:text-[#0E91C9]">Blog</Link></li>
+    <li><Link href="" className="hover:text-[#0E91C9]">Our Team</Link></li>
+    <li><Link href="" className="hover:text-[#0E91C9]">Careers</Link></li>
+    <li><Link href="" className="hover:text-[#0E91C9]">Gallery</Link></li>
+  </ul>
+
+
               </div>
 
               <div>
@@ -93,12 +101,14 @@ function Footer() {
           <div className="border-t-2 border- w-full mb-6"></div>
 
           <div className="mb-6">
-            <ul className="flex flex-wrap justify-center gap-6 sm:gap-10 text-sm text-center">
-              {["Privacy Policy", "Cancellation & Refund Policy", "Terms of Use", "KYC Policy & Onboarding Process", "Chargeback & Cancellation Policy"].map((text) => (
-                <li key={text}><a href="#" className="hover:text-[#0E91C9]">{text}</a></li>
-              ))}
-            </ul>
-          </div>
+  <ul className="flex flex-wrap justify-center gap-6 sm:gap-10 text-sm text-center">
+    <li><Link href="/privacypolicy" className="hover:text-[#0E91C9]">Privacy Policy</Link></li>
+    <li><Link href="/refundpolicy" className="hover:text-[#0E91C9]">Cancellation & Refund Policy</Link></li>
+    <li><Link href="/termsofuse" className="hover:text-[#0E91C9]">Terms of Use</Link></li>
+    <li><Link href="/kycpolicy" className="hover:text-[#0E91C9]">KYC Policy & Onboarding Process</Link></li>
+    <li><Link href="/chargebackpolicy" className="hover:text-[#0E91C9]">Chargeback & Cancellation Policy</Link></li>
+  </ul>
+</div>
 
           <div className="text-center text-sm mt-auto">
             © 2025 Deenita India Private Limited. All rights reserved.
