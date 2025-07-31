@@ -9,7 +9,7 @@ export default function ServiceSection2({ sections }) {
       {sections.map((section, index) => (
         <div
           key={index}
-          className="flex flex-col md:flex-row items-center  p-6 md:p-12 "
+          className="flex flex-col md:flex-row items-center gap-8 p-6 md:p-12 "
         >
           <div className="w-full md:w-1/2 flex justify-center relative overflow-visible">
             <div className="relative w-[300px] h-[300px] rounded-xl bg-gradient-to-t from-white to-[#115d8e] shadow-lg overflow-visible flex items-center justify-center">
@@ -20,12 +20,12 @@ export default function ServiceSection2({ sections }) {
                 height={300}
                 className="h-full w-auto object-cover object-center"
               />
-              <div className="absolute top-20 -right-5 bg-white text-black px-3 py-1 rounded-3xl shadow-lg z-20">
-                {section.tag1}
-              </div>
-              <div className="absolute top-36 -right-8 bg-white text-black px-3 py-1 rounded-3xl shadow-lg z-20">
-                {section.tag2}
-              </div>
+            <div className="absolute animate-float-tag top-20 -right-5 bg-white text-black px-3 py-1 rounded-3xl shadow-lg z-20">
+  {section.tag1}
+</div>
+<div className="absolute animate-float-tag top-36 -right-8 bg-white text-black px-3 py-1 rounded-3xl shadow-lg z-20">
+  {section.tag2}
+</div>
             </div>
           </div>
 

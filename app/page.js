@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <>
       <section className="home-hero-section  py-10">
+        <div className="absolute w-72 h-72 bg-[#115D8E] rounded-full opacity-30 blur-3xl top-50 -left-50 z-0"></div>
        <div className=" container">
          <div className="grid lg:grid-cols-2">
           <div className="pt-20 flex flex-col gap-4">
@@ -37,6 +38,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative home-img-height hidden lg:block">
+              <div className="absolute w-72 h-72 bg-[#115D8E] rounded-full opacity-10 blur-3xl top-50 -left-30 z-0"></div>
             <Image className="object-cover rounded-md p-0 w-auto h-full" src="/images/home-main.png" width={400} height={400} alt="banner image" />
           </div>
         </div>
