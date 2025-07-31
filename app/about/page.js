@@ -121,12 +121,13 @@ export default function CompanySection() {
         </div>
       </section>
 
-<div className="backdrop-blur-3xl bg-[#115D8E]"></div>
+
 
 
 
       <div className="mt-16 md:mt-32 w-full px-4 sm:px-6">
-        <h3 className="text-3xl md:text-5xl font-bold mb-8 md:mb-14 pl-0 md:pl-32 text-center md:text-left">
+        <h3 className="relative text-3xl md:text-5xl font-bold mb-8 md:mb-14 pl-0 md:pl-32 text-center md:text-left">
+<div className="absolute w-72 h-72 bg-[#115D8E] rounded-full opacity-20 blur-3xl top-20 -left-20 z-0"></div>
           <span className="text-[#115d8e]">Our </span>
           <span className="text-gray-700">Vision & Mission</span>
         </h3>
@@ -174,7 +175,10 @@ export default function CompanySection() {
 
       </div>
 
-      {/* Journey Section */}
+
+
+
+
       <section className="w-full py-8 md:py-12 overflow-hidden relative bg-cover bg-center bg-no-repeat px-4 sm:px-6">
         <div
           className="relative z-10 bg-white bg-opacity-90 backdrop-blur-[100px] rounded-lg mx-auto max-w-7xl p-4 md:p-6"
@@ -230,10 +234,11 @@ export default function CompanySection() {
 
   <Cta/>
 
-      {/* Achievements Section */}
-      <section className="py-12 md:py-16 px-4 sm:px-6 bg-white">
+
+      <section className="py-12 md:py-16 px-4 sm:px-6 bg-white relative">
+          <div className="absolute w-82 h-82 bg-[#115D8E] rounded-full opacity-15 blur-3xl top-70 -left-20 z-0"></div>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Left Text Section */}
+
           <div>
             <h3  className="text-3xl md:text-[48px] font-bold text-gray-800 leading-snug">
               Proud Moments & <br />
@@ -337,8 +342,9 @@ export default function CompanySection() {
       </section>
 
       {/* Media Highlights Section */}
-      <section className="bg-white py-12 lg:px-32 md:py-20 px-4 sm:px-6">
+      <section className="bg-white py-12 lg:px-32 md:py-20 px-4 sm:px-6 relative">
         <div className="max-w-7xl mx-auto">
+           <div className="absolute w-92 h-82 bg-[#115D8E] rounded-full opacity-10 blur-3xl top-140 -right-30 z-0"></div>
           {/* Heading and Description */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 md:mb-10">
             <h3 className="text-3xl md:text-5xl font-bold text-gray-800 pl-0 md:pl-10 mb-4 md:mb-0 text-center md:text-left">

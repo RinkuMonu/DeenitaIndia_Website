@@ -144,6 +144,7 @@ export default function BlogSection() {
                                 {[...new Set(blogPosts.map((p) => p.category))].map((cat, idx) => (
                                     <option key={idx} value={cat}>
                                         {cat.toUpperCase()}
+
                                     </option>
                                 ))}
                             </select>
