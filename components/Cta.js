@@ -40,7 +40,7 @@ const Cta = () => {
      </div>
       
         <Link 
-          href="/contact" 
+          href="/contactpage"
           className="inline-flex absolute top-10 right-30 bg-white theme-text hover:bg-gray-100 px-6 py-3 rounded-lg font-medium text-lg transition-colors duration-300 shadow-md hover:shadow-lg float-end"
         >
           Contact Us <MdArrowOutward className="ml-2 mt-1 text-bold" />
