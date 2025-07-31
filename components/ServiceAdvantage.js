@@ -16,7 +16,7 @@ export default function ServiceAdvantage({ sections }) {
                             alt="Section Image"
                             width={500}
                             height={500}
-                            className="rounded-2xl"
+                            className="rounded-2xl max-h-[280px] w-auto"
                         />
                     </div>
                     <div className="flex-1 flex flex-col justify-center px-4">

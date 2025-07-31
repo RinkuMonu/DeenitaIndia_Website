@@ -1,3 +1,4 @@
+import BankingPartner from '@/components/BankingPartner';
 import Cta from '@/components/Cta';
 import ServiceAdvantage from '@/components/ServiceAdvantage';
 import ServiceBanner from '@/components/ServiceBanner';
@@ -90,23 +91,30 @@ function page() {
       imageSrc: "/images/switch2.png",
     },
   ]
-  const contractData = [
-  {
-    title: "B2B",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/b2b.jpg"
-  },
-  {
-    title: "Real Estate",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/real-estate.jpg"
-  },
-  {
-    title: "Freelancing",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/freelancing.jpg"
-  },
-];
+ const contractData = [
+   {
+  title: "Service",
+  subtitle: "From scope to timelines, everything is documented to ensure smooth collaboration",
+  items: [
+    {
+      title: "B2B",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/b2b.jpg"
+    },
+    {
+      title: "Real Estate",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/real-estate.jpg"
+    },
+    {
+      title: "Freelancing",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/freelancing.jpg"
+    },
+  ]
+}
+
+  ];
 const stepperData = {
   title: "How it works",
   subtitle: "Choose your service, complete KYC, and make a secure payment through our platform",
@@ -140,6 +148,9 @@ const stepperData = {
              </div>
                <ServiceBanner sections={sections}/>
                <ServiceAdvantage sections={sections1}/>
+               <div>
+                <BankingPartner />
+               </div>
         </>
     )
 }

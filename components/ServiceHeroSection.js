@@ -45,7 +45,7 @@ export default function ServiceHeroSection({ sections }) {
          </div>
 
 
-          <div className="absolute -top-6 right-15 rounded-xl z-99 hidden lg:block">
+          <div className="absolute -top-6 right-15 rounded-xl z-49 hidden lg:block">
             <Image
               src={section.imageSrc}
               alt="Blog Preview"

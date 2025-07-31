@@ -1,4 +1,5 @@
 import Cta from '@/components/Cta';
+import ServiceAccordian from '@/components/ServiceAccordian';
 import ServiceAdvantage from '@/components/ServiceAdvantage';
 import ServiceBanner from '@/components/ServiceBanner';
 import ServiceContracts from '@/components/ServiceContracts';
@@ -8,10 +9,10 @@ import ServicesSteper from '@/components/ServicesSteper';
 import React from 'react'
 const sections = [
   {
-    title: "Secure Escrow Payments",
+    title: "Multi-Utility Payment API",
     description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
     buttonText: "Connect Now",
-    imageSrc: "/images/office.jpg",
+    imageSrc: "/images/lc3.jpg",
     features: [
       { icon: "/images/milestone.png", label: "Milestone-based release" },
       { icon: "/images/dashbord.png", label: "Dashboard" },
@@ -24,7 +25,7 @@ const sections1 = [
     title: "Fully Compliant, Legally Secure",
     description:
       "We operate under full legal frameworks, ensuring all our services are compliant with applicable laws and regulations",
-    imageSrc: "/images/cybersecurity.jpg",
+    imageSrc: "/images/us4.jpg",
     features: [
       {
         icon: "/images/legal_paper.png",
@@ -56,11 +57,11 @@ function page() {
     const EscrowService = [
         {
             tag: "Services",
-            title: "Escrow Service",
+            title: "Utility Service",
             description: "Our escrow service ensures secure transactions by holding funds until both parties meet agreed conditions.",
             ctaText: "Connect",
             ctaLink: "/contact",
-            imageSrc: "/images/escrowservice1.jpg",
+            imageSrc: "/images/us1.jpg",
              features: [
       {
         icon: "/images/precaution.png",
@@ -79,66 +80,80 @@ function page() {
     ];
       const section2 = [
     {
-      tag: "Escrow Service",
+      tag: "Legal & Compliance Services",
       tag1:"hjh hghgjh",
       tag2:"hjh hghgjh",
-      title: "A trusted third party holds funds until both parties meet agreed terms",
+      title: "We handle licensing, policy drafting, and ongoing compliance checks",
       description:
         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
       ctaText: "Get started",
       ctaLink: "/get-started",
-      imageSrc: "/images/escrow2.png",
+      imageSrc: "/images/us2.png",
     },
   ]
-  const contractData = [
-  {
-    title: "B2B",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/b2b.jpg"
-  },
-  {
-    title: "Real Estate",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/real-estate.jpg"
-  },
-  {
-    title: "Freelancing",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/freelancing.jpg"
-  },
-];
-const stepperData = {
-  title: "How it works",
-  subtitle: "Choose your service, complete KYC, and make a secure payment through our platform",
-  description: "Funds are held in escrow and released only when both parties fulfill their commitments",
-  steps: [
+ const contractData = [
+   {
+  title: "PAN-Aadhaar-GST Integration",
+  subtitle: "From scope to timelines, everything is documented to ensure smooth collaboration",
+  items: [
     {
-      image: "/images/stepper.png",
+      title: "B2B",
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/b2b.jpg"
     },
     {
-      image: "/images/stepper.png",
+      title: "Real Estate",
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/real-estate.jpg"
     },
     {
-      image: "/images/stepper.png",
+      title: "Freelancing",
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/freelancing.jpg"
     },
-  ],
-};
+  ]
+}
+
+  ];
+  const accordiansections = [
+    {
+      title: "enables instant and paperless identity verification",
+      subtitle: "eKYC Integration Service",
+      imageSrc: "/images/us3.jpg",
+      items: [
+        {
+          title: "Real-Time Invoicing",
+          description: "Instant invoice generation aligned with GST rules."
+        },
+        {
+          title: "Automated Tax Calculation",
+          description: "System calculates CGST, SGST, and IGST automatically."
+        },
+         {
+          title: "Real-Time Invoicing",
+          description: "Instant invoice generation aligned with GST rules."
+        },
+        {
+          title: "Automated Tax Calculation",
+          description: "System calculates CGST, SGST, and IGST automatically."
+        }
+      ]
+    }
+  ]
+
 
     return (
         <>
             <div className='container'>
                 <ServiceHeroSection sections={EscrowService} />
                 <ServiceSection2 sections={section2}/>
-                <ServiceContracts contracts={contractData}/>
+               
             </div>
              <Cta/>
                  <div className='container'>
-               <ServicesSteper data={stepperData}/>
-             
+              <ServiceContracts contracts={contractData}/>
              </div>
+              <ServiceAccordian sections={accordiansections} />
                <ServiceBanner sections={sections}/>
                <ServiceAdvantage sections={sections1}/>
         </>

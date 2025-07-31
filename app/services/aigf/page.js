@@ -33,13 +33,13 @@ const sections1 = [
         description:
           "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
       },
-    {
+      {
         icon: "/images/venture.png",
         label: "bgyg njoj",
         description:
           "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
       },
-       {
+      {
         icon: "/images/teamwork.png",
         label: "bgyg njoj",
         description:
@@ -54,36 +54,36 @@ const sections1 = [
   },
 ];
 function page() {
-    const EscrowService = [
-        {
-            tag: "Services",
-            title: "AIGF License Assistance",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun",
-            ctaText: "Connect",
-            ctaLink: "/contact",
-            imageSrc: "/images/aigf1.jpg",
-             features: [
-      {
-        icon: "/images/precaution.png",
-        label: "Reduce risk"
-      },
+  const EscrowService = [
     {
-        icon: "/images/precaution.png",
-        label: "Reduce risk"
-      },
-       {
-        icon: "/images/precaution.png",
-        label: "Reduce risk"
-      }
-    ],
+      tag: "Services",
+      title: "AIGF License Assistance",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun",
+      ctaText: "Connect",
+      ctaLink: "/contact",
+      imageSrc: "/images/aigf1.jpg",
+      features: [
+        {
+          icon: "/images/precaution.png",
+          label: "Reduce risk"
+        },
+        {
+          icon: "/images/precaution.png",
+          label: "Reduce risk"
+        },
+        {
+          icon: "/images/precaution.png",
+          label: "Reduce risk"
         }
-    ];
-      const section2 = [
+      ],
+    }
+  ];
+  const section2 = [
     {
       tag: "Escrow Service",
-      tag1:"hjh hghgjh",
-      tag2:"hjh hghgjh",
-        title: "Operate legally and build player trust with AIGF accreditation",
+      tag1: "hjh hghgjh",
+      tag2: "hjh hghgjh",
+      title: "Operate legally and build player trust with AIGF accreditation",
       description:
         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
       ctaText: "Get started",
@@ -92,112 +92,117 @@ function page() {
     },
   ]
   const contractData = [
-  {
-    title: "B2B",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/b2b.jpg"
-  },
-  {
-    title: "Real Estate",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/real-estate.jpg"
-  },
-  {
-    title: "Freelancing",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/freelancing.jpg"
-  },
-];
-const stepperData = {
-  title: "Service Support Steps",
-  subtitle: "We guide you step by step from eligibility check and document preparation to application submission and approval",
-  description: "Our team ensures smooth communication and ongoing support throughout the entire process",
-  steps: [
+   {
+  title: "Service Contracts",
+  subtitle: "From scope to timelines, everything is documented to ensure smooth collaboration",
+  items: [
     {
-      image: "/images/stepper.png",
+      title: "B2B",
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/b2b.jpg"
     },
     {
-      image: "/images/stepper.png",
+      title: "Real Estate",
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/real-estate.jpg"
     },
     {
-      image: "/images/stepper.png",
+      title: "Freelancing",
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/freelancing.jpg"
     },
-  ],
-};
+  ]
+}
 
-const plans = [
+  ];
+  const stepperData = {
+    title: "Service Support Steps",
+    subtitle: "We guide you step by step from eligibility check and document preparation to application submission and approval",
+    description: "Our team ensures smooth communication and ongoing support throughout the entire process",
+    steps: [
+      {
+        image: "/images/stepper.png",
+        description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      },
+      {
+        image: "/images/stepper.png",
+        description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      },
+      {
+        image: "/images/stepper.png",
+        description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      },
+    ],
+  };
+
+  const plans = [
     {
-      title: 'Creator',
-      description: 'At vero eos et accusamus et iusto odio dignissimos ducimus odio',
-      price: '100',
-      subText: 'Per user & per month',
-      buttonText: 'Current Plan',
-      buttonType: 'muted',
-      popular: false,
+      title: "Creator",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio",
+      monthlyPrice: 100,
+      annualPrice: 50,
+      buttonText: "Current Plan",
+      buttonType: "muted",
       features: [
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
       ],
     },
     {
-      title: 'Pro Plan',
-      description: 'At vero eos et accusamus et iusto odio dignissimos ducimus odio',
-      price: '1000',
-      subText: 'Per user, per month & billed annually',
-      buttonText: 'Switch to this Plan',
-      buttonType: 'outline',
+      title: "Pro Plan",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio",
+      monthlyPrice: 2000,
+      annualPrice: 1000,
       popular: true,
+      buttonText: "Switch to this Plan",
+      buttonType: "outline",
       features: [
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
       ],
     },
     {
-      title: 'Business Plan',
-      description: 'At vero eos et accusamus et iusto odio dignissimos ducimus odio',
-      price: '2000',
-      subText: 'custom Pricing, Custom Billing',
-      buttonText: 'Contact Sales',
-      buttonType: 'primary',
-      popular: false,
+      title: "Business Plan",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio",
+      monthlyPrice: 4000,
+      annualPrice: 2000,
+      buttonText: "Contact Sales",
+      buttonType: "primary",
       features: [
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
       ],
     },
   ];
 
-    return (
-        <>
-            <div className='container'>
-                <ServiceHeroSection sections={EscrowService} />
-                <ServiceSection2 sections={section2}/>
-            </div>
-             <ServiceBanner sections={sections}/>
-                 <div className='container'>
-                         <ServiceContracts contracts={contractData}/>
-               <ServicesSteper data={stepperData}/>
-             </div>
-               <ServiceAdvantage sections={sections1}/>
-               <Cta/>
-               <Plans plans={plans}/>
-        </>
-    )
+
+  return (
+    <>
+      <div className='container'>
+        <ServiceHeroSection sections={EscrowService} />
+        <ServiceSection2 sections={section2} />
+      </div>
+      <ServiceBanner sections={sections} />
+      <div className='container'>
+        <ServiceContracts contracts={contractData} />
+        <ServicesSteper data={stepperData} />
+      </div>
+      <ServiceAdvantage sections={sections1} />
+      <Cta />
+      <div className='container'>
+        <Plans plans={plans} />
+      </div>
+    </>
+  )
 }
 
 export default page
