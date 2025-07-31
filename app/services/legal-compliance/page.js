@@ -1,4 +1,5 @@
 import Cta from '@/components/Cta';
+import ServiceAccordian from '@/components/ServiceAccordian';
 import ServiceAdvantage from '@/components/ServiceAdvantage';
 import ServiceBanner from '@/components/ServiceBanner';
 import ServiceContracts from '@/components/ServiceContracts';
@@ -11,7 +12,7 @@ const sections = [
     title: "Secure Escrow Payments",
     description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
     buttonText: "Connect Now",
-    imageSrc: "/images/office.jpg",
+    imageSrc: "/images/lc3.jpg",
     features: [
       { icon: "/images/milestone.png", label: "Milestone-based release" },
       { icon: "/images/dashbord.png", label: "Dashboard" },
@@ -24,7 +25,7 @@ const sections1 = [
     title: "Fully Compliant, Legally Secure",
     description:
       "We operate under full legal frameworks, ensuring all our services are compliant with applicable laws and regulations",
-    imageSrc: "/images/cybersecurity.jpg",
+    imageSrc: "/images/lc4.jpg",
     features: [
       {
         icon: "/images/legal_paper.png",
@@ -32,13 +33,13 @@ const sections1 = [
         description:
           "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
       },
-    {
+      {
         icon: "/images/venture.png",
         label: "bgyg njoj",
         description:
           "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
       },
-       {
+      {
         icon: "/images/teamwork.png",
         label: "bgyg njoj",
         description:
@@ -53,96 +54,130 @@ const sections1 = [
   },
 ];
 function page() {
-    const EscrowService = [
+  const EscrowService = [
+    {
+      tag: "Services",
+      title: "Legal & Compliance Service",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun",
+      ctaText: "Connect",
+      ctaLink: "/contact",
+      imageSrc: "/images/lc1.jpg",
+      features: [
         {
-            tag: "Services",
-            title: "Escrow Service",
-            description: "Our escrow service ensures secure transactions by holding funds until both parties meet agreed conditions.",
-            ctaText: "Connect",
-            ctaLink: "/contact",
-            imageSrc: "/images/escrowservice1.jpg",
-             features: [
-      {
-        icon: "/images/precaution.png",
-        label: "Reduce risk"
-      },
-    {
-        icon: "/images/precaution.png",
-        label: "Reduce risk"
-      },
-       {
-        icon: "/images/precaution.png",
-        label: "Reduce risk"
-      }
-    ],
+          icon: "/images/precaution.png",
+          label: "Reduce risk"
+        },
+        {
+          icon: "/images/precaution.png",
+          label: "Reduce risk"
+        },
+        {
+          icon: "/images/precaution.png",
+          label: "Reduce risk"
         }
-    ];
-      const section2 = [
+      ],
+    }
+  ];
+  const section2 = [
     {
-      tag: "Escrow Service",
-      tag1:"hjh hghgjh",
-      tag2:"hjh hghgjh",
-      title: "A trusted third party holds funds until both parties meet agreed terms",
+      tag: "Legal & Compliance Services",
+      tag1: "hjh hghgjh",
+      tag2: "hjh hghgjh",
+      title: "We handle licensing, policy drafting, and ongoing compliance checks",
       description:
         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
       ctaText: "Get started",
       ctaLink: "/get-started",
-      imageSrc: "/images/escrow2.png",
+      imageSrc: "/images/lc2.png",
     },
   ]
-  const contractData = [
-  {
-    title: "B2B",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/b2b.jpg"
-  },
-  {
-    title: "Real Estate",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/real-estate.jpg"
-  },
-  {
-    title: "Freelancing",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-    image: "/images/freelancing.jpg"
-  },
-];
-const stepperData = {
-  title: "How it works",
-  subtitle: "Choose your service, complete KYC, and make a secure payment through our platform",
-  description: "Funds are held in escrow and released only when both parties fulfill their commitments",
-  steps: [
+ const contractData = [
+   {
+  title: "Service",
+  subtitle: "From scope to timelines, everything is documented to ensure smooth collaboration",
+  items: [
     {
-      image: "/images/stepper.png",
+      title: "B2B",
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/b2b.jpg"
     },
     {
-      image: "/images/stepper.png",
+      title: "Real Estate",
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/real-estate.jpg"
     },
     {
-      image: "/images/stepper.png",
+      title: "Freelancing",
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/freelancing.jpg"
     },
-  ],
-};
+  ]
+}
 
-    return (
-        <>
-            <div className='container'>
-                <ServiceHeroSection sections={EscrowService} />
-                <ServiceSection2 sections={section2}/>
-                <ServiceContracts contracts={contractData}/>
-            </div>
-             <Cta/>
-                 <div className='container'>
-               <ServicesSteper data={stepperData}/>
-             
-             </div>
-               <ServiceBanner sections={sections}/>
-               <ServiceAdvantage sections={sections1}/>
-        </>
-    )
+  ];
+  const stepperData = {
+    title: "How it works",
+    subtitle: "Choose your service, complete KYC, and make a secure payment through our platform",
+    description: "Funds are held in escrow and released only when both parties fulfill their commitments",
+    steps: [
+      {
+        image: "/images/stepper.png",
+        description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      },
+      {
+        image: "/images/stepper.png",
+        description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      },
+      {
+        image: "/images/stepper.png",
+        description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      },
+    ],
+  };
+  const accordiansections = [
+    {
+      title: "Fully GST compliant and legally aligned",
+      subtitle: "GST-Aligned Operations",
+      imageSrc: "/images/lc4.jpg",
+      items: [
+        {
+          title: "Real-Time Invoicing",
+          description: "Instant invoice generation aligned with GST rules."
+        },
+        {
+          title: "Automated Tax Calculation",
+          description: "System calculates CGST, SGST, and IGST automatically."
+        },
+         {
+          title: "Real-Time Invoicing",
+          description: "Instant invoice generation aligned with GST rules."
+        },
+        {
+          title: "Automated Tax Calculation",
+          description: "System calculates CGST, SGST, and IGST automatically."
+        }
+      ]
+    }
+  ]
+
+
+  return (
+    <>
+      <div className='container'>
+        <ServiceHeroSection sections={EscrowService} />
+        <ServiceSection2 sections={section2} />
+        <ServiceContracts contracts={contractData} />
+      </div>
+      <ServiceAccordian sections={accordiansections} />
+      <div className='container'>
+        <ServicesSteper data={stepperData} />
+      </div>
+      <Cta/>
+      <ServiceBanner sections={sections} />
+      <ServiceAdvantage sections={sections1} />
+
+    </>
+  )
 }
 
 export default page

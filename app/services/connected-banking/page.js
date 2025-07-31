@@ -90,23 +90,30 @@ function page() {
             imageSrc: "/images/cb2.png",
         },
     ]
-    const contractData = [
-        {
-            title: "B2B",
-            description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-            image: "/images/b2b.jpg"
-        },
-        {
-            title: "Real Estate",
-            description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-            image: "/images/real-estate.jpg"
-        },
-        {
-            title: "Freelancing",
-            description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-            image: "/images/freelancing.jpg"
-        },
-    ];
+  const contractData = [
+   {
+  title: "Service",
+  subtitle: "From scope to timelines, everything is documented to ensure smooth collaboration",
+  items: [
+    {
+      title: "B2B",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/b2b.jpg"
+    },
+    {
+      title: "Fintech Startups",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/real-estate.jpg"
+    },
+    {
+      title: "Freelancing",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+      image: "/images/freelancing.jpg"
+    },
+  ]
+}
+
+  ];
     return (
         <>
             <div className='container'>

@@ -16,7 +16,6 @@ function header() {
             <button type="button" className="font-medium bg-white rounded-lg text-xs px-3 text-center text-[#39464F] h-[38px]">Login</button>
           <button type="button" className="text-white  bg-[#115D8E]  rounded-lg text-xs px-4 text-center  h-[38px]">Join</button>
             <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 " aria-controls="navbar-cta" aria-expanded="false"  onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <span className="sr-only">Open main menu</span>
               <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                 <path stroke="currentColor"  d="M1 1h15M1 7h15M1 13h15" />
               </svg>
@@ -31,24 +30,44 @@ function header() {
                 <Link href="/about" className="block py-2 px-3 md:p-0  text-xs hover:text-[#115D8E]  ">About</Link>
               </li>
               <li>
-                <details className="relative group">
-                  <summary className="cursor-pointer hover:text-[#115D8E] text-xs flex items-center">
-                    Services
-                    <svg
-                      className="w-3 h-3 ml-1 transition-transform group-open:rotate-180"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </summary>
-                  <div className="absolute mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-40 z-50">
-                    <Link href="/services/web-development" className="block px-4 py-2 text-xs">Web Development</Link>
-                    <Link href="/services/mobile-apps" className="block px-4 py-2 text-xs">Mobile Apps</Link>
-                    <Link href="/services/seo" className="block px-4 py-2 text-xs">SEO</Link>
-                  </div>
-                </details>
+               <div className="relative group">
+  <div className="cursor-pointer hover:text-[#115D8E] text-xs flex items-center">
+    Services
+    <svg
+      className="w-3 h-3 ml-1 transition-transform group-hover:rotate-180"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+
+  <div
+    className="absolute mt-3 left-0 bg-white border border-gray-200 rounded-xl shadow-[0_8px_30px_rgba(138,173,187)] 
+    w-96 z-50 grid grid-cols-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
+  >
+    <Link href="/services/switch" className="block px-4 py-3 text-xs hover-underline">
+      Switch Service
+    </Link>
+    <Link href="/services/aigf" className="block px-4 py-3 text-xs hover-underline">
+      AIGF License Assistance
+    </Link>
+    <Link href="/services/escrow" className="block px-4 py-3 text-xs hover-underline">
+      Escrow Service
+    </Link>
+    <Link href="/services/legal-compliance" className="block px-4 py-3 text-xs hover-underline">
+      Legal & Compliance Services
+    </Link>
+    <Link href="/services/connected-banking" className="block px-4 py-3 text-xs hover-underline">
+      Connected Banking
+    </Link>
+    <Link href="/services/utility" className="block px-4 py-3 text-xs hover-underline">
+      Utility Services
+    </Link>
+  </div>
+</div>
+
               </li>
                <li>
                 <Link href="/blog" className="block py-2 px-3 md:p-0 text-xs hover:text-[#115D8E] ">Blog</Link>
