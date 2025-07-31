@@ -22,9 +22,9 @@ const sections = [
 ];
 const sections1 = [
   {
-    title: "Fully Compliant, Legally Secure",
+    title: "Requirements & Documentation Guide",
     description:
-      "We operate under full legal frameworks, ensuring all our services are compliant with applicable laws and regulations",
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,",
     imageSrc: "/images/cybersecurity.jpg",
     features: [
       {
@@ -108,20 +108,26 @@ function page() {
     image: "/images/freelancing.jpg"
   },
 ];
-const steps = [
-  {
-    image: "/images/stepper.png",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-  },
-  {
-    image: "/images/stepper.png",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-  },
-  {
-    image: "/images/stepper.png",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-  },
-];
+const stepperData = {
+  title: "Service Support Steps",
+  subtitle: "We guide you step by step from eligibility check and document preparation to application submission and approval",
+  description: "Our team ensures smooth communication and ongoing support throughout the entire process",
+  steps: [
+    {
+      image: "/images/stepper.png",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+    },
+    {
+      image: "/images/stepper.png",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+    },
+    {
+      image: "/images/stepper.png",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+    },
+  ],
+};
+
 const plans = [
     {
       title: 'Creator',
@@ -185,7 +191,7 @@ const plans = [
              <ServiceBanner sections={sections}/>
                  <div className='container'>
                          <ServiceContracts contracts={contractData}/>
-               <ServicesSteper steps={steps}/>
+               <ServicesSteper data={stepperData}/>
              </div>
                <ServiceAdvantage sections={sections1}/>
                <Cta/>

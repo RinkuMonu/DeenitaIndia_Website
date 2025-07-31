@@ -107,20 +107,25 @@ function page() {
     image: "/images/freelancing.jpg"
   },
 ];
-const steps = [
-  {
-    image: "/images/stepper.png",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-  },
-  {
-    image: "/images/stepper.png",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-  },
-  {
-    image: "/images/stepper.png",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-  },
-];
+const stepperData = {
+  title: "How it works",
+  subtitle: "Choose your service, complete KYC, and make a secure payment through our platform",
+  description: "Funds are held in escrow and released only when both parties fulfill their commitments",
+  steps: [
+    {
+      image: "/images/stepper.png",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+    },
+    {
+      image: "/images/stepper.png",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+    },
+    {
+      image: "/images/stepper.png",
+      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+    },
+  ],
+};
 
     return (
         <>
@@ -131,7 +136,7 @@ const steps = [
             </div>
              <Cta/>
                  <div className='container'>
-               <ServicesSteper steps={steps}/>
+               <ServicesSteper data={stepperData}/>
              
              </div>
                <ServiceBanner sections={sections}/>
