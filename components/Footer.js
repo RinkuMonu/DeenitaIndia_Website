@@ -74,15 +74,15 @@ function Footer() {
                   <div>
                     <p className="font-semibold">HEAD OFFICE</p>
                     <div className='flex items-start'>
-                      <FaLocationDot className='text-xl text-[#0E91C9] mt-1' />
+                      <FaLocationDot className='text-3xl text-[#0E91C9] mt-1' />
                       <p className="pl-3">Plot No 97, Dakshinpuri - I, Shrikishan, Sanganer, Jagatpura, Jaipur Rajasthan, India, 302017</p>
                     </div>
                   </div>
                   <div>
                     <p className="font-semibold">COORPORATE OFFICE</p>
                     <div className='flex items-start'>
-                      <FaLocationDot className='text-2xl text-[#0E91C9] mt-1' />
-                      <p className="pl-3">Office No. 101/2, ‘Vakratunda Corporate Park Premises Co-operative Society Limited, Off. Aarey Road, Goregaon (East), Mumbai - 400 063</p>
+                      <FaLocationDot className='text-5xl text-[#0E91C9] mt-1' />
+                      <p className="pl-3">Office No. 101/2, ‘Vakratunda Corporate Park Premises Co-operative Society Limited, Off. Aarey Road, Goregaon (East), Mumbai - 400063</p>
                     </div>
                   </div>
                   <div className='flex items-start'>
