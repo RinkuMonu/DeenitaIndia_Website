@@ -101,7 +101,7 @@ const [formData, setFormData] = useState({
             </div>
           </div>
 
-          <div className="hidden md:block md:absolute right-4 lg:right-8 xl:right-40 top-[90px]">
+          <div className="hidden md:block md:absolute right-4 lg:right-8 xl:right-40 top-[90px] transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <div className="rounded-xl overflow-hidden shadow-xl">
               <Image
                 src="/Image/contact-banner-img.png"
@@ -119,7 +119,7 @@ const [formData, setFormData] = useState({
       <section className="mt-8 lg:mt-40">
         <div className="bg-white flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           {/* Contact Form */}
-          <div className="w-full lg:max-w-md bg-white rounded-2xl shadow-[1px_4px_10px_2px_rgba(0,0,0,0.25)] p-6 md:p-8">
+          <div className="w-full lg:max-w-md bg-white rounded-2xl shadow-[1px_4px_10px_2px_rgba(0,0,0,0.25)] p-6 md:p-8 transform transition duration-300 hover:scale-105 hover:shadow-xl">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">Contact Us</h2>
 
       <form className="space-y-4" onSubmit={handleSubmit} noValidate>
@@ -313,21 +313,21 @@ const [formData, setFormData] = useState({
                     alt="Logo 1"
                     width={40}
                     height={10}
-                    className="w-8 md:w-10"
+                    className="w-8 md:w-10 transform transition duration-300 hover:scale-105"
                   />
                   <Image
                     src="/Image/logo-2.png"
                     alt="Logo 2"
                     width={40}
                     height={10}
-                    className="w-8 md:w-10"
+                    className="w-8 md:w-10 transform transition duration-300 hover:scale-105"
                   />
                   <Image
                     src="/Image/logo-3.png"
                     alt="Logo 3"
                     width={80}
                     height={30}
-                    className="w-16 md:w-20"
+                    className="w-16 md:w-20 transform transition duration-300 hover:scale-105"
                   />
                 </div>
               </div>
