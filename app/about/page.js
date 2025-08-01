@@ -127,7 +127,7 @@ export default function CompanySection() {
 
       <div className="mt-16 md:mt-32 w-full px-4 sm:px-6">
         <h3 className="relative text-3xl md:text-5xl font-bold mb-8 md:mb-14 pl-0 md:pl-32 text-center md:text-left">
-<div className="absolute w-72 h-72 bg-[#115D8E] rounded-full opacity-20 blur-3xl top-20 -left-20 z-0"></div>
+<div className="absolute w-96 h-96 bg-[#115D8E] rounded-full opacity-15 blur-3xl top-20 -left-20 z-0"></div>
           <span className="text-[#115d8e]">Our </span>
           <span className="text-gray-700">Vision & Mission</span>
         </h3>
@@ -327,7 +327,7 @@ export default function CompanySection() {
 
           {/* Button */}
           <div className="mt-8 md:mt-12 w-[max-content] mx-auto transform transition duration-300 hover:scale-105 hover:shadow-xl">
-            <Link href="/contactpage" className="bg-[#115D8E] text-white px-6 md:px-10 py-2 rounded-lg font-semibold shadow-md transition flex items-center justify-center gap-2">
+            <Link href="/contact" className="bg-[#115D8E] text-white px-6 md:px-10 py-2 rounded-lg font-semibold shadow-md transition flex items-center justify-center gap-2">
               Get started
               <Image
                 src="/Image/arrow-right.png"
@@ -344,8 +344,8 @@ export default function CompanySection() {
       {/* Media Highlights Section */}
       <section className="bg-white py-12 lg:px-32 md:py-20 px-4 sm:px-6 relative">
         <div className="max-w-7xl mx-auto">
-           <div className="absolute w-92 h-82 bg-[#115D8E] rounded-full opacity-10 blur-3xl top-140 -right-30 z-0"></div>
-          {/* Heading and Description */}
+           <div className="absolute w-96 h-96 bg-[#115D8E] rounded-full opacity-15 blur-3xl top-140 -right-20 z-0"></div>
+
           <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 md:mb-10">
             <h3 className="text-3xl md:text-5xl font-bold text-gray-800 pl-0 md:pl-10 mb-4 md:mb-0 text-center md:text-left">
               Media <span className="text-[#115D8E]">Highlights</span>
@@ -437,7 +437,7 @@ export default function CompanySection() {
     </div>
 
           <div className="mt-8 md:mt-12 text-center">
-            <Link href="/contactpage">
+            <Link href="/contact">
             <button className="px-6 md:px-8 py-2 md:py-3 rounded-lg bg-white border border-gray-300 shadow-[2px_2px_20px_0px_#8AADBB] hover:shadow-lg transition font-semibold flex items-center justify-center gap-2 mx-auto">
               Contact Us
               <Image
