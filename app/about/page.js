@@ -3,35 +3,37 @@
 import Image from "next/image";
 import Cta from "@/components/Cta";
 import Link from "next/link";
-// import AOS from "aos";
 import "aos/dist/aos.css";
+import { MdArrowOutward } from "react-icons/md";
 
+const images = [
+  "/Image/Rectangle 61.png",
+  "/Image/Rectangle 61.png",
+  "/Image/Rectangle 61.png",
+  "/Image/Rectangle 61.png",
+  "/Image/Rectangle 61.png",
+  "/Image/Rectangle 61.png",
+  "/Image/Rectangle 61.png",
+  "/Image/Rectangle 61.png",
+  "/Image/Rectangle 61.png",
+  "/images/cybersecurity.jpg",
+];
 
-const images1 = [
-  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[240px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[269px]" },
-]
-const images2 = [
-{ src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[120px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[160px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[240px]" },
-]
-const images3 = [
-  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[160px]" },
-  { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[160px]" },
-]
-
-const images4 = [
- { src: "/Image/Rectangle 61.png", w: "w-[220px]", h: "h-[269px]" },
-
-]
-
+const getRandomHeight = (index) => {
+  const heights = ["h-32", "h-64", "h-56", "h-96"];
+  return heights[index % heights.length];
+};
 
 
 export default function CompanySection() {
+  const columns = 4;
+
+  const imageColumns = Array.from({ length: columns }, (_, i) =>
+    images.filter((_, index) => index % columns === i)
+  );
+
   return (
     <div className="overflow-hidden">
-      {/* Hero Section */}
       <section className="pt-20 md:pt-32 relative before:content-[''] before:absolute before:inset-0 before:backdrop-blur-[100px] before:z-[-1] z-1 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full bg-[#eaf4fa] rounded-xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row">
@@ -127,58 +129,51 @@ export default function CompanySection() {
 
       <div className="mt-16 md:mt-32 w-full px-4 sm:px-6">
         <h3 className="relative text-3xl md:text-5xl font-bold mb-8 md:mb-14 pl-0 md:pl-32 text-center md:text-left">
-<div className="absolute w-96 h-96 bg-[#115D8E] rounded-full opacity-15 blur-3xl top-20 -left-20 z-0"></div>
+          <div className="absolute w-72 h-72 bg-[#115D8E] rounded-full opacity-20 blur-3xl top-20 -left-20 z-0"></div>
           <span className="text-[#115d8e]">Our </span>
           <span className="text-gray-700">Vision & Mission</span>
         </h3>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-0 md:px-10">
-  {/* Vision Card */}
-  <div className="bg-[#166599] text-white p-6 md:p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
-    <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-      <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 pl-10">
-        <Image
-          src="/Image/vision.png"
-          alt="Icon"
-          width={32}
-          height={36}
-        />
-        Vision
-      </h3>
-    </div>
-    <p className="text-sm md:text-base leading-relaxed mx-0 md:mx-10 text-center md:text-left">
-      At vero eos et accusamus et iusto odio dignissimos ducimus qui
-      blanditiis praesentium voluptatum deleniti atque corrupti quos
-      dolores et quas.
-    </p>
-  </div>
-
-  {/* Mission Card */}
-  <div className="bg-white border border-gray-200 text-[#166599] p-6 md:p-8 rounded-xl shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#f9f9f9]">
-    <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-      <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 pl-10">
-        <Image
-          src="/Image/Mission.png"
-          alt="Icon"
-          width={32}
-          height={36}
-        />
-        Mission
-      </h3>
-    </div>
-    <p className="text-sm md:text-base text-gray-600 leading-relaxed mx-0 md:mx-10 text-center md:text-left">
-      At vero eos et accusamus et iusto odio dignissimos ducimus qui
-      blanditiis praesentium voluptatum deleniti atque corrupti quos
-      dolores et quas.
-    </p>
-  </div>
-</div>
+          {/* Vision Card */}
+          <div className="bg-[#166599] text-white p-6 md:p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+              <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 pl-10">
+                <Image
+                  src="/Image/vision.png"
+                  alt="Icon"
+                  width={32}
+                  height={36}
+                />
+                Vision
+              </h3>
+            </div>
+            <p className="text-sm md:text-base leading-relaxed mx-0 md:mx-10 text-center md:text-left">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas.
+            </p>
+          </div>
+          <div className="bg-white border border-gray-200 text-[#166599] p-6 md:p-8 rounded-xl shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#f9f9f9]">
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+              <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 pl-10">
+                <Image
+                  src="/Image/Mission.png"
+                  alt="Icon"
+                  width={32}
+                  height={36}
+                />
+                Mission
+              </h3>
+            </div>
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed mx-0 md:mx-10 text-center md:text-left">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas.
+            </p>
+          </div>
+        </div>
 
       </div>
-
-
-
-
-
       <section className="w-full py-8 md:py-12 overflow-hidden relative bg-cover bg-center bg-no-repeat px-4 sm:px-6">
         <div
           className="relative z-10 bg-white bg-opacity-90 backdrop-blur-[100px] rounded-lg mx-auto max-w-7xl p-4 md:p-6"
@@ -232,15 +227,15 @@ export default function CompanySection() {
       </section>
 
 
-  <Cta/>
+      <Cta />
 
 
       <section className="py-12 md:py-16 px-4 sm:px-6 bg-white relative">
-          <div className="absolute w-82 h-82 bg-[#115D8E] rounded-full opacity-15 blur-3xl top-70 -left-20 z-0"></div>
+        <div className="absolute w-82 h-82 bg-[#115D8E] rounded-full opacity-15 blur-3xl top-70 -left-20 z-0"></div>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
 
           <div>
-            <h3  className="text-3xl md:text-[48px] font-bold text-gray-800 leading-snug">
+            <h3 className="text-3xl md:text-[48px] font-bold text-gray-800 leading-snug">
               Proud Moments & <br />
               <span className="text-[#2E709B]">Achievements</span>
             </h3>
@@ -252,7 +247,7 @@ export default function CompanySection() {
           </div>
 
           {/* Right Grid Box */}
-          <div  className="grid grid-cols-2 gap-4 md:gap-8 p-4 md:p-8 border-0.9 rounded-xl shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-xl">
+          <div className="grid grid-cols-2 gap-4 md:gap-8 p-4 md:p-8 border-0.9 rounded-xl shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-xl">
             {[
               { value: "9+", label: "Years" },
               { value: "99%", label: "Certified" },
@@ -340,116 +335,87 @@ export default function CompanySection() {
           </div>
         </div>
       </section>
+      <section>
+        <div className='md:flex justify-between align-middle'>
+          <p className="heading font-semibold ">
+            Media <span className="theme-text">Highlights</span>
+          </p>
+          <p className='md:max-w-sm pt-4'>Our work and impact have been featured across trusted media platforms.Explore what the press is saying about us.</p>
+        </div>
+        <div className="relative w-full max-h-[80vh] overflow-hidden max-w-6xl mx-auto   my-10 rounded-xl">
+          <div className="flex gap-4 w-full overflow-hidden">
+            {imageColumns.map((col, index) => (
+              <div
+                key={index}
+                className={`flex flex-col gap-4 w-1/4 animate-${index % 2 === 0 ? "scroll-up" : "scroll-down"
+                  }`}
+              >
+                {[...col, ...col].map((src, i) => (
+                  <div
+                    key={i}
+                    className={`group relative w-full overflow-hidden rounded-xl transition-transform duration-300  ${getRandomHeight(i)}`}
+                  >
+                    <Image
+                      src={src}
+                      alt={`img-${i}`}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className={`absolute inset-0 rounded-xl bg-gradient-to-t from-[#115D8E6B] to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-10 flex flex-col justify-end p-4 pointer-events-none ${getRandomHeight(i)} `}>
+                      <div>
+                        <p className="text-2xl font-semibold">Media</p>
+                        <p className="text-sm">
+                          Consolidate your projects, clients and team into Consolidate your projects, clients and team into
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-      {/* Media Highlights Section */}
-      <section className="bg-white py-12 lg:px-32 md:py-20 px-4 sm:px-6 relative">
-        <div className="max-w-7xl mx-auto">
-           <div className="absolute w-96 h-96 bg-[#115D8E] rounded-full opacity-15 blur-3xl top-140 -right-20 z-0"></div>
+                ))}
 
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 md:mb-10">
-            <h3 className="text-3xl md:text-5xl font-bold text-gray-800 pl-0 md:pl-10 mb-4 md:mb-0 text-center md:text-left">
-              Media <span className="text-[#115D8E]">Highlights</span>
-            </h3>
-            <p className="text-gray-600 max-w-md text-sm md:text-base text-center md:text-left">
-              Our work and impact have been featured across trusted media
-              platforms.
-              <br className="hidden md:block" />
-              Explore what the press is saying about us.
-            </p>
+              </div>
+            ))}
           </div>
 
+          <style jsx>{`
+    @keyframes scroll-up {
+      0% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
 
-         <div className="flex gap-3 align-item-center">
+    @keyframes scroll-down {
+      0% {
+        transform: translateY(-50%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
 
-      {/* <div className="w-[160px] h-[240px] bg-[#0E2A38]/80 text-white rounded-xl p-4 backdrop-blur-lg flex flex-col justify-center shadow-md">
-        <h2 className="text-2xl font-bold mb-1">Media</h2>
-        <p className="text-sm">
-          Consolidate your projects, clients and team into Consolidate your
-          projects, clients and team into
-        </p>
-      </div> */}
+    .animate-scroll-up {
+      animation: scroll-up 30s linear infinite;
+    }
+
+    .animate-scroll-down {
+      animation: scroll-down 30s linear infinite;
+    }
+  `}</style>
 
 
-     <div className="grid grid-cols-1">
-       {images1.map((img, idx) => (
-        <div
-          key={idx}
-          className={`relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 ${img.w} ${img.h}`}
-        >
-          <Image
-            src={img.src}
-            alt={`Media ${idx + 1}`}
-            width={500}
-            height={500}
-            className="w-full h-full object-cover"
-          />
         </div>
-      ))}
-     </div>
-  <div className="grid grid-cols-1">
-{images2.map((img, idx) => (
-        <div
-          key={idx}
-          className={`relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ${img.w} ${img.h}`}
-        >
-          <Image
-            src={img.src}
-            alt={`Media ${idx + 1}`}
-            width={500}
-            height={500}
-            className="w-full h-full object-cover"
-          />
-        </div>
-      ))}
-</div>
- <div className="grid grid-cols-1">
-      {images3.map((img, idx) => (
-        <div
-          key={idx}
-          className={`relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ${img.w} ${img.h}`}
-        >
-          <Image
-            src={img.src}
-            alt={`Media ${idx + 1}`}
-            width={500}
-            height={500}
-            className="w-full h-full object-cover"
-          />
-        </div>
-      ))}
-      </div>
- <div className="grid grid-cols-1">
-      {images4.map((img, idx) => (
-        <div
-          key={idx}
-          className={`relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ${img.w} ${img.h}`}
-        >
-          <Image
-            src={img.src}
-            alt={`Media ${idx + 1}`}
-            width={500}
-            height={500}
-            className="w-full h-full object-cover"
-          />
-        </div>
-      ))}
-      </div>
-    </div>
 
-          <div className="mt-8 md:mt-12 text-center">
-            <Link href="/contact">
-            <button className="px-6 md:px-8 py-2 md:py-3 rounded-lg bg-white border border-gray-300 shadow-[2px_2px_20px_0px_#8AADBB] hover:shadow-lg transition font-semibold flex items-center justify-center gap-2 mx-auto">
-              Contact Us
-              <Image
-                src="/Image/arrow-top-right.png"
-                alt="Icon"
-                width={20}
-                height={20}
-                className="w-4 h-4 md:w-5 md:h-5"
-              />
-            </button>
-            </Link>
-          </div>
+        <div className="flex mb-10 justify-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 hover:bg-[#115D8E] text-[#115D8E] border-2 border-gray-200  hover:text-white font-medium text-sm px-4 py-2 rounded-4xl transition"
+          >
+            Connect
+            <MdArrowOutward className="ml-1 text-bold" />
+          </Link>
         </div>
       </section>
     </div>
