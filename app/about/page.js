@@ -5,6 +5,7 @@ import Cta from "@/components/Cta";
 import Link from "next/link";
 import "aos/dist/aos.css";
 import { MdArrowOutward } from "react-icons/md";
+import { useEffect, useState } from "react";
 
 const images = [
   "/Image/Rectangle 61.png",
@@ -16,7 +17,7 @@ const images = [
   "/Image/Rectangle 61.png",
   "/Image/Rectangle 61.png",
   "/Image/Rectangle 61.png",
-  "/images/cybersecurity.jpg",
+  "/Image/Rectangle 61.png",
 ];
 
 const getRandomHeight = (index) => {
@@ -26,7 +27,28 @@ const getRandomHeight = (index) => {
 
 
 export default function CompanySection() {
-  const columns = 4;
+ const [columns, setColumns] = useState(4);
+
+  useEffect(() => {
+    const updateColumns = () => {
+      if (window.innerWidth < 767) {
+        setColumns(2); // Mobile & small screens
+      }
+       else {
+        setColumns(4); // md and up
+      }
+    };
+
+    // Initial check
+    updateColumns();
+
+    // Listen to screen resize
+    window.addEventListener("resize", updateColumns);
+
+    // Cleanup on unmount
+    return () => window.removeEventListener("resize", updateColumns);
+  }, []);
+
 
   const imageColumns = Array.from({ length: columns }, (_, i) =>
     images.filter((_, index) => index % columns === i)
@@ -35,9 +57,9 @@ export default function CompanySection() {
   return (
     <div className="overflow-hidden">
       <section className="pt-20 md:pt-32 relative before:content-[''] before:absolute before:inset-0 before:backdrop-blur-[100px] before:z-[-1] z-1 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
+        <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full bg-[#eaf4fa] rounded-xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row">
-            <div className="w-full md:w-3/5">
+            <div className="w-full lg:w-3/5">
               <span className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white text-sm px-4 py-1 rounded-full mb-4">
                 About Company
               </span>
@@ -115,7 +137,7 @@ export default function CompanySection() {
                   alt="Team working"
                   width={398}
                   height={190}
-                  className="banner-overlaid-img object-cover h-[540px]"
+                  className="banner-overlaid-img object-cover h-[474px]"
                 />
               </div>
             </div>
@@ -133,11 +155,11 @@ export default function CompanySection() {
           <span className="text-[#115d8e]">Our </span>
           <span className="text-gray-700">Vision & Mission</span>
         </h3>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-0 md:px-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-0 md:px-0">
           {/* Vision Card */}
-          <div className="bg-[#166599] text-white p-6 md:p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+          <div className="bg-[#166599] text-white p-6 md:p-8 rounded-xl shadow-[4px_4px_4px_2px_#00000040] transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-              <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 pl-10">
+              <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-4 md:pl-10">
                 <Image
                   src="/Image/vision.png"
                   alt="Icon"
@@ -153,9 +175,9 @@ export default function CompanySection() {
               dolores et quas.
             </p>
           </div>
-          <div className="bg-white border border-gray-200 text-[#166599] p-6 md:p-8 rounded-xl shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#f9f9f9]">
+          <div className="bg-white border border-gray-200 text-[#166599] p-6 md:p-8 rounded-xl shadow-[4px_4px_4px_2px_#00000040] transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#f9f9f9]">
             <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-              <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 pl-10">
+              <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 md:pl-10">
                 <Image
                   src="/Image/Mission.png"
                   alt="Icon"
@@ -174,14 +196,15 @@ export default function CompanySection() {
         </div>
 
       </div>
-      <section className="w-full py-8 md:py-12 overflow-hidden relative bg-cover bg-center bg-no-repeat px-4 sm:px-6">
+      <section className="w-full py-8 md:py-12 overflow-hidden relative bg-cover bg-center bg-no-repeat md:mt-8">
         <div
           className="relative z-10 bg-white bg-opacity-90 backdrop-blur-[100px] rounded-lg mx-auto max-w-7xl p-4 md:p-6"
           style={{ backgroundImage: 'url("/Image/about-2-bg.png")' }}
         >
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-            <div className="absolute top-0 left-0 h-full w-2 md:w-7 bg-[#115d8e]" />
+           <div className="absolute top-0 left-0 h-full w-2 md:w-7 bg-[#115d8e]" />
             <div className="absolute top-0 right-0 h-full w-2 md:w-7 bg-[#115d8e]" />
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+
             <div className="w-full md:w-[40%] flex justify-center">
               <div className="relative rounded-xl overflow-hidden md:left-10 w-full max-w-[400px] transform transition duration-300 hover:scale-105 hover:shadow-xl">
                 <Image
@@ -199,7 +222,7 @@ export default function CompanySection() {
               </div>
             </div>
 
-            <div className="w-full md:w-[60%] mt-6 md:mt-0">
+            <div className="w-full md:w-[60%] mt-6 md:mt-0 sm:p-12">
               <h3 className="text-3xl md:text-[48px] font-bold text-[#115d8e] leading-tight mb-2">
                 We started this journey
                 <br />
@@ -230,7 +253,7 @@ export default function CompanySection() {
       <Cta />
 
 
-      <section className="py-12 md:py-16 px-4 sm:px-6 bg-white relative">
+     <section className="px-4 py-8 sm:px-6 md:py-12 lg:px-8 xl:px-0 bg-white relative">
         <div className="absolute w-82 h-82 bg-[#115D8E] rounded-full opacity-15 blur-3xl top-70 -left-20 z-0"></div>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
 
@@ -274,7 +297,7 @@ export default function CompanySection() {
         </div>
       </section>
 
-      {/* Trust Section */}
+
       <section className="py-12 md:py-20 bg-white px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-block px-4 py-1 text-sm rounded-full bg-gradient-to-r from-[#777777] to-[#115D8E] text-white font-medium mb-4">
@@ -293,7 +316,7 @@ export default function CompanySection() {
             compromise on it.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-center px-0 md:pl-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-center md:px-16">
             {[1, 2, 3, 4].map((item) => (
               <div
                 key={item}
@@ -335,7 +358,7 @@ export default function CompanySection() {
           </div>
         </div>
       </section>
-      <section>
+      <section className="px-6 sm:px-12 md:px-24">
         <div className='md:flex justify-between align-middle'>
           <p className="heading font-semibold ">
             Media <span className="theme-text">Highlights</span>
@@ -347,7 +370,7 @@ export default function CompanySection() {
             {imageColumns.map((col, index) => (
               <div
                 key={index}
-                className={`flex flex-col gap-4 w-1/4 animate-${index % 2 === 0 ? "scroll-up" : "scroll-down"
+                className={`flex flex-col gap-4 w-1/2 animate-${index % 2 === 0 ? "scroll-up" : "scroll-down"
                   }`}
               >
                 {[...col, ...col].map((src, i) => (
