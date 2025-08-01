@@ -11,26 +11,28 @@ export default function ServiceSection2({ sections }) {
           key={index}
           className="flex flex-col md:flex-row items-center gap-8 p-6 md:p-12 "
         >
-          <div className="w-full md:w-1/2 flex justify-center relative overflow-visible">
-            <div className="relative w-[300px] h-[300px] rounded-xl bg-gradient-to-t from-white to-[#115d8e] shadow-lg overflow-visible flex items-center justify-center">
-              <Image
-                src={section.imageSrc}
-                alt="Feature"
-                width={400}
-                height={300}
-                className="h-full w-auto object-cover object-center"
-              />
-            <div className="absolute animate-float-tag top-20 -right-5 bg-white text-black px-3 py-1 rounded-3xl shadow-lg z-20">
-  {section.tag1}
-</div>
-<div className="absolute animate-float-tag top-36 -right-8 bg-white text-black px-3 py-1 rounded-3xl shadow-lg z-20">
-  {section.tag2}
-</div>
+          <div className="w-full md:w-2/5  relative">
+            <div className="relative w-[300px] h-[300px] rounded-xl bg-gradient-to-t from-white to-[#115d8e] shadow-lg  overflow-visible">
+              <div className="absolute -top-8 -left-10 w-[120%] h-[110%]">
+                <Image
+                  src={section.imageSrc}
+                  alt="Feature"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="absolute animate-float-tag top-20 -right-5 bg-white text-black px-3 py-1 rounded-3xl shadow-lg z-20">
+                {section.tag1}
+              </div>
+              <div className="absolute animate-float-tag top-36 -right-8 bg-white text-black px-3 py-1 rounded-3xl shadow-lg z-20">
+                {section.tag2}
+              </div>
             </div>
           </div>
 
 
-          <div className="w-full md:w-1/2 space-y-4">
+          <div className="w-full md:w-3/5 space-y-4">
             <p className="text-2xl md:text-4xl max-w-lg font-bold text-gray-800">
               <span className="text-[#115D8E] text-base font-semibold me-2">{section.tag}</span>
               {section.title}

@@ -1,4 +1,5 @@
 import Cta from '@/components/Cta';
+import OrganizationalStructuring from '@/components/Organizational';
 import ServiceAccordian from '@/components/ServiceAccordian';
 import ServiceAdvantage from '@/components/ServiceAdvantage';
 import ServiceBanner from '@/components/ServiceBanner';
@@ -175,6 +176,7 @@ function page() {
       <Cta/>
       <ServiceBanner sections={sections} />
       <ServiceAdvantage sections={sections1} />
+      <OrganizationalStructuring/>
 
     </>
   )

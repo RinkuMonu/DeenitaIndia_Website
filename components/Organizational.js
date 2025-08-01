@@ -27,16 +27,14 @@ export default function OrganizationalStructuring() {
   const [activeTab, setActiveTab] = useState(1);
 
   return (
-    <section className="px-4 py-12 max-w-5xl mx-auto">
-      {/* Heading */}
+   <div className="container">
+     <section className=" py-12  mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold text-[#115D8E] pb-2">
         Organizational
       </h2>
       <h3 className="text-3xl md:text-4xl font-bold text-gray-700 mb-8">
         Structuring
       </h3>
-
-      {/* Tabs */}
       <div className="flex flex-wrap gap-4 mb-6">
         {tabs.map((tab) => (
           <button
@@ -44,7 +42,7 @@ export default function OrganizationalStructuring() {
             onClick={() => setActiveTab(tab.id)}
             className={`flex items-center gap-2 px-8 py-4 rounded-lg border text-sm font-medium transition-all duration-200 ${
               activeTab === tab.id
-                ? "border-[#0E91C9] text-[#0E91C9] bg-white shadow"
+                ? "border-[#115D8E] text-[#115D8E] bg-white shadow"
                 : "border-gray-300 text-gray-600 bg-white"
             }`}
           >
@@ -57,11 +55,10 @@ export default function OrganizationalStructuring() {
           </button>
         ))}
       </div>
-
-      {/* Content Box */}
       <div className="bg-[#F2F8FB] p-6 rounded-xl shadow-md  text-[16px] text-gray-700 leading-relaxed">
         {tabs.find((tab) => tab.id === activeTab)?.content}
       </div>
     </section>
+   </div>
   );
 }

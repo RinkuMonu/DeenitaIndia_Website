@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ServicesSteper = ({ data }) => {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto md:text-center">
+    <section className="py-16 max-w-7xl mx-auto md:text-center">
       <p className="text-[#1476ad] font-medium text-sm mb-2">{data.title}</p>
       <h2 className="text-3xl md:text-4xl font-semibold mb-3">
         {data.subtitle}

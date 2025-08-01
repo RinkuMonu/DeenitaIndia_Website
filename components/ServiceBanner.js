@@ -41,7 +41,7 @@ export default function ServiceBanner({ sections }) {
             </div>
 
             <div className="flex-1 w-full max-w-md md:max-w-none">
-              <div className="rounded-xl overflow-hidden p-6 md:p-10 shadow-md">
+              <div className="rounded-xl overflow-hidden py-6 md:p-10 shadow-md">
                 <Image
                   src={section.imageSrc}
                   alt="Section visual"
