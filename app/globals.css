@@ -23,8 +23,8 @@ html, body {
   color: #115D8E;
 }
 .container{
-  padding-left: 156px;
-  padding-right: 156px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 @media (max-width: 426px){
   .container{

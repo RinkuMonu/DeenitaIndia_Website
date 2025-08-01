@@ -7,6 +7,7 @@ import Partners from "@/components/Partners";
 import ProjectCarousel from "@/components/Slider";
 import Testonomials from "@/components/Testonomials";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -27,8 +28,8 @@ export default function Home() {
               one integrated, easy-to-use platform
             </p>
             <div className="flex flex-col md:flex-row gap-4">
-              <button type="button" className="text-white shadow-[0_8px_30px_rgba(138,173,187)]  font-semibold bg-[#115D8E] py-3 rounded-lg text-base px-6 text-center w-fit  ">Get started</button>
-              <button type="button" className="font-semibold bg-white rounded-lg shadow-[0_8px_30px_rgba(138,173,187)] text-base px-6 py-3 text-center text-[#39464F] w-fit">Book a demo</button>
+              <Link href="/login" className="text-white shadow-[0_8px_30px_rgba(138,173,187)]  font-semibold bg-[#115D8E] py-3 rounded-lg text-base px-6 text-center w-fit  ">Get started</Link>
+              <Link href="/contact" className="font-semibold bg-white rounded-lg shadow-[0_8px_30px_rgba(138,173,187)] text-base px-6 py-3 text-center text-[#39464F] w-fit">Book a demo</Link>
             </div>
             <div>
               <p className="text-[40px] font-semibold"><span className="theme-text">100+ </span>Projects</p>

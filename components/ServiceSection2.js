@@ -9,11 +9,11 @@ export default function ServiceSection2({ sections }) {
       {sections.map((section, index) => (
         <div
           key={index}
-          className="flex flex-col md:flex-row items-center gap-8 p-6 md:p-12 "
+          className="flex flex-col md:flex-row items-center gap-16 p-6 md:p-12 "
         >
           <div className="w-full md:w-2/5  relative">
-            <div className="relative w-[300px] h-[300px] rounded-xl bg-gradient-to-t from-white to-[#115d8e] shadow-lg  overflow-visible">
-              <div className="absolute -top-8 -left-10 w-[120%] h-[110%]">
+            <div className="relative w-[150px] h-[150px] md:w-[300px] md:h-[300px] rounded-xl bg-gradient-to-t from-white to-[#115d8e] shadow-lg  overflow-visible">
+              <div className="absolute -top-4 md:-top-8 md:-left-10 w-[120%] h-[110%]">
                 <Image
                   src={section.imageSrc}
                   alt="Feature"

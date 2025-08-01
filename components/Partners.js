@@ -25,8 +25,8 @@ export default function Partners() {
               Explore expert articles, tips, and thought leadership.
             </p>
           </div>
-     <div className="w-full ">
-          <Marquee pauseOnHover gradient={false} speed={40} className="gap-6 max-w-xl">
+     <div className="max-w-xl ">
+          <Marquee pauseOnHover gradient={false} speed={40} >
         {partnerLogos.map((logo, i) => (
           <div
             key={i}

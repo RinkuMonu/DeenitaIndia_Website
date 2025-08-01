@@ -41,7 +41,7 @@ deleniti atque corrupti quos dolores et quas`,
                                 </p>
                             </div>
                               <div className='col-span-1 mx-auto mt-1 md:mt-0 '>
-                                <Link href="/" className="group inline-flex flex-col items-center justify-center px-2 py-1 md:py-6 text-[#2E709B] bg-white text-xs border-2 border-[#2E709B] font-medium rounded-2xl md:rounded-full transition-all duration-300 ease-in-out hover:bg-[#2E709B] hover:text-white">
+                                <Link href="/contact" className="group inline-flex flex-col items-center justify-center px-2 py-1 md:py-6 text-[#2E709B] bg-white text-xs border-2 border-[#2E709B] font-medium rounded-2xl md:rounded-full transition-all duration-300 ease-in-out hover:bg-[#2E709B] hover:text-white">
                                 <MdArrowOutward  className="text-xl mx-auto" />
                                 View Details
                             </Link></div>
