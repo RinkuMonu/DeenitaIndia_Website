@@ -5,6 +5,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 
 const projects = [
@@ -44,10 +45,12 @@ const projects = [
 export default function ProjectCarousel() {
   return (
     <section className="container py-10">
-      <p className="heading font-semibold ">
+<div>
+        <p className="heading font-semibold mb-8">
         Delivering Expert <span className="theme-text">Services</span> <br></br> that drive results
       </p>
-      <button type="button" className="text-white shadow-[0_8px_30px_rgba(138,173,187)] me-4 font-semibold bg-[#115D8E] py-3 rounded-lg text-base px-6 text-center mt-3 mb-7">Get in touch</button>
+      <Link href="/login" className="text-white shadow-[0_8px_30px_rgba(138,173,187)] me-4 font-semibold bg-[#115D8E] py-3 rounded-lg text-base px-6 text-center">Get in touch</Link>
+</div>
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
@@ -61,6 +64,7 @@ export default function ProjectCarousel() {
           1024: { slidesPerView: 3 },
           1280: { slidesPerView: 4 },
         }}
+        className="my-15"
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>

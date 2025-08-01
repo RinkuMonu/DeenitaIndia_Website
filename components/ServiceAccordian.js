@@ -48,14 +48,14 @@ const ServiceAccordian = ({ sections }) => {
                                 ))}
                             </div>
                         </div>
-                        <div className="w-full lg:w-1/2 flex flex-col ">
-                            <div className="rounded-2xl overflow-hidden flex justify-end">
+                        <div className="w-full lg:w-1/2 flex flex-col items-center">
+                            <div className="rounded-2xl overflow-hidden shadow-lg flex justify-end">
                                 <Image
                                     src={section.imageSrc}
                                     alt="Section visual"
                                     width={512}
                                     height={512}
-                                    className="rounded-2xl"
+                                    className=""
                                 />
                             </div>
                             <Link

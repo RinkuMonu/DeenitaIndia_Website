@@ -127,18 +127,18 @@ export default function BlogSection() {
                             <p className="theme-text">Latest Posts</p>
                             <p className="pt-4 text-4xl font-semibold">Fresh ideas, real stories, and smart insights.</p>
                         </div>
-                        <div className="flex  items-center mx-auto max-w-5xl gap-4 mt-8 mb-4">
+                        <div className="sm:flex  items-center mx-auto max-w-5xl gap-4 mt-8 mb-4">
                             <input
                                 type="text"
                                 placeholder="Search Articles..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                className="w-full lg:w-2/3 border border-gray-300 bg-gray-100 rounded-md px-10 font-semibold py-2"
+                                className="w-full mb-2 sm:mb-0 lg:w-2/3 border border-gray-300 bg-gray-100 rounded-md px-10 font-semibold py-2"
                             />
                             <select
                                 value={selectedCategory}
                                 onChange={(e) => setSelectedCategory(e.target.value)}
-                                className="w-full lg:w-1/3 border border-gray-300 bg-gray-100 rounded-md px-4 py-2"
+                                className="w-full lg:w-1/3 border border-gray-300 bg-gray-100  rounded-md px-4 py-2"
                             >
                                 <option value="">All Categories</option>
                                 {[...new Set(blogPosts.map((p) => p.category))].map((cat, idx) => (
@@ -172,16 +172,16 @@ export default function BlogSection() {
                                             className="object-cover rounded-xl w-full h-full transition-transform duration-500 group-hover:scale-105 "
                                         />
                                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-[#115D8E54] via-[#115D8E54]/33 to-[#115D8E54] z-10" />
-                                        <button className="absolute inline-flex z-20 top-27 left-1/2 font-bold -translate-x-1/2 bg-white theme-text px-4 py-2 text-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                        <Link href="/blog"  className="absolute inline-flex z-20 top-27 left-1/2 font-bold -translate-x-1/2 bg-white theme-text px-4 py-2 text-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500">
                                             Read More <MdArrowOutward className="font-bold text-lg ms-1" />
-                                        </button>
+                                        </Link >
                                     </div>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="flex justify-between items-center mt-10">
-                            <div className="flex gap-2">
+                        <div className="sm:flex justify-between items-center mt-10">
+                            <div className="flex justify-center sm:justify-end gap-2">
                                 {Array.from({ length: 4 }).map((_, i) => {
                                     const half = Math.floor(4 / 2);
                                     let start = Math.max(1, currentPage - half);
@@ -210,7 +210,7 @@ export default function BlogSection() {
                                     );
                                 })}
                             </div>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 pt-4 justify-center sm:justify-end sm:mt-0">
                                 <button
                                     onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
                                     disabled={currentPage === 1}

@@ -19,7 +19,7 @@ export default function ServiceAdvantage({ sections }) {
                             className="rounded-2xl max-h-[280px] w-auto"
                         />
                     </div>
-                    <div className="flex-1 flex flex-col justify-center px-4">
+                    <div className="flex-1 flex flex-col justify-center">
                         <p className="text-4xl font-bold max-w-md">
                             {section.title.split(" ").map((word, i, arr) => {
                                 const shouldHighlight =

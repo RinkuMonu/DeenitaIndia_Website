@@ -33,7 +33,7 @@ function HomeSteps() {
                     <div className="max-w-3xl mx-auto mt-7" key={index}>
                         <div
 
-                            className={`rounded-4xl md:rounded-full max-w-lg bg-[#ECF5FB] shadow-[0_3px_3px_rgba(141,220,251)]  ${index % 2 === 0 ? "ms-auto md:me-12" : "md:mr-auto"}`}
+                            className={`rounded-4xl md:rounded-full max-w-lg bg-[#ECF5FB] shadow-[0_3px_3px_rgba(141,220,251)]  ${index % 2 === 0 ? "ms-auto md:me-12 " : "md:mr-auto"}`}
                             data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
                         >
                             <div
@@ -41,7 +41,7 @@ function HomeSteps() {
           ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}
                             >
                                 <p className="text-2xl font-semibold lg:max-w-[250px] text-center">{step.label}</p>
-                                <div className="text-9xl"><Image src={step.icon} width={60} height={60} alt="sevice-icons" className="mx-auto"/></div>
+                                <div className="text-9xl "><Image src={step.icon} width={60} height={60} alt="sevice-icons" className="mx-auto md:mx-0"/></div>
 
                             </div>
                         </div>
