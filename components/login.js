@@ -73,7 +73,7 @@ export default function LoginModal({ onClose }) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="email@company.com"
-              className="w-full pt-6 pb-2 px-4 border border-[#115D8E] text-gray-900 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#115D8E] focus:shadow-[0_4px_30px_rgba(138,173,187)]"
+              className="w-full pt-6 pb-2 px-4 border-2 border-gray-200 text-gray-900 rounded-xl focus:outline-none focus:ring-3 focus:ring-[#115D8E] focus:shadow-[0_4px_30px_rgba(138,173,187)]"
             />
             {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
           </div>
@@ -91,7 +91,7 @@ export default function LoginModal({ onClose }) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="*************"
-              className="w-full pt-6 pb-2 px-4 text-gray-900 border border-[#115D8E] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#115D8E]  focus:shadow-[0_0_6px_2px_rgba(17,93,142,0.4)]"
+              className="w-full pt-6 pb-2 px-4 text-gray-900 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-3 focus:ring-[#115D8E]  focus:shadow-[0_0_6px_2px_rgba(17,93,142,0.4)]"
             />
             {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
           </div>

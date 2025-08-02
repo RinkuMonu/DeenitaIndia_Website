@@ -4,7 +4,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 export default function ServiceAdvantage({ sections }) {
     return (
-        <section className="w-full py-10 container">
+        <section className="w-full py-10 ">
             {sections.map((section, idx) => (
                 <div
                     key={idx}
@@ -16,11 +16,11 @@ export default function ServiceAdvantage({ sections }) {
                             alt="Section Image"
                             width={500}
                             height={500}
-                            className="rounded-2xl max-h-[280px] w-auto"
+                            className="rounded-2xl max-h-[280px] w-auto mb-3 md:mb-0"
                         />
                     </div>
                     <div className="flex-1 flex flex-col justify-center">
-                        <p className="text-4xl font-bold max-w-md">
+                        <p className="text-3xl md:text-4xl font-bold max-w-md">
                             {section.title.split(" ").map((word, i, arr) => {
                                 const shouldHighlight =
                                     (arr.length === 1 && i === 0) ||
@@ -63,6 +63,7 @@ export default function ServiceAdvantage({ sections }) {
                             alt={feature.label}
                             width={40}
                             height={40}
+                            className="border-2 rounded-md p-1 border-gray-200"
                         />
                         <h4 className="mt-4 text-lg  text-gray-800 font-semibold">{feature.label}</h4>
                         <p className="mt-2 text-sm text-gray-600">{feature.description}</p>

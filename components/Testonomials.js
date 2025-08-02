@@ -11,7 +11,7 @@ import { useState } from "react";
 
 const testimonials = [
     {
-        name: "Anisha Parmar",
+        name: "Abjfkf jfjf",
         review: "This service exceeded all expectations. Professional, prompt, and reliable!",
         timeAgo: "2 days ago",
         image: "/images/b3.jpg",
@@ -52,7 +52,7 @@ const testimonials = [
 export default function Testonomials() {
       const [activeIndex, setActiveIndex] = useState(0)
     return (
-        <section className="container py-20 ">
+        <section className="container pt-20 text-center md:text-left">
             <p className="heading font-semibold max-w-xl">
                 Client <span className="theme-text">Experiences</span>
             </p>
@@ -63,7 +63,7 @@ export default function Testonomials() {
                 autoplay={{ delay: 3000 , disableOnInteraction: true }}
                 loop
                   centeredSlides={true}
-                spaceBetween={20}
+                spaceBetween={10}
                 slidesPerView={1.2}
                 breakpoints={{
                     640: { slidesPerView: 1.2 },
@@ -84,29 +84,29 @@ border border-gray-50 flex flex-col justify-between transition-transform duratio
           >
             {index === activeIndex && (
               <span className="absolute -top-4 -left-4 text-[6rem] flex text-[#115D8E] font-serif leading-none">
-                <img src="/images/vector6.png" width={20} height={20} alt="comma" />
-                <img src="/images/vector6.png" width={20} height={20} alt="comma" />
+                <Image src="/images/vector6.png" width={20} height={20} alt="comma" />
+                <Image src="/images/vector6.png" width={20} height={20} alt="comma" />
               </span>
             )}
-                            <div className="lg:flex items-center lg:gap-4">
+                            <div className="lg:flex items-center justify-center  lg:gap-4">
                                 <Image
                                     src={testimonial.image}
                                     alt={testimonial.name}
-                                    className="w-18 h-18 rounded-full object-cover"
+                                    className="w-18 h-18 rounded-full object-cover mx-auto md:mx-0"
                                     width={40}
                                     height={40}
                                 />
                                 <div>
                                     <h4 className="text-lg font-bold theme-text">{testimonial.name}</h4>
-                                    <p className="text-sm text-gray-500">{testimonial.post}</p>
+                                    <p className="text-sm  text-gray-500">{testimonial.post}</p>
                                 </div>
                             </div>
 
-                            <p className="mt-4 text-gray-700">"{testimonial.review}"</p>
+                            <p className="mt-4 text-gray-700 text-sm md:text-lg mb-2 md:mb-0">"{testimonial.review}"</p>
 
                             <div className="flex items-center">
                                 <Image src="/images/logo.png" width={40} height={40} alt="logo" />
-                                <span className="text-sm text-gray-400 ms-2">{testimonial.timeAgo}</span>
+                                <span className="text-sm  text-gray-400 ms-2">{testimonial.timeAgo}</span>
                             </div>
                         </div>
 

@@ -44,7 +44,7 @@ const projects = [
 
 export default function ProjectCarousel() {
   return (
-    <section className="container py-10">
+    <section className="container pt-10">
 <div>
         <p className="heading font-semibold mb-8">
         Delivering Expert <span className="theme-text">Services</span> <br></br> that drive results
@@ -69,7 +69,7 @@ export default function ProjectCarousel() {
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <div
-              className={`group relative w-full h-72 overflow-hidden rounded-lg shadow-lg transition-all duration-500 ${index % 2 === 1 ? "mt-10" : ""
+              className={`group relative w-full h-72 overflow-hidden rounded-lg shadow-lg transition-all duration-500 ${index % 2 === 1 ? "md:mt-10" : ""
                 }`}
             >
               <div className="absolute inset-0 bg-gray-900">

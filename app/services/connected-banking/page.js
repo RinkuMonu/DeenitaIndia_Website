@@ -123,12 +123,13 @@ function page() {
             <ServiceBanner sections={sections} />
             <div className='container'>
                 <ServiceContracts contracts={contractData} />
+                          <ServiceAdvantage sections={sections1} />
             </div>
-            <ServiceAdvantage sections={sections1} />
+  
             <Cta />
 
             <div className='container my-16'>
-                <div className='flex justify-between align-middle'>
+                <div className='md:flex justify-between align-middle'>
                     <p className="heading font-semibold ">
                         <span className="theme-text">Dashboard Visual </span><br></br>Overview
                     </p>

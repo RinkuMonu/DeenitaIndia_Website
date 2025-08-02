@@ -13,7 +13,7 @@ export default function ServiceHeroSection({ sections }) {
         >
          <div className="col-span-3">
            <div className="space-y-4 lg:ps-5 z-10">
-            <span className="inline-block bg-gradient-to-r from-[#601919] to-[#115D8E] text-white shadow-[0_8px_30px_rgba(138,173,187)] px-3 py-1 rounded-full text-sm font-medium">
+            <span className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white shadow-[0_8px_30px_rgba(138,173,187)] px-3 py-1 rounded-full text-sm font-medium">
               {section.tag}
             </span>
             <h1 className="text-3xl md:text-4xl font-bold text-[#0B4870] leading-snug">
