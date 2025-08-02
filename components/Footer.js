@@ -48,12 +48,12 @@ function Footer() {
                 <ul className="space-y-2 text-base">
 
     <li><Link href="/about" className="hover:text-[#0E91C9]">About Us</Link></li>
-    <li><Link href="" className="hover:text-[#0E91C9]">Services</Link></li>
-    <li><Link href="" className="hover:text-[#0E91C9]">API's</Link></li>
+    <li><Link href="/services/switch" className="hover:text-[#0E91C9]">Services</Link></li>
+    {/* <li><Link href="" className="hover:text-[#0E91C9]">API's</Link></li> */}
     <li><Link href="/blog" className="hover:text-[#0E91C9]">Blog</Link></li>
-    <li><Link href="" className="hover:text-[#0E91C9]">Our Team</Link></li>
-    <li><Link href="" className="hover:text-[#0E91C9]">Careers</Link></li>
-    <li><Link href="" className="hover:text-[#0E91C9]">Gallery</Link></li>
+    <li><Link href="/" className="hover:text-[#0E91C9]">Our Team</Link></li>
+    <li><Link href="/" className="hover:text-[#0E91C9]">Careers</Link></li>
+    <li><Link href="/" className="hover:text-[#0E91C9]">Gallery</Link></li>
   </ul>
 
 
@@ -74,18 +74,18 @@ function Footer() {
 
               <div className='mt-10 md:mt-0'>
                 <h3 className="font-bold text-lg mb-4">Contact Us</h3>
-                <div className="space-y-4 text-base">
+                <div className="space-y-4 text-sm">
                   <div>
                     <p className="font-semibold mb-2">HEAD OFFICE</p>
                     <div className='flex items-start'>
-                      <FaLocationDot className='text-2xl text-[#0E91C9] mt-1' />
+                      <FaLocationDot className='text-3xl text-[#0E91C9] mt-1' />
                       <p className="pl-3">Plot No 97, Dakshinpuri - I, Shrikishan, Sanganer, Jagatpura, Jaipur Rajasthan, India, 302017</p>
                     </div>
                   </div>
                   <div>
                     <p className="font-semibold mb-2">COORPORATE OFFICE</p>
                     <div className='flex items-start'>
-                      <FaLocationDot className='text-4xl text-[#0E91C9] mt-1' />
+                      <FaLocationDot className='text-5xl text-[#0E91C9] mt-1' />
                       <p className="pl-3">Office No. 101/2, ‘Vakratunda Corporate Park Premises Co-operative Society Limited, Off. Aarey Road, Goregaon (East), Mumbai - 400063</p>
                     </div>
                   </div>

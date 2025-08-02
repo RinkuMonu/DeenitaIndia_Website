@@ -62,23 +62,23 @@ const [formData, setFormData] = useState({
     }
   };
   return (
-    <section className="pt-20 md:pt-32 relative before:content-[''] before:absolute before:inset-0 before:backdrop-blur-[100px] before:z-[-1] z-1 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
-        <div className="w-full bg-[#eaf4fa] rounded-xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row">
-          <div className="w-full lg::w-3/5">
-            <div className="px-4 md:px-16">
-              <span className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white text-sm px-4 py-1 rounded-full mb-4">
-                Contact us anytime
-              </span>
 
-              <h1 className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#115d8e] mb-4">
-                Reach out to us we're just a message away
+   <section className="px-4 sm:px-14">
+   <section className="pt-20 md:pt-32 relative before:content-[''] before:absolute before:inset-0 before:backdrop-blur-[100px] before:z-[-1] z-1 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
+          <div className="w-full bg-[#eaf4fa] rounded-xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row">
+            <div className="w-full lg:w-3/5 md:p-6">
+              <span className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white text-sm px-4 py-1 rounded-full mb-4">
+               Contact us anytime
+              </span>
+              <h1 className="text-2xl md:text-[32px] font-bold text-[#115d8e] mb-4 md:pr-10">
+               Reach out to us we're just a message away
               </h1>
-              <p className="text-gray-800 mb-6 text-base md:text-[20px]">
-                We're here to answer your questions and provide the support you
-                need.
+              <p className="text-gray-800 mb-6 text-base md:text-[16px] md:pr-8">
+                We're here to answer your questions and provide the support you need.
               </p>
-             <Link href="/contact">
+
+               <Link href="/contact">
               <button className="flex mt-8 md:mt-16 bg-[#115d8e] hover:bg-[#006c9d] text-white font-semibold px-6 py-2 md:px-8 md:py-3 rounded-md shadow-[2px_2px_20px_0px_#8AADBB]">
                 Connect
                 <Image
@@ -90,28 +90,30 @@ const [formData, setFormData] = useState({
                 />
               </button></Link>
             </div>
-          </div>
 
-          <div className="hidden md:block md:absolute right-4 lg:right-8 xl:right-40 top-[90px] transform transition duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="rounded-xl overflow-hidden shadow-xl">
-              <Image
-                src="/Image/contact-banner-img.png"
-                alt="Team working"
-                width={398}
-                height={190}
-                className="banner-overlaid-img object-fill h-[400px] lg:h-[470px]"
-              />
+            <div className="hidden md:block md:absolute md:right-8 lg:right-28 top-[90px] transform transition duration-300 hover:scale-105 hover:shadow-xl">
+              <div className="rounded-xl overflow-hidden shadow-xl">
+                <Image
+                  src="/Image/contact-banner-img.png"
+                  alt="Team working"
+                  width={398}
+                  height={190}
+                  className="banner-overlaid-img object-cover h-[464px]"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+
       <section className="mt-8 lg:mt-40">
         <div className="bg-white flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="w-full lg:max-w-md bg-white rounded-2xl shadow-[1px_4px_10px_2px_rgba(0,0,0,0.25)] p-6 md:p-8 transform transition duration-300 hover:scale-105 hover:shadow-xl">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">Contact Us</h2>
 
       <form className="space-y-4" onSubmit={handleSubmit} noValidate>
-        {/* Full Name Field */}
+
         <div>
           <label className="block text-sm font-medium text-[#115D8E] mb-1">
             Full Name
@@ -129,7 +131,7 @@ const [formData, setFormData] = useState({
           )}
         </div>
 
-        {/* Business Email Field */}
+
         <div>
           <label className="block text-sm font-medium text-[#115D8E] mb-1">
             Business Email
@@ -189,7 +191,7 @@ const [formData, setFormData] = useState({
           )}
         </div>
 
-        {/* Terms Checkbox */}
+
         <div className="flex items-start gap-2 text-sm text-gray-600">
           <input
             type="checkbox"
@@ -200,14 +202,14 @@ const [formData, setFormData] = useState({
             onChange={handleChange}
           />
           <label htmlFor="terms" className="cursor-pointer">
-            I agree to all <a href="/termsofuse" className="text-[#115D8E] underline">terms and conditions</a>.
+            I agree to all <Link href="/termsofuse" className="text-[#115D8E] underline">terms and conditions</Link>.
           </label>
         </div>
         {errors.agreedToTerms && (
           <p className="text-red-500 text-xs mt-1">{errors.agreedToTerms}</p>
         )}
 
-        {/* Submit Button */}
+
         <button
           type="submit"
           className="w-full py-2 rounded-md text-white font-medium bg-gradient-to-r from-[#777777] to-[#115D8E] shadow-md hover:opacity-90 transition"
@@ -217,7 +219,7 @@ const [formData, setFormData] = useState({
       </form>
     </div>
 
-          {/* Contact Info */}
+
           <div className="w-full lg:max-w-xl text-gray-800 mt-8 lg:mt-0">
             <h3 className="text-2xl md:text-[32px] font-bold text-[#115D8E] mb-2">
               Start the conversation today
@@ -321,7 +323,7 @@ const [formData, setFormData] = useState({
       </section>
 
 
-      <div className="hidden md:block absolute right-4 lg:right-8 xl:right-56 top-[1450px] z-10">
+      <div className="hidden md:block absolute md:right-40 top-[1460px] z-10">
         <Image
           src="/Image/curved-arrow.png"
           alt="Curved Arrow"
@@ -332,7 +334,7 @@ const [formData, setFormData] = useState({
       </div>
 
 
-      <section className="relative bg-white py-12 text-center px-4 sm:px-6 lg:px-8 lg:mt-40">
+ <section className="relative bg-white py-8 text-center px-4 sm:px-6 lg:px-8 lg:mt-40">
         <p className="text-lg md:text-[20px] text-[#115D8E] mb-2 font-bold">
           Here's where you can find us!
         </p>
@@ -354,5 +356,7 @@ const [formData, setFormData] = useState({
         </div>
       </section>
     </section>
+
+
   );
 }
