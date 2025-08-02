@@ -24,10 +24,11 @@ const termsSections = [
 export default function Privacy() {
   return (
     <>
-      <section className="bg-white min-h-screen pt-28 pb-16 px-32">
+     <div className="container">
+
         <div className="bg-[#F4FCFF] rounded-2xl">
           <section>
-            <div className="max-w-5xl mx-auto px-4 py-12">
+            <div className="max-w-5xl mx-auto px-4">
               <div className="text-center mb-10">
                 <div className="mb-6">
                   <Image
@@ -71,8 +72,9 @@ export default function Privacy() {
             </div>
           </section>
         </div>
-      </section>
 
+
+     </div>
       <div className="mb-16">
         <Cta />
       </div>
