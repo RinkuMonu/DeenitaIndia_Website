@@ -141,6 +141,7 @@ function page() {
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio",
       monthlyPrice: 100,
       annualPrice: 50,
+      link:"/",
       buttonText: "Current Plan",
       buttonType: "muted",
       features: [
@@ -156,6 +157,7 @@ function page() {
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio",
       monthlyPrice: 2000,
       annualPrice: 1000,
+          link:"/",
       popular: true,
       buttonText: "Switch to this Plan",
       buttonType: "outline",
@@ -172,6 +174,7 @@ function page() {
       description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio",
       monthlyPrice: 4000,
       annualPrice: 2000,
+          link:"/",
       buttonText: "Contact Sales",
       buttonType: "primary",
       features: [
@@ -195,8 +198,9 @@ function page() {
       <div className='container'>
         <ServiceContracts contracts={contractData} />
         <ServicesSteper data={stepperData} />
+            <ServiceAdvantage sections={sections1} />
       </div>
-      <ServiceAdvantage sections={sections1} />
+  
       <Cta />
       <div className='container'>
         <Plans plans={plans} />

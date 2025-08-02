@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Plans({ plans }) {
   const [billingCycle, setBillingCycle] = useState("annual");
@@ -55,7 +56,7 @@ export default function Plans({ plans }) {
         {filteredPlans.map((plan, index) => (
           <div
             key={index}
-            className={`relative p-6 rounded-3xl border-2 border-gray-200 transition-all duration-300 ${
+            className={`relative p-6 rounded-2xl border-2 border-gray-200 transition-all duration-300 ${
               plan.popular
                 ? 'shadow-xl bg-gradient-to-tr border-none from-white to-[#E4EDF3] scale-115 z-10'
                 : 'bg-white'
@@ -71,8 +72,9 @@ export default function Plans({ plans }) {
             <p className="text-2xl font-bold theme-text">Rs {plan.price}</p>
             <p className="text-sm mb-4">{plan.subText}</p>
 
-            <button
-              className={`w-full py-1 rounded-lg font-medium mt-2 mb-1 ${
+            <Link
+            href={plan.link}
+              className={` p-2 rounded-lg flex flex-col text-center font-medium mt-2 mb-1 ${
                 plan.buttonType === "primary"
                   ? "bg-[#115D8E] text-white"
                   : plan.buttonType === "muted"
@@ -81,7 +83,7 @@ export default function Plans({ plans }) {
               }`}
             >
               {plan.buttonText}
-            </button>
+            </Link>
             <p className="text-sm  text-center mb-4">
               Start <span className="font-bold theme-text text-xs">Free 7-Days</span> Trial
             </p>
@@ -89,12 +91,15 @@ export default function Plans({ plans }) {
             <div className="border-t pt-4">
               <h4 className="font-semibold text-gray-700 mb-2">Features</h4>
               <ul className="space-y-2 text-sm">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="theme-text"><IoMdCheckmarkCircleOutline/></span>
-                    {feature}
-                  </li>
-                ))}
+              {plan.features.map((feature, i) => (
+  <li key={i} className="flex items-center gap-2">
+    <span className="theme-text text-xl">
+      <IoMdCheckmarkCircleOutline />
+    </span>
+    <span>{feature}</span>
+  </li>
+))}
+
               </ul>
             </div>
           </div>

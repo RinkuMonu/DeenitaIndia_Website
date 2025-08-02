@@ -155,7 +155,9 @@ function page() {
              </div>
               <ServiceAccordian sections={accordiansections} />
                <ServiceBanner sections={sections}/>
-               <ServiceAdvantage sections={sections1}/>
+               <div className='container'>
+                           <ServiceAdvantage sections={sections1} />
+                     </div>
         </>
     )
 }

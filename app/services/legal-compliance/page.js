@@ -175,7 +175,9 @@ function page() {
       </div>
       <Cta/>
       <ServiceBanner sections={sections} />
-      <ServiceAdvantage sections={sections1} />
+       <div className='container'>
+            <ServiceAdvantage sections={sections1} />
+      </div>
       <OrganizationalStructuring/>
 
     </>

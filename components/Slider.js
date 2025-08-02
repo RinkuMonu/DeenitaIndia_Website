@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from "next/link";
+import Image from "next/image";
 
 
 const projects = [
@@ -44,7 +45,7 @@ const projects = [
 
 export default function ProjectCarousel() {
   return (
-    <section className="container py-10">
+    <section className="container pt-10">
 <div>
         <p className="heading font-semibold mb-8">
         Delivering Expert <span className="theme-text">Services</span> <br></br> that drive results
@@ -57,10 +58,10 @@ export default function ProjectCarousel() {
         autoplay={{ delay: 3000 }}
         loop
         spaceBetween={20}
-        slidesPerView={1.2}
+        slidesPerView={1}
         breakpoints={{
-          640: { slidesPerView: 1.2 },
-          768: { slidesPerView: 2 },
+          425: { slidesPerView: 1 },
+          426: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
           1280: { slidesPerView: 4 },
         }}
@@ -69,13 +70,15 @@ export default function ProjectCarousel() {
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <div
-              className={`group relative w-full h-72 overflow-hidden rounded-lg shadow-lg transition-all duration-500 ${index % 2 === 1 ? "mt-10" : ""
+              className={`group relative w-full h-72 overflow-hidden rounded-lg shadow-lg transition-all duration-500 ${index % 2 === 1 ? "md:mt-10" : ""
                 }`}
             >
               <div className="absolute inset-0 bg-gray-900">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={80}
+                  height={80}
                   className="h-full w-full object-cover opacity-70 transition-opacity duration-300 group-hover:opacity-50"
                 />
               </div>

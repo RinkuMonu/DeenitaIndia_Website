@@ -37,7 +37,7 @@ function Blog() {
     ];
     return (
         <>
-            <section className='my-10'>
+            <section className='mt-10 my-10 md:my-0'>
                 <div className='container'>
                     <div className='md:flex justify-between gap-5 align-middle'>
                         <p className="heading font-semibold ">
@@ -47,7 +47,7 @@ function Blog() {
                         </p>
                     </div>
                <div className='relative'>
-                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full pt-10 overflow-hidden min-h-[500px]">
+                     <div className="flex flex-col lg:flex-row w-full pt-10 overflow-hidden min-h-[550px]">
                         {blogPosts.map((post, index) => (
                             <div
                                 key={index}
@@ -87,12 +87,12 @@ function Blog() {
 
                                         <Link
                                             href="/blog"
-                                            className="inline-flex items-center text-xs p-1 rounded-lg 
+                                            className="inline-flex items-center text-xs py-1 px-2 rounded-lg 
                        text-white bg-[#115D8E] mt-auto
                        shadow-[0_4px_30px_rgba(138,173,187,0.4)] 
                        transition-all duration-500 ease-in-out"
                                         >
-                                            Read more <MdArrowOutward className="ml-2 font-bold" />
+                                            Read more <MdArrowOutward className="ml-1 font-bold" />
                                         </Link>
                                     </div>
                                 </div>

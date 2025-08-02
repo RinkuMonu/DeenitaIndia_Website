@@ -33,25 +33,25 @@ function HomeSteps() {
                     <div className="max-w-3xl mx-auto mt-7" key={index}>
                         <div
 
-                            className={`rounded-4xl md:rounded-full max-w-lg bg-[#ECF5FB] shadow-[0_3px_3px_rgba(141,220,251)]  ${index % 2 === 0 ? "ms-auto md:me-12 " : "md:mr-auto"}`}
+                            className={`rounded-2xl md:rounded-full max-w-lg bg-[#ECF5FB] shadow-[0_3px_3px_rgba(141,220,251)] ${index % 2 === 0 ? "ms-auto  " : "md:mr-auto"}`}
                             data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
                         >
                             <div
                                 className={` md:flex justify-between items-center p-5 theme-text 
           ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}
                             >
-                                <p className="text-2xl font-semibold lg:max-w-[250px] text-center">{step.label}</p>
+                                <p className="text-md md:text-2xl font-semibold lg:max-w-[250px] text-center mb-2 md:mb-0">{step.label}</p>
                                 <div className="text-9xl "><Image src={step.icon} width={60} height={60} alt="sevice-icons" className="mx-auto md:mx-0"/></div>
 
                             </div>
                         </div>
                     </div>
                 ))}
-                <div className=" left-[46%] top-24 absolute hidden lg:block">
+                <div className=" left-[47%] top-24 absolute hidden lg:block">
                     <div className="flex flex-col items-center ">
                         {numbers.map((num) => (
                             <div key={num}
-                                className={`w-22 h-36 text-white flex items-center justify-center text-lg font-bold relative
+                                className={`w-22 h-36 text-white flex items-center justify-center text-4xl font-bold relative
       ${num % 2 === 0 ? "bg-sky-300" : "bg-sky-500"} 
       ${num === 1 ? "rounded-t-4xl" : num === 6 ? "rounded-b-4xl" : ""}
       ${num !== 1 ? "before:absolute before:top-0 before:left-0 before:w-full before:h-6 before:bg-white before:rounded-b-full p-0" : ""}

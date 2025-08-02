@@ -15,7 +15,7 @@ const Cta = () => {
   const circleY2 = useTransform(scrollYProgress, [0, 1], [0, 120]);
 
   return (
-    <div ref={sectionRef} className="cta_bg relative overflow-hidden">
+    <div ref={sectionRef} className="cta_bg relative overflow-hidden mb-5">
       <motion.div
         style={{ y: circleY1 }}
         className="absolute -top-3 -left-10 w-30 h-30 border-3 border-[#115D8E] rounded-full z-10"
@@ -27,7 +27,7 @@ const Cta = () => {
 
       <div className="container py-10 md:py-20">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6  md:px-0">
-          <div className="max-w-3xl">
+          <div className="">
             <p className="text-3xl sm:text-4xl theme-text font-bold mb-4">
               Let us help you find the perfect fit
             </p>
