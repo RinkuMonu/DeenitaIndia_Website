@@ -133,7 +133,7 @@ export default function LoginModal({ onClose }) {
 
         <p className="text-center text-sm mt-4 text-gray-600">
           Don’t have an account?{" "}
-          <a href="#" className="text-[#115D8E] font-semibold hover:underline">Sign up</a>
+          <Link href="#" className="text-[#115D8E] font-semibold hover:underline">Sign up</Link>
         </p>
       </div>
     </div>
