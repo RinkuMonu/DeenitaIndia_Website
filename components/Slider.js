@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from "next/link";
+import Image from "next/image";
 
 
 const projects = [
@@ -57,10 +58,10 @@ export default function ProjectCarousel() {
         autoplay={{ delay: 3000 }}
         loop
         spaceBetween={20}
-        slidesPerView={1.2}
+        slidesPerView={1}
         breakpoints={{
-          640: { slidesPerView: 1.2 },
-          768: { slidesPerView: 2 },
+          425: { slidesPerView: 1 },
+          426: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
           1280: { slidesPerView: 4 },
         }}
@@ -73,9 +74,11 @@ export default function ProjectCarousel() {
                 }`}
             >
               <div className="absolute inset-0 bg-gray-900">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={80}
+                  height={80}
                   className="h-full w-full object-cover opacity-70 transition-opacity duration-300 group-hover:opacity-50"
                 />
               </div>

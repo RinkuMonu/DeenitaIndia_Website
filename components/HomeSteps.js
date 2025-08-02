@@ -33,7 +33,7 @@ function HomeSteps() {
                     <div className="max-w-3xl mx-auto mt-7" key={index}>
                         <div
 
-                            className={`rounded-2xl md:rounded-full max-w-lg bg-[#ECF5FB] shadow-[0_3px_3px_rgba(141,220,251)]  ${index % 2 === 0 ? "ms-auto md:me-12 " : "md:mr-auto"}`}
+                            className={`rounded-2xl md:rounded-full max-w-lg bg-[#ECF5FB] shadow-[0_3px_3px_rgba(141,220,251)] ${index % 2 === 0 ? "ms-auto  " : "md:mr-auto"}`}
                             data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
                         >
                             <div
@@ -47,7 +47,7 @@ function HomeSteps() {
                         </div>
                     </div>
                 ))}
-                <div className=" left-[46%] top-24 absolute hidden lg:block">
+                <div className=" left-[47%] top-24 absolute hidden lg:block">
                     <div className="flex flex-col items-center ">
                         {numbers.map((num) => (
                             <div key={num}
