@@ -39,7 +39,7 @@ export default function Privacy() {
                     className="mx-auto"
                   />
                 </div>
-                <div className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white font-medium px-8 py-3 rounded-full mb-4">
+                <div className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white font-medium px-8 py-2 rounded-full mb-4">
                   Cancellation & Refund Policy
                 </div>
                 <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 lg:px-16 mb-8">
