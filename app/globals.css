@@ -263,7 +263,9 @@ html, body {
   color: inherit;
   text-decoration: none;
 }
-
+.swiper-pagination-bullet-active {
+  background: #115D8E !important; 
+}
 .hover-underline:hover {
   color: #115D8E;
   text-decoration-line: underline;

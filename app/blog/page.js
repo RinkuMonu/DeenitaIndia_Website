@@ -89,7 +89,7 @@ export default function BlogSection() {
 
     return (
         <>
-            <section className="mt-30">
+            <section className="mt-30" >
                 <div className="container  relative">
                     <div className="grid lg:grid-cols-2 bg-[#E6F0F9] rounded-xl p-6 md:p-10 gap-6">
                         <div className=" space-y-4 ">
@@ -122,7 +122,8 @@ export default function BlogSection() {
                             />
                         </div>
                     </div>
-                    <section className="mb-10 mt-20">
+                    <section className="mb-10 mt-20"   data-aos="fade-right"
+  data-aos-duration="2000">
                         <div className="text-center">
                             <p className="theme-text">Latest Posts</p>
                             <p className="pt-4 text-4xl font-semibold">Fresh ideas, real stories, and smart insights.</p>

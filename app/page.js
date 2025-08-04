@@ -29,7 +29,7 @@ export default function Home() {
             </p>
             <div className="flex flex-row gap-4">
               <Link href="/login" className="text-white shadow-[0_8px_30px_rgba(138,173,187)]  font-semibold bg-[#115D8E] py-2 md:py-3 rounded-lg text-base px-3 md:px-6 text-center w-fit  ">Get started</Link>
-        zz      <Link href="/contact" className="font-semibold bg-white rounded-lg shadow-[0_8px_30px_rgba(138,173,187)] text-base px-3 md:px-6 py-2 md:py-3 text-center text-[#39464F] w-fit">Book a demo</Link>
+          <Link href="/contact" className="font-semibold bg-white rounded-lg shadow-[0_8px_30px_rgba(138,173,187)] text-base px-3 md:px-6 py-2 md:py-3 text-center text-[#39464F] w-fit">Book a demo</Link>
             </div>
             <div>
               <p className="text-3xl md:text-4xl font-semibold"><span className="theme-text">100+ </span>Projects</p>

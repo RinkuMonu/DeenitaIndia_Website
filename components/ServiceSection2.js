@@ -10,6 +10,8 @@ export default function ServiceSection2({ sections }) {
         <div
           key={index}
           className="flex flex-col md:flex-row items-center gap-16 md:p-12 "
+            data-aos="fade-up"
+  data-aos-duration="2000"
         >
           <div className="w-full md:w-2/5  relative">
             <div className="relative w-[150px] h-[150px] md:w-[300px] md:h-[300px] rounded-xl bg-gradient-to-t from-white to-[#115d8e] shadow-lg  overflow-visible">

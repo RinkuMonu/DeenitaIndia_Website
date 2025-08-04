@@ -4,7 +4,8 @@ import { MdArrowOutward } from "react-icons/md";
 
 const ServiceContracts = ({ contracts }) => {
   return (
-    <section className="py-10 max-w-7xl mx-auto">
+    <section className="py-10 max-w-7xl mx-auto"   data-aos="fade-up"
+  data-aos-duration="2000">
       {contracts.map((section, sectionIndex) => (
         <div key={sectionIndex} className="mb-16">
           <div className="mb-10">

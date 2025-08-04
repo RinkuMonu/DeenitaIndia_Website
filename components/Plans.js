@@ -17,7 +17,7 @@ export default function Plans({ plans }) {
   }));
 
   return (
-    <section className="py-15 px-4 bg-white text-gray-800">
+    <section className="py-15 px-4 bg-white text-gray-800" >
       <div className=" mb-10">
        <div className='md:flex justify-between align-middle'>
                         <p className="heading font-semibold ">
@@ -52,7 +52,8 @@ export default function Plans({ plans }) {
         </button>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-15  mx-auto">
+      <div className="grid md:grid-cols-3 gap-15  mx-auto"   data-aos="fade-up"
+  data-aos-duration="2000">
         {filteredPlans.map((plan, index) => (
           <div
             key={index}

@@ -52,7 +52,8 @@ const testimonials = [
 export default function Testonomials() {
       const [activeIndex, setActiveIndex] = useState(0)
     return (
-        <section className="container pt-20 text-center md:text-left">
+        <section className="container pt-20 text-center md:text-left"   data-aos="fade-up"
+  data-aos-duration="2000">
             <p className="heading font-semibold max-w-xl">
                 Client <span className="theme-text">Experiences</span>
             </p>

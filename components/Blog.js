@@ -37,7 +37,8 @@ function Blog() {
     ];
     return (
         <>
-            <section className='mt-10 my-10 md:my-0'>
+            <section className='mt-10 my-10 md:my-0'   data-aos="fade-up"
+  data-aos-duration="2000">
                 <div className='container'>
                     <div className='md:flex justify-between gap-5 align-middle'>
                         <p className="heading font-semibold ">
