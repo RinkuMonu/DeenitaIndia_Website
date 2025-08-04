@@ -2,7 +2,8 @@ import Image from "next/image";
 
 const ServicesSteper = ({ data }) => {
   return (
-    <section className=" py-6 md:py-16 max-w-7xl mx-auto md:text-center">
+    <section className=" py-6 md:py-16 max-w-7xl mx-auto md:text-center"   data-aos="fade-up"
+  data-aos-duration="2000">
       <p className="text-[#1476ad] font-medium text-sm mb-2">{data.title}</p>
       <h2 className="text-2xl md:text-4xl font-semibold mb-3">
         {data.subtitle}

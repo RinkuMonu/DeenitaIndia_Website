@@ -4,13 +4,13 @@ import React from 'react'
 function BestChoices() {
     return (
         <>
-            <section className='my-24'>
+            <section className='my-24'   data-aos="fade-up">
                 <div className='container'>
                     <div className='md:flex justify-between align-middle'>
-                        <p className="heading font-semibold ">
+                        <p className="heading font-semibold">
                             What Makes Us Your <br></br> <span className="theme-text">Best Choice</span>
                         </p>
-                        <p className='md:max-w-sm pt-4'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+                        <p className='md:max-w-sm pt-4' data-aos="fade-up" data-aos-duration="2000">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 max-w-6xl  mx-auto mt-8">
                         <div className="relative group overflow-hidden border-b-4 border-r-4 border-gray-200 p-5 py-10 flex flex-col items-center justify-center">

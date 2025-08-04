@@ -128,7 +128,8 @@ function page() {
   
             <Cta />
 
-            <div className='container my-16'>
+            <div className='container my-16'   data-aos="fade-up"
+  data-aos-duration="2000">
                 <div className='md:flex justify-between align-middle'>
                     <p className="heading font-semibold ">
                         <span className="theme-text">Dashboard Visual </span><br></br>Overview

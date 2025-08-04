@@ -24,7 +24,8 @@ deleniti atque corrupti quos dolores et quas`,
 
     return (
         <>
-            <section className='container'>
+            <section className='container'   data-aos="fade-up"
+  data-aos-duration="2000">
                 <p className="heading font-semibold max-w-md">
                     <span className="theme-text">Industries </span>
                     We Proudly Serve

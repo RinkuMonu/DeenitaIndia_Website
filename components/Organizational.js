@@ -32,7 +32,8 @@ export default function OrganizationalStructuring() {
   };
 
   return (
-    <div className="container">
+    <div className="container"   data-aos="fade-up"
+  data-aos-duration="2000">
       <section className="py-12 mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-[#115D8E] pb-2">
           Organizational
