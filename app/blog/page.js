@@ -172,7 +172,7 @@ export default function BlogSection() {
                                             className="object-cover rounded-xl w-full h-full transition-transform duration-500 group-hover:scale-105 "
                                         />
                                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-[#115D8E54] via-[#115D8E54]/33 to-[#115D8E54] z-10" />
-                                        <Link href="/blog"  className="absolute inline-flex z-20 top-27 left-1/2 font-bold -translate-x-1/2 bg-white theme-text px-4 py-2 text-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                        <Link href="/blog/blog-details"  className="absolute inline-flex z-20 top-27 left-1/2 font-bold -translate-x-1/2 bg-white theme-text px-4 py-2 text-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500">
                                             Read More <MdArrowOutward className="font-bold text-lg ms-1" />
                                         </Link >
                                     </div>
