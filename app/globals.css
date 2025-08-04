@@ -273,6 +273,9 @@ html, body {
 }
 
 
+.height_blogcard{
+      height: -webkit-fill-available;
+}
 /*cloud animation*/
 @keyframes float-x {
   0% {
