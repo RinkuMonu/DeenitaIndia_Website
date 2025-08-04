@@ -169,7 +169,7 @@ export default function CompanySection() {
             <span className="text-gray-700">Vision & Mission</span>
           </h3>
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-0 md:px-0">
-            <div className="bg-[#166599] text-white p-6 md:p-8 rounded-xl shadow-[4px_4px_4px_2px_#00000040] transform transition duration-300 hover:scale-105 hover:shadow-xl">
+            <div className="bg-[#166599] text-white p-6 md:p-8 rounded-xl shadow-[4px_4px_4px_2px_#00000040] transform transition duration-300 hover:scale-105 hover:shadow-xl" data-aos="fade-right"  data-aos-duration="1000">
               <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                 <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-4 md:pl-10">
                   <Image
@@ -187,7 +187,7 @@ export default function CompanySection() {
                 dolores et quas.
               </p>
             </div>
-            <div className="bg-white border border-gray-200 text-[#166599] p-6 md:p-8 rounded-xl shadow-[4px_4px_4px_2px_#00000040] transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#f9f9f9]">
+            <div className="bg-white border border-gray-200 text-[#166599] p-6 md:p-8 rounded-xl shadow-[4px_4px_4px_2px_#00000040] transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#f9f9f9]"  data-aos="fade-left" data-aos-duration="1000">
               <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                 <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 md:pl-10">
                   <Image
@@ -217,7 +217,7 @@ export default function CompanySection() {
             <div className="absolute top-0 -left-0 h-full w-4 md:w-7 bg-[#115d8e]" />
             <div className="absolute top-0 right-0 h-full w-4 md:w-7 bg-[#115d8e]" />
             <div className="w-full md:w-[40%] flex justify-center">
-              <div className="relative rounded-xl overflow-hidden md:left-10 w-full max-w-[400px] transform transition duration-300 hover:scale-105 hover:shadow-xl">
+              <div className="relative rounded-xl overflow-hidden md:left-10 w-full max-w-[400px] transform transition duration-300 hover:scale-105 hover:shadow-xl" >
                 <Image
                   src="/Image/Rectangle 52.png"
                   alt="CEO"
@@ -268,8 +268,8 @@ export default function CompanySection() {
         <section className="py-8 md:py-12 lg:px-8 xl:px-0 bg-white relative">
           <div className="absolute w-82 h-82 bg-[#115D8E] rounded-full opacity-15 blur-3xl top-70 -left-20 z-0"></div>
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div>
-              <h3 className="text-3xl md:text-[48px] font-bold text-gray-800 leading-snug">
+            <div className="" data-aos="fade-up-right"  data-aos-duration="2000">
+              <h3 className="text-3xl md:text-[48px] font-bold text-gray-800 leading-snug" >
                 Proud Moments & <br />
                 <span className="text-[#2E709B]">Achievements</span>
               </h3>
@@ -281,8 +281,8 @@ export default function CompanySection() {
               </p>
             </div>
 
-            {/* Right Grid Box */}
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8 p-4 md:p-8 border-2 border-gray-200 rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-xl">
+
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8 p-4 md:p-8 border-2 border-gray-200 rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-xl" data-aos="fade-up-left" data-aos-duration="2000">
               {[
                 { value: "9+", label: "Years" },
                 { value: "99%", label: "Certified" },
@@ -331,7 +331,7 @@ export default function CompanySection() {
               {[1, 2, 3, 4].map((item) => (
                 <div
                   key={item}
-                  className="bg-white rounded-2xl p-4 md:p-6 text-left border border-gray-100 hover:shadow-md transition shadow-[1px_1px_100px_1px_#115D8E2E] w-full mx-auto max-w-xs transform duration-300 hover:scale-110"
+                  className="bg-white rounded-2xl p-4 md:p-6 text-left border border-gray-100 hover:shadow-md transition shadow-[1px_1px_100px_1px_#115D8E2E] w-full mx-auto max-w-xs transform duration-300 hover:scale-110" data-aos="fade-down-right" data-aos-duration="2000"
                 >
                   <div className="mb-1">
                     <div className="w-8 h-8 md:w-10 md:h-10 transform transition duration-300 hover:scale-120">
@@ -373,10 +373,10 @@ export default function CompanySection() {
         </section>
         <section className="">
           <div className="md:flex justify-between align-middle">
-            <p className="heading font-semibold ">
+            <p className="heading font-semibold " data-aos="fade-right">
               Media <span className="theme-text">Highlights</span>
             </p>
-            <p className="md:max-w-sm pt-4">
+            <p className="md:max-w-sm pt-4" data-aos="fade-left">
               Our work and impact have been featured across trusted media
               platforms.Explore what the press is saying about us.
             </p>
