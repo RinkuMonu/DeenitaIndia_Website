@@ -26,19 +26,20 @@ export default function Privacy() {
     <>
      <div className="container">
 
-        <div className="bg-[#F4FCFF] rounded-2xl">
+<section className="bg-white min-h-screen pt-28 pb-16">
+    <div className="bg-[#F4FCFF] rounded-2xl">
           <section>
-            <div className="max-w-5xl mx-auto px-4">
+            <div className="max-w-5xl mx-auto px-4 py-12">
               <div className="text-center mb-10">
                 <div className="mb-6">
-                  <Image
-                    src="/Image/terms-img.png"
-                    alt="Icon"
-                    width={100}
-                    height={85}
-                    className="mx-auto"
-                  />
-                </div>
+                                 <Image
+                                   src="/Image/privacy-img.png"
+                                   alt="Icon"
+                                   width={83}
+                                   height={83}
+                                   className="mx-auto"
+                                 />
+                               </div>
                 <div className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white font-medium px-8 py-2 rounded-full mb-4">
                  Terms of Use
                 </div>
@@ -72,6 +73,7 @@ export default function Privacy() {
             </div>
           </section>
         </div>
+</section>
 
 
      </div>
