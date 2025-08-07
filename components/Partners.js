@@ -18,7 +18,7 @@ export default function Partners() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-10">
           <div className="max-w-md">
-                <p className="heading font-semibold ">
+                <p className="heading font-semibold">
                             Partners & <span className="theme-text">Associations</span>
                         </p>
             <p className="text-gray-600 mt-4 text-base leading-relaxed">

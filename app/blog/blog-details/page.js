@@ -13,6 +13,9 @@ import {
     FaFolderOpen,
 } from 'react-icons/fa';
 import { IoIosArrowBack } from "react-icons/io";
+import Comment from "@/components/Comment";
+
+
 const blogData = [
     {
         image: '/images/cybersecurity.jpg',
@@ -53,24 +56,26 @@ const categories = [
 
 export default function BlogDetailPage() {
     return (
-        <section className="pt-20 bg-gray-100 min-h-screen container">
+      <>
+      <section className='container bg-gray-50'>
+          <section className="pt-20  min-h-screen ">
             <div className=" mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                    {/* Left Content */}
+
                     <div className="md:col-span-2 space-y-6">
                         <div className="max-w-4xl mx-auto  py-6">
-                            {/* Title */}
+
                             <h1 className="text-2xl md:text-4xl font-bold theme-text mb-2 ">
                                 Lorem ipsum dolor sit amet, consecte adipiscing elit, sed
                             </h1>
                             <div className="md:flex justify-between text-gray-500 text-sm mb-4">
-                                <div className="flex  md:justify-between gap-1">
+                                <div className="flex  md:justify-between gap-1 md:mt-3">
                                     <FaRegCalendarAlt size={14} />
                                     <span>02-05-2025</span>
                                 </div>
-                                <p>By : doloremque laudantium, totam reb</p>
-                                <p>Author : dicta sunt</p>
+                                <p className=' md:mt-3'>By : doloremque laudantium, totam reb</p>
+                                <p className=' md:mt-3'>Author : dicta sunt</p>
                             </div>
                             <div className="rounded-xl overflow-hidden mb-6">
                                 <Image
@@ -86,7 +91,7 @@ export default function BlogDetailPage() {
                             <div className="mt-4">
                                 <div className='grid grid-cols-1 md:grid-cols-12 gap-4'>
                                     <div className='md:col-span-1 flex md:block justify-center'>
-                                        <div className="flex md:flex-col gap-4 ">
+                                        <div className="flex md:flex-col gap-4  md:mt-6">
                                             <Link href="#" className="text-[#115D8E] hover:text-white border w-fit p-2 rounded-full hover:bg-[#115D8E]">
                                                 <FaWhatsapp size={24} />
                                             </Link>
@@ -101,8 +106,8 @@ export default function BlogDetailPage() {
                                             </Link>
                                         </div>
                                     </div>
-                                    <div className='md:col-span-11 ps-3 md:pe-0'>
-                                        <h2 className="text-xl font-semibold mb-2">
+                                    <div className='md:col-span-11 ps-3 md:pe-0 md:mt-6'>
+                                        <h2 className="text-2xl font-semibold mb-2">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         </h2>
                                         <p className="text-gray-700 leading-relaxed mb-2">
@@ -117,7 +122,7 @@ export default function BlogDetailPage() {
                                             eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                                             praesentium voluptatum deleniti atque corrupti quos dolores et quas...
                                         </p>
-                                        <h2 className="text-xl font-semibold mb-2">
+                                        <h2 className="text-2xl font-semibold mb-2 md:mt-6">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         </h2>
                                         <p className="text-gray-700 leading-relaxed mb-4">
@@ -130,7 +135,7 @@ export default function BlogDetailPage() {
 
                                             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
                                         </p>
-                                        <Link href="/contact" className="font-semibold bg-white shadow-[0_8px_15px_rgba(138,173,187)] rounded-lg inline-flex text-base px-3 md:px-6 py-2 md:py-3 text-center theme-text mt-5 w-fit"> <IoIosArrowBack className='mt-1 me-1' />Back to blog</Link>
+                                        <Link href="/contact" className="font-semibold bg-gray-100 shadow-[0_8px_15px_rgba(138,173,187)] rounded-lg inline-flex text-base px-3 md:px-5 py-2 md:py-3 text-center theme-text mt-5 w-fit"> <IoIosArrowBack className='mt-1 me-1' />Back to blog</Link>
 
                                     </div>
                                 </div>
@@ -138,7 +143,7 @@ export default function BlogDetailPage() {
                         </div>
                     </div>
 
-                    {/* Right Sidebar */}
+
                     <div className="h-fit md:pt-8">
                         <div className="lg:sticky top-24 max-w-full lg:max-w-sm space-y-8">
                             <div className="  rounded-xl border-2 border-[#CDE5F5] p-4">
@@ -239,5 +244,15 @@ export default function BlogDetailPage() {
                 </div>
             </div>
         </section>
+
+
+
+<section>
+    <Comment />
+</section>
+
+
+      </section>
+      </>
     );
 }

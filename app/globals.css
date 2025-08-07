@@ -2,58 +2,58 @@
 :root {
   --bg-background: white;
   --clr-card: white;
-  --clr-1: #E7F8FF;
-  --clr-2: #115D8E;
-  --clr-3: #F8FDFF;
+  --clr-1: #e7f8ff;
+  --clr-2: #115d8e;
+  --clr-3: #f8fdff;
 }
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
 .home-hero-section {
-  background-color: #E4EEF480;
+  background-color: #e4eef480;
 }
 .home-img-height {
   height: 528px !important;
   width: 667px !important;
 }
 
-.theme-text{
-  color: #115D8E;
+.theme-text {
+  color: #115d8e;
 }
-.container{
+.container {
   padding-left: 100px;
   padding-right: 100px;
 }
-@media (max-width: 426px){
-  .container{
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.heading{
-  font-size: 30px;
-}
-.swiper-pagination-bullet {
-  width: 30px !important;
-  height: 4px !important;
-  border-radius: 4px !important;
-  background: rgba(217 ,217 ,217, 1) !important;
-  opacity: 1 !important;
-  transition: background 0.3s ease !important;
+@media (max-width: 426px) {
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .heading {
+    font-size: 30px;
+  }
+  .swiper-pagination-bullet {
+    width: 30px !important;
+    height: 4px !important;
+    border-radius: 4px !important;
+    background: rgba(217, 217, 217, 1) !important;
+    opacity: 1 !important;
+    transition: background 0.3s ease !important;
     margin: 0 4px !important;
-}
-}
-
-    .container {
-         max-width: 100vw;
-    }
-@media (max-width: 1025px){
-  .container{
-  padding-left: 30px;
-  padding-right: 30px;
-}
+  }
 }
 
+.container {
+  max-width: 100vw;
+}
+@media (max-width: 1025px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 
 @media (max-width: 1085px) {
   .banner-overlaid-img {
@@ -65,19 +65,19 @@ html, body {
   .banner-overlaid-img {
     height: 300px;
     width: 100px;
-   }
   }
-.radial-grad{
+}
+.radial-grad {
   background: radial-gradient(
-  circle,
-  rgba(255, 255, 255, 1) 0%,
-  rgba(17, 93, 142, 0.3) 0%,
-  rgba(255, 255, 255, 0.2) 100%
-);
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(17, 93, 142, 0.3) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
 }
 
 .swiper-pagination-bullet-active {
-  background: rgba(17 ,93 ,142 ,1) !important;
+  background: rgba(17, 93, 142, 1) !important;
 }
 .swiper-pagination {
   position: relative !important;
@@ -86,14 +86,14 @@ html, body {
   text-align: center !important;
 }
 @media (min-width: 80rem) {
-    .container {
-        max-width: 100vw;
-    }
-    .heading{
-  font-size: 48px;
+  .container {
+    max-width: 100vw;
+  }
+  .heading {
+    font-size: 48px;
+  }
 }
-}
-.cta_bg{
+.cta_bg {
   background-image: url(/images/cta_image.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,7 +109,7 @@ html, body {
 .circle-1 {
   width: 120px;
   height: 120px;
-  border:#115D8E 4px solid;
+  border: #115d8e 4px solid;
   animation-delay: 0s;
   z-index: 99;
 }
@@ -117,14 +117,14 @@ html, body {
 .circle-2 {
   width: 180px;
   height: 180px;
-  border:#115D8E 4px solid;
+  border: #115d8e 4px solid;
   bottom: 10%;
   right: 10%;
   animation-delay: 2s;
 }
-.service-bg{
+.service-bg {
   background-image: url(/images/servicesBg.jpg);
-   background-size: cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -154,7 +154,6 @@ html, body {
   animation: dashMove 2s linear infinite;
 }
 
-
 .card {
   position: relative;
   border-radius: 0.45rem;
@@ -174,8 +173,8 @@ html, body {
     var(--clr-1),
     var(--clr-2),
     var(--clr-3),
-     var(--clr-3),
-      var(--clr-3),
+    var(--clr-3),
+    var(--clr-3),
     var(--clr-2),
     var(--clr-1),
     var(--clr-card)
@@ -215,45 +214,45 @@ html, body {
 }
 
 @keyframes float {
-    0% {
-      transform: translate(0px, 0px);
-    }
-    25% {
-      transform: translate(-10px, -15px);
-    }
-    50% {
-      transform: translate(0px, -25px);
-    }
-    75% {
-      transform: translate(10px, -15px);
-    }
-    100% {
-      transform: translate(0px, 0px);
-    }
+  0% {
+    transform: translate(0px, 0px);
   }
+  25% {
+    transform: translate(-10px, -15px);
+  }
+  50% {
+    transform: translate(0px, -25px);
+  }
+  75% {
+    transform: translate(10px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
 
-  .float-animate {
-    animation-name: float;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-  }
+.float-animate {
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
 @media (min-width: 768px) {
   details.group:hover[open] summary::before {
     display: none;
   }
   .swiper-pagination-bullet {
-  width: 40px !important;
-  height: 8px !important;
-  border-radius: 4px !important;
-  background: rgba(217 ,217 ,217, 1) !important;
-  opacity: 1 !important;
-  transition: background 0.3s ease !important;
+    width: 40px !important;
+    height: 8px !important;
+    border-radius: 4px !important;
+    background: rgba(217, 217, 217, 1) !important;
+    opacity: 1 !important;
+    transition: background 0.3s ease !important;
     margin: 0 4px !important;
-}
+  }
 
-.heading{
-  font-size: 48px;
-}
+  .heading {
+    font-size: 48px;
+  }
   details.group:hover summary {
     pointer-events: none;
   }
@@ -264,19 +263,18 @@ html, body {
   text-decoration: none;
 }
 .swiper-pagination-bullet-active {
-  background: #115D8E !important; 
+  background: #115d8e !important;
 }
 .hover-underline:hover {
-  color: #115D8E;
+  color: #115d8e;
   text-decoration-line: underline;
-  text-decoration-color: #115D8E;
+  text-decoration-color: #115d8e;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
 }
 
-
-.height_blogcard{
-      height: -webkit-fill-available;
+.height_blogcard {
+  height: -webkit-fill-available;
 }
 /*cloud animation*/
 @keyframes float-x {
@@ -314,4 +312,26 @@ html, body {
 .float-x-5 {
   animation: float-x 5.1s ease-in-out infinite;
   animation-delay: 1s;
+}
+
+/*index-page animation*/
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+.animate-blob {
+  animation: blob 7s infinite;
+}
+.animation-delay-2000 {
+  animation-delay: 2s;
 }

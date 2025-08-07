@@ -19,7 +19,7 @@ const ServiceContracts = ({ contracts }) => {
             {section.items.map((contract, index) => (
               <div
                 key={index}
-                className="rounded-xl overflow-hidden shadow-md relative group border-4 border-transparent hover:border-[#115D8E] transition-all duration-300"
+                className="rounded-xl overflow-hidden shadow-md relative group border-4 border-transparent hover:border-[#115D8E] transition-all duration-300" data-aos="flip-right"data-aos-duration="2000"
               >
                 <Image
                   src={contract.image}
