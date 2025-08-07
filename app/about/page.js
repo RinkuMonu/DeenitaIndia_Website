@@ -282,7 +282,7 @@ export default function CompanySection() {
             </div>
 
 
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8 p-4 md:p-8 border-2 border-gray-200 rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-xl" data-aos="fade-up-left" data-aos-duration="2000">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8 p-4 md:p-8 border-2 border-gray-200 rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-xl" data-aos="flip-right" data-aos-duration="2000">
               {[
                 { value: "9+", label: "Years" },
                 { value: "99%", label: "Certified" },

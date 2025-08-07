@@ -10,7 +10,7 @@ export default function ServiceAdvantage({ sections }) {
                     key={idx}
                     className="flex flex-col md:flex-row items-center lg:items-stretch mb-6"
                 >
-                    <div className="flex-1 flex items-center ">
+                    <div className="flex-1 flex items-center " data-aos="flip-down">
                         <Image
                             src={section.imageSrc}
                             alt="Section Image"

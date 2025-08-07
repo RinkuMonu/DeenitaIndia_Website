@@ -10,10 +10,10 @@ export default function ServiceSection2({ sections }) {
         <div
           key={index}
           className="flex flex-col md:flex-row items-center gap-16 md:p-12 "
-            data-aos="fade-up"
+
   data-aos-duration="2000"
         >
-          <div className="w-full md:w-2/5  relative">
+          <div className="w-full md:w-2/5  relative" data-aos="fade-right"data-aos-duration="2000">
             <div className="relative w-[150px] h-[150px] md:w-[300px] md:h-[300px] rounded-xl bg-gradient-to-t from-white to-[#115d8e] shadow-lg  overflow-visible">
               <div className="absolute -top-4 md:-top-8 md:-left-10 w-[120%] h-[110%]">
                 <Image
@@ -34,7 +34,7 @@ export default function ServiceSection2({ sections }) {
           </div>
 
 
-          <div className="w-full md:w-3/5 space-y-4">
+          <div className="w-full md:w-3/5 space-y-4" data-aos="fade-left"data-aos-duration="2000">
             <p className="text-2xl md:text-4xl max-w-lg font-bold text-gray-800">
               <span className="text-[#115D8E] text-base font-semibold me-2">{section.tag}</span>
               {section.title}
