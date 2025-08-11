@@ -135,7 +135,7 @@ export default function BlogDetailPage() {
 
                                             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
                                         </p>
-                                        <Link href="/contact" className="font-semibold bg-gray-100 shadow-[0_8px_15px_rgba(138,173,187)] rounded-lg inline-flex text-base px-3 md:px-5 py-2 md:py-3 text-center theme-text mt-5 w-fit"> <IoIosArrowBack className='mt-1 me-1' />Back to blog</Link>
+                                        <Link href="/blog" className="font-semibold bg-gray-100 shadow-[0_8px_15px_rgba(138,173,187)] rounded-lg inline-flex text-base px-3 md:px-5 py-2 md:py-3 text-center theme-text mt-5 w-fit"> <IoIosArrowBack className='mt-1 me-1' />Back to blog</Link>
 
                                     </div>
                                 </div>
