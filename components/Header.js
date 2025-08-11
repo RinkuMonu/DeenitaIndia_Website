@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link'
 import React, { useState } from 'react'
-import LoginModal from './Login.js';
+import LoginModal from './login.js';
 import { usePathname } from 'next/navigation';
 
 function Header() {
