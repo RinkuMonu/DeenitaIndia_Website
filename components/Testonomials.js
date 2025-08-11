@@ -103,7 +103,7 @@ border border-gray-50 flex flex-col justify-between transition-transform duratio
                                 </div>
                             </div>
 
-                            <p className="mt-4 text-gray-700 text-sm md:text-lg mb-2 md:mb-0">"{testimonial.review}"</p>
+                            <p className="mt-4 text-gray-700 text-sm md:text-lg mb-2 md:mb-0">&quot;{testimonial.review}&quot;</p>
 
                             <div className="flex items-center">
                                 <Image src="/images/logo.png" width={40} height={40} alt="logo" />

@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import LoginModal from './Login';
 import { usePathname } from 'next/navigation';
 
-function header() {
+function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
@@ -206,4 +206,4 @@ function header() {
   )
 }
 
-export default header
+export default Header

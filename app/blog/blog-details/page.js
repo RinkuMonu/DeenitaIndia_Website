@@ -9,7 +9,6 @@ import {
     FaFacebookF,
     FaTwitter,
     FaWhatsapp,
-    FaRegClock,
     FaFolderOpen,
 } from 'react-icons/fa';
 import { IoIosArrowBack } from "react-icons/io";

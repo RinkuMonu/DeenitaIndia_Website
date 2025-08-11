@@ -68,7 +68,7 @@ function Footer() {
                   </li>
                   <li className="group transition-all duration-200 hover:pl-2">
                     <Link href="" className="hover:text-[#0E91C9]">
-                      API's
+                      API&apos;s
                     </Link>
                   </li>
                   <li className="group transition-all duration-200 hover:pl-2">

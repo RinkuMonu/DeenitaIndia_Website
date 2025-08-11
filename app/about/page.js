@@ -242,7 +242,7 @@ export default function CompanySection() {
                 with one goal
               </h3>
               <p className="text-gray-700 mb-4 font-medium text-lg md:text-[16px] md:pr-32">
-                to make a real difference in people's lives through experiences
+                to make a real difference in people&apos;s lives through experiences
                 that matter.
               </p>
               <p className="text-gray-600 text-sm md:text-base md:pr-28">

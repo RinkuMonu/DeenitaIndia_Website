@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from 'next/navigation';
 
 
-export default function contact() {
+export default function Contact() {
 
 const [formData, setFormData] = useState({
     fullName: '',
@@ -72,10 +72,10 @@ const [formData, setFormData] = useState({
                Contact us anytime
               </span>
               <h1 className="text-2xl md:text-[32px] font-bold text-[#115d8e] mb-4 md:pr-10">
-               Reach out to us we're just a message away
+               Reach out to us we&apos;re just a message away
               </h1>
               <p className="text-gray-800 mb-6 text-base md:text-[16px] md:pr-8">
-                We're here to answer your questions and provide the support you need.
+                We&apos;re here to answer your questions and provide the support you need.
               </p>
 
                <Link href="/contact">
@@ -225,7 +225,7 @@ const [formData, setFormData] = useState({
               Start the conversation today
             </h3>
             <p className="text-gray-500 mb-6 md:mb-8 text-base md:text-[18px]">
-              We're just a message, call, or click away.
+              We&apos;re just a message, call, or click away.
             </p>
 
             <div className="space-y-6">
@@ -336,10 +336,10 @@ const [formData, setFormData] = useState({
 
  <section className="relative bg-white py-8 text-center px-4 sm:px-6 lg:px-8 lg:mt-40">
         <p className="text-lg md:text-[20px] text-[#115D8E] mb-2 font-bold">
-          Here's where you can find us!
+          Here&apos;s where you can find us!
         </p>
         <h3 className="text-2xl md:text-[32px] font-semibold text-gray-800 mb-8 md:mb-16">
-          We're easy to find and always ready to connect
+          We&apos;re easy to find and always ready to connect
         </h3>
 
         <div className="overflow-hidden mb-6 rounded-lg shadow-lg">
