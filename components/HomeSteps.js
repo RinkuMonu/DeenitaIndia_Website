@@ -27,7 +27,7 @@ function HomeSteps() {
         <>
             <section className="container relative my-8">
                 <p className="heading text-center font-semibold pb-12">
-                    Here&apos;s how it <span className="theme-text">works</span>
+                    Here's how it <span className="theme-text">works</span>
                 </p>
                 {steps.map((step, index) => (
                     <div className="max-w-3xl mx-auto mt-7" key={index}>

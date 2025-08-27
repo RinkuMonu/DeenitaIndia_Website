@@ -43,7 +43,7 @@ const projects = [
 ];
 
 
-export default function ProjectCarousel() {
+export default function Slider() {
   return (
     <section className="container pt-10">
 <div>
