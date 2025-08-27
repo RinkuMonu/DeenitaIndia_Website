@@ -50,7 +50,7 @@ export default function Slider() {
         <p className="heading font-semibold mb-8">
         Delivering Expert <span className="theme-text">Services</span> <br></br> that drive results
       </p>
-      <Link href="/login" className="text-white shadow-[0_8px_30px_rgba(138,173,187)] me-4 font-semibold bg-[#115D8E] py-3 rounded-lg text-base px-6 text-center">Get in touch</Link>
+      <Link href="/contact" className="text-white shadow-[0_8px_30px_rgba(138,173,187)] me-4 font-semibold bg-[#115D8E] py-3 rounded-lg text-base px-6 text-center">Get in touch</Link>
 </div>
       <Swiper
         modules={[Pagination, Autoplay]}

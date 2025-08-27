@@ -41,11 +41,11 @@ export default function Home() {
               {/* Trust indicators */}
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-accent" />
+                  <Shield className="w-4 h-4 text-[#046eb4]" />
                   <span>Bank-level Security</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Award className="w-4 h-4 text-accent" />
+                  <Award className="w-4 h-4 text-[#046eb4]" />
                   <span>SOC 2 Certified</span>
                 </div>
               </div>
@@ -53,7 +53,7 @@ export default function Home() {
               {/* Main heading */}
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#115D8E] to-[#046eb4] bg-clip-text text-transparent">
                     Innovative
                   </span>
                   <br />
@@ -74,14 +74,14 @@ export default function Home() {
               {/* CTA buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/get-started"
-                  className="group bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105"
+                  href="/contact"
+                  className="group bg-[#046eb4]  hover:bg-[#085080]  text-accent-foreground font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105"
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  href="/demo"
+                  href="/contact"
                   className="group bg-card/80 backdrop-blur-sm hover:bg-card text-card-foreground font-semibold py-4 px-8 rounded-xl border border-border/50 hover:border-border transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105"
                 >
                   Book a Demo
@@ -93,7 +93,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-8 pt-8">
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-accent" />
+                    <TrendingUp className="w-5 h-5 text-[#046eb4] " />
                     <span className="text-3xl lg:text-4xl font-bold text-primary">
                       $2.5B+
                     </span>
@@ -104,7 +104,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <Users className="w-5 h-5 text-accent" />
+                    <Users className="w-5 h-5 text-[#046eb4] " />
                     <span className="text-3xl lg:text-4xl font-bold text-primary">
                       10K+
                     </span>
@@ -126,7 +126,7 @@ export default function Home() {
                       Financial Dashboard
                     </h3>
                     <div className="flex gap-2">
-                      <div className="w-3 h-3 bg-accent rounded-full"></div>
+                      <div className="w-3 h-3 bg-[#046eb4]  rounded-full"></div>
                       <div className="w-3 h-3 bg-primary rounded-full"></div>
                       <div className="w-3 h-3 bg-muted rounded-full"></div>
                     </div>
@@ -148,7 +148,7 @@ export default function Home() {
                       {[40, 65, 45, 80, 55, 90, 75].map((height, i) => (
                         <div
                           key={i}
-                          className="bg-gradient-to-t from-primary to-accent rounded-sm w-6 transition-all duration-1000"
+                          className="bg-gradient-to-t from-[#053453]  to-[#1996e9]  rounded-sm w-6 transition-all duration-1000"
                           style={{
                             height: `${height}%`,
                             transitionDelay: `${i * 100}ms`,
@@ -164,7 +164,7 @@ export default function Home() {
                       <div className="text-sm text-muted-foreground">
                         Monthly Growth
                       </div>
-                      <div className="text-xl font-bold text-accent">
+                      <div className="text-xl font-bold text-[#046eb4] ">
                         +12.5%
                       </div>
                     </div>
@@ -180,10 +180,10 @@ export default function Home() {
 
               {/* Floating elements */}
               <div className="absolute -top-4  -right-4 bg-accent/10 backdrop-blur-sm rounded-full p-4 border border-accent/20">
-                <Shield className="w-6 h-6 text-accent" />
+                <Shield className="w-6 h-6 text-[#046eb4] " />
               </div>
               <div className="absolute -bottom-4 -left-4 bg-primary/10 backdrop-blur-sm rounded-full p-4 border border-primary/20">
-                <TrendingUp className="w-6 h-6 text-primary" />
+                <TrendingUp className="w-6 h-6 text-[#046eb4] " />
               </div>
             </div>
           </div>
@@ -197,7 +197,7 @@ export default function Home() {
       <Testonomials />
       <Blog />
       <Cta />
-      <Partners /> 
+      <Partners />
     </>
   );
 }
