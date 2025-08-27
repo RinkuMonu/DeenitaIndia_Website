@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
+import { MdArrowOutward } from "react-icons/md";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -116,7 +117,7 @@ export default function Contact() {
   return (
     <section className="px-4 sm:px-14">
       <section className="pt-20 md:pt-32 relative before:content-[''] before:absolute before:inset-0 before:backdrop-blur-[100px] before:z-[-1] z-1 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
+        {/* <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full bg-[#eaf4fa] rounded-xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row">
             <div className="w-full lg:w-3/5 md:p-6">
               <span className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white text-sm px-4 py-1 rounded-full mb-4">
@@ -156,10 +157,46 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+
+           <div className="grid lg:grid-cols-2 bg-[#E6F0F9] rounded-2xl p-8 md:p-12 gap-8 overflow-hidden">
+            <div className="flex flex-col justify-center space-y-6 z-10">
+              <span className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white shadow-lg px-4 py-2 rounded-full text-sm font-medium w-fit">
+                Contact us anytime
+              </span>
+              <h1 className="text-4xl md:text-5xl font-bold text-[#0B4870] leading-tight">
+                Reach out to us we&apos;re just a message away
+              </h1>
+              <p className="text-gray-600 text-lg">
+                We&apos;re here to answer your questions and provide the support
+                you need.
+              </p>
+              <div className="flex gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-[#115D8E] hover:bg-[#0B4870] text-white font-medium text-base px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                >
+                  Connect With Us
+                  <MdArrowOutward className="text-lg" />
+                </Link>
+            
+              </div>
+            </div>
+            <div className="hidden lg:flex items-center justify-center relative">
+              <div className="absolute -top-10 -right-10 w-72 h-72 bg-[#115D8E] opacity-10 rounded-full"></div>
+              <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[#0B4870] opacity-10 rounded-full"></div>
+              <Image
+                src="/Image/contact-banner-img.png"
+                alt="Blog Preview"
+                width={400}
+                height={500}
+                className="rounded-2xl h-[400px] w-[350px] object-cover object-center z-10 shadow-xl"
+              />
+            </div>
+          </div>
       </section>
 
-      <section className="mt-8 lg:mt-40">
+      <section className="mt-8 lg:mt-28">
         <div className="bg-white flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="w-full lg:max-w-md bg-white rounded-2xl shadow-[1px_4px_10px_2px_rgba(0,0,0,0.25)] p-6 md:p-8 transform transition duration-300 hover:scale-105 hover:shadow-xl">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">Contact Us</h2>
@@ -399,7 +436,7 @@ export default function Contact() {
         />
       </div>
 
-      <section className="relative bg-white py-8 text-center px-4 sm:px-6 lg:px-8 lg:mt-40">
+      <section className="relative bg-white py-8 text-center px-4 sm:px-6 lg:px-8 lg:mt-28">
         <p className="text-lg md:text-[20px] text-[#115D8E] mb-2 font-bold">
           Here&apos;s where you can find us!
         </p>

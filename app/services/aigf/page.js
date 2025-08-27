@@ -81,8 +81,8 @@ function page() {
   const section2 = [
     {
       tag: "Escrow Service",
-      tag1: "hjh hghgjh",
-      tag2: "hjh hghgjh",
+      tag1: "Secure Transactions",
+      tag2: "GET AIGF accreditation",
       title: "Operate legally and build player trust with AIGF accreditation",
       description:
         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
@@ -198,7 +198,7 @@ function page() {
       <div className='container'>
         <ServiceContracts contracts={contractData} />
         <ServicesSteper data={stepperData} />
-            <ServiceAdvantage sections={sections1} />
+        <ServiceAdvantage sections={sections1} />
       </div>
   
       <Cta />
