@@ -1,14 +1,14 @@
-"use client"
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
-import LoginModal from "@/components/login"
-import { usePathname } from "next/navigation"
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import LoginModal from "@/components/login";
+import { usePathname } from "next/navigation";
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <>
@@ -58,7 +58,9 @@ function Header() {
                   <div className="relative group">
                     <div
                       className={`text-sm font-medium flex items-center cursor-pointer transition-all duration-300 hover:text-primary hover:scale-105 relative ${
-                        pathname.startsWith("/services") ? "text-primary" : "text-foreground"
+                        pathname.startsWith("/services")
+                          ? "text-primary"
+                          : "text-foreground"
                       }`}
                     >
                       Services
@@ -69,7 +71,12 @@ function Header() {
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </div>
 
@@ -136,7 +143,9 @@ function Header() {
                   <Link
                     href="/contact"
                     className={`text-sm font-medium transition-all duration-300 hover:text-primary hover:scale-105 relative group ${
-                      pathname === "/contact" ? "text-primary" : "text-foreground"
+                      pathname === "/contact"
+                        ? "text-primary"
+                        : "text-foreground"
                     }`}
                   >
                     Contact us
@@ -157,7 +166,8 @@ function Header() {
               </button>
               <Link
                 href="/contact"
-                className="hidden lg:flex items-center justify-center px-6 py-2 text-sm font-medium text-accent-foreground bg-accent hover:bg-accent/90 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg relative group overflow-hidden"
+                className="hidden lg:flex items-center justify-center px-6 py-2 text-sm font-medium text-accent-foreground bg-[#115d8e]
+                 hover:bg-[#046eb4] rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg relative group overflow-hidden "
               >
                 <span className="relative z-10">Join</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
@@ -168,8 +178,18 @@ function Header() {
                 className="lg:hidden inline-flex items-center justify-center p-2 w-10 h-10 text-foreground hover:bg-muted/50 rounded-lg transition-all duration-300"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 </svg>
               </button>
             </div>
@@ -178,7 +198,9 @@ function Header() {
 
         <div
           className={`lg:hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-4"
+            isMenuOpen
+              ? "opacity-100 visible translate-y-0"
+              : "opacity-0 invisible -translate-y-4"
           }`}
         >
           <div className="max-w-7xl mx-auto mt-2 px-4">
@@ -189,7 +211,9 @@ function Header() {
                     href="/"
                     onClick={() => setIsMenuOpen(false)}
                     className={`block py-2 text-sm font-medium transition-colors duration-200 ${
-                      pathname === "/" ? "text-primary" : "text-foreground hover:text-primary"
+                      pathname === "/"
+                        ? "text-primary"
+                        : "text-foreground hover:text-primary"
                     }`}
                   >
                     Home
@@ -200,7 +224,9 @@ function Header() {
                     href="/about"
                     onClick={() => setIsMenuOpen(false)}
                     className={`block py-2 text-sm font-medium transition-colors duration-200 ${
-                      pathname === "/about" ? "text-primary" : "text-foreground hover:text-primary"
+                      pathname === "/about"
+                        ? "text-primary"
+                        : "text-foreground hover:text-primary"
                     }`}
                   >
                     About
@@ -210,7 +236,9 @@ function Header() {
                   <details className="group">
                     <summary
                       className={`py-2 text-sm font-medium flex items-center cursor-pointer transition-colors duration-200 ${
-                        pathname.startsWith("/services") ? "text-primary" : "text-foreground hover:text-primary"
+                        pathname.startsWith("/services")
+                          ? "text-primary"
+                          : "text-foreground hover:text-primary"
                       }`}
                     >
                       Services
@@ -220,7 +248,12 @@ function Header() {
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </summary>
                     <div className="pl-4 mt-2 space-y-2">
@@ -274,7 +307,9 @@ function Header() {
                     href="/blog"
                     onClick={() => setIsMenuOpen(false)}
                     className={`block py-2 text-sm font-medium transition-colors duration-200 ${
-                      pathname === "/blog" ? "text-primary" : "text-foreground hover:text-primary"
+                      pathname === "/blog"
+                        ? "text-primary"
+                        : "text-foreground hover:text-primary"
                     }`}
                   >
                     Blog
@@ -285,7 +320,9 @@ function Header() {
                     href="/contact"
                     onClick={() => setIsMenuOpen(false)}
                     className={`block py-2 text-sm font-medium transition-colors duration-200 ${
-                      pathname === "/contact" ? "text-primary" : "text-foreground hover:text-primary"
+                      pathname === "/contact"
+                        ? "text-primary"
+                        : "text-foreground hover:text-primary"
                     }`}
                   >
                     Contact us
@@ -296,8 +333,8 @@ function Header() {
                   <button
                     type="button"
                     onClick={() => {
-                      setIsModalOpen(true)
-                      setIsMenuOpen(false)
+                      setIsModalOpen(true);
+                      setIsMenuOpen(false);
                     }}
                     className="block w-full py-3 text-sm font-medium text-foreground bg-background/80 hover:bg-muted/80 border border-border/40 rounded-lg transition-all duration-200 mb-3"
                   >
@@ -319,7 +356,7 @@ function Header() {
 
       {isModalOpen && <LoginModal onClose={() => setIsModalOpen(false)} />}
     </>
-  )
+  );
 }
 
-export default Header
+export default Header;
