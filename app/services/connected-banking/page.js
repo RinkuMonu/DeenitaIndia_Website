@@ -90,30 +90,30 @@ function page() {
             imageSrc: "/images/cb2.png",
         },
     ]
-  const contractData = [
-   {
-  title: "Service",
-  subtitle: "From scope to timelines, everything is documented to ensure smooth collaboration",
-  items: [
-    {
-      title: "B2B",
-      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      image: "/images/b2b.jpg"
-    },
-    {
-      title: "Fintech Startups",
-      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      image: "/images/real-estate.jpg"
-    },
-    {
-      title: "Freelancing",
-      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      image: "/images/freelancing.jpg"
-    },
-  ]
-}
+    const contractData = [
+        {
+            title: "Service",
+            subtitle: "From scope to timelines, everything is documented to ensure smooth collaboration",
+            items: [
+                {
+                    title: "B2B",
+                    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+                    image: "/images/b2b.jpg"
+                },
+                {
+                    title: "Fintech Startups",
+                    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+                    image: "/images/real-estate.jpg"
+                },
+                {
+                    title: "Freelancing",
+                    description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+                    image: "/images/freelancing.jpg"
+                },
+            ]
+        }
 
-  ];
+    ];
     return (
         <>
             <div className='container'>
@@ -123,13 +123,13 @@ function page() {
             <ServiceBanner sections={sections} />
             <div className='container'>
                 <ServiceContracts contracts={contractData} />
-                          <ServiceAdvantage sections={sections1} />
+                <ServiceAdvantage sections={sections1} />
             </div>
-  
+
             <Cta />
 
-            <div className='container my-16'   data-aos="fade-up"
-  data-aos-duration="2000">
+            <div className='container my-16' data-aos="fade-up"
+                data-aos-duration="2000">
                 <div className='md:flex justify-between align-middle'>
                     <p className="heading font-semibold ">
                         <span className="theme-text">Dashboard Visual </span><br></br>Overview

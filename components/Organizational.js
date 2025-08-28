@@ -5,19 +5,19 @@ import { useState } from "react";
 const tabs = [
   {
     id: 1,
-    title: "Lorem ipsum dolor sit amet",
+    title: "Leadership Structure",
     content:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem acuptatem accusantium doloremque laudantium, totam rem aperiam.",
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
   },
   {
     id: 2,
-    title: "Lorem ipsum dolor sit amet",
+    title: "Team Organization",
     content:
       "Content for tab 2: different text can go here. You can add more if needed voluptatem accusantium doloremque laudantium, totam rem aperiam.",
   },
   {
     id: 3,
-    title: "Lorem ipsum dolor sit amet",
+    title: "Department Roles",
     content:
       "Content for tab 3: replace this with relevant content voluptatem accusantium doloremque laudantium, totam rem aperiam.",
   },

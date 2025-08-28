@@ -158,7 +158,7 @@ function Header() {
             <div className="flex items-center space-x-3">
               <button
                 type="button"
-                className="hidden lg:flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-background/80 hover:bg-muted/80 border border-border/40 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-md relative group overflow-hidden"
+                className="hidden lg:flex items-center justify-center px-4 py-2 text-sm cursor-pointer font-medium text-foreground bg-background/80 hover:bg-muted/80 border border-border/40 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-md relative group overflow-hidden"
                 onClick={() => setIsModalOpen(true)}
               >
                 <span className="relative z-10">Login</span>

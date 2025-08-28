@@ -240,7 +240,7 @@ export default function Contact() {
           </div>
         </section>
 
-        <section className="mt-8 lg:mt-28 py-12 lg:py-20 ">
+        <section className=" py-12 ">
           <div className="px-4 flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-16 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div className="w-full lg:max-w-lg bg-white rounded-3xl shadow-[0_20px_50px_rgba(17,93,142,0.1)] border border-gray-100 p-10 md:px-12 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(17,93,142,0.15)]">
               <div className="text-center mb-6">
