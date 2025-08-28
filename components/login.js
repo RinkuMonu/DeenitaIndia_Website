@@ -204,7 +204,7 @@ export default function LoginModal({ onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl transition-colors duration-200 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-200"
+          className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl transition-colors duration-200 w-8 h-8 flex items-center cursor-pointer justify-center rounded-full hover:bg-gray-200"
           onClick={onClose}
           aria-label="Close modal"
         >
@@ -232,7 +232,7 @@ export default function LoginModal({ onClose }) {
                 placeholder=" "
               />
               <label 
-                htmlFor="email" 
+                htmlFor="email"
                 className="absolute text-sm text-gray-500 duration-300 transform -translate-y-3 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-[#115D8E] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3"
               >
                 Email
@@ -271,7 +271,7 @@ export default function LoginModal({ onClose }) {
               <button
                 type="button"
                 onClick={() => setRememberMe(!rememberMe)}
-                className={`relative inline-flex h-5 w-10 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#115D8E] focus:ring-offset-2 ${rememberMe ? 'bg-[#115D8E]' : 'bg-gray-300'}`}
+                className={`relative inline-flex h-5 w-10 cursor-pointer items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#115D8E] focus:ring-offset-2 ${rememberMe ? 'bg-[#115D8E]' : 'bg-gray-300'}`}
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${rememberMe ? 'translate-x-5' : 'translate-x-1'}`}
@@ -282,7 +282,7 @@ export default function LoginModal({ onClose }) {
 
           <button
             type="submit"
-            className="w-full py-3.5 rounded-xl text-white font-semibold bg-gradient-to-r from-[#777777] to-[#115D8E] hover:opacity-90 transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg"
+            className="w-full py-3.5 rounded-xl text-white font-semibold cursor-pointer bg-gradient-to-r from-[#777777] to-[#115D8E] hover:opacity-90 transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg"
           >
             Log in
           </button>
@@ -294,7 +294,7 @@ export default function LoginModal({ onClose }) {
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
 
-        <button className="w-full py-3 rounded-xl border border-gray-300 bg-white text-gray-700 font-medium hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm hover:shadow-md">
+        <button className="w-full py-3 cursor-pointer rounded-xl border border-gray-300 bg-white text-gray-700 font-medium hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm hover:shadow-md">
           <svg className="w-5 h-5" viewBox="0 0 24 24" width="24" height="24">
             <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
             <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
