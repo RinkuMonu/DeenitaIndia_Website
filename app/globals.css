@@ -165,18 +165,18 @@ body {
   }
 }
 
-@media (max-width: 1085px) {
+@media (max-width: 900px) {
   .banner-overlaid-img {
     display: none;
   }
 }
 
-@media (max-width: 1056px) {
+/* @media (max-width: 1056px) {
   .banner-overlaid-img {
     height: 300px;
     width: 100px;
   }
-}
+} */
 .radial-grad {
   background: radial-gradient(
     circle,

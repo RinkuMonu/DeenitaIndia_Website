@@ -70,193 +70,358 @@ export default function CompanySection() {
   return (
     <>
       <div className="container overflow-hidden">
-        <section className="pt-20 md:pt-32 relative before:content-[''] before:absolute before:inset-0 before:backdrop-blur-[100px] before:z-[-1] z-1">
-          <div className="mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
-            <div className="w-full bg-[#eaf4fa] rounded-xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row">
-              <div className="w-full lg:w-3/5">
-                <span className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white text-sm px-4 py-1 rounded-full mb-4">
-                  About Company
-                </span>
-                <h1 className="text-2xl md:text-[32px] font-bold text-[#115d8e] mb-4 md:pr-10">
-                  Creating connections through impactful experiences
-                </h1>
-                <p className="text-gray-800 mb-6 text-base md:text-[16px] md:pr-8">
-                  We turn bold ideas into impactful results through design,
-                  strategy, and innovation.
-                </p>
+        <section className="pt-20 md:pt-32 relative ">
+          <div className="absolute inset-0 backdrop-blur-[100px] bg-white/30 z-[-1]"></div>
 
-                <div className="flex flex-wrap gap-3 md:gap-4 mb-6">
-                  <div className="bg-white p-3 md:p-4 rounded-xl shadow-md w-full sm:w-40 text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-                    <Image
-                      src="/Image/distribution 1.png"
-                      alt="Icon"
-                      width={32}
-                      height={36}
-                      className="mx-auto mb-2"
-                    />
-                    <div className="flex justify-center">
-                      <div className="text-xs md:text-[13px] font-semibold text-[#184766] md:pl-2">
-                        2000+
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+              <div className="w-full bg-[#eaf4fa] rounded-xl p-6 md:p-8 shadow-sm">
+                <div className="flex flex-col lg:flex-row gap-8">
+                  {/* Left Content */}
+                  <div className="w-full lg:w-1/2">
+                    <span className="inline-block gradient-badge text-white text-sm px-4 py-1 rounded-full mb-4">
+                      About Company
+                    </span>
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#115d8e] mb-4">
+                      Creating connections through impactful experiences
+                    </h1>
+                    <p className="text-gray-800 mb-6 text-base md:text-lg">
+                      We turn bold ideas into impactful results through design,
+                      strategy, and innovation.
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                      {/* Distributors Card */}
+                      <div className="bg-white p-4 rounded-xl shadow-md text-center card-hover">
+                        <div className="mx-auto mb-3 w-12 h-12 bg-[#115d8e] rounded-full flex items-center justify-center">
+                          <svg
+                            className="w-6 h-6 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                            />
+                          </svg>
+                        </div>
+                        <div className="font-semibold text-lg text-[#184766]">
+                          2000+
+                        </div>
+                        <div className="text-sm text-gray-600">
+                          Distributors
+                        </div>
                       </div>
-                      <div className="text-xs md:text-[13px] text-gray-600 pl-1 md:pl-2">
-                        Distributors
+
+                      {/* Retailers Card */}
+                      <div className="bg-white p-4 rounded-xl shadow-md text-center card-hover">
+                        <div className="mx-auto mb-3 w-12 h-12 bg-[#115d8e] rounded-full flex items-center justify-center">
+                          <svg
+                            className="w-6 h-6 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                            />
+                          </svg>
+                        </div>
+                        <div className="font-semibold text-lg text-[#184766]">
+                          100,000+
+                        </div>
+                        <div className="text-sm text-gray-600">Retailers</div>
+                      </div>
+
+                      {/* Districts Card */}
+                      <div className="bg-white p-4 rounded-xl shadow-md text-center card-hover">
+                        <div className="mx-auto mb-3 w-12 h-12 bg-[#115d8e] rounded-full flex items-center justify-center">
+                          <svg
+                            className="w-6 h-6 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                          </svg>
+                        </div>
+                        <div className="font-semibold text-lg text-[#184766]">
+                          800+
+                        </div>
+                        <div className="text-sm text-gray-600">Districts</div>
                       </div>
                     </div>
-                  </div>
-                  <div className="bg-white p-3 md:p-4 rounded-xl shadow-md w-full sm:w-40 text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-                    <Image
-                      src="/Image/region 1.png"
-                      alt="Icon"
-                      width={36}
-                      height={40}
-                      className="mx-auto mb-2"
-                    />
-                    <div className="flex justify-center">
-                      <div className="text-xs md:text-[13px] font-semibold text-[#184766] md:pl-2">
-                        100,000 +
-                      </div>
-                      <div className="text-xs md:text-[13px] text-gray-600 pl-1 md:pl-2">
-                        Retailers
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-white p-3 md:p-4 rounded-xl shadow-md w-full sm:w-40 text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-                    <Image
-                      src="/Image/shop 1.png"
-                      alt="Icon"
-                      width={34}
-                      height={38}
-                      className="mx-auto mb-2"
-                    />
-                    <div className="flex justify-center">
-                      <div className="text-xs md:text-[13px] font-semibold text-[#184766] md:pl-4">
-                        800 +
-                      </div>
-                      <div className="text-xs md:text-[13px] text-gray-600 pl-1 md:pl-2">
-                        Districts
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                <Link
-                  href="/contact"
-                  className="mt-4 md:mt-6 bg-[#115d8e] hover:bg-[#006c9d] text-white font-semibold px-6 py-2 rounded-md shadow-md"
-                >
-                  Get started
-                </Link>
-              </div>
+                    <Link
+                      href="/contact"
+                      className="inline-block mt-2 bg-[#115d8e] hover:bg-[#006c9d] text-white font-semibold px-8 py-3 rounded-md shadow-md transition duration-300"
+                    >
+                      Get started
+                    </Link>
+                  </div>
 
-              <div className="hidden md:block md:absolute md:right-20 top-[90px] transform transition duration-300 hover:scale-105 hover:shadow-xl">
-                <div className="rounded-xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/Image/Rectangle 45.png"
-                    alt="Team working"
-                    width={398}
-                    height={190}
-                    className="banner-overlaid-img object-cover h-[500px]"
-                  />
+                  {/* Right Image */}
+                  <div className="w-full lg:w-1/2  justify-center  rounded-xl banner-overlaid-img">
+                    <Image
+                      src="/Image/Rectangle 45.png"
+                      alt="Team working"
+                      width={898}
+                      height={190}
+                      className=" object-cover h-[500px] rounded-xl"
+                    />
+                    {/* </div>
+                      </div>
+                    </div> */}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <style jsx>{`
+            .gradient-badge {
+              background: linear-gradient(to right, #777777, #115d8e);
+            }
+            .card-hover {
+              transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            }
+            .image-hover {
+              transition: transform 0.3s ease;
+            }
+            .image-hover:hover {
+              transform: scale(1.02);
+            }
+          `}</style>
         </section>
 
-        <div className="mt-16 md:mt-32 w-full my-20">
-          <h3 className="relative text-3xl md:text-5xl font-bold mb-8 md:mb-14 pl-0 md:pl-32 text-center md:text-left">
-            <div className="absolute w-72 h-72 bg-[#115D8E] rounded-full opacity-20 blur-3xl top-20 -left-20 z-0"></div>
-            <span className="text-[#115d8e]">Our </span>
-            <span className="text-gray-700">Vision & Mission</span>
-          </h3>
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-0 md:px-0">
-            <div className="bg-[#166599] text-white p-6 md:p-8 rounded-xl shadow-[4px_4px_4px_2px_#00000040] transform transition duration-300 hover:scale-105 hover:shadow-xl" data-aos="fade-right"  data-aos-duration="1000">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-                <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-4 md:pl-10">
-                  <Image
-                    src="/Image/vision.png"
-                    alt="Icon"
-                    width={32}
-                    height={36}
+        <div className="mt-16 md:mt-32 w-full my-20 relative overflow-hidden  rounded-lg">
+          {/* Background elements */}
+          <div className="absolute w-72 h-72 bg-[#9dbace] rounded-full opacity-20 blur-3xl -top-20 -left-20 z-0"></div>
+          <div className="absolute w-64 h-64 bg-[#acbfcc] rounded-full opacity-10 blur-3xl bottom-10 -right-20 z-0"></div>
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4">
+            <h3 className="relative text-3xl md:text-5xl font-bold mb-12 md:mb-16 text-center">
+              <span className="text-[#115d8e] relative inline-block">
+                Our
+                <svg
+                  className="absolute -bottom-2 left-0 w-full"
+                  width="140"
+                  height="8"
+                  viewBox="0 0 140 8"
+                  fill="none"
+                >
+                  <path
+                    d="M1 4C35.5 2 80 6.5 139 4"
+                    stroke="#115d8e"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
-                  Vision
-                </h3>
+                </svg>
+              </span>
+              <span className="text-gray-800 ml-2">Vision & Mission</span>
+            </h3>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+              {/* Vision Card */}
+              <div
+                className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-[#115d8e] to-[#184766] text-white p-8 shadow-lg transform transition-all duration-500 hover:-translate-y-2"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-28 h-28 -mt-10 -mr-10 bg-white/10 rounded-full"></div>
+                <div className="absolute bottom-0 left-0 w-20 h-20 -mb-8 -ml-8 bg-white/5 rounded-full"></div>
+
+                <div className="relative z-10">
+                  <div className="flex flex-col items-center md:flex-row md:items-start gap-4 mb-6">
+                    <div className="bg-white/20 p-4 rounded-xl backdrop-blur-sm">
+                      <Image
+                        src="/Image/vision.png"
+                        alt="Vision Icon"
+                        width={40}
+                        height={40}
+                        className="w-8 h-8 md:w-10 md:h-10"
+                      />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-center md:text-left">
+                      Vision
+                    </h3>
+                  </div>
+                  <p className="text-sm md:text-base leading-relaxed text-white/90 text-center md:text-left">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium voluptatum deleniti atque
+                    corrupti quos dolores et quas.
+                  </p>
+                  <div className="mt-6 flex justify-center md:justify-start">
+                    <div className="w-12 h-1 bg-white/40 rounded-full"></div>
+                  </div>
+                </div>
+
+                {/* Hover effect border */}
+                <div className="absolute inset-0 rounded-2xl border-2 border-white/0 group-hover:border-white/20 transition-all duration-500"></div>
               </div>
-              <p className="text-sm md:text-base leading-relaxed mx-0 md:mx-10 text-center md:text-left">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas.
-              </p>
+
+              {/* Mission Card */}
+              <div
+                className="relative group overflow-hidden rounded-2xl bg-white p-8 shadow-lg transform transition-all duration-500 hover:-translate-y-2"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-28 h-28 -mt-10 -mr-10 bg-[#115d8e]/10 rounded-full"></div>
+                <div className="absolute bottom-0 left-0 w-20 h-20 -mb-8 -ml-8 bg-[#115d8e]/5 rounded-full"></div>
+
+                <div className="relative z-10">
+                  <div className="flex flex-col items-center md:flex-row md:items-start gap-4 mb-6">
+                    <div className="bg-[#eaf4fa] p-4 rounded-xl">
+                      <Image
+                        src="/Image/Mission.png"
+                        alt="Mission Icon"
+                        width={40}
+                        height={40}
+                        className="w-8 h-8 md:w-10 md:h-10"
+                      />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#115d8e] text-center md:text-left">
+                      Mission
+                    </h3>
+                  </div>
+                  <p className="text-sm md:text-base leading-relaxed text-gray-600 text-center md:text-left">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium voluptatum deleniti atque
+                    corrupti quos dolores et quas.
+                  </p>
+                  <div className="mt-6 flex justify-center md:justify-start">
+                    <div className="w-12 h-1 bg-[#115d8e]/40 rounded-full"></div>
+                  </div>
+                </div>
+
+                {/* Hover effect border */}
+                <div className="absolute inset-0 rounded-2xl border-2 border-[#115d8e]/0 group-hover:border-[#115d8e]/20 transition-all duration-500"></div>
+              </div>
             </div>
-            <div className="bg-white border border-gray-200 text-[#166599] p-6 md:p-8 rounded-xl shadow-[4px_4px_4px_2px_#00000040] transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#f9f9f9]"  data-aos="fade-left" data-aos-duration="1000">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-                <h3 className="text-2xl md:text-[36px] font-bold text-center flex items-center justify-center gap-2 md:pl-10">
-                  <Image
-                    src="/Image/Mission.png"
-                    alt="Icon"
-                    width={32}
-                    height={36}
-                  />
-                  Mission
-                </h3>
-              </div>
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed mx-0 md:mx-10 text-center md:text-left">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas.
-              </p>
+
+            {/* Connecting line for visual flow */}
+            <div className="hidden lg:flex justify-center mt-8">
+              <div className="w-1 h-12 bg-gradient-to-b from-[#115d8e] to-transparent rounded-full"></div>
             </div>
           </div>
         </div>
       </div>
-      <section className="w-full overflow-hidden relative bg-cover bg-center bg-no-repeat mb-10">
-        <div
-          className="z-10 bg-white bg-opacity-90 backdrop-blur-[100px] rounded-lg"
-          style={bgStyle}
-        >
-          <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-10 px-8 py-4 bg-[#FBFCFF] md:bg-transparent">
-            <div className="absolute top-0 -left-0 h-full w-4 md:w-7 bg-[#115d8e]" />
-            <div className="absolute top-0 right-0 h-full w-4 md:w-7 bg-[#115d8e]" />
-            <div className="w-full md:w-[40%] flex justify-center">
-              <div className="relative rounded-xl overflow-hidden md:left-10 w-full max-w-[400px] transform transition duration-300 hover:scale-105 hover:shadow-xl" >
-                <Image
-                  src="/Image/Rectangle 52.png"
-                  alt="CEO"
-                  width={400}
-                  height={400}
-                  className="rounded-xl w-full h-auto"
-                  layout="responsive"
-                />
-                <div className="absolute bottom-0 bg-gradient-to-r from-[#115d8e] to-gray-700 text-white px-4 py-2">
-                  <p className="text-xs md:text-sm font-semibold">
-                    deleniti atque
-                  </p>
-                  <p className="text-[10px] md:text-xs">Ceo at Velasconde</p>
+      <section className="w-full overflow-hidden relative py-16 md:py-24">
+        {/* Background pattern */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxMTVEOEUiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6TTE4IDM0YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+
+        <div className="container mx-auto px-4">
+          <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+            {/* Accent borders */}
+            <div className="absolute top-0 left-0 h-full w-2 md:w-3 bg-gradient-to-b from-[#115d8e] to-[#2E709B]"></div>
+            <div className="absolute top-0 right-0 h-full w-2 md:w-3 bg-gradient-to-b from-[#115d8e] to-[#2E709B]"></div>
+
+            <div className="relative flex flex-col lg:flex-row items-stretch">
+              {/* Image Section */}
+              <div className="w-full lg:w-2/5 relative">
+                <div className="relative h-full min-h-[400px] lg:min-h-[500px] overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#115de]/80 to-transparent z-10"></div>
+                  <Image
+                    src="/Image/Rectangle 52.png"
+                    alt="CEO"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+
+                  {/* CEO Info Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-[#115d8e] to-transparent p-6 text-white">
+                    <div className="max-w-xs mx-auto lg:mx-0">
+                      <p className="text-lg md:text-xl font-semibold mb-1">
+                        deleniti atque
+                      </p>
+                      <p className="text-sm md:text-base opacity-90">
+                        CEO at Velasconde
+                      </p>
+
+                      {/* Quote icon */}
+                      <div className="absolute -top-8 right-6 w-16 h-16 bg-[#115d8e] rounded-full flex items-center justify-center">
+                        <svg
+                          className="w-8 h-8 text-white"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="w-full md:w-[60%] mt-6 md:mt-0 sm:p-12">
-              <h3 className="text-4xl md:text-[42px] font-bold text-[#115d8e] leading-tight mb-2">
-                We started this journey
-                <br />
-                with one goal
-              </h3>
-              <p className="text-gray-700 mb-4 font-medium text-lg md:text-[16px] md:pr-32">
-                to make a real difference in people&apos;s lives through experiences
-                that matter.
-              </p>
-              <p className="text-gray-600 text-sm md:text-base md:pr-28">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas. At vero eos et accusamus et iusto odio
-                dignissimos ducimus qui blanditiis praesentium voluptatum
-                deleniti atque corrupti quos dolores et quas.
-                <br />
-                <br />
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas.
-              </p>
+              {/* Content Section */}
+              <div className="w-full lg:w-3/4 p-8 md:px-12 flex flex-col justify-center">
+                <div className="max-w-2xl">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#115d8e] leading-tight mb-5">
+                    We started this journey
+                    <br />
+                    with one goal
+                  </h3>
+
+                  <p className="text-lg md:text-xl text-gray-800 font-medium mb-6 leading-relaxed">
+                    to make a real difference in people&apos;s lives through
+                    experiences that matter.
+                  </p>
+
+                  <div className="space-y-4 text-gray-600">
+                    <p className="leading-relaxed">
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium voluptatum deleniti atque
+                    </p>
+
+                    <p className="leading-relaxed">
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium voluptatum deleniti atque
+                      corrupti quos dolores et quas.
+                    </p>
+                  </div>
+
+                  {/* Signature */}
+                  <div className="mt-8 pt-6 border-t border-gray-200">
+                    <div className="flex items-center">
+                      <div className="w-12 h-12 bg-[#eaf4fa] rounded-full flex items-center justify-center mr-4">
+                        <svg
+                          className="w-6 h-6 text-[#115d8e]"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-[#115d8e]">
+                          Leadership Team
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          Committed to excellence
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -265,15 +430,35 @@ export default function CompanySection() {
       <Cta />
 
       <div className="container">
-        <section className="py-8 md:py-12 lg:px-8 xl:px-0 bg-white relative">
-          <div className="absolute w-82 h-82 bg-[#115D8E] rounded-full opacity-15 blur-3xl top-70 -left-20 z-0"></div>
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="" data-aos="fade-up-right"  data-aos-duration="2000">
-              <h3 className="text-3xl md:text-[48px] font-bold text-gray-800 leading-snug" >
+        <section className="py-12 md:py-20 lg:px-4 relative overflow-hidden  rounded-lg  ">
+          {/* Background decorative elements */}
+          <div className="absolute w-72 h-72 bg-[#bad0e0] rounded-full opacity-15 blur-3xl -top-20 -left-20 z-0"></div>
+          <div className="absolute w-64 h-64 bg-[#b5c8d4] rounded-full opacity-10 blur-3xl bottom-0 -right-20 z-0"></div>
+
+          <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center px-4">
+            {/* Left Content */}
+            <div className="" data-aos="fade-up-right" data-aos-duration="1500">
+              <h3 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
                 Proud Moments & <br />
-                <span className="text-[#2E709B]">Achievements</span>
+                <span className="text-[#2E709B] relative inline-block">
+                  Achievements
+                  <svg
+                    className="absolute -bottom-2 left-0 w-full"
+                    width="180"
+                    height="8"
+                    viewBox="0 0 180 8"
+                    fill="none"
+                  >
+                    <path
+                      d="M1 4C40 2 90 6.5 179 4"
+                      stroke="#2E709B"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
               </h3>
-              <p className="mt-4 md:mt-6 text-gray-600 leading-relaxed text-sm md:text-base pr-0 md:pr-14 ">
+              <p className="mt-6 text-gray-600 leading-relaxed text-base md:text-lg max-w-md">
                 At vero eos et accusamus et iusto odio dignissimos ducimus qui
                 blanditiis praesentium voluptatum deleniti atque corrupti quos
                 dolores et quas At vero eos et accusamus et iusto odio
@@ -281,28 +466,53 @@ export default function CompanySection() {
               </p>
             </div>
 
-
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8 p-4 md:p-8 border-2 border-gray-200 rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-xl" data-aos="flip-right" data-aos-duration="2000">
+            {/* Right Stats Grid */}
+            <div
+              className="grid grid-cols-2 gap-6 p-6 md:p-8 bg-white rounded-2xl shadow-lg border border-gray-100 transform transition-all duration-500 hover:shadow-xl"
+              data-aos="flip-right"
+              data-aos-duration="1500"
+            >
               {[
-                { value: "9+", label: "Years" },
-                { value: "99%", label: "Certified" },
-                { value: "80 +", label: "Clients" },
-                { value: "100+", label: "Projects" },
+                {
+                  value: "9+",
+                  label: "Years",
+                  description: "Of excellence and innovation",
+                },
+                {
+                  value: "99%",
+                  label: "Certified",
+                  description: "Quality assurance guaranteed",
+                },
+                {
+                  value: "80+",
+                  label: "Clients",
+                  description: "Satisfied business partners",
+                },
+                {
+                  value: "100+",
+                  label: "Projects",
+                  description: "Successfully delivered",
+                },
               ].map((item, index) => (
-                <div key={index} className="p-2 md:p-0">
-                  <span className="flex items-center transform transition duration-300 hover:scale-110">
-                    <h4 className="text-3xl md:text-2xl font-semibold text-[#115D8E] ">
+                <div
+                  key={index}
+                  className="group text-center p-4 rounded-xl hover:bg-[#eaf4fa] transition-all duration-300"
+                >
+                  {/* Value with animated background */}
+                  <div className="relative inline-block mb-3">
+                    <div className="absolute inset-0 bg-[#115D8E] rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-300 -inset-3"></div>
+                    <h4 className="text-3xl md:text-4xl font-bold text-[#115D8E] relative z-10">
                       {item.value}
                     </h4>
-                    <h4 className="text-2xl md:text-2xl font-semibold text-gray-600 pl-2">
-                      {item.label}
-                    </h4>
-                  </span>
-                  <p className="text-xs md:text-sm text-gray-600 mt-1 hover:text-[#0E91C9]">
-                    Consolidate your projects,
-                    <br />
-                    clients and team into
-                  </p>
+                  </div>
+
+                  {/* Label */}
+                  <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                    {item.label}
+                  </h4>
+
+                  {/* Description */}
+                  <p className="text-xs text-gray-600">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -327,29 +537,71 @@ export default function CompanySection() {
               compromise on it.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-center md:px-2">
-              {[1, 2, 3, 4].map((item) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 justify-center">
+              {[
+                {
+                  title: "Data Privacy & Protection",
+                  icon: "/Image/folder.png",
+                  description:
+                    "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+                },
+                {
+                  title: "Secure Infrastructure",
+                  icon: "/Image/folder.png",
+                  description:
+                    "Enterprise-grade security measures to protect your sensitive information",
+                },
+                {
+                  title: "Compliance",
+                  icon: "/Image/folder.png",
+                  description:
+                    "Adherence to global standards and regulations for data protection",
+                },
+                {
+                  title: "Continuous Monitoring",
+                  icon: "/Image/folder.png",
+                  description:
+                    "24/7 surveillance and proactive threat detection systems",
+                },
+              ].map((item, index) => (
                 <div
-                  key={item}
-                  className="bg-white rounded-2xl p-4 md:p-6 text-left border border-gray-100 hover:shadow-md transition shadow-[1px_1px_100px_1px_#115D8E2E] w-full mx-auto max-w-xs transform duration-300 hover:scale-110" data-aos="fade-down-right" data-aos-duration="2000"
+                  key={index}
+                  className="group relative bg-[#d1dce41f] rounded-2xl p-6 text-left border border-gray-100 hover:border-[#115D8E]/20 transition-all duration-500 overflow-hidden w-full mx-auto max-w-xs"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay={index * 100}
                 >
-                  <div className="mb-1">
-                    <div className="w-8 h-8 md:w-10 md:h-10 transform transition duration-300 hover:scale-120">
+                  {/* Background effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#115D8E]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  {/* Icon container */}
+                  <div className="relative z-10 mb-5">
+                    <div className="w-12 h-12 bg-[#eaf4fa] rounded-xl flex items-center justify-center group-hover:bg-[#115D8E] group-hover:scale-110 transition-all duration-300">
                       <Image
-                        src="/Image/folder.png"
-                        alt="Icon"
-                        width={32}
-                        height={36}
+                        src={item.icon}
+                        alt={item.title}
+                        width={24}
+                        height={24}
+                        className="group-hover:brightness-0 group-hover:invert transition duration-300"
                       />
                     </div>
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-[#115D8E] mb-2">
-                    Data Privacy & Protection
-                  </h3>
-                  <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    odio dignissimos ducimus
-                  </p>
+
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <h3 className="text-lg font-semibold text-[#115D8E] mb-3 group-hover:text-gray-800 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  {/* Hover effect border */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-[#115D8E]/0 group-hover:border-[#115D8E]/10 transition-all duration-500"></div>
+
+                  {/* Bottom accent */}
+                  <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#115D8E] group-hover:w-full transition-all duration-500"></div>
                 </div>
               ))}
             </div>
