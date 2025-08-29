@@ -170,7 +170,7 @@ export default function Privacy() {
 
   return (
     <>
-      <div className="container">
+      <div className="container mt-10">
         <section className="bg-white min-h-screen pt-28 pb-16">
           <div className="bg-[#F4FCFF] rounded-2xl shadow-lg">
             <section>
