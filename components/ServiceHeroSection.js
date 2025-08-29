@@ -75,7 +75,7 @@ export default function ServiceHeroSection({ sections }) {
   }, []);
 
   return (
-    <div className="relative mt-26 px-3">
+    <div className="relative mt-32 px-3">
       {sections.map((section, index) => (
         <div
           key={index}

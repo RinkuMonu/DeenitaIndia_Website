@@ -50,10 +50,10 @@ export default function OrganizationalStructuring() {
               className={`flex items-center gap-2 px-8 py-4 rounded-lg border text-sm font-medium transition-all duration-200 ${
                 activeTab === tab.id
                   ? "border-[#115D8E] text-[#115D8E] bg-white shadow"
-                  : "border-gray-300 text-gray-600 bg-white" 
+                  : "border-gray-300 text-gray-600 bg-white"
               }`}
             >
-              
+
               <span
                 className={`w-3 h-3 rounded-full ${
                   activeTab === tab.id ? "bg-[#115D8E]" : "bg-gray-600"

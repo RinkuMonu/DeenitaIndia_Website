@@ -21,8 +21,8 @@ function Header() {
                   <div className="absolute inset-0 bg-primary/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <Image
                     src="/Image/deenita-logo.png"
-                    width={100}
-                    height={100}
+                    width={150}
+                    height={150}
                     className=" transition-all duration-300"
                     alt="Company Logo"
                   />
