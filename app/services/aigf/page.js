@@ -195,11 +195,12 @@ function page() {
         <ServiceSection2 sections={section2} />
       </div>
       <ServiceBanner sections={sections} />
-      <div className=''>
         <ServiceContracts contracts={contractData} />
         <ServicesSteper data={stepperData} />
+        <div className='container'>
         <ServiceAdvantage sections={sections1} />
-      </div>
+
+        </div>
   
       <Cta />
       <div className='container'>

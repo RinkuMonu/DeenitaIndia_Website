@@ -136,7 +136,7 @@ const stepperData = {
 
     return (
         <>
-            <div className='container'>
+            <div className=''>
                 <ServiceHeroSection sections={EscrowService} />
                 <ServiceSection2 sections={section2}/>
                 <ServiceContracts contracts={contractData}/>

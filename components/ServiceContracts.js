@@ -5,14 +5,14 @@ import { VscWorkspaceTrusted } from "react-icons/vsc"
 
 const ServiceContracts = ({ contracts }) => {
   return (
-    <section className=" mx-auto py-6 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#72CAF7]/5 via-[#44A5E9]/3 to-[#0097CC]/5 -z-20"></div>
+    <section className=" mx-auto py-6 px-4  relative overflow-hidden">
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-[#72CAF7]/5 via-[#44A5E9]/3 to-[#0097CC]/5 -z-20"></div>
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-gradient-to-r from-[#5EBDF7]/20 to-[#44A5E9]/20 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-gradient-to-l from-[#0E90C9]/20 to-[#1476AD]/20 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-gradient-to-l from-[#0E90C9]/20 to-[#1476AD]/20 rounded-full blur-3xl -z-10"></div> */}
 
-      <div className="absolute top-1/4 left-10 w-6 h-6 rounded-full bg-[#44A5E9]/30 animate-pulse"></div>
+      {/* <div className="absolute top-1/4 left-10 w-6 h-6 rounded-full bg-[#44A5E9]/30 animate-pulse"></div>
       <div className="absolute bottom-1/3 right-16 w-8 h-8 rounded-full bg-[#0097CC]/40 animate-bounce"></div>
-      <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-[#72CAF7]/50 animate-ping"></div>
+      <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-[#72CAF7]/50 animate-ping"></div> */}
 
       {contracts.map((section, sectionIndex) => (
         <div key={sectionIndex} className="mb-24 relative max-w-7xl mx-auto">

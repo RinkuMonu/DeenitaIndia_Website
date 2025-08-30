@@ -4,11 +4,11 @@ import { MdArrowOutward } from "react-icons/md"
 
 export default function ServiceAdvantage({ sections }) {
   return (
-    <section className="w-full py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="w-full py-16 ">
+      <div className=" mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-xl md:text-2xl font-bold text-[#0A223D] mb-6">Why Choose Our Services</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-[#0A223D]">Why Choose Our Services</h2>
           <p className="text-lg text-[#3A4F66] max-w-3xl mx-auto">
             Discover the advantages that set our services apart and help you achieve your goals
           </p>

@@ -56,7 +56,7 @@ import Image from "next/image"
 
 const ServicesSteper = ({ data }) => {
   return (
-    <section className="py-12 max-w-7xl mx-auto px-4 md:px-6" data-aos="fade-up" data-aos-duration="2000">
+    <section className="py-12 max-w-7xl mx-auto px-4 md:px-6" >
       {/* Header Section */}
       <div className="text-center mb-16">
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#1476ad]/10 border border-[#1476ad]/20 mb-6">
