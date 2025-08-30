@@ -422,7 +422,7 @@ export default function BlogSection() {
 
   return (
     <>
-      <section className="mt-28">
+      <section className="mt-32">
         <div className="container relative">
           {/* Hero Section */}
           <div className="grid lg:grid-cols-2 bg-[#E6F0F9] rounded-2xl p-8 md:p-12 gap-8 overflow-hidden">
