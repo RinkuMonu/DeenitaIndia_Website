@@ -36,13 +36,13 @@ function Footer() {
                 </p>
                 <div className="flex gap-4 mt-6">
                   <Link
-                    href=""
+                    href="https://www.instagram.com/deenita_india/"
                     className="text-gray-600 hover:text-[#1476ad] transition-colors"
                   >
                     <FaInstagram size={24} />
                   </Link>
                   <Link
-                    href=""
+                    href="https://www.facebook.com/profile.php?id=61580205651246"
                     className="text-gray-600 hover:text-[#1476ad] transition-colors"
                   >
                     <FaFacebook size={24} />
@@ -59,10 +59,7 @@ function Footer() {
                     </Link>
                   </li>
                   <li className="group transition-all duration-200 hover:pl-2">
-                    <Link
-                      href="/services"
-                      className="hover:text-[#0E91C9]"
-                    >
+                    <Link href="/services" className="hover:text-[#0E91C9]">
                       Services
                     </Link>
                   </li>
@@ -172,19 +169,32 @@ function Footer() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start">
-                    <IoMail className="text-xl text-[#0E91C9] mt-1" />
-                    <p className="pl-3 hover:text-[#0E91C9]">
+                  <div className="flex items-start cursor-pointer">
+                    <IoMail className="text-xl text-[#0E91C9] mt-1 " />
+                    <a
+                      href="mailto:support@7unique.in"
+                      className="pl-3 hover:text-[#0E91C9]"
+                    >
                       support@7unique.in
-                    </p>
+                    </a>
                   </div>
-                  <div className="flex items-start">
+                  <div className="flex items-start cursor-pointer">
                     <IoMail className="text-xl text-[#0E91C9] mt-1" />
-                    <p className="pl-3 hover:text-[#0E91C9]">info@7unique.in</p>
+                    <a
+                      href="mailto:support@7unique.in"
+                      className="pl-3 hover:text-[#0E91C9]"
+                    >
+                      info@7unique.in
+                    </a>
                   </div>
-                  <div className="flex items-start">
+                  <div className="flex items-start cursor-pointer">
                     <IoMdCall className="text-xl text-[#0E91C9] mt-1" />
-                    <p className="pl-3 hover:text-[#0E91C9]">0141-4511098</p>
+                    <a
+                      href="tel:support@7unique.in"
+                      className="pl-3 hover:text-[#0E91C9]"
+                    >
+                      0141-4511098
+                    </a>
                   </div>
                 </div>
               </div>
