@@ -1,97 +1,16 @@
-// import Image from "next/image";
-// import Link from "next/link";
-// import { MdArrowOutward } from "react-icons/md";
-
-// export default function ServiceAdvantage({ sections }) {
-//     return (
-//         <section className="w-full py-10 ">
-//             {sections.map((section, idx) => (
-//                 <div
-//                     key={idx}
-//                     className="flex flex-col md:flex-row items-center lg:items-stretch mb-6"
-//                 >
-//                     <div className="flex-1 flex items-center " data-aos="flip-down">
-//                         <Image
-//                             src={section.imageSrc}
-//                             alt="Section Image"
-//                             width={500}
-//                             height={500}
-//                             className="rounded-2xl max-h-[280px] w-auto mb-3 md:mb-0"
-//                         />
-//                     </div>
-//                     <div className="flex-1 flex flex-col justify-center">
-//                         <p className="text-3xl md:text-4xl font-bold max-w-md">
-//                             {section.title.split(" ").map((word, i, arr) => {
-//                                 const shouldHighlight =
-//                                     (arr.length === 1 && i === 0) ||
-//                                     (arr.length === 2 && i === 0) ||
-//                                     (arr.length > 2 && i < 2);
-
-//                                 return (
-//                                     <span
-//                                         key={i}
-//                                         className={shouldHighlight ? "text-[#115D8E]" : "text-[#0A223D]"}
-//                                     >
-//                                         {word}{" "}
-//                                     </span>
-//                                 );
-//                             })}
-//                         </p>
-
-//                         <p className="mt-4 text-[#3A4F66] text-lg leading-relaxed">
-//                             {section.description}
-//                         </p>
-//                         <Link
-//                             href="/contact"
-//                             className="mt-6 w-fit inline-flex items-center gap-2 bg-[#115D8E] text-white px-3 py-1 rounded-lg hover:bg-[#004e8c] transition-all"
-//                         >
-//                             Connect <MdArrowOutward />
-//                         </Link>
-//                     </div>
-//                 </div>
-//             ))}
-
-//             <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
-// >
-//                 {sections[0].features.map((feature, idx) => (
-//                     <div
-//                         key={idx}
-//                         className="flex flex-col md:py-6 "
-//                          data-aos="fade-up"
-//       data-aos-delay={idx * 100}
-//                     >
-//                         <Image
-//                             src={feature.icon}
-//                             alt={feature.label}
-//                             width={40}
-//                             height={40}
-//                             className="border-2 rounded-md p-1 border-gray-200"
-//                         />
-//                         <h4 className="mt-4 text-lg  text-gray-800 font-semibold">{feature.label}</h4>
-//                         <p className="mt-2 text-sm text-gray-600">{feature.description}</p>
-//                     </div>
-//                 ))}
-//             </div>
-//         </section>
-//     );
-// }
-
-import Image from "next/image";
-import Link from "next/link";
-import { MdArrowOutward } from "react-icons/md";
+import Image from "next/image"
+import Link from "next/link"
+import { MdArrowOutward } from "react-icons/md"
 
 export default function ServiceAdvantage({ sections }) {
   return (
     <section className="w-full py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Header Section */}
-        <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0A223D] mb-6">
-            Why Choose Our Services
-          </h2>
-          <p className="text-xl text-[#3A4F66] max-w-3xl mx-auto">
-            Discover the advantages that set our services apart and help you
-            achieve your goals
+        <div className="text-center mb-16">
+          <h2 className="text-xl md:text-2xl font-bold text-[#0A223D] mb-6">Why Choose Our Services</h2>
+          <p className="text-lg text-[#3A4F66] max-w-3xl mx-auto">
+            Discover the advantages that set our services apart and help you achieve your goals
           </p>
         </div>
 
@@ -104,14 +23,10 @@ export default function ServiceAdvantage({ sections }) {
             } items-center gap-10 mb-16 md:mb-20`}
           >
             {/* Image Section */}
-            <div
-              className="flex-1 relative group"
-              data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
-              data-aos-delay={idx * 100}
-            >
+            <div className="flex-1 relative group">
               <div className="relative overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src={section.imageSrc}
+                  src={section.imageSrc || "/placeholder.svg"}
                   alt="Section Image"
                   width={600}
                   height={400}
@@ -127,37 +42,24 @@ export default function ServiceAdvantage({ sections }) {
             </div>
 
             {/* Text Content Section */}
-            <div
-              className="flex-1 flex flex-col justify-center"
-              data-aos={idx % 2 === 0 ? "fade-left" : "fade-right"}
-              data-aos-delay={idx * 100 + 200}
-            >
-              <h3 className="text-3xl md:text-4xl font-bold mb-6">
+            <div className="flex-1 flex flex-col justify-center">
+              <h3 className="text-3xl md:text-2xl font-bold mb-6">
                 {section.title.split(" ").map((word, i, arr) => {
                   const shouldHighlight =
-                    (arr.length === 1 && i === 0) ||
-                    (arr.length === 2 && i === 0) ||
-                    (arr.length > 2 && i < 2);
+                    (arr.length === 1 && i === 0) || (arr.length === 2 && i === 0) || (arr.length > 2 && i < 2)
 
                   return (
-                    <span
-                      key={i}
-                      className={
-                        shouldHighlight ? "text-[#115D8E]" : "text-[#0A223D]"
-                      }
-                    >
+                    <span key={i} className={shouldHighlight ? "text-[#115D8E]" : "text-[#0A223D]"}>
                       {word}{" "}
                     </span>
-                  );
+                  )
                 })}
               </h3>
 
-              <p className="text-[#3A4F66] text-lg leading-relaxed mb-6">
-                {section.description}
-              </p>
+              <p className="text-[#3A4F66] text-md leading-relaxed mb-6">{section.description}</p>
               <Link
                 href="/contact"
-                className="group w-fit inline-flex items-center gap-2 bg-[#115D8E] text-white px-6 py-3 rounded-lg hover:bg-[#004e8c] transition-all duration-300 shadow-md hover:shadow-lg"
+                className="group w-fit inline-flex items-center gap-2 bg-[#115D8E] text-white px-6 py-2 text-[14px] rounded-lg hover:bg-[#004e8c] transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 Connect
                 <MdArrowOutward className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -168,24 +70,17 @@ export default function ServiceAdvantage({ sections }) {
 
         {/* Features Grid */}
         <div className="mt-20">
-          <h3
-            className="text-3xl font-bold text-center text-[#0A223D] mb-12"
-            data-aos="fade-up"
-          >
-            Key Features & Advantages
-          </h3>
+          <h3 className="text-3xl font-bold text-center text-[#0A223D] mb-12">Key Features & Advantages</h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {sections[0].features.map((feature, idx) => (
               <div
                 key={idx}
                 className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group"
-                data-aos="fade-up"
-                data-aos-delay={idx * 100}
               >
                 <div className="mb-5 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[#E6F0F9] group-hover:bg-[#115D8E] group-hover:text-white transition-colors duration-300">
                   <Image
-                    src={feature.icon}
+                    src={feature.icon || "/placeholder.svg"}
                     alt={feature.label}
                     width={24}
                     height={24}
@@ -197,15 +92,13 @@ export default function ServiceAdvantage({ sections }) {
                 </h4>
                 <p className="text-gray-600 flex-1">{feature.description}</p>
                 <Link href={"/contact"} className="mt-4 pt-4 border-t border-gray-100">
-                  <span className="text-sm text-[#115D8E] font-medium group-hover:underline">
-                    Know more
-                  </span>
-                </Link >
+                  <span className="text-sm text-[#115D8E] font-medium group-hover:underline">Know more</span>
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
