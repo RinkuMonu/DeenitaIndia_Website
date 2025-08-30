@@ -70,32 +70,32 @@ export default function CompanySection() {
   return (
     <>
       <div className="container overflow-hidden">
-        <section className="pt-20 md:pt-32 relative ">
+        <section className="pt-20 md:pt-32 relative">
           <div className="absolute inset-0 backdrop-blur-[100px] bg-white/30 z-[-1]"></div>
 
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-4 xl:px-0 w-full">
             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-              <div className="w-full bg-[#eaf4fa] rounded-xl p-6 md:p-8 shadow-sm">
-                <div className="flex flex-col lg:flex-row gap-8">
-                  {/* Left Content */}
-                  <div className="w-full lg:w-1/2">
-                    <span className="inline-block gradient-badge text-white text-sm px-4 py-1 rounded-full mb-4">
+              <div className="w-full bg-gradient-to-br from-white/80 to-[#eaf4fa] rounded-2xl p-8 md:p-10 lg:p-12 shadow-xl border border-white/50">
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
+                  {/* Left Content - Increased width */}
+                  <div className="w-full lg:w-1/2 xl:w-3/5">
+                    <span className="inline-block gradient-badge text-white text-sm px-4 py-2 rounded-full mb-6 font-medium">
                       About Company
                     </span>
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#115d8e] mb-4">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#115d8e] mb-6 leading-tight">
                       Creating connections through impactful experiences
                     </h1>
-                    <p className="text-gray-800 mb-6 text-base md:text-lg">
+                    <p className="text-gray-800 mb-8 text-lg md:text-xl leading-relaxed">
                       We turn bold ideas into impactful results through design,
                       strategy, and innovation.
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
                       {/* Distributors Card */}
-                      <div className="bg-white p-4 rounded-xl shadow-md text-center card-hover">
-                        <div className="mx-auto mb-3 w-12 h-12 bg-[#115d8e] rounded-full flex items-center justify-center">
+                      <div className="bg-gradient-to-br from-white to-gray-50 p-5 rounded-xl text-center card-hover shadow-md border border-gray-100">
+                        <div className="mx-auto mb-4 w-14 h-14 bg-gradient-to-br from-[#115d8e] to-[#0c4569] rounded-full flex items-center justify-center">
                           <svg
-                            className="w-6 h-6 text-white"
+                            className="w-7 h-7 text-white"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -108,19 +108,19 @@ export default function CompanySection() {
                             />
                           </svg>
                         </div>
-                        <div className="font-semibold text-lg text-[#184766]">
+                        <div className="font-bold text-xl text-[#184766] mb-1">
                           2000+
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-600 font-medium">
                           Distributors
                         </div>
                       </div>
 
                       {/* Retailers Card */}
-                      <div className="bg-white p-4 rounded-xl shadow-md text-center card-hover">
-                        <div className="mx-auto mb-3 w-12 h-12 bg-[#115d8e] rounded-full flex items-center justify-center">
+                      <div className="bg-gradient-to-br from-white to-gray-50 p-5 rounded-xl text-center card-hover shadow-md border border-gray-100">
+                        <div className="mx-auto mb-4 w-14 h-14 bg-gradient-to-br from-[#115d8e] to-[#0c4569] rounded-full flex items-center justify-center">
                           <svg
-                            className="w-6 h-6 text-white"
+                            className="w-7 h-7 text-white"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -133,17 +133,19 @@ export default function CompanySection() {
                             />
                           </svg>
                         </div>
-                        <div className="font-semibold text-lg text-[#184766]">
+                        <div className="font-bold text-xl text-[#184766] mb-1">
                           100,000+
                         </div>
-                        <div className="text-sm text-gray-600">Retailers</div>
+                        <div className="text-sm text-gray-600 font-medium">
+                          Retailers
+                        </div>
                       </div>
 
                       {/* Districts Card */}
-                      <div className="bg-white p-4 rounded-xl shadow-md text-center card-hover">
-                        <div className="mx-auto mb-3 w-12 h-12 bg-[#115d8e] rounded-full flex items-center justify-center">
+                      <div className="bg-gradient-to-br from-white to-gray-50 p-5 rounded-xl text-center card-hover shadow-md border border-gray-100">
+                        <div className="mx-auto mb-4 w-14 h-14 bg-gradient-to-br from-[#115d8e] to-[#0c4569] rounded-full flex items-center justify-center">
                           <svg
-                            className="w-6 h-6 text-white"
+                            className="w-7 h-7 text-white"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -156,33 +158,38 @@ export default function CompanySection() {
                             />
                           </svg>
                         </div>
-                        <div className="font-semibold text-lg text-[#184766]">
+                        <div className="font-bold text-xl text-[#184766] mb-1">
                           800+
                         </div>
-                        <div className="text-sm text-gray-600">Districts</div>
+                        <div className="text-sm text-gray-600 font-medium">
+                          Districts
+                        </div>
                       </div>
                     </div>
 
-                    <Link
+                    <a
                       href="/contact"
-                      className="inline-block mt-2 bg-[#115d8e] hover:bg-[#006c9d] text-white font-semibold px-8 py-3 rounded-md shadow-md transition duration-300"
+                      className="inline-block mt-2 bg-gradient-to-r from-[#115d8e] to-[#0c4569] hover:from-[#0c4569] hover:to-[#115d8e] text-white font-semibold px-10 py-4 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 text-lg"
                     >
                       Get started
-                    </Link>
+                    </a>
                   </div>
 
-                  {/* Right Image */}
-                  <div className="w-full lg:w-1/2  justify-center  rounded-xl banner-overlaid-img">
-                    <Image
-                      src="/Image/Rectangle 45.png"
-                      alt="Team working"
-                      width={898}
-                      height={190}
-                      className=" object-cover h-[500px] rounded-xl"
-                    />
-                    {/* </div>
+                  {/* Right Image - Adjusted width */}
+                  <div className="w-full lg:w-1/2 xl:w-2/5 flex items-center justify-center">
+                    <div className="relative w-full h-96 md:h-[500px] rounded-xl overflow-hidden shadow-lg">
+                      {/* Replace with your actual image */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#115d8e] to-[#0c4569] flex items-center justify-center text-white text-lg">
+                        Company Image
                       </div>
-                    </div> */}
+                      {/* Uncomment to use with Next.js Image component */}
+                      <Image
+                    src="/Image/Rectangle 45.png"
+                    alt="Team working"
+                    fill
+                    className="object-cover"
+                  />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -198,13 +205,7 @@ export default function CompanySection() {
             }
             .card-hover:hover {
               transform: translateY(-5px);
-              box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-            }
-            .image-hover {
-              transition: transform 0.3s ease;
-            }
-            .image-hover:hover {
-              transform: scale(1.02);
+              box-shadow: 0 15px 30px -5px rgba(17, 93, 142, 0.25);
             }
           `}</style>
         </section>
@@ -238,11 +239,7 @@ export default function CompanySection() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
               {/* Vision Card */}
-              <div
-                className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-[#115d8e] to-[#184766] text-white p-8 shadow-lg transform transition-all duration-500 hover:-translate-y-2"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-              >
+              <div className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-[#115d8e] to-[#184766] text-white p-8 shadow-lg transform transition-all duration-500 hover:-translate-y-2">
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-28 h-28 -mt-10 -mr-10 bg-white/10 rounded-full"></div>
                 <div className="absolute bottom-0 left-0 w-20 h-20 -mb-8 -ml-8 bg-white/5 rounded-full"></div>
@@ -277,11 +274,7 @@ export default function CompanySection() {
               </div>
 
               {/* Mission Card */}
-              <div
-                className="relative group overflow-hidden rounded-2xl bg-white p-8 shadow-lg transform transition-all duration-500 hover:-translate-y-2"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-              >
+              <div className="relative group overflow-hidden rounded-2xl bg-white p-8 shadow-lg transform transition-all duration-500 hover:-translate-y-2">
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-28 h-28 -mt-10 -mr-10 bg-[#115d8e]/10 rounded-full"></div>
                 <div className="absolute bottom-0 left-0 w-20 h-20 -mb-8 -ml-8 bg-[#115d8e]/5 rounded-full"></div>
@@ -328,7 +321,6 @@ export default function CompanySection() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxMTVEOEUiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6TTE4IDM0YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
 
         <div className="container mx-auto px-4">
-          
           <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
             {/* Accent borders */}
             <div className="absolute top-0 left-0 h-full w-2 md:w-3 bg-gradient-to-b from-[#115d8e] to-[#2E709B]"></div>
@@ -438,7 +430,7 @@ export default function CompanySection() {
 
           <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center px-4">
             {/* Left Content */}
-            <div className="" data-aos="fade-up-right" data-aos-duration="1500">
+            <div className="">
               <h3 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
                 Proud Moments & <br />
                 <span className="text-[#2E709B] relative inline-block">
@@ -468,11 +460,7 @@ export default function CompanySection() {
             </div>
 
             {/* Right Stats Grid */}
-            <div
-              className="grid grid-cols-2 gap-6 p-6 md:p-8 bg-white rounded-2xl shadow-lg border border-gray-100 transform transition-all duration-500 hover:shadow-xl"
-              data-aos="flip-right"
-              data-aos-duration="1500"
-            >
+            <div className="grid grid-cols-2 gap-6 p-6 md:p-8 bg-white rounded-2xl shadow-lg border border-gray-100 transform transition-all duration-500 hover:shadow-xl">
               {[
                 {
                   value: "9+",
@@ -568,9 +556,6 @@ export default function CompanySection() {
                 <div
                   key={index}
                   className="group relative bg-[#d1dce41f] rounded-2xl p-6 text-left border border-gray-100 hover:border-[#115D8E]/20 transition-all duration-500 overflow-hidden w-full mx-auto max-w-xs"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay={index * 100}
                 >
                   {/* Background effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#115D8E]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
