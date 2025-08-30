@@ -190,12 +190,12 @@ function page() {
 
   return (
     <>
-      <div className='container'>
+      <div className=''>
         <ServiceHeroSection sections={EscrowService} />
         <ServiceSection2 sections={section2} />
       </div>
       <ServiceBanner sections={sections} />
-      <div className='container'>
+      <div className=''>
         <ServiceContracts contracts={contractData} />
         <ServicesSteper data={stepperData} />
         <ServiceAdvantage sections={sections1} />
