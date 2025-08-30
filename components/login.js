@@ -304,12 +304,12 @@ export default function LoginModal({ onClose }) {
           Continue with Google
         </button>
 
-        <p className="text-center text-sm mt-6 text-gray-600">
-          Don't have an account?{" "}
-          <Link href="#" className="text-[#115D8E] font-semibold hover:underline transition-all duration-200">
-            Sign up
-          </Link>
-        </p>
+            {/* <p className="text-center text-sm mt-6 text-gray-600">
+              Don't have an account?{" "}
+              <Link href="#" className="text-[#115D8E] font-semibold hover:underline transition-all duration-200">
+                Sign up
+              </Link>
+            </p> */}
       </div>
     </div>
   );
