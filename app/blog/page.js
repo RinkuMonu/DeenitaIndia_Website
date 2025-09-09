@@ -427,7 +427,7 @@ export default function BlogPage() {
 
   return (
     <>
- <header className="relative h-[60vh] w-full flex items-center justify-center mb-16">
+ <header className="relative h-[75vh] w-full flex items-center justify-center pt-20">
       {/* Background Image */}
       <Image
         src="/image/blog-bg.jpg" // change to your image
@@ -451,7 +451,7 @@ export default function BlogPage() {
         </p>
       </div>
     </header>
-      <section className="container mx-auto px-14 pt-32 pb-20 mb-10">
+      <section className="container mx-auto px-14 pt-20 pb-20 ">
         {/* Search + Category */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 w-full">
           {/* Search Input */}
