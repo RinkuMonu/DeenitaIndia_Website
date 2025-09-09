@@ -26,17 +26,17 @@ const ServiceAdvantage = ({featuresData}) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="inline-block bg-[#115D8E]/10 text-[#115D8E] text-sm font-semibold px-4 py-1 rounded-full">
-            Why choose our service  
+            Why choose our service
           </p>
           <h2 className="mt-4 text-4xl  font-bold text-gray-900 tracking-tight">
           Fully Compliant <span className="text-[#115D8E]" > Legally Secure</span>
           </h2>
           <p className='text-gray-500 mt-4'>Discover the advantages that set our services apart and help you achieve your goals</p>
         </div>
-        
+
 
         <div className="mt-16 lg:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-y-16 lg:gap-x-8 lg:items-center">
-          
+
           {/* Left Features Column */}
           <div className="space-y-12">
             {leftFeatures.map((feature) => (
@@ -45,8 +45,8 @@ const ServiceAdvantage = ({featuresData}) => {
           </div>
 
           <div className="relative lg:flex justify-center items-center lg:px-6 hidden ">
-            <div className="absolute w-[100%] h-auto aspect-square -z-0 bg-blue-100 rounded-full"></div>
- 
+            <div className="absolute w-[100%] h-auto aspect-square -z-0 bg-[#115d8e]/10 rounded-full"></div>
+
             <img
               src="/images/stepper.png"
               alt="App interface on two smartphones"
