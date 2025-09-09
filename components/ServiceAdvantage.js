@@ -17,7 +17,7 @@ const FeatureItem = ({ icon: Icon, title, description }) => (
 );
 
 // Main section component
-const ServiceAdvantage = ({featuresData}) => {
+const ServiceAdvantage = ({featuresData =[]}) => {
   const leftFeatures = featuresData.filter(f => f.side === 'left');
   const rightFeatures = featuresData.filter(f => f.side === 'right');
 
