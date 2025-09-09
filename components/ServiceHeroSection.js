@@ -2,8 +2,6 @@
 import Image from "next/image"
 import { useEffect, useState } from "react"
 
-// Finance-related icons from Lucide
-import { TrendingUp, PieChart, LineChart, Banknote, BarChart3 } from "lucide-react"
 
 import { MdTrendingUp } from "react-icons/md"
 
