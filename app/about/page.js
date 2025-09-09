@@ -8,6 +8,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { useEffect, useState } from "react";
 import AboutHero from "../../components/AboutHero";
 import OurVisionMission from "../../components/OurVisionMission";
+import LeadershipSection from "../../components/LeadershipSection";
 
 const images = [
   "/Image/Rectangle 61.png",
@@ -204,117 +205,19 @@ export default function CompanySection() {
             }
           `}</style>
         </section> */}
-   <AboutHero />
-          <OurVisionMission />
-        {/* <div className="w-full my-20 relative overflow-hidden  rounded-lg">
-          <div className="absolute w-64 h-64 bg-[#acbfcc] rounded-full opacity-10 blur-3xl bottom-10 -right-20 z-0"></div>
+        <AboutHero />
+        <OurVisionMission />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4">
-            <h3 className="relative text-3xl md:text-5xl font-bold mb-12 md:mb-16 text-center">
-              <span className="text-[#115d8e] relative inline-block">
-                Our
-                <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  width="140"
-                  height="8"
-                  viewBox="0 0 140 8"
-                  fill="none"
-                >
-                  <path
-                    d="M1 4C35.5 2 80 6.5 139 4"
-                    stroke="#115d8e"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
-              <span className="text-gray-800 ml-2">Vision & Mission</span>
-            </h3>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-              <div className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-[#115d8e] to-[#184766] text-white p-8 shadow-lg transform transition-all duration-500 hover:-translate-y-2">
-                <div className="absolute top-0 right-0 w-28 h-28 -mt-10 -mr-10 bg-white/10 rounded-full"></div>
-                <div className="absolute bottom-0 left-0 w-20 h-20 -mb-8 -ml-8 bg-white/5 rounded-full"></div>
-
-                <div className="relative z-10">
-                  <div className="flex flex-col items-center md:flex-row md:items-start gap-4 mb-6">
-                    <div className="bg-white/20 p-4 rounded-xl backdrop-blur-sm">
-                      <Image
-                        src="/Image/vision.png"
-                        alt="Vision Icon"
-                        width={40}
-                        height={40}
-                        className="w-8 h-8 md:w-10 md:h-10"
-                      />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-center md:text-left">
-                      Vision
-                    </h3>
-                  </div>
-                  <p className="text-sm md:text-base leading-relaxed text-white/90 text-center md:text-left">
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti quos dolores et quas.
-                  </p>
-                  <div className="mt-6 flex justify-center md:justify-start">
-                    <div className="w-12 h-1 bg-white/40 rounded-full"></div>
-                  </div>
-                </div>
-
-                <div className="absolute inset-0 rounded-2xl border-2 border-white/0 group-hover:border-white/20 transition-all duration-500"></div>
-              </div>
-
-              <div className="relative group overflow-hidden rounded-2xl bg-white p-8 shadow-lg transform transition-all duration-500 hover:-translate-y-2">
-                <div className="absolute top-0 right-0 w-28 h-28 -mt-10 -mr-10 bg-[#115d8e]/10 rounded-full"></div>
-                <div className="absolute bottom-0 left-0 w-20 h-20 -mb-8 -ml-8 bg-[#115d8e]/5 rounded-full"></div>
-
-                <div className="relative z-10">
-                  <div className="flex flex-col items-center md:flex-row md:items-start gap-4 mb-6">
-                    <div className="bg-[#eaf4fa] p-4 rounded-xl">
-                      <Image
-                        src="/Image/Mission.png"
-                        alt="Mission Icon"
-                        width={40}
-                        height={40}
-                        className="w-8 h-8 md:w-10 md:h-10"
-                      />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-[#115d8e] text-center md:text-left">
-                      Mission
-                    </h3>
-                  </div>
-                  <p className="text-sm md:text-base leading-relaxed text-gray-600 text-center md:text-left">
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti quos dolores et quas.
-                  </p>
-                  <div className="mt-6 flex justify-center md:justify-start">
-                    <div className="w-12 h-1 bg-[#115d8e]/40 rounded-full"></div>
-                  </div>
-                </div>
-
-                <div className="absolute inset-0 rounded-2xl border-2 border-[#115d8e]/0 group-hover:border-[#115d8e]/20 transition-all duration-500"></div>
-              </div>
-            </div>
-
-            <div className="hidden lg:flex justify-center mt-8">
-              <div className="w-1 h-12 bg-gradient-to-b from-[#115d8e] to-transparent rounded-full"></div>
-            </div>
-          </div>
-        </div> */}
       </div>
-      <section className="w-full overflow-hidden relative py-16 md:py-24">
-        {/* Background pattern */}
+      {/* <section className="w-full overflow-hidden relative py-16 md:py-24">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxMTVEOEUiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6TTE4IDM0YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
 
         <div className="container mx-auto px-4">
           <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-            {/* Accent borders */}
             <div className="absolute top-0 left-0 h-full w-2 md:w-3 bg-gradient-to-b from-[#115d8e] to-[#2E709B]"></div>
             <div className="absolute top-0 right-0 h-full w-2 md:w-3 bg-gradient-to-b from-[#115d8e] to-[#2E709B]"></div>
 
             <div className="relative flex flex-col lg:flex-row items-stretch">
-              {/* Image Section */}
               <div className="w-full lg:w-2/5 relative">
                 <div className="relative h-full min-h-[400px] lg:min-h-[500px] overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#115de]/80 to-transparent z-10"></div>
@@ -326,7 +229,6 @@ export default function CompanySection() {
                     priority
                   />
 
-                  {/* CEO Info Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-[#115d8e] to-transparent p-6 text-white">
                     <div className="max-w-xs mx-auto lg:mx-0">
                       <p className="text-lg md:text-xl font-semibold mb-1">
@@ -336,7 +238,6 @@ export default function CompanySection() {
                         CEO at Velasconde
                       </p>
 
-                      {/* Quote icon */}
                       <div className="absolute -top-8 right-6 w-16 h-16 bg-[#115d8e] rounded-full flex items-center justify-center">
                         <svg
                           className="w-8 h-8 text-white"
@@ -351,7 +252,6 @@ export default function CompanySection() {
                 </div>
               </div>
 
-              {/* Content Section */}
               <div className="w-full lg:w-3/4 p-8 md:px-12 flex flex-col justify-center">
                 <div className="max-w-2xl">
                   <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#115d8e] leading-tight mb-5">
@@ -378,7 +278,6 @@ export default function CompanySection() {
                     </p>
                   </div>
 
-                  {/* Signature */}
                   <div className="mt-8 pt-6 border-t border-gray-200">
                     <div className="flex items-center">
                       <div className="w-12 h-12 bg-[#eaf4fa] rounded-full flex items-center justify-center mr-4">
@@ -405,7 +304,8 @@ export default function CompanySection() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}  
+      <LeadershipSection />
 
       <Cta />
 
