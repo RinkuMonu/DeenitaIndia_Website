@@ -8,7 +8,7 @@ import ServiceHeroSection from '@/components/ServiceHeroSection'
 import ServiceSection2 from '@/components/ServiceSection2';
 import ServicesSteper from '@/components/ServicesSteper';
 import React from 'react'
-import FaqSection from '../../../components/FaqSection';
+
 import { 
   Library, 
   BellRing, 
@@ -227,7 +227,7 @@ function page() {
             <ServiceAdvantage featuresData={featuresData} />
       </div>
       <OrganizationalStructuring/>
-<FaqSection/>
+
     </>
   )
 }
