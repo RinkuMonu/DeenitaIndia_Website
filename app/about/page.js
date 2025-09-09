@@ -6,6 +6,8 @@ import Link from "next/link";
 import "aos/dist/aos.css";
 import { MdArrowOutward } from "react-icons/md";
 import { useEffect, useState } from "react";
+import AboutHero from "../../components/AboutHero";
+import OurVisionMission from "../../components/OurVisionMission";
 
 const images = [
   "/Image/Rectangle 61.png",
@@ -70,14 +72,14 @@ export default function CompanySection() {
   return (
     <>
       <div className="container overflow-hidden">
-        <section className="pt-20 md:pt-32 relative">
+        {/* <section className="pt-20 md:pt-32 relative">
           <div className="absolute inset-0 backdrop-blur-[100px] bg-white/30 z-[-1]"></div>
 
           <div className="max-w-7xl mx-auto px-4 xl:px-0 w-full">
             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
               <div className="w-full bg-gradient-to-br from-white/80 to-[#eaf4fa] rounded-2xl p-8 md:p-10 lg:p-12 shadow-xl border border-white/50">
                 <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
-                  {/* Left Content - Increased width */}
+                  
                   <div className="w-full lg:w-1/2 xl:w-3/5">
                     <span className="inline-block gradient-badge text-white text-sm px-4 py-2 rounded-full mb-6 font-medium">
                       About Company
@@ -91,7 +93,7 @@ export default function CompanySection() {
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
-                      {/* Distributors Card */}
+                     
                       <div className="bg-gradient-to-br from-white to-gray-50 p-5 rounded-xl text-center card-hover shadow-md border border-gray-100">
                         <div className="mx-auto mb-4 w-14 h-14 bg-gradient-to-br from-[#115d8e] to-[#0c4569] rounded-full flex items-center justify-center">
                           <svg
@@ -115,8 +117,6 @@ export default function CompanySection() {
                           Distributors
                         </div>
                       </div>
-
-                      {/* Retailers Card */}
                       <div className="bg-gradient-to-br from-white to-gray-50 p-5 rounded-xl text-center card-hover shadow-md border border-gray-100">
                         <div className="mx-auto mb-4 w-14 h-14 bg-gradient-to-br from-[#115d8e] to-[#0c4569] rounded-full flex items-center justify-center">
                           <svg
@@ -140,8 +140,6 @@ export default function CompanySection() {
                           Retailers
                         </div>
                       </div>
-
-                      {/* Districts Card */}
                       <div className="bg-gradient-to-br from-white to-gray-50 p-5 rounded-xl text-center card-hover shadow-md border border-gray-100">
                         <div className="mx-auto mb-4 w-14 h-14 bg-gradient-to-br from-[#115d8e] to-[#0c4569] rounded-full flex items-center justify-center">
                           <svg
@@ -174,15 +172,12 @@ export default function CompanySection() {
                       Get started
                     </a>
                   </div>
-
-                  {/* Right Image - Adjusted width */}
                   <div className="w-full lg:w-1/2 xl:w-2/5 flex items-center justify-center">
                     <div className="relative w-full h-96 md:h-[500px] rounded-xl overflow-hidden shadow-lg">
-                      {/* Replace with your actual image */}
+                      
                       <div className="absolute inset-0 bg-gradient-to-br from-[#115d8e] to-[#0c4569] flex items-center justify-center text-white text-lg">
                         Company Image
                       </div>
-                      {/* Uncomment to use with Next.js Image component */}
                       <Image
                     src="/Image/Rectangle 45.png"
                     alt="Team working"
@@ -208,11 +203,10 @@ export default function CompanySection() {
               box-shadow: 0 15px 30px -5px rgba(17, 93, 142, 0.25);
             }
           `}</style>
-        </section>
-
-        <div className="mt-16 md:mt-32 w-full my-20 relative overflow-hidden  rounded-lg">
-          {/* Background elements */}
-          <div className="absolute w-72 h-72 bg-[#9dbace] rounded-full opacity-20 blur-3xl -top-20 -left-20 z-0"></div>
+        </section> */}
+   <AboutHero />
+          <OurVisionMission />
+        {/* <div className="w-full my-20 relative overflow-hidden  rounded-lg">
           <div className="absolute w-64 h-64 bg-[#acbfcc] rounded-full opacity-10 blur-3xl bottom-10 -right-20 z-0"></div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4">
@@ -238,9 +232,7 @@ export default function CompanySection() {
             </h3>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-              {/* Vision Card */}
               <div className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-[#115d8e] to-[#184766] text-white p-8 shadow-lg transform transition-all duration-500 hover:-translate-y-2">
-                {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-28 h-28 -mt-10 -mr-10 bg-white/10 rounded-full"></div>
                 <div className="absolute bottom-0 left-0 w-20 h-20 -mb-8 -ml-8 bg-white/5 rounded-full"></div>
 
@@ -269,13 +261,10 @@ export default function CompanySection() {
                   </div>
                 </div>
 
-                {/* Hover effect border */}
                 <div className="absolute inset-0 rounded-2xl border-2 border-white/0 group-hover:border-white/20 transition-all duration-500"></div>
               </div>
 
-              {/* Mission Card */}
               <div className="relative group overflow-hidden rounded-2xl bg-white p-8 shadow-lg transform transition-all duration-500 hover:-translate-y-2">
-                {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-28 h-28 -mt-10 -mr-10 bg-[#115d8e]/10 rounded-full"></div>
                 <div className="absolute bottom-0 left-0 w-20 h-20 -mb-8 -ml-8 bg-[#115d8e]/5 rounded-full"></div>
 
@@ -304,17 +293,15 @@ export default function CompanySection() {
                   </div>
                 </div>
 
-                {/* Hover effect border */}
                 <div className="absolute inset-0 rounded-2xl border-2 border-[#115d8e]/0 group-hover:border-[#115d8e]/20 transition-all duration-500"></div>
               </div>
             </div>
 
-            {/* Connecting line for visual flow */}
             <div className="hidden lg:flex justify-center mt-8">
               <div className="w-1 h-12 bg-gradient-to-b from-[#115d8e] to-transparent rounded-full"></div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <section className="w-full overflow-hidden relative py-16 md:py-24">
         {/* Background pattern */}
@@ -422,14 +409,13 @@ export default function CompanySection() {
 
       <Cta />
 
-      <div className="container">
+      {/* <div className="container">
         <section className="py-12 md:py-20 lg:px-4 relative overflow-hidden  rounded-lg  ">
-          {/* Background decorative elements */}
           <div className="absolute w-72 h-72 bg-[#bad0e0] rounded-full opacity-15 blur-3xl -top-20 -left-20 z-0"></div>
           <div className="absolute w-64 h-64 bg-[#b5c8d4] rounded-full opacity-10 blur-3xl bottom-0 -right-20 z-0"></div>
 
           <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center px-4">
-            {/* Left Content */}
+     
             <div className="">
               <h3 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
                 Proud Moments & <br />
@@ -459,7 +445,6 @@ export default function CompanySection() {
               </p>
             </div>
 
-            {/* Right Stats Grid */}
             <div className="grid grid-cols-2 gap-6 p-6 md:p-8 bg-white rounded-2xl shadow-lg border border-gray-100 transform transition-all duration-500 hover:shadow-xl">
               {[
                 {
@@ -487,7 +472,6 @@ export default function CompanySection() {
                   key={index}
                   className="group text-center p-4 rounded-xl hover:bg-[#eaf4fa] transition-all duration-300"
                 >
-                  {/* Value with animated background */}
                   <div className="relative inline-block mb-3">
                     <div className="absolute inset-0 bg-[#115D8E] rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-300 -inset-3"></div>
                     <h4 className="text-3xl md:text-4xl font-bold text-[#115D8E] relative z-10">
@@ -495,12 +479,10 @@ export default function CompanySection() {
                     </h4>
                   </div>
 
-                  {/* Label */}
                   <h4 className="text-lg font-semibold text-gray-800 mb-2">
                     {item.label}
                   </h4>
 
-                  {/* Description */}
                   <p className="text-xs text-gray-600">{item.description}</p>
                 </div>
               ))}
@@ -557,10 +539,8 @@ export default function CompanySection() {
                   key={index}
                   className="group relative bg-[#d1dce41f] rounded-2xl p-6 text-left border border-gray-100 hover:border-[#115D8E]/20 transition-all duration-500 overflow-hidden w-full mx-auto max-w-xs"
                 >
-                  {/* Background effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#115D8E]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                  {/* Icon container */}
                   <div className="relative z-10 mb-5">
                     <div className="w-12 h-12 bg-[#eaf4fa] rounded-xl flex items-center justify-center group-hover:bg-[#115D8E] group-hover:scale-110 transition-all duration-300">
                       <Image
@@ -573,7 +553,6 @@ export default function CompanySection() {
                     </div>
                   </div>
 
-                  {/* Content */}
                   <div className="relative z-10">
                     <h3 className="text-lg font-semibold text-[#115D8E] mb-3 group-hover:text-gray-800 transition-colors">
                       {item.title}
@@ -583,10 +562,8 @@ export default function CompanySection() {
                     </p>
                   </div>
 
-                  {/* Hover effect border */}
                   <div className="absolute inset-0 rounded-2xl border-2 border-[#115D8E]/0 group-hover:border-[#115D8E]/10 transition-all duration-500"></div>
 
-                  {/* Bottom accent */}
                   <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#115D8E] group-hover:w-full transition-all duration-500"></div>
                 </div>
               ))}
@@ -624,9 +601,8 @@ export default function CompanySection() {
               {imageColumns.map((col, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col gap-4 w-1/2 animate-${
-                    index % 2 === 0 ? "scroll-up" : "scroll-down"
-                  }`}
+                  className={`flex flex-col gap-4 w-1/2 animate-${index % 2 === 0 ? "scroll-up" : "scroll-down"
+                    }`}
                 >
                   {[...col, ...col].map((src, i) => (
                     <div
@@ -699,7 +675,7 @@ export default function CompanySection() {
             </Link>
           </div>
         </section>
-      </div>
+      </div> */}
     </>
   );
 }

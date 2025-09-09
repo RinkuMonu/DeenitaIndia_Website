@@ -20,7 +20,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <section className="relative hero-15 min-h-screen overflow-hidden" style={{ backgroundImage: "url(/Newimg/herosection/hero_bg_2.webp)" }}>
+      <section className="relative hero-15 min-h-screen overflow-hidden" style={{ backgroundImage: "url(/Newimg/herosection/hero_bg_2.webp)", }}>
         {/* Background accents */}
         <div className="absolute inset-0 pointer-events-none z-50">
           <div
@@ -126,9 +126,9 @@ export default function Home() {
       <BestChoices />
       <Industries />
       <Testonomials />
-      <Blog />
-      <Cta />
       <Partners />
+      <Cta />
+      <Blog />
     </>
   );
 }

@@ -4,6 +4,7 @@ import  Header  from "@/components/Header";
 import  Footer  from "@/components/Footer";
 import ScrollToTop from "@/components/Scrolltotop";
 import { Poppins } from 'next/font/google'
+import CustomCursor from "@/components/CustomCursor"
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
         className={`${poppins.variable} ${poppins.variable} antialiased `}
       >
       <Header/>
+      {/* <CustomCursor /> */}
         {children}
         <Footer/>
          <ScrollToTop />
