@@ -57,25 +57,32 @@ const Cta = () => {
       </div>
 
 
-      <div className="container py-10 md:py-28">
-        <div className="flex flex-col justify-between items-start lg:items-start gap-6  md:px-0">
-          <div className="">
-            <p className="text-3xl md:text-5xl sm:text-4xl text-gray-200 font-bold mb-4">
-              Let us help you find the perfect fit
-            </p>
-            <p className="text-lg sm:text-2xl text-gray-200 opacity-60">
-              Share your requirements, and our experts will get in touch with tailored recommendations
-            </p>
-          </div>
+     <div className="container mx-auto px-14 pt-32 pb-20">
+  <div className="flex flex-col lg:flex-row items-start lg:items-center  gap-6 md:px-0">
 
-          <Link
-            href="/contact"
-            className="inline-flex items-center bg-white theme-text hover:bg-gray-100 px-6 py-3 rounded-lg font-medium text-base sm:text-lg transition-colors duration-300 shadow-md hover:shadow-lg"
-          >
-            Contact <MdArrowOutward className="ml-2 mt-1 text-bold" />
-          </Link>
-        </div>
-      </div>
+
+    <div>
+      <p className="text-3xl md:text-5xl sm:text-4xl text-gray-200 font-bold mb-4">
+        Let us help you find the perfect fit
+      </p>
+      <p className="text-lg sm:text-2xl text-gray-200 opacity-60">
+        Share your requirements, and our experts will get in touch with tailored recommendations
+      </p>
+    </div>
+
+
+    <div className="ml-4 md:ml-8">
+      <Link
+      href="/contact"
+      className="inline-flex items-center bg-white theme-text hover:bg-gray-100 px-6 py-3 rounded-lg font-medium text-base sm:text-lg transition-colors duration-300 shadow-md hover:shadow-lg"
+    >
+      Contact <MdArrowOutward className="ml-2 mt-1 text-bold" />
+    </Link>
+    </div>
+
+  </div>
+</div>
+
     </div>
   );
 };
