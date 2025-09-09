@@ -509,65 +509,6 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-
-                <div className="bg-gradient-to-r from-gray-50 to-white p-6 rounded-2xl border border-gray-100">
-                  <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-800 flex items-center gap-2">
-                    <div className="w-2 h-2 bg-[#115D8E] rounded-full"></div>
-                    Office Hours
-                  </h3>
-                  <div className="space-y-2 text-base md:text-md text-gray-600">
-                    <p className="flex justify-between">
-                      <span className="font-medium">Monday - Friday:</span>
-                      <span>9:30 AM - 6:30 PM</span>
-                    </p>
-                    <p className="flex justify-between">
-                      <span className="font-medium">Saturday:</span>
-                      <span>09:30 AM - 6:30 PM</span>
-                    </p>
-                    <p className="flex justify-between">
-                      <span className="font-medium">Sunday:</span>
-                      <span>Closed</span>
-                    </p>
-                    <p className="text-sm text-gray-500 mt-2">
-                      *2nd and 4th Saturday closed
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-[#24b6f0]/5 to-[#115D8E]/5 p-6 rounded-2xl border border-[#24b6f0]/20">
-                  <p className="text-[#24b6f0] text-lg md:text-xl mb-4 font-semibold">
-                    Working together for smarter solutions
-                  </p>
-                  <div className="flex flex-wrap items-center gap-6 md:gap-8">
-                    <div className="transform transition-all duration-300 hover:scale-110 hover:shadow-lg rounded-lg p-2">
-                      <Image
-                        src="/Image/logo-1.png"
-                        alt="Partner Logo 1"
-                        width={48}
-                        height={48}
-                        className="w-10 md:w-12"
-                      />
-                    </div>
-                    <div className="transform transition-all duration-300 hover:scale-110 hover:shadow-lg rounded-lg p-2">
-                      <Image
-                        src="/Image/logo-2.png"
-                        alt="Partner Logo 2"
-                        width={48}
-                        height={48}
-                        className="w-10 md:w-12"
-                      />
-                    </div>
-                    <div className="transform transition-all duration-300 hover:scale-110 hover:shadow-lg rounded-lg p-2">
-                      <Image
-                        src="/Image/logo-3.png"
-                        alt="Partner Logo 3"
-                        width={80}
-                        height={40}
-                        className="w-16 md:w-20"
-                      />
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -581,6 +522,85 @@ export default function Contact() {
             className="w-[120px] lg:w-[180px]"
           />
         </div> */}
+
+  <section className="flex flex-col lg:flex-row gap-8 items-stretch">
+  {/* Left Half - Image */}
+  <div className="w-full lg:w-1/2 flex justify-center items-center">
+    <Image
+      src="/images/contact-vec.png"
+      alt="Contact Illustration"
+      width={500}
+      height={500}
+      className="rounded-2xl object-cover"
+    />
+  </div>
+
+  {/* Right Half - Stacked Cards */}
+  <div className="w-full lg:w-1/2 flex flex-col gap-6">
+    {/* Office Hours */}
+    <div className="bg-gradient-to-r from-gray-50 to-white p-6 rounded-2xl border border-gray-100 shadow-sm h-full">
+      <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-800 flex items-center gap-2">
+        <div className="w-2 h-2 bg-[#115D8E] rounded-full"></div>
+        Office Hours
+      </h3>
+      <div className="space-y-2 text-base md:text-md text-gray-600">
+        <p className="flex justify-between">
+          <span className="font-medium">Monday - Friday:</span>
+          <span>9:30 AM - 6:30 PM</span>
+        </p>
+        <p className="flex justify-between">
+          <span className="font-medium">Saturday:</span>
+          <span>09:30 AM - 6:30 PM</span>
+        </p>
+        <p className="flex justify-between">
+          <span className="font-medium">Sunday:</span>
+          <span>Closed</span>
+        </p>
+        <p className="text-sm text-gray-500 mt-2">
+          *2nd and 4th Saturday closed
+        </p>
+      </div>
+    </div>
+
+    {/* Partners / Solutions */}
+    <div className="bg-gradient-to-r from-[#24b6f0]/5 to-[#115D8E]/5 p-6 rounded-2xl border border-[#24b6f0]/20 shadow-sm h-auto">
+      <p className="text-[#24b6f0] text-lg md:text-xl mb-4 font-semibold">
+        Working together for smarter solutions
+      </p>
+      <div className="flex flex-wrap items-center gap-6 md:gap-8">
+        <div className="transform transition-all duration-300 hover:scale-110 hover:shadow-lg rounded-lg p-2">
+          <Image
+            src="/Image/logo-1.png"
+            alt="Partner Logo 1"
+            width={48}
+            height={48}
+            className="w-10 md:w-12"
+          />
+        </div>
+        <div className="transform transition-all duration-300 hover:scale-110 hover:shadow-lg rounded-lg p-2">
+          <Image
+            src="/Image/logo-2.png"
+            alt="Partner Logo 2"
+            width={48}
+            height={48}
+            className="w-10 md:w-12"
+          />
+        </div>
+        <div className="transform transition-all duration-300 hover:scale-110 hover:shadow-lg rounded-lg p-2">
+          <Image
+            src="/Image/logo-3.png"
+            alt="Partner Logo 3"
+            width={80}
+            height={40}
+            className="w-16 md:w-20"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
         <section className="relative bg-white py-8 text-center px-4 sm:px-6 lg:px-8 lg:mt-12">
           <p className="text-lg md:text-[20px] text-[#115D8E] mb-2 font-bold">
