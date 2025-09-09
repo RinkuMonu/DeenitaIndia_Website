@@ -54,7 +54,7 @@ export default function Slider() {
       </div>
       <Swiper
         modules={[Pagination, Autoplay]}
-        pagination={{ clickable: true }}
+        // pagination={{ clickable: false }}
         autoplay={{ delay: 3000 }}
         loop
         spaceBetween={20}
@@ -70,8 +70,7 @@ export default function Slider() {
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <div
-              className={`group relative w-full h-72 overflow-hidden rounded-lg shadow-lg transition-all duration-500 ${index % 2 === 1 ? "md:mt-10" : ""
-                }`}
+              className={`group relative w-full h-72 overflow-hidden shadow-lg transition-all duration-500 `}
             >
               <div className="absolute inset-0 bg-gray-900">
                 <Image

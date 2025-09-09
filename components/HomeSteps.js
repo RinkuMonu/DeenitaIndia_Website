@@ -1,94 +1,124 @@
 "use client";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import Image from "next/image";
+import {
+  UserPlus,
+  IdCard,
+  FileSearch,
+  ShieldCheck,
+  LayoutDashboard,
+  CheckCircle,
+} from "lucide-react";
 
-function HomeSteps() {
-  const numbers = [1, 2, 3, 4, 5, 6];
-
+export default function HomeSteps() {
   const steps = [
-    { label: "Register / Create an Account", icon: "/images/step1.png" },
-    { label: "Complete KYC & Upload Documents", icon: "/images/step2.png" },
-    { label: "Select a Service or Request a Quote", icon: "/images/step3.png" },
-    { label: "Escrow Setup / Legal Process Begins", icon: "/images/step4.png" },
     {
-      label: "Dashboard Access & Real-Time Tracking",
-      icon: "/images/step5.png",
+      title: "Register / Create an Account",
+      description: "Sign up with your email and basic details to get started.",
+      icon: <UserPlus className="h-8 w-8" />,
     },
-    { label: "Completion & Secure Closure", icon: "/images/step6.png" },
+    {
+      title: "Complete KYC & Upload Documents",
+      description: "Verify your identity and securely upload required documents.",
+      icon: <IdCard className="h-8 w-8" />,
+    },
+    {
+      title: "Select a Service or Request a Quote",
+      description: "Choose a plan or ask for a custom quote tailored to your needs.",
+      icon: <FileSearch className="h-8 w-8" />,
+    },
+    {
+      title: "Escrow Setup / Legal Process Begins",
+      description: "Funds are held securely; compliance and paperwork kick off.",
+      icon: <ShieldCheck className="h-8 w-8" />,
+    },
+    {
+      title: "Dashboard Access & Real-Time Tracking",
+      description: "Track status, milestones, and updates in one clean dashboard.",
+      icon: <LayoutDashboard className="h-8 w-8" />,
+    },
+    {
+      title: "Completion & Secure Closure",
+      description: "Approve deliverables, release funds, and close with confidence.",
+      icon: <CheckCircle className="h-8 w-8" />,
+    },
   ];
 
-  useEffect(() => {
-    AOS.init({
-      duration: 500,
-      once: false,
-    });
-  }, []);
-
   return (
-    <>
-      <section className="container relative my-8">
-        <p className="heading text-center font-semibold pb-12">
-          Here's how it <span className="theme-text">works</span>
-        </p>
-        {steps.map((step, index) => (
-          <div className="max-w-3xl mx-auto mt-7" key={index}>
-            <div
-                 className={`group relative rounded-2xl md:rounded-full max-w-lg
-                bg-[#ECF5FB]/90 backdrop-blur-sm
-                border border-sky-100/70 shadow-[0_10px_30px_-10px_rgba(16,112,202,0.15)]
-                ring-1 ring-transparent hover:ring-sky-200 transition-all duration-300
-                ${index % 2 === 0 ? "ms-auto" : "md:mr-auto"}`}
-              data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
-              style={{ animationDelay: `${index * 60}ms` }}
-            >
-              <div
-                className={` md:flex justify-between items-center p-5 theme-text 
-                ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}
-              >
-                <p className="text-md md:text-xl font-semibold lg:max-w-[250px] text-center mb-2 md:mb-0">
-                  {step.label}
-                </p>
-                <div className="text-9xl ">
-                  <Image
-                    src={step.icon}
-                    width={60}
-                    height={60}
-                    alt="sevice-icons"
-                    className="mx-auto md:mx-0"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-        <div className=" left-[47%] top-24 absolute hidden lg:block">
-          <div className="flex flex-col items-center ">
-            {numbers.map((num) => (
-              <div
-                key={num}
-                className={`w-20 h-36 text-white flex items-center justify-center text-4xl font-bold relative
-      ${num % 2 === 0 ? "bg-sky-300" : "bg-sky-500"} 
-      ${num === 1 ? "rounded-t-4xl" : num === 6 ? "rounded-b-4xl" : ""}
-      ${num !== 1
-                    ? "before:absolute before:top-0 before:left-0 before:w-full before:h-6 before:bg-white before:rounded-b-full p-0"
-                    : ""
-                  }
-      ${num !== 6
-                    ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-6 after:bg-white after:rounded-t-full p-0"
-                    : ""
-                  }
-    `}
-              >
-                {num}
-              </div>
+    <section className="relative bg-sand text-ink">
+      <div className="container mx-auto px-6 md:px-10 lg:px-14 pt-16 md:pt-20 pb-16">
+        {/* header */}
+        <div>
+          <p className="heading font-semibold mb-8 capitalize">
+            Here's how it <span className="theme-text">Works</span> <br /> that drive results
+          </p>
+        </div>
+
+        {/* ARROWS (first row) */}
+        <div className="relative mt-14">
+          {/* left arrow: between column 1 and 2 */}
+          <Image
+            src="/Newimg/bgimg/workprocess-shape1.webp"
+            alt=""
+            width={900}
+            height={240}
+            className="
+              pointer-events-none select-none
+              hidden lg:block
+              absolute
+              top-[-1.25rem] md:top-[-0.5rem] xl:top-[50%]
+              left-72 -translate-x-1/2
+              w-[18%] max-w-[520px] min-w-[280px] h-auto
+            "
+          />
+          {/* right arrow: between column 2 and 3 */}
+          <Image
+            src="/Newimg/bgimg/workprocess-shape2.webp"
+            alt=""
+            width={900}
+            height={240}
+            className="
+              pointer-events-none select-none
+              hidden lg:block
+              absolute
+              top-[-1.25rem] md:top-[-0.5rem] xl:top-[50%]
+              right-72 -translate-x-1/2
+              w-[18%] max-w-[520px] min-w-[280px] h-auto
+            "
+          />
+
+          {/* steps (3 columns desktop, 2 rows) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+            {steps.map((s, i) => (
+              <Step
+                key={s.title}
+                index={String(i + 1).padStart(2, "0")}
+                title={s.title}
+                description={s.description}
+                icon={s.icon}
+                isFirst={i === 0}
+              />
             ))}
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
-export default HomeSteps;
+function Step({ index, title, description, icon, isFirst  }) {
+  return (
+    <div
+    className={`relative p-3 transition-all 
+      ${isFirst ? "shadow-2xl" : "hover:shadow-2xl"}`}
+  >
+      <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-circle ring-1 ring-ring">
+        {icon}
+      </div>
+      <div className="absolute -left-2 -top-2 flex h-9 w-9 items-center justify-center rounded-full bg-[#115c8c] text-white text-sm font-bold ring-8 ring-sand">
+        {index}
+      </div>
+      <h3 className="mt-6 text-xl font-extrabold">{title}</h3>
+      <p className="mt-3 max-w-xl text-base leading-7 text-sub">{description}</p>
+    </div>
+  );
+}
