@@ -1,12 +1,53 @@
+"use client"
 import Cta from '@/components/Cta';
 import ServiceAdvantage from '@/components/ServiceAdvantage';
 import ServiceBanner from '@/components/ServiceBanner';
 import ServiceContracts from '@/components/ServiceContracts';
 import ServiceHeroSection from '@/components/ServiceHeroSection'
 import ServiceSection2 from '@/components/ServiceSection2';
+import { Library, MessageSquare, BellRing, Share2, Combine, Keyboard } from "lucide-react";
 import ServicesSteper from '@/components/ServicesSteper';
 import Image from 'next/image';
 import React from 'react'
+
+const featuresData = [
+  {
+    icon: Library,
+    title: "High Usability",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: MessageSquare,
+    title: "Free Live Chat",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
+  },
+  {
+    icon: BellRing,
+    title: "Action Reminder",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: Share2,
+    title: "Social Share",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
+  },
+  {
+    icon: Combine,
+    title: "Merge Files",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: Keyboard,
+    title: "Custom Shortcuts",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
+  },
+];
 const sections = [
     {
         title: "API Access Methods",
@@ -123,7 +164,7 @@ function page() {
             <ServiceBanner sections={sections} />
             <div className='container'>
                 <ServiceContracts contracts={contractData} />
-                <ServiceAdvantage sections={sections1} />
+               <ServiceAdvantage featuresData={featuresData} />
             </div>
 
             <Cta />

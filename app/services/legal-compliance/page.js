@@ -1,7 +1,10 @@
+
+"use client"
 import Cta from '@/components/Cta';
 import OrganizationalStructuring from '@/components/Organizational';
 import ServiceAccordian from '@/components/ServiceAccordian';
 import ServiceAdvantage from '@/components/ServiceAdvantage';
+import { Library, MessageSquare, BellRing, Share2, Combine, Keyboard } from "lucide-react";
 import ServiceBanner from '@/components/ServiceBanner';
 import ServiceContracts from '@/components/ServiceContracts';
 import ServiceHeroSection from '@/components/ServiceHeroSection'
@@ -9,14 +12,6 @@ import ServiceSection2 from '@/components/ServiceSection2';
 import ServicesSteper from '@/components/ServicesSteper';
 import React from 'react'
 
-import { 
-  Library, 
-  BellRing, 
-  Combine, 
-  MessageSquare, 
-  Share2, 
-  Keyboard 
-} from 'lucide-react';
 const sections = [
   {
     title: "Secure Escrow Payments",
@@ -69,39 +64,7 @@ const featuresData = [
   },
 ];
 
-const sections1 = [
-  {
-    title: "Fully Compliant, Legally Secure",
-    description:
-      "We operate under full legal frameworks, ensuring all our services are compliant with applicable laws and regulations",
-    imageSrc: "/images/lc4.jpg",
-    features: [
-      {
-        icon: "/images/legal_paper.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      },
-      {
-        icon: "/images/venture.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      },
-      {
-        icon: "/images/teamwork.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      }, {
-        icon: "/images/value_chian.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      },
-    ],
-  },
-];
+
 function page() {
   const EscrowService = [
     {
