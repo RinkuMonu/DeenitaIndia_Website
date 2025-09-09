@@ -402,9 +402,9 @@ const categories = {
 }
 export default function BlogPostPage() {
     return (
-        <div className="bg-gray-50">
+        <div className="bg-gray-50 ">
             {/* Hero */}
-            <div className="relative h-[50vh] md:h-[60vh]">
+            <div className="relative h-[50vh] md:h-[75vh]">
                 <Image src={post.image} alt={post.title} fill className="object-cover" priority />
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="absolute inset-0 flex items-center">
@@ -431,7 +431,7 @@ export default function BlogPostPage() {
             </div>
 
             {/* Content */}
-            <div className="px-14 pt-20 pb-20">
+            <div className="container mx-auto px-14 pt-16 pb-20">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Main Content */}
                     <div className="lg:col-span-2 bg-white p-6 shadow-md rounded-lg">
