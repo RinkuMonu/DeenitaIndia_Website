@@ -1,3 +1,4 @@
+"use client"
 import Cta from '@/components/Cta';
 import ServiceAdvantage from '@/components/ServiceAdvantage';
 import ServiceBanner from '@/components/ServiceBanner';
@@ -5,6 +6,7 @@ import ServiceContracts from '@/components/ServiceContracts';
 import ServiceHeroSection from '@/components/ServiceHeroSection'
 import ServiceSection2 from '@/components/ServiceSection2';
 import ServicesSteper from '@/components/ServicesSteper';
+import { Library, MessageSquare, BellRing, Share2, Combine, Keyboard } from "lucide-react";
 import React from 'react'
 const sections = [
   {
@@ -17,6 +19,44 @@ const sections = [
       { icon: "/images/dashbord.png", label: "Dashboard" },
       { icon: "/images/transparency.png", label: "Transparency" },
     ],
+  },
+];
+const featuresData = [
+  {
+    icon: Library,
+    title: "High Usability",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: MessageSquare,
+    title: "Free Live Chat",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
+  },
+  {
+    icon: BellRing,
+    title: "Action Reminder",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: Share2,
+    title: "Social Share",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
+  },
+  {
+    icon: Combine,
+    title: "Merge Files",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: Keyboard,
+    title: "Custom Shortcuts",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
   },
 ];
 const sections1 = [
@@ -148,7 +188,7 @@ const stepperData = {
              </div>
                <ServiceBanner sections={sections}/>
            <div className='container'>
-                <ServiceAdvantage sections={sections1}/>
+             <ServiceAdvantage featuresData={featuresData} />
            </div>
         </>
     )

@@ -315,6 +315,45 @@ const sections = [
   },
 ];
 
+const featuresData = [
+  {
+    icon: Library,
+    title: "High Usability",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: MessageSquare,
+    title: "Free Live Chat",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
+  },
+  {
+    icon: BellRing,
+    title: "Action Reminder",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: Share2,
+    title: "Social Share",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
+  },
+  {
+    icon: Combine,
+    title: "Merge Files",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: Keyboard,
+    title: "Custom Shortcuts",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
+  },
+];
+
 const sections1 = [
   {
     title: "Safe, Private, Controlled",
@@ -465,7 +504,7 @@ export default function ServicesPage() {
       </section> */}
 
       <div className="container">
-        <ServiceAdvantage sections={sections1} />
+         <ServiceAdvantage featuresData={featuresData} />
       </div>
 
       {/* Stats Section - New Addition */}
