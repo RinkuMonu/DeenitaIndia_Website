@@ -1,104 +1,69 @@
-import Image from "next/image"
-import Link from "next/link"
-import { MdArrowOutward } from "react-icons/md"
+import React from 'react';
 
-export default function ServiceAdvantage({ sections }) {
+
+// Data for the feature items
+
+// Reusable component for each feature item
+const FeatureItem = ({ icon: Icon, title, description }) => (
+  <div className="flex items-start gap-4">
+    <div className="border border-gray-200 p-3 rounded-lg flex-shrink-0">
+      <Icon className="w-6 h-6 text-[#115D8E]" />
+    </div>
+    <div>
+      <h3 className="font-semibold text-lg text-gray-800">{title}</h3>
+      <p className="text-gray-500 mt-1">{description}</p>
+    </div>
+  </div>
+);
+
+// Main section component
+const ServiceAdvantage = ({featuresData}) => {
+  const leftFeatures = featuresData.filter(f => f.side === 'left');
+  const rightFeatures = featuresData.filter(f => f.side === 'right');
+
   return (
-    <section className="w-full py-16 ">
-      <div className=" mx-auto px-4">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-xl md:text-2xl font-bold text-[#0A223D]">Why Choose Our Services</h2>
-          <p className="text-lg text-[#3A4F66] max-w-3xl mx-auto">
-            Discover the advantages that set our services apart and help you achieve your goals
+    <section className="bg-white w-full py-16 sm:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p className="inline-block bg-[#115D8E]/10 text-[#115D8E] text-sm font-semibold px-4 py-1 rounded-full">
+            Why choose our service  
           </p>
+          <h2 className="mt-4 text-4xl  font-bold text-gray-900 tracking-tight">
+          Fully Compliant <span className="text-[#115D8E]" > Legally Secure</span>
+          </h2>
+          <p className='text-gray-500 mt-4'>Discover the advantages that set our services apart and help you achieve your goals</p>
         </div>
+        
 
-        {/* Main Content Sections */}
-        {sections.map((section, idx) => (
-          <div
-            key={idx}
-            className={`flex flex-col ${
-              idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            } items-center gap-10 mb-16 md:mb-20`}
-          >
-            {/* Image Section */}
-            <div className="flex-1 relative group">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg">
-                <Image
-                  src={section.imageSrc || "/placeholder.svg"}
-                  alt="Section Image"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#115D8E]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-              {idx === 0 && (
-                <div className="absolute -bottom-4 -right-4 bg-[#115D8E] text-white text-sm font-bold py-2 px-4 rounded-lg shadow-md">
-                  Most Popular
-                </div>
-              )}
-            </div>
-
-            {/* Text Content Section */}
-            <div className="flex-1 flex flex-col justify-center">
-              <h3 className="text-3xl md:text-2xl font-bold mb-6">
-                {section.title.split(" ").map((word, i, arr) => {
-                  const shouldHighlight =
-                    (arr.length === 1 && i === 0) || (arr.length === 2 && i === 0) || (arr.length > 2 && i < 2)
-
-                  return (
-                    <span key={i} className={shouldHighlight ? "text-[#115D8E]" : "text-[#0A223D]"}>
-                      {word}{" "}
-                    </span>
-                  )
-                })}
-              </h3>
-
-              <p className="text-[#3A4F66] text-md leading-relaxed mb-6">{section.description}</p>
-              <Link
-                href="/contact"
-                className="group w-fit inline-flex items-center gap-2 bg-[#115D8E] text-white px-6 py-2 text-[14px] rounded-lg hover:bg-[#004e8c] transition-all duration-300 shadow-md hover:shadow-lg"
-              >
-                Connect
-                <MdArrowOutward className="transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-            </div>
-          </div>
-        ))}
-
-        {/* Features Grid */}
-        <div className="mt-20">
-          <h3 className="text-3xl font-bold text-center text-[#0A223D] mb-12">Key Features & Advantages</h3>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {sections[0].features.map((feature, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group"
-              >
-                <div className="mb-5 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[#E6F0F9] group-hover:bg-[#115D8E] group-hover:text-white transition-colors duration-300">
-                  <Image
-                    src={feature.icon || "/placeholder.svg"}
-                    alt={feature.label}
-                    width={24}
-                    height={24}
-                    className="transition-transform duration-300 group-hover:scale-110"
-                  />
-                </div>
-                <h4 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-[#115D8E] transition-colors duration-300">
-                  {feature.label}
-                </h4>
-                <p className="text-gray-600 flex-1">{feature.description}</p>
-                <Link href={"/contact"} className="mt-4 pt-4 border-t border-gray-100">
-                  <span className="text-sm text-[#115D8E] font-medium group-hover:underline">Know more</span>
-                </Link>
-              </div>
+        <div className="mt-16 lg:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-y-16 lg:gap-x-8 lg:items-center">
+          
+          {/* Left Features Column */}
+          <div className="space-y-12">
+            {leftFeatures.map((feature) => (
+              <FeatureItem key={feature.title} {...feature} />
             ))}
           </div>
+
+          <div className="relative lg:flex justify-center items-center lg:px-6 hidden ">
+            <div className="absolute w-[100%] h-auto aspect-square -z-0 bg-blue-100 rounded-full"></div>
+ 
+            <img
+              src="/images/stepper.png"
+              alt="App interface on two smartphones"
+              className="relative max-w-xs md:max-w-sm mx-auto"
+            />
+          </div>
+
+          <div className="space-y-12">
+            {rightFeatures.map((feature) => (
+              <FeatureItem key={feature.title} {...feature} />
+            ))}
+          </div>
+
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default ServiceAdvantage;
