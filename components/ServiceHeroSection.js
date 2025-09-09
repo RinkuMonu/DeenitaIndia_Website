@@ -15,7 +15,7 @@ export default function ServiceHeroSection({ sections }) {
   }, [])
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-white via-slate-50 to-[#72CAF7]/10 mt-20 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-white via-slate-50 to-[#72CAF7]/10 overflow-hidden container mx-auto px-14 pt-32 pb-20">
 
       {sections.map((section, index) => (
         <div key={index} className="container mx-auto px-6 py-16 relative z-10">
