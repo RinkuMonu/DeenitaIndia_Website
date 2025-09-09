@@ -45,13 +45,13 @@ const projects = [
 
 export default function Slider() {
   return (
-    <section className="container pt-10">
-<div>
-        <p className="heading font-semibold mb-8">
-        Delivering Expert <span className="theme-text">Services</span> <br></br> that drive results
-      </p>
-      <Link href="/contact" className="text-white shadow-[0_8px_30px_rgba(138,173,187)] me-4 font-semibold bg-[#115D8E] py-3 rounded-lg text-base px-6 text-center">Get in touch</Link>
-</div>
+    <section className="container px-14 pt-32 ">
+      <div>
+        <p className="heading font-semibold mb-8 capitalize">
+          Delivering Expert <span className="theme-text">Services</span> <br></br> that drive results
+        </p>
+        
+      </div>
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}

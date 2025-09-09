@@ -35,16 +35,19 @@ function HomeSteps() {
         {steps.map((step, index) => (
           <div className="max-w-3xl mx-auto mt-7" key={index}>
             <div
-              className={`rounded-2xl md:rounded-full max-w-lg bg-[#ECF5FB] shadow-[0_3px_3px_rgba(141,220,251)] ${
-                index % 2 === 0 ? "ms-auto  " : "md:mr-auto"
-              }`}
+                 className={`group relative rounded-2xl md:rounded-full max-w-lg
+                bg-[#ECF5FB]/90 backdrop-blur-sm
+                border border-sky-100/70 shadow-[0_10px_30px_-10px_rgba(16,112,202,0.15)]
+                ring-1 ring-transparent hover:ring-sky-200 transition-all duration-300
+                ${index % 2 === 0 ? "ms-auto" : "md:mr-auto"}`}
               data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+              style={{ animationDelay: `${index * 60}ms` }}
             >
               <div
                 className={` md:flex justify-between items-center p-5 theme-text 
-          ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}
+                ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}
               >
-                <p className="text-md md:text-2xl font-semibold lg:max-w-[250px] text-center mb-2 md:mb-0">
+                <p className="text-md md:text-xl font-semibold lg:max-w-[250px] text-center mb-2 md:mb-0">
                   {step.label}
                 </p>
                 <div className="text-9xl ">
@@ -65,19 +68,17 @@ function HomeSteps() {
             {numbers.map((num) => (
               <div
                 key={num}
-                className={`w-22 h-36 text-white flex items-center justify-center text-4xl font-bold relative
+                className={`w-20 h-36 text-white flex items-center justify-center text-4xl font-bold relative
       ${num % 2 === 0 ? "bg-sky-300" : "bg-sky-500"} 
       ${num === 1 ? "rounded-t-4xl" : num === 6 ? "rounded-b-4xl" : ""}
-      ${
-        num !== 1
-          ? "before:absolute before:top-0 before:left-0 before:w-full before:h-6 before:bg-white before:rounded-b-full p-0"
-          : ""
-      }
-      ${
-        num !== 6
-          ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-6 after:bg-white after:rounded-t-full p-0"
-          : ""
-      }
+      ${num !== 1
+                    ? "before:absolute before:top-0 before:left-0 before:w-full before:h-6 before:bg-white before:rounded-b-full p-0"
+                    : ""
+                  }
+      ${num !== 6
+                    ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-6 after:bg-white after:rounded-t-full p-0"
+                    : ""
+                  }
     `}
               >
                 {num}

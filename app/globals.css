@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 :root {
   --bg-background: white;
@@ -119,6 +120,7 @@
 html,
 body {
   overflow-x: hidden;
+  font-family: "Outfit", sans-serif !important;
 }
 
 .home-hero-section {
@@ -132,15 +134,9 @@ body {
 .theme-text {
   color: #115d8e;
 }
-.container {
-  padding-left: 100px;
-  padding-right: 100px;
-}
+
 @media (max-width: 426px) {
-  .container {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+
   .heading {
     font-size: 30px;
   }
@@ -444,5 +440,15 @@ body {
   animation-delay: 2s;
 }
 
-
-
+.hero15-shape {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -1%;
+  background: linear-gradient(135deg, #9FB3F9, #6A8DFF); /* example gradient */
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  z-index: -1;
+}
