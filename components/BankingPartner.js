@@ -14,7 +14,7 @@ const partnerLogos = [
 
 export default function BankingPartner() {
   return (
-    <div className="w-full py-12 bg-white" data-aos="fade-right">
+    <div className="w-full py-12 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-10">
           <div className="lg:max-w-md">
