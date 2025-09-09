@@ -169,7 +169,7 @@ function page() {
 
             <Cta />
 
-            <div className='container my-16' data-aos="fade-up"
+            <div className='container mx-auto px-14 pt-32 md:pt-40 pb-20 py-8' data-aos="fade-up"
                 data-aos-duration="2000">
                 <div className='md:flex justify-between align-middle'>
                     <p className="heading font-semibold ">
