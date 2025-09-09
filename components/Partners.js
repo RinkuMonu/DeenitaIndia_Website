@@ -43,7 +43,7 @@ const IntegrationsSection = () => {
     <section className="w-full bg-[#f8f9fa] py-16 overflow-hidden relative">
       <div className="container mx-auto relative px-4">
         {/* Central Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center lg:h-[35vh]">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center lg:h-[40vh]">
           <button className="flex items-center gap-2 mb-6 border border-[#115D8E]/20 bg-white px-3 py-1 rounded-full shadow-sm">
       
             <span className="text-sm font-medium text-[#115D8E]">
@@ -52,54 +52,57 @@ const IntegrationsSection = () => {
           </button>
 
           <h1 className="text-3xl lg:text-4xl font-bold text-[#115D8E] max-w-3xl leading-tight">
-            Connected To Your Favourite Applications
+            Partners & Associations
           </h1>
 
-          <button className="flex items-center gap-2 mt-8 bg-[#115D8E]/60 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#115D8E]/70 transition-colors duration-300">
+          {/* <button className="flex items-center gap-2 mt-8 bg-[#115D8E]/60 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#115D8E]/70 transition-colors duration-300">
             <span>SEE ALL Partners</span>
             <ArrowRight size={20} />
-          </button>
+          </button> */}
+          <p className=" text-gray-700 max-w-lg ">
+          Stay updated with our latest insights and industry trends. Explore expert articles, tips, and thought leadership.
+          </p>
         </div>
 
         {/* Desktop absolute icons */}
         <div className="hidden lg:block">
           {/* Left side */}
-          <div className="absolute top-0 left-[18%]">
+          <div className="absolute top-0 left-[20%]">
             <IconCard {...integrationIcons[0]} />
           </div>
-          <div className="absolute bottom-0 left-[18%]">
+          <div className="absolute bottom-0 left-[20%]">
             <IconCard {...integrationIcons[1]} />
           </div>
-          <div className="absolute top-1/2 -translate-y-1/2 left-[8%]">
+          <div className="absolute top-1/2 -translate-y-1/2 left-[11%]">
             <IconCard {...integrationIcons[2]} />
           </div>
-          <div className="absolute bottom-0 left-0">
+          <div className="absolute bottom-0 left-11">
             <IconCard {...integrationIcons[3]} />
           </div>
-          <div className="absolute top-0 left-0">
+          <div className="absolute top-0 left-11">
             <IconCard {...integrationIcons[4]} />
           </div>
 
           {/* Right side */}
-          <div className="absolute top-0 right-[18%]">
+          <div className="absolute top-0 right-[20%]">
             <IconCard {...integrationIcons[5]} />
           </div>
-          <div className="absolute bottom-0 right-[18%]">
+          <div className="absolute bottom-0 right-[20%]">
             <IconCard {...integrationIcons[6]} />
           </div>
-          <div className="absolute top-1/2 -translate-y-1/2 right-[8%]">
+          <div className="absolute top-1/2 -translate-y-1/2 right-[11%]">
             <IconCard {...integrationIcons[7]} />
           </div>
-          <div className="absolute bottom-0 right-0">
+          <div className="absolute bottom-0 right-11">
             <IconCard {...integrationIcons[8]} />
           </div>
-          <div className="absolute top-0 right-0">
+          <div className="absolute top-0 right-11">
             <IconCard {...integrationIcons[9]} />
           </div>
         </div>
 
         {/* Mobile / Tablet Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-12 lg:hidden">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-12 lg:hidden">
           {integrationIcons.map((icon, i) => (
             <IconCard key={i} {...icon} />
           ))}
