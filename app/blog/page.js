@@ -281,16 +281,220 @@
 //     </>
 //   );
 // }
-
 "use client";
-import Blog from '../../components/Blog';
-import React from 'react'
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { MdArrowOutward } from "react-icons/md";
+import { Search, Filter } from "lucide-react";
 
-export default function page() {
+
+const blogPosts = [
+  {
+    id: 1,
+    author: "Debitis Aut",
+    date: "20 April 2025",
+    title: "At vero eos et accusamus et lustood io dignissimos ducimus vero",
+    description:
+      "Stay updated with our latest insights and industry trends. Explore expert articles, tips, and thought leadership.",
+    url: "/blog/post-1",
+    image: "/images/blog.jpg",
+    category: "Technology",
+  },
+  {
+    id: 2,
+    author: "Jane Doe",
+    date: "15 May 2025",
+    title: "Understanding modern web development practices",
+    description:
+      "Learn about the latest trends in web development and how to implement them in your projects.",
+    url: "/blog/post-2",
+    image: "/images/blog.jpg",
+    category: "Development",
+  },
+  {
+    id: 3,
+    author: "John Smith",
+    date: "1 June 2025",
+    title: "The future of responsive design",
+    description:
+      "Exploring new techniques for creating truly responsive web experiences across all devices.",
+    url: "/blog/post-3",
+    image: "/images/blog.jpg",
+    category: "Design",
+  },
+  {
+    id: 4,
+    author: "John Smith",
+    date: "1 June 2025",
+    title: "The future of responsive design",
+    description:
+      "Exploring new techniques for creating truly responsive web experiences across all devices.",
+    url: "/blog/post-3",
+    image: "/images/blog.jpg",
+    category: "Design",
+  },
+  {
+    id: 5,
+    author: "John Smith",
+    date: "1 June 2025",
+    title: "The future of responsive design",
+    description:
+      "Exploring new techniques for creating truly responsive web experiences across all devices.",
+    url: "/blog/post-3",
+    image: "/images/blog.jpg",
+    category: "Design",
+  },
+  {
+    id: 6,
+    author: "John Smith",
+    date: "1 June 2025",
+    title: "The future of responsive design",
+    description:
+      "Exploring new techniques for creating truly responsive web experiences across all devices.",
+    url: "/blog/post-3",
+    image: "/images/blog.jpg",
+    category: "Design",
+  },
+];
+
+
+
+function BlogCard({ post }) {
+  return (
+    <article
+      key={post.id}
+      className="group relative min-h-[300px] rounded-2xl overflow-hidden bg-white"
+
+    >
+      {/* image */}
+      <Image
+        src={post.image}
+        alt={post.title}
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        sizes="(min-width:1024px) 25vw, 100vw"
+      />
+      {/* dark-to-transparent overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/20 to-transparent" />
+
+      {/* content */}
+      <div className="relative z-10 h-full p-5 flex flex-col justify-end text-white">
+        <div className="mb-2 flex items-center justify-between text-xs opacity-90">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-2.5 py-1">
+            <span className="inline-block h-2 w-2 rounded-full bg-sky-400"></span>
+            {post.author}
+          </span>
+          <span>{post.date}</span>
+        </div>
+
+        <h4 className="text-xl font-semibold leading-snug">{post.title}</h4>
+        <p className="mt-2 text-white/80 line-clamp-2">{post.description}</p>
+
+        <div className="mt-4">
+          <Link
+            href="/blog/blog-detail"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 text-gray-900 px-3 py-1.5 text-xs font-semibold hover:bg-white transition"
+          >
+            Read more <MdArrowOutward />
+          </Link>
+        </div>
+      </div>
+
+      {/* small shine */}
+      <span className="absolute left-0 top-0 h-full w-1/5 translate-x-[-60%] bg-white/10 blur-xl opacity-0 group-hover:opacity-100 group-hover:translate-x-[180%] transition-all duration-[900ms]" />
+    </article>
+  );
+}
+
+export default function BlogPage() {
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("Categories");
+
+  const categories = ["Categories", ...new Set(blogPosts.map((p) => p.category))];
+
+  const filteredPosts = blogPosts.filter((post) => {
+    const searchLower = search.toLowerCase();
+    const matchSearch =
+      post.title.toLowerCase().includes(searchLower) ||
+      post.description.toLowerCase().includes(searchLower) ||
+      post.author.toLowerCase().includes(searchLower);
+
+    const matchCategory = category === "Categories" || post.category === category;
+
+    return matchSearch && matchCategory;
+  });
+
   return (
     <>
-    <Blog />
-      
+ <header className="relative h-[60vh] w-full flex items-center justify-center mb-16">
+      {/* Background Image */}
+      <Image
+        src="/image/blog-bg.jpg" // change to your image
+        alt="Blog Background"
+        fill
+        priority
+        className="object-cover"
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* Text Content */}
+      <div className="relative z-10 text-center max-w-2xl px-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
+          Our Blog
+        </h1>
+        <p className="mt-4 text-lg text-gray-200">
+          Insights, stories, and updates from our team — stay inspired and
+          informed.
+        </p>
+      </div>
+    </header>
+      <section className="container mx-auto px-14 pt-32 pb-20 mb-10">
+        {/* Search + Category */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 w-full">
+          {/* Search Input */}
+          <div className="relative w-full md:w-2/3">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+            <input
+              type="text"
+              placeholder="Search articles..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#115d8e] outline-none"
+            />
+          </div>
+
+          {/* Category Select */}
+          <div className="relative w-full md:w-1/3">
+            <Filter className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              className="w-full appearance-none pl-10 pr-8 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#115d8e] outline-none"
+            >
+              {categories.map((cat) => (
+                <option key={cat} value={cat}>
+                  {cat}
+                </option>
+              ))}
+            </select>
+
+          </div>
+        </div>
+
+        {/* Blog Grid */}
+        {filteredPosts.length > 0 ? (
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {filteredPosts.map((post) => (
+              <BlogCard key={post.id} post={post} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-center text-gray-500">No blog posts found.</p>
+        )}
+      </section>
     </>
-  )
+  );
 }
