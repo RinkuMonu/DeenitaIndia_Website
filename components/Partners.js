@@ -5,16 +5,16 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const integrationIcons = [
-  { name: "HTML5", src: "/images/venture.png", direction: "left" },
-  { name: "JavaScript", src: "/images/lc4.jpg", direction: "left" },
-  { name: "Dropbox", src: "/images/venture.png", direction: "left" },
-  { name: "CSS3", src: "/images/lc4.jpg", direction: "left" },
-  { name: "Mailchimp", src: "/images/venture.png", direction: "left" },
-  { name: "HTML5", src: "/images/lc4.jpg", direction: "right" },
-  { name: "JavaScript", src: "/images/lc4.jpg", direction: "right" },
-  { name: "Dropbox", src: "/images/lc4.jpg", direction: "right" },
-  { name: "CSS3", src: "/images/venture.png", direction: "right" },
-  { name: "Mailchimp", src: "/images/lc4.jpg", direction: "right" },
+  { name: "Axis", src: "/bank/axisbank.png", direction: "left" },
+  { name: "Tata", src: "/bank/tata-capital.png", direction: "left" },
+  { name: "YesBank", src: "/bank/yes-bank.png", direction: "left" },
+  { name: "Bajaj", src: "/bank/bajaj-finserv.png", direction: "left" },
+  { name: "Kotak", src: "/bank/kotak.png", direction: "left" },
+  { name: "Jana-sfb", src: "/bank/jana-sfb.png", direction: "right" },
+  { name: "Bandhan", src: "/bank/bandhan.png", direction: "right" },
+  { name: "RBL", src: "/bank/rbl.png", direction: "right" },
+  { name: "AU", src: "/bank/au-sfb.png", direction: "right" },
+  { name: "Idfc", src: "/bank/idfc-first.png", direction: "right" },
 ];
 
 // Reusable Icon Card with Framer Motion
@@ -27,12 +27,12 @@ const IconCard = ({ src, name, direction }) => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: false, amount: 0.3 }}
-      className="bg-white p-3 rounded-lg shadow-md flex items-center justify-center"
+      className="bg-white p-1 rounded-lg shadow-md flex items-center justify-center"
     >
       <img
         src={src}
         alt={`${name} logo`}
-        className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 object-contain"
+        className="h-12 w-12 sm:h-16 sm:w-16 md:h-24 md:w-24 object-contain"
       />
     </motion.div>
   );
