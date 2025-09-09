@@ -184,13 +184,13 @@ function page() {
       <div className='container'>
         <ServicesSteper data={stepperData} />
       </div>
-      <Cta/>
+
       <ServiceBanner sections={sections} />
        <div className='container'>
             <ServiceAdvantage featuresData={featuresData} />
       </div>
       <OrganizationalStructuring/>
-
+   <Cta/>
     </>
   )
 }

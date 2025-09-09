@@ -169,19 +169,36 @@ function page() {
 
             <Cta />
 
-            <div className='container mx-auto px-14 pt-32 md:pt-40 pb-20 py-8' data-aos="fade-up"
-                data-aos-duration="2000">
-                <div className='md:flex justify-between align-middle'>
-                    <p className="heading font-semibold ">
-                        <span className="theme-text">Dashboard Visual </span><br></br>Overview
-                    </p>
-                    <p className='md:max-w-sm pt-4'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-                </div>
-                <div className='card mt-10'>
-                    <Image src="/images/morder-dashboard.png" width={400} height={400} alt='dashboard image' className='w-full h-auto' />
 
-                </div>
-            </div>
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-12 items-center">
+
+        {/* Left Content */}
+        <div className="space-y-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Transforming Ideas into <span className="text-[#1476ad]">Reality</span>
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            We help businesses bring their visions to life with innovative
+            solutions, cutting-edge technology, and a focus on long-term growth.
+          </p>
+          <button className="px-6 py-3 rounded-lg bg-[#1476ad] text-white font-semibold shadow-md hover:bg-[#125f8a] transition">
+            Learn More
+          </button>
+        </div>
+
+        {/* Right Image */}
+        <div className="relative w-full h-80 md:h-[500px] rounded-2xl overflow-hidden ">
+          <Image
+            src="/images/vector.png"
+            alt="Creative process"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
         </>
     )
 }
