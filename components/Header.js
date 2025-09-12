@@ -101,7 +101,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center space-x-4">
             <button
               onClick={() => setIsLoginOpen(true)}
-              className="inline-flex items-center bg-[#115d8e] shadow-none rounded-full px-6 py-3 hover:shadow-lg transition-all duration-300"
+              className="inline-flex cursor-pointer items-center bg-[#115d8e] shadow-none rounded-full px-6 py-3 hover:shadow-lg transition-all duration-300"
             >
               <span className="text-white font-medium mr-3">Login</span>
               <span className="flex items-center justify-center w-8 h-8 bg-white rounded-full">
@@ -156,7 +156,7 @@ export default function Navbar() {
         {/* Close Button */}
         <button
           onClick={() => setIsLoginOpen(false)}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
+          className="absolute top-4 cursor-pointer right-4 text-gray-500 hover:text-gray-800"
         >
           <X className="w-6 h-6" />
         </button>

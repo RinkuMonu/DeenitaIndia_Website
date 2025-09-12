@@ -13,32 +13,32 @@ export default function HomeSteps() {
   const steps = [
     {
       title: "Register / Create an Account",
-      description: "Sign up with your email and basic details to get started.",
+      description: "You're signed up with your basic details",
       icon: <UserPlus className="h-8 w-8" />,
     },
     {
       title: "Complete KYC & Upload Documents",
-      description: "Verify your identity and securely upload required documents.",
+      description: "Confirm your identity by uploading the required documentation",
       icon: <IdCard className="h-8 w-8" />,
     },
     {
       title: "Select a Service or Request a Quote",
-      description: "Choose a plan or ask for a custom quote tailored to your needs.",
+      description: "Choose the service you need or request a custom quote",
       icon: <FileSearch className="h-8 w-8" />,
     },
     {
       title: "Escrow Setup / Legal Process Begins",
-      description: "Funds are held securely; compliance and paperwork kick off.",
+      description: "Your funds are placed in escrow, and the process begins",
       icon: <ShieldCheck className="h-8 w-8" />,
     },
     {
       title: "Dashboard Access & Real-Time Tracking",
-      description: "Track status, milestones, and updates in one clean dashboard.",
+      description: "You can track the status of your project anytime based on live updates",
       icon: <LayoutDashboard className="h-8 w-8" />,
     },
     {
       title: "Completion & Secure Closure",
-      description: "Approve deliverables, release funds, and close with confidence.",
+      description: "You'll obtain confirmation and close out the service securely",
       icon: <CheckCircle className="h-8 w-8" />,
     },
   ];
