@@ -11,33 +11,33 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Switch",
-    description: "Consolidate your projects, clients and team intoConsolidate your projects, clients and team into",
+    title: "Switch Service",
+    description: "A fast, secure, and reliable service for transaction routing.",
     image: "/images/expert-service1.jpg",
   },
   {
-    title: "Project Title 2",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Escrow Service",
+    description: "A safe place to hold your funds until the conditions are fully met.",
     image: "/images/expert-service2.jpg",
   },
   {
-    title: "Project Title 3",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Connected Banking",
+    description: "A seamless integration of banking services with real-time payments.",
     image: "/images/expert-service3.jpg",
   },
   {
-    title: "Project Title 4",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "AIGF License Services",
+    description: "We provide complete support for your legal gaming activities.",
     image: "/images/expert-service4.jpg",
   },
   {
-    title: "Project Title 2",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Legal & Compliance Services",
+    description: "Keeping you compliant with our experienced legal services.",
     image: "/images/expert-service2.jpg",
   },
   {
-    title: "Project Title 3",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Utility Services",
+    description: "Pay bills or recharge easily on a secure platform.",
     image: "/images/expert-service3.jpg",
   },
 ];
@@ -48,7 +48,7 @@ export default function Slider() {
     <section className="container px-14 pt-32 ">
       <div>
         <p className="heading font-semibold mb-8 capitalize">
-          Delivering Expert <span className="theme-text">Services</span> <br></br> that drive results
+        Providing experienced <span className="theme-text">Services</span> <br></br> that drive results
         </p>
         
       </div>

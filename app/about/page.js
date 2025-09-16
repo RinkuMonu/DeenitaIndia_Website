@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import AboutHero from "../../components/AboutHero";
 import OurVisionMission from "../../components/OurVisionMission";
 import LeadershipSection from "../../components/LeadershipSection";
+import AboutServices from "../../components/AboutServices";
 
 const images = [
   "/Image/Rectangle 61.png",
@@ -304,18 +305,18 @@ export default function CompanySection() {
             </div>
           </div>
         </div>
-      </section> */}  
+      </section> */}
       <LeadershipSection />
 
       <Cta />
 
-      {/* <div className="container">
-        <section className="py-12 md:py-20 lg:px-4 relative overflow-hidden  rounded-lg  ">
+      <div className="container mx-auto px-14 pt-32 ">
+        <section className="relative overflow-hidden  rounded-lg  ">
           <div className="absolute w-72 h-72 bg-[#bad0e0] rounded-full opacity-15 blur-3xl -top-20 -left-20 z-0"></div>
           <div className="absolute w-64 h-64 bg-[#b5c8d4] rounded-full opacity-10 blur-3xl bottom-0 -right-20 z-0"></div>
 
           <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center px-4">
-     
+
             <div className="">
               <h3 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
                 Proud Moments & <br />
@@ -391,22 +392,12 @@ export default function CompanySection() {
         </section>
 
         <section className="py-12 md:py-20 bg-white sm:px-6">
-          <div className="mx-auto text-center">
-            <div className="inline-block px-4 py-1 text-sm rounded-full bg-gradient-to-r from-[#777777] to-[#115D8E] text-white font-medium mb-4">
-              Your Data, Our Responsibility
+          <div className="">
+            <div>
+              <p className="heading font-semibold mb-8 capitalize">
+                Built on Trust<span className="theme-text">&nbsp;Services</span> <br></br>  Your Data, Our Responsibility
+              </p>
             </div>
-
-            <h3 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
-              Built on Trust
-            </h3>
-
-            <p className="text-gray-600 text-sm md:text-base max-w-xl mx-auto mb-8 md:mb-12">
-              We follow industry-leading security protocols to safeguard your
-              data and privacy.
-              <br className="hidden md:block" />
-              Trust is the foundation of everything we do — and we never
-              compromise on it.
-            </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 justify-center">
               {[
@@ -486,7 +477,7 @@ export default function CompanySection() {
             </div>
           </div>
         </section>
-        <section className="">
+        {/* <section className="">
           <div className="md:flex justify-between align-middle">
             <p className="heading font-semibold " data-aos="fade-right">
               Media <span className="theme-text">Highlights</span>
@@ -574,8 +565,9 @@ export default function CompanySection() {
               <MdArrowOutward className="ml-1 text-bold" />
             </Link>
           </div>
-        </section>
-      </div> */}
+        </section> */}
+      </div>
+      <AboutServices />
     </>
   );
 }

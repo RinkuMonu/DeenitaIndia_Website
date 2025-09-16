@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Sparkles, Puzzle, Zap, MessagesSquare } from "lucide-react";
+import { Sparkles, Puzzle, Building2, ReceiptText } from "lucide-react";
 
 function Feature({ icon, title, desc, align = "left" }) {
   return (
@@ -10,7 +10,7 @@ function Feature({ icon, title, desc, align = "left" }) {
         align === "right" ? "ml-auto text-left" : "text-left"
       }`}
     >
-      <div className="shrink-0 grid place-items-center w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-100 to-blue-100 border border-blue-200/60 shadow-sm">
+      <div className="shrink-0 grid place-items-center w-8 h-8 rounded-md bg-gradient-to-tr from-indigo-100 to-blue-100 border border-blue-200/60 shadow-sm">
         {icon}
       </div>
       <div>
@@ -38,10 +38,10 @@ export default function WhyChoose() {
         {/* Heading */}
         <div className="text-center mb-10 sm:mb-14 md:mb-20">
           <h2 className="mt-3 text-3xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 capitalize">
-            <span className="text-[#115d8e]">Industries </span> We Proudly Serve
+            <span className="text-[#115d8e]">Industries </span>Where We Provide Services
           </h2>
           <p className="text-base sm:text-lg font-semibold text-[#ccc] uppercase">
-            We deliver tailored solutions for diverse sectors with cutting-edge technology
+          We offer customized solutions to industries by leveraging innovative technology.
           </p>
         </div>
 
@@ -50,9 +50,15 @@ export default function WhyChoose() {
           {/* Left features */}
           <div className="order-2 md:order-1 space-y-6 md:space-y-10">
             <Feature
-              icon={<Puzzle className="w-5 h-5 text-blue-600" />}
-              title="Gaming"
-              desc="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditis praesentium voluptatum deieniti atque corrupti quos dolores et quas"
+              icon={<Building2 className="w-3 h-3 text-blue-600" />}
+              title="Real estate"
+              desc="Our connected banking and escrow services support the buyer or developer's safe property transaction with immediate settlement, and the challenge of verified financial compliance is resolved."
+              align="left"
+            />
+            <Feature
+              icon={<Puzzle className="w-3 h-3 text-blue-600" />}
+              title="Startups & Enterprises"
+              desc="Whether it is legal compliance, switch services, or connected banking systems, we enable start-ups and larger organizations to efficiently manage payments while remaining compliant to regulations, allowing for local, national, and international scaling."
               align="left"
             />
           </div>
@@ -82,15 +88,15 @@ export default function WhyChoose() {
           {/* Right features */}
           <div className="order-3 space-y-6 md:space-y-10">
             <Feature
-              icon={<Sparkles className="w-5 h-5 text-blue-600" />}
-              title="Real Estate"
-              desc="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditilis praesentium voluptatum deleniti atque corrupti quos dolores et quas"
+              icon={<Sparkles className="w-3 h-3 text-blue-600" />}
+              title="NBFCs & Fintech"
+              desc="The switch services and connected banking relationship simplify the lending, repayment, and settlement process for NBFC borrowers, while also reducing the additional burden of legal compliance for regulatory purposes."
               align="right"
             />
             <Feature
-              icon={<MessagesSquare className="w-5 h-5 text-blue-600" />}
-              title="NBFCs"
-              desc="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas"
+              icon={<ReceiptText  className="w-3 h-3 text-blue-600" />}
+              title="E-com & Retail"
+              desc="We support digital stores with escrow protection of funds, utility integration overlays with the e-commerce transaction, connected banking, and customer trust for interactive online businesses."
               align="right"
             />
           </div>

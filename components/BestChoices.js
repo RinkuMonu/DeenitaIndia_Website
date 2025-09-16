@@ -126,37 +126,37 @@ const STEPS = [
     {
         no: "01",
         title: "Secure",
-        desc: "Bank-level security protocols to protect your data and transactions",
+        desc: "Bank-level security protocols protect your data and transactions.",
         icon: "/images/secure-icon.png",
     },
     {
         no: "02",
         title: "Regulated",
-        desc: "Fully compliant with all financial regulations and standards",
+        desc: " Fully compliant with all regulatory requirements and standards within the financial industry.",
         icon: "/images/regulated-icon.png",
     },
     {
         no: "03",
         title: "Audited",
-        desc: "Regular third-party audits ensure complete transparency",
+        desc: " Independent third parties audit our transparency.",
         icon: "/images/audited-icon.png",
     },
     {
         no: "04",
         title: "Trusted",
-        desc: "Trusted by thousands of customers worldwide",
+        desc: " Thousands of customers around the world choose us and trust us",
         icon: "/images/audited-icon.png",
     },
     {
         no: "05",
         title: "Reliable",
-        desc: "99.9% uptime with redundant systems for maximum reliability",
+        desc: "99.9% uptime and a highly redundant system.",
         icon: "/images/audited-icon.png",
     },
     {
         no: "06",
         title: "Innovative",
-        desc: "Cutting-edge technology for seamless user experience",
+        desc: " High-end technology is focused on a seamless customer experience.",
         icon: "/images/audited-icon.png",
     },
 ];
@@ -167,18 +167,11 @@ export default function WorkFeature() {
             <section className="relative">
                 {/* Heading */}
                 <div className="container mx-auto px-14 pt-32 pb-20">
-                    <div className="text-center mb-10 md:mb-16">
-                        <div className="flex items-center justify-center gap-2 text-xs font-semibold tracking-wider text-slate-500 uppercase">
-                            <span className="w-2 h-2 rounded-full bg-blue-600 shadow-[0_0_12px_rgba(59,130,246,0.55)]" />
-                            What Makes Us Your Best Choice
-                            <span className="w-2 h-2 rounded-md bg-blue-500" />
-                        </div>
-
-                        <h2 className="mt-4 text-4xl md:text-5xl font-semibold text-[#115d8e]">
-                            Best Choice
-                        </h2>
+                    <div>
+                        <p className="heading font-semibold mb-8 capitalize">
+                            What Makes Us <span className="theme-text"><br />Best Choice</span>
+                        </p>
                     </div>
-
                     {/* Steps */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                         {STEPS.map((s, i) => (

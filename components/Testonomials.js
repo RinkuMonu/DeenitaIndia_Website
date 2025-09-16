@@ -9,38 +9,38 @@ import Image from "next/image";
 
 const testimonials = [
     {
-        name: "Ruchi Bhasker",
-        review: "This service exceeded all expectations. Professional, prompt, and reliable!Lorem the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        name: "Ankit Sharma",
+        review: "The Switch Service by Deenita India truly optimized our payment system, making it much quicker and more dependable, and the improvement was instantaneous in terms of transaction speed and trust from our customers.",
         timeAgo: "2 days ago",
-        image: "/images/b3.jpg",
-        post: "UI/UX Designer",
+        image: "/Newimg/herosection/man.png",
+        post: "Founder, Fintech Startup",
     },
     {
-        name: "Rahul Mehta",
-        review: "Amazing experience! Will definitely recommend to others.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        name: "Rohit Verma",
+        review: "With the escrow service, business transactions became far more secure and transparent. Clients experience the security of working with us now.",
         timeAgo: "1 week ago",
-        image: "/images/b3.jpg",
-        post: "Frontend Developer",
+        image: "/Newimg/herosection/man2.png",
+        post: "Head of Operations, E-commerce Brand",
     },
     {
-        name: "Sneha Verma",
-        review: "Prompt support and great communication. Highly appreciated!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        name: "Sneha Kapoor",
+        review: "The Connected Banking solutions are integrated directly into our platform, reducing the amount of manual work and drastically improving our reconciliation speed.",
         timeAgo: "3 weeks ago",
-        image: "/images/b3.jpg",
-        post: "Product Manager",
+        image: "/Newimg/herosection/girl.png",
+        post: "Finance Manager, SaaS Company",
     },
     {
-        name: "Kunal Raj",
-        review: "Their expert services helped boost our productivity.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        name: "Aditya Mehta",
+        review: "The legal and compliance services were timely and relevant, and specific to our organization. Their expertise gave us strong advice and strategies to mitigate any possible risks.",
         timeAgo: "1 month ago",
-        image: "/images/b3.jpg",
-        post: "Fullstack Developer",
+        image: "/Newimg/herosection/man3.png",
+        post: "Legal Consultant",
     }, {
-        name: "Kunal Raj",
-        review: "Their expert services helped boost our productivity. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        name: "Neha Singh",
+        review: "We have full faith in their Utility Services model support. They offer a full range of services from bill payments to customer integrations, and there is never a second of downtime.",
         timeAgo: "1 month ago",
-        image: "/images/b3.jpg",
-        post: "Fullstack Developer",
+        image: "/Newimg/herosection/human.png",
+        post: "Startup Owner",
     },
 ];
 
@@ -49,9 +49,6 @@ export default function Testimonials() {
 
     return (
         <section className="max-w-7xl mx-auto pt-20 mb-10">
-            {/* <p className="heading font-semibold text-4xl text-center mx-auto md:mx-0">
-        Client <span className="text-[#115d8e] ">Experiences</span>
-      </p> */}
             <div className="grid grid-cols-1 lg:grid-cols-2  justify-center items-center mt-8">
 
                 <div className="flex justify-center">
@@ -79,7 +76,7 @@ export default function Testimonials() {
                         centeredSlides={true}
                         spaceBetween={0}
                         slidesPerView={1}
-                        loopedSlides={testimonials.length}
+                        // loopedSlides={testimonials.length}
                         speed={1200}
                         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                         onSwiper={(swiper) => setActiveIndex(swiper.realIndex)}
