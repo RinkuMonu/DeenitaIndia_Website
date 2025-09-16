@@ -32,8 +32,8 @@ export default function Navbar() {
         <div className="flex space-x-4">
           <Link href="#" className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center">Instagram<MoveUpRight className="w-4 h-4" /></Link>
           <div className="w-px h-6 bg-gray-300"></div>
-          <Link href="#" className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center">Twitter<MoveUpRight className="w-4 h-4" /></Link>
-          <div className="w-px h-6 bg-gray-300"></div>
+          {/* <Link href="#" className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center">Twitter<MoveUpRight className="w-4 h-4" /></Link>
+          <div className="w-px h-6 bg-gray-300"></div> */}
           <Link href="#" className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center">Facebook<MoveUpRight className="w-4 h-4" /></Link>
         </div>
       </div>
