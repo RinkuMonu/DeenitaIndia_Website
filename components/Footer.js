@@ -42,11 +42,7 @@ function Footer() {
               {[
                 { name: "About Us", href: "/about" },
                 { name: "Services", href: "/services" },
-                { name: "API's", href: "" },
                 { name: "Blog", href: "/blog" },
-                { name: "Our Team", href: "/" },
-                { name: "Careers", href: "/" },
-                { name: "Gallery", href: "/" },
               ].map((link, index) => (
                 <Link
                   key={index}

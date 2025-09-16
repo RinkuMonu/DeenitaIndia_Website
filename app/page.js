@@ -56,15 +56,14 @@ export default function Home() {
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
                   <span className="bg-gradient-to-r from-[#115D8E] to-[#046eb4] bg-clip-text text-transparent">
-                    Empowering Businesses
+                    One Platform
                   </span>
                   <br />
-                  Through <span className="text-[#3B82F6]">Technology</span>
+                  Infinite <span className="text-[#3B82F6]">Business Solutions.</span>
                 </h1>
 
                 <p className="text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed">
-                  Empowering your financial decisions with cutting-edge technology,
-                  comprehensive analytics, and enterprise-grade security.
+                From secure transaction delivery services & escrow services through connected banking services and legal compliance, Deenita India is your trusted ally, enabling growth and transparency!
                 </p>
               </div>
 

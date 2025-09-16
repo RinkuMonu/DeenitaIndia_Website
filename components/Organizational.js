@@ -1,23 +1,16 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import {
-  Crown, Users, Building2, ArrowDown, ArrowUp, Star, Award, BarChart3
+  Crown, Users, Building2, Star, Award, BarChart3, Target, ChevronRight
 } from "lucide-react";
-
-// 🔽 Add Swiper imports
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination, A11y } from "swiper/modules";
 
 const tabs = [
   {
     id: 1,
     title: "Leadership Structure",
     content:
-      "Our leadership framework ensures clear direction and strategic vision. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+      "Our leadership framework ensures clear direction and strategic vision with streamlined decision-making processes that drive organizational success.",
     icon: Crown,
     features: ["Strategic Vision", "Decision Making", "Executive Oversight"],
     stats: "95% Employee Satisfaction",
@@ -26,7 +19,7 @@ const tabs = [
     id: 2,
     title: "Team Organization",
     content:
-      "Our teams are structured for maximum collaboration and efficiency. Content for tab 2: different text can go here. You can add more if needed voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+      "Our teams are structured for maximum collaboration and efficiency, enabling cross-functional cooperation and innovative problem-solving.",
     icon: Users,
     features: ["Collaboration", "Efficiency", "Cross-functional Teams"],
     stats: "42+ Teams Organized",
@@ -35,7 +28,7 @@ const tabs = [
     id: 3,
     title: "Department Roles",
     content:
-      "Clear department roles ensure accountability and smooth operations. Content for tab 3: replace this with relevant content voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+      "Clear department roles ensure accountability and smooth operations across all organizational functions and strategic initiatives.",
     icon: Building2,
     features: ["Accountability", "Clarity", "Streamlined Operations"],
     stats: "15 Departments",
@@ -44,239 +37,132 @@ const tabs = [
 
 export default function OrganizationalStructuring() {
   const [activeTab, setActiveTab] = useState(1);
-  const [openAccordion, setOpenAccordion] = useState(1);
-  const [isVisible, setIsVisible] = useState(false);
-  const swiperRef = useRef(null); // 🔽 holds Swiper instance
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const toggleAccordion = (id) => {
-    setOpenAccordion(openAccordion === id ? null : id);
-  };
-
-  // Helper to map tab.id -> slide index
-  const indexFromId = (id) => tabs.findIndex((t) => t.id === id);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50/30 via-white to-indigo-50/30 py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div className="min-h-screen container mx-auto px-14 pt-32 pb-20 flex items-center justify-center bg-gradient-to-br from-blue-50/20 via-white to-indigo-50/20 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-[#115D8E]/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#115D8E]/10 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-64 h-64 bg-[#115D8E]/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#115D8E]/5 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
 
-      <div className="max-w-7xl w-full space-y-8 relative z-10">
+      <div className="w-full space-y-8 relative z-10">
         {/* Header Section */}
-        <div>
-          <div className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-[#115D8E] to-[#0e4a75] text-white rounded-full text-xs font-semibold mb-6 shadow-md">
+        <div className="">
+          <div className="inline-flex items-center  px-4 py-2 bg-gradient-to-r from-[#115D8E] to-[#0e4a75] text-white rounded-full text-sm font-medium mb-6 shadow-lg">
             <Award className="w-4 h-4 mr-2" />
             Organizational Excellence
           </div>
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-[#115D8E] to-[#0e4a75] bg-clip-text text-transparent">
-            Organizational
+          
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+            Organizational {" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#115D8E] to-[#0e7bc2]">
+              Structuring
+            </span>
           </h2>
-          <h3 className="text-4xl font-bold text-gray-800 mt-2">Structuring</h3>
-          <p className="mt-6 text-gray-600 leading-relaxed">
-            Discover how our organization is structured for success, efficiency, and collaboration across all departments and teams.
+          
+          <p className="mt-4 text-gray-600 text-lg ">
+            Discover how our organization is structured for success, efficiency, and collaboration.
           </p>
         </div>
 
-        {/* Desktop: Buttons + Slider (kept buttons, now control the slider) */}
-        <div className="hidden md:block">
-          {/* Buttons Row */}
-          <div className="flex gap-4 mb-10">
-            {tabs.map((tab) => {
-              const IconComponent = tab.icon;
-              const isActive = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => {
-                    setActiveTab(tab.id);
-                    if (swiperRef.current) {
-                      swiperRef.current.slideTo(indexFromId(tab.id));
-                    }
-                  }}
-                  aria-pressed={isActive}
-                  className={`flex flex-col items-center gap-4 px-4 py-3 rounded-2xl border-2 text-lg font-semibold transition-all duration-500 transform ${
-                    isActive
-                      ? "border-[#115D8E] text-[#115D8E] bg-white shadow-2xl scale-105"
-                      : "border-gray-200 text-gray-600 bg-white hover:border-[#115D8E]/40 hover:text-[#115D8E] hover:shadow-lg"
-                  }`}
-                >
-                  <div className={`p-3 rounded-full ${isActive ? "bg-[#115D8E]/10" : "bg-gray-100"}`}>
-                    <IconComponent className={`w-6 h-6 ${isActive ? "text-[#115D8E]" : "text-gray-500"}`} />
-                  </div>
-                  {tab.title}
-                  <div
-                    className={`h-1.5 w-12 rounded-full transition-all duration-500 ${
-                      isActive ? "bg-[#115D8E] w-16" : "bg-transparent"
-                    }`}
-                  ></div>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Slider */}
-          <Swiper
-            modules={[Navigation, Pagination, A11y]}
-            spaceBetween={30}
-            slidesPerView={1}
-            speed={500}
-            autoHeight
-            // navigation
-            pagination={{ clickable: true }}
-            initialSlide={indexFromId(activeTab)}
-            onSwiper={(swiper) => {
-              swiperRef.current = swiper;
-            }}
-            onSlideChange={(swiper) => {
-              const newActiveId = tabs[swiper.activeIndex]?.id;
-              if (newActiveId) setActiveTab(newActiveId);
-            }}
-            className="pb-10"
-          >
-            {tabs.map((tab) => {
-              const IconComponent = tab.icon;
-              return (
-                <SwiperSlide key={tab.id}>
-                  <div
-                    className="bg-white p-10 rounded-3xl border border-gray-200 transition-all duration-700"
-                    data-aos="fade-in"
-                    data-aos-duration="800"
-                  >
-                    <div className="flex flex-col md:flex-row gap-8">
-                      <div className="flex-1">
-                        <div className="flex items-start mb-6">
-                          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#115D8E] to-[#0e4a75] flex items-center justify-center text-3xl text-white mr-6 shadow-lg">
-                            <IconComponent className="w-8 h-8" />
-                          </div>
-                          <div>
-                            <h4 className="text-3xl font-bold text-gray-800">{tab.title}</h4>
-                            <div className="flex gap-2 mt-3 flex-wrap">
-                              {tab.features.map((feature, index) => (
-                                <span
-                                  key={index}
-                                  className="px-3 py-1.5 bg-[#115D8E]/10 text-[#115D8E] rounded-full text-sm font-medium"
-                                >
-                                  {feature}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                        <p className="text-lg text-gray-700 leading-relaxed mb-6">{tab.content}</p>
-                        <div className="flex items-center gap-3 text-[#115D8E] font-medium">
-                          <BarChart3 className="w-5 h-5" />
-                          <span>{tab.stats}</span>
-                        </div>
-                      </div>
-
-                      <div className="md:w-1/3 bg-gradient-to-br from-[#F2F8FB] to-blue-50 p-6 rounded-2xl border border-[#115D8E]/20">
-                        <h5 className="font-semibold text-gray-800 mb-4 flex items-center">
-                          <Star className="w-5 h-5 text-amber-400 mr-2" />
-                          Key Benefits
-                        </h5>
-                        <ul className="space-y-3">
-                          <li className="flex items-center">
-                            <div className="w-2 h-2 rounded-full bg-[#115D8E] mr-3"></div>
-                            <span className="text-gray-700">Enhanced decision-making processes</span>
-                          </li>
-                          <li className="flex items-center">
-                            <div className="w-2 h-2 rounded-full bg-[#115D8E] mr-3"></div>
-                            <span className="text-gray-700">Improved cross-department collaboration</span>
-                          </li>
-                          <li className="flex items-center">
-                            <div className="w-2 h-2 rounded-full bg-[#115D8E] mr-3"></div>
-                            <span className="text-gray-700">Clear accountability at all levels</span>
-                          </li>
-                          <li className="flex items-center">
-                            <div className="w-2 h-2 rounded-full bg-[#115D8E] mr-3"></div>
-                            <span className="text-gray-700">Streamlined operational efficiency</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </div>
-
-        {/* Mobile Accordion (unchanged) */}
-        <div className="md:hidden space-y-6">
+        {/* Tabs Navigation */}
+        <div className="flex flex-wrap  gap-3 mb-8">
           {tabs.map((tab) => {
             const IconComponent = tab.icon;
-            const isOpen = openAccordion === tab.id;
+            const isActive = activeTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center gap-3 px-5 py-3 rounded-xl border text-base font-semibold transition-all duration-300 ${
+                  isActive
+                    ? "border-[#115D8E] text-white bg-gradient-to-r from-[#115D8E] to-[#0e7bc2] shadow-lg transform -translate-y-1"
+                    : "border-gray-200 text-gray-600 bg-white hover:border-[#115D8E]/60 hover:text-[#115D8E] hover:shadow-md"
+                }`}
+              >
+                <IconComponent className={`w-4 h-4 ${isActive ? "text-white" : "text-gray-500"}`} />
+                {tab.title}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Tab Content */}
+        <div className="bg-white p-6 md:p-8 rounded-2xl border border-gray-100 shadow-sm transition-all duration-500">
+          {tabs.map((tab) => {
+            if (tab.id !== activeTab) return null;
+            const IconComponent = tab.icon;
 
             return (
-              <div key={tab.id} className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg bg-white">
-                {/* Accordion Button */}
-                <button
-                  onClick={() => toggleAccordion(tab.id)}
-                  className="w-full flex justify-between items-center px-6 py-5 text-left"
-                >
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 rounded-xl bg-[#115D8E]/10 flex items-center justify-center text-[#115D8E] mr-4">
+              <div key={tab.id} className="flex flex-col lg:flex-row gap-6 md:gap-8 animate-fadeIn">
+                {/* Main Content */}
+                <div className="flex-1">
+                  <div className="flex items-start mb-6">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#115D8E] to-[#0e7bc2] flex items-center justify-center text-white mr-4 shadow-md">
                       <IconComponent className="w-6 h-6" />
                     </div>
                     <div>
-                      <span className="font-bold text-gray-800 text-lg block">{tab.title}</span>
-                      <span className="text-sm text-gray-500">{tab.stats}</span>
+                      <h4 className="text-2xl font-bold text-gray-800">{tab.title}</h4>
+                      <div className="flex gap-2 mt-3 flex-wrap">
+                        {tab.features.map((feature, index) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1.5 bg-blue-50 text-[#115D8E] rounded-lg text-sm font-medium border border-blue-100"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
-                  {isOpen ? <ArrowUp className="w-5 h-5 text-[#115D8E]" /> : <ArrowDown className="w-5 h-5 text-[#115D8E]" />}
-                </button>
+                  <p className="text-gray-700 mb-6 leading-relaxed">{tab.content}</p>
 
-                {/* Accordion Content */}
-                <div
-                  className={`grid transition-all duration-500 ease-in-out ${
-                    isOpen ? "grid-rows-[1fr] opacity-100 p-6" : "grid-rows-[0fr] opacity-0 p-0"
-                  }`}
-                >
-                  <div className="overflow-hidden bg-[#F2F8FB] rounded-xl border-t border-gray-100 p-4">
-                    <div className="flex gap-2 mb-4 flex-wrap">
-                      {tab.features.map((feature, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1.5 bg-[#115D8E]/10 text-[#115D8E] rounded-full text-sm font-medium"
-                        >
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                    <p className="mb-4">{tab.content}</p>
-
-                    <div className="bg-white p-4 rounded-xl border border-[#115D8E]/10">
-                      <h5 className="font-semibold text-gray-800 mb-3 flex items-center">
-                        <Star className="w-4 h-4 text-amber-400 mr-2" />
-                        Key Benefits
-                      </h5>
-                      <ul className="space-y-2 text-sm">
-                        <li className="flex items-center">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#115D8E] mr-2"></div>
-                          <span>Enhanced decision-making</span>
-                        </li>
-                        <li className="flex items-center">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#115D8E] mr-2"></div>
-                          <span>Improved collaboration</span>
-                        </li>
-                        <li className="flex items-center">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#115D8E] mr-2"></div>
-                          <span>Clear accountability</span>
-                        </li>
-                      </ul>
-                    </div>
+                  <div className="flex items-center gap-3 text-[#115D8E] font-medium p-3 bg-blue-50 rounded-lg border border-blue-100">
+                    <BarChart3 className="w-5 h-5" />
+                    <span className="text-sm">{tab.stats}</span>
                   </div>
+                </div>
+
+                {/* Benefits Sidebar */}
+                <div className="lg:w-2/5 bg-gradient-to-br from-blue-50 to-indigo-50 p-5 rounded-xl border border-blue-100">
+                  <div className="flex items-center mb-4">
+                    <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center mr-3">
+                      <Star className="w-4 h-4 text-amber-500" />
+                    </div>
+                    <h5 className="font-semibold text-gray-800">Key Benefits</h5>
+                  </div>
+                  
+                  <ul className="space-y-3">
+                    {[
+                      "Enhanced decision-making processes",
+                      "Improved cross-department collaboration",
+                      "Clear accountability at all levels",
+                      "Streamlined operational efficiency"
+                    ].map((benefit, index) => (
+                      <li key={index} className="flex items-start">
+                        <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
+                          <ChevronRight className="w-3 h-3 text-[#115D8E]" />
+                        </div>
+                        <span className="text-gray-700 text-sm">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             );
           })}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(8px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.4s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 }

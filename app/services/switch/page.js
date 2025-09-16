@@ -1,5 +1,6 @@
 "use client"
-import BankingPartner from "@/components/BankingPartner";
+// import BankingPartner from "@/components/BankingPartner";
+import Partners from "@/components/Partners";
 import Cta from "@/components/Cta";
 import ServiceAdvantage from "@/components/ServiceAdvantage";
 import ServiceBanner from "@/components/ServiceBanner";
@@ -198,11 +199,13 @@ function page() {
         <ServicesSteper data={stepperData} />
       </div>
       <ServiceBanner sections={sections} />
+     
+      {/* <div>
+        <BankingPartner />
+      </div> */}
+      <Partners />
       <div className="container">
         <ServiceAdvantage featuresData={featuresData} />
-      </div>
-      <div>
-        <BankingPartner />
       </div>
     </>
   );
