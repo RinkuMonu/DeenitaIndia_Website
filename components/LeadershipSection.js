@@ -12,8 +12,13 @@ export default function LeadershipSection() {
         <div className="absolute z-10 -bottom-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-tr from-[#046eb4]/30 to-[#115D8E]/30 blur-3xl animate-slow-pulse" />
       </div>
 
-      <div className="container mx-auto px-6 md:px-10 lg:px-14 space-y-20">
-
+      <div className="container mx-auto px-6 md:px-10 lg:px-14 space-y-10">
+<h2 className="text-2xl sm:text-4xl md:text-3xl text-black font-extrabold tracking-tight leading-tight">
+                     Message from the{" "}
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#115D8E] to-[#046eb4]">
+                            Founders & Promoters
+                        </span>
+                    </h2>
         {/* Visionary CEO Section */}
         <div className="grid lg:grid-cols-2 items-center gap-12">
 
@@ -43,15 +48,18 @@ export default function LeadershipSection() {
           >
             <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-[#d6efff] to-[#046eb4] rounded-l-3xl" />
 
-            <h3 className="text-4xl font-extrabold text-black">CEO</h3>
-            <p className="mt-2 text-xl text-[#046eb4] font-semibold">deleniti atque</p>
-            <p className="mt-1 text-gray-800">CEO at Velasconde</p>
+            <h3 className="text-4xl font-extrabold text-black">Founders & Promoters</h3>
+            <p className="mt-2 text-xl text-[#046eb4] font-semibold">Dinesh Kumar || Amit Balotiya
+
+</p>
+            <p className="mt-1 text-gray-800"> Founders & Promoters, Deenita India</p>
 
             <p className="mt-6 text-lg leading-relaxed text-gray-900">
-              We started this journey with one goal: to make a real difference in people's lives through experiences that matter.
+              We launched this journey with a clear vision: to make a difference in people’s lives by providing dependable, safe, and innovative services.
+
             </p>
             <p className="mt-4 text-gray-400 italic">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.
+              We provide meaningful solutions that improve trust, transparency, and efficiency from Switch Services, Escrow, Connected Banking, Legal & Compliance, and Utility Services—these create the bedrock of sensible and modern solutions.
             </p>
           </motion.div>
         </div>

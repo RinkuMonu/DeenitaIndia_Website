@@ -32,7 +32,7 @@ export default function HomeSteps() {
       icon: <ShieldCheck className="h-8 w-8" />,
     },
     {
-      title: "Dashboard Access & Real-Time Tracking",
+      title: "Real-time Dashboard Access ",
       description: "You can track the status of your project anytime based on live updates",
       icon: <LayoutDashboard className="h-8 w-8" />,
     },
@@ -55,7 +55,6 @@ export default function HomeSteps() {
 
         {/* ARROWS (first row) */}
         <div className="relative mt-14">
-          {/* left arrow: between column 1 and 2 */}
           <Image
             src="/Newimg/bgimg/workprocess-shape1.webp"
             alt=""

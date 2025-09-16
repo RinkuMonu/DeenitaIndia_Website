@@ -210,11 +210,10 @@ export default function Contact() {
                 Contact us anytime
               </span>
               <h1 className="text-4xl md:text-5xl font-bold text-[#0B4870] leading-tight">
-                Reach out to us we&apos;re just a message away
+                Feel free to reach out &apos;just send us a message.
               </h1>
               <p className="text-gray-600 text-lg">
-                We&apos;re here to answer your questions and provide the support
-                you need.
+                 Our team is ready to address your inquiries and offer the support you need
               </p>
               <div className="flex gap-4">
                 <button
@@ -537,7 +536,7 @@ export default function Contact() {
                   Start the conversation today
                 </h3>
                 <p className="text-gray-600 mb-5 text-lg md:text-xl leading-relaxed">
-                  We&apos;re just a message, call, or click away.
+We’re only a message, call, or click away. Let’s collaborate for more effective solutions
                 </p>
               </div>
 
@@ -585,8 +584,10 @@ export default function Contact() {
                       Visit us
                     </div>
                     <div className="text-gray-600 text-base md:text-lg leading-relaxed">
-                      Office No. 101/2, 'Vakratunda Corporate Park Premises
-                      Co-operative Society Limited, Off. Aarey Road, Goregaon
+                       <h3 className="text-xl text-bold text-black">Head Office </h3> Plot No 97, Dakshinpuri - I, Shrikishan, Sanganer, Jagatpura, Jaipur, Rajasthan, India, 302017
+                      (East), Mumbai - 400063
+                      <h3 className="text-xl text-bold text-black mt-3">Corporate Office </h3>Office No. 101/2, Vakratunda Corporate Park Premises Co-operative Society Limited, Off Aarey Road, Goregaon (East), Mumbai - 400063
+
                       (East), Mumbai - 400063
                     </div>
                   </div>
