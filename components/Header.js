@@ -22,6 +22,32 @@ export default function Navbar() {
   return (
     <>
 
+
+        <div className="flex space-x-4">
+          <Link href="#" className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center">Instagram<MoveUpRight className="w-4 h-4" /></Link>
+          <div className="w-px h-6 bg-gray-300"></div>
+          {/* <Link href="#" className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center">Twitter<MoveUpRight className="w-4 h-4" /></Link>
+          <div className="w-px h-6 bg-gray-300"></div> */}
+          <Link href="#" className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center">Facebook<MoveUpRight className="w-4 h-4" /></Link>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <div className={`flex items-center justify-between rounded-b-xl px-4 md:px-6 py-3 backdrop-blur-xl transition-all duration-500 ${scrolled ? "bg-white/90 top-0 mx-0 border-zinc-200 shadow-xl rounded-none" : "bg-white rounded-none shadow-md border border-[#44A5E9]/20 top-12 "}`}>
+        
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-3 group">
+          <div className="relative">
+            <div className="absolute inset-0 bg-[#44A5E9]/30 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+            <Image
+              src="/Image/deenita-logo.png"
+              width={100}
+              height={100}
+              className="relative z-10"
+              alt="Company Logo"
+              priority
+            />
+
       <nav className={`fixed left-0 w-full z-[9999] transition-all duration-500 ${scrolled ? "bg-white/90  shadow-xl" : "px-4"}`}>
 
         {/* Top Contact Bar */}
@@ -38,6 +64,7 @@ export default function Navbar() {
             <Link href="#" className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center">Twitter<MoveUpRight className="w-4 h-4" /></Link>
             <div className="w-px h-6 bg-gray-300"></div>
             <Link href="#" className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center">Facebook<MoveUpRight className="w-4 h-4" /></Link>
+
           </div>
         </div>
 
