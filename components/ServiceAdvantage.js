@@ -17,9 +17,12 @@ const FeatureItem = ({ icon: Icon, title, description }) => (
 );
 
 // Main section component
-const ServiceAdvantage = ({featuresData}) => {
+const ServiceAdvantage = ({featuresData , title , description}) => {
   const leftFeatures = featuresData.filter(f => f.side === 'left');
   const rightFeatures = featuresData.filter(f => f.side === 'right');
+   const mid = Math.ceil(title.length / 2); // split in half
+  const firstHalf = title.slice(0, mid);
+  const secondHalf = title.slice(mid);
 
   return (
     <section className="bg-white w-full py-16 sm:py-24">
@@ -28,10 +31,11 @@ const ServiceAdvantage = ({featuresData}) => {
           <p className="inline-block bg-[#115D8E]/10 text-[#115D8E] text-sm font-semibold px-4 py-1 rounded-full">
             Why choose our service
           </p>
-          <h2 className="mt-4 text-4xl  font-bold text-gray-900 tracking-tight">
-          Fully Compliant <span className="text-[#115D8E]" > Legally Secure</span>
-          </h2>
-          <p className='text-gray-500 mt-4'>Discover the advantages that set our services apart and help you achieve your goals</p>
+          <h2 className="mt-4 text-4xl font-bold tracking-tight">
+      <span className="text-gray-900">{firstHalf}</span>
+      <span className="text-[#115D8E]">{secondHalf}</span>
+    </h2>
+          <p className='text-gray-500 mt-4'>{description}</p>
         </div>
 
 

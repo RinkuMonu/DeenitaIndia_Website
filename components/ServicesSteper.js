@@ -73,7 +73,6 @@ const ServicesSteper = ({ data }) => {
       ref={containerRef}
       className="py-16 max-w-6xl mx-auto px-4 md:px-6 relative"
     >
-      {/* Header Section */}
       <div className="text-center mb-20">
         <div className="inline-flex items-center px-5 py-2 rounded-full bg-gradient-to-r from-[#1476ad]/20 to-[#63b3ed]/20 border border-[#1476ad]/30 mb-6 shadow-sm">
           <p className="text-[#1476ad] font-semibold text-sm tracking-wide uppercase">
@@ -83,7 +82,7 @@ const ServicesSteper = ({ data }) => {
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
           {data.subtitle}
         </h2>
-        <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed text-lg">
+        <p className="text-gray-600 mx-auto leading-relaxed text-lg">
           {data.description}
         </p>
       </div>
