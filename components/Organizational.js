@@ -8,30 +8,46 @@ import {
 const tabs = [
   {
     id: 1,
-    title: "Leadership Structure",
+    title: "Compliance Structure",
     content:
-      "Our leadership framework ensures clear direction and strategic vision with streamlined decision-making processes that drive organizational success.",
+      "Our compliance leadership ensures clear governance, policy enforcement, and decision-making aligned with regulatory standards.",
     icon: Crown,
-    features: ["Strategic Vision", "Decision Making", "Executive Oversight"],
-    stats: "95% Employee Satisfaction",
+    features: ["Strategic Vision", "Policy Enforcement", "Executive Oversight"],
+    stats: "95% Compliance Accuracy",
+     benifit :[
+ "Stronger risk management",
+  "Improved regulatory alignment",
+  "Clear accountability at all levels",
+  "Streamlined audit efficiency"
+]
   },
   {
     id: 2,
     title: "Team Organization",
     content:
-      "Our teams are structured for maximum collaboration and efficiency, enabling cross-functional cooperation and innovative problem-solving.",
+      "With 42+ teams across departments, we foster collaboration, efficiency, and innovation—empowering cross-functional success and streamlined operations.",
     icon: Users,
-    features: ["Collaboration", "Efficiency", "Cross-functional Teams"],
+    features: ["Collaboration", "Efficiency", "Innovation"],
     stats: "42+ Teams Organized",
+     benifit:[
+      "Strong cross-functional teamwork" , " Faster smarter decision-making" , " Clear accountability across teams " , "Streamlined operations and workflows" ," Culture of continuous innovation"
+    ]
   },
   {
     id: 3,
     title: "Department Roles",
     content:
-      "Clear department roles ensure accountability and smooth operations across all organizational functions and strategic initiatives.",
+      "Each department plays a well-defined role, ensuring clarity of responsibilities while maintaining the agility to work seamlessly with others.",
     icon: Building2,
     features: ["Accountability", "Clarity", "Streamlined Operations"],
     stats: "15 Departments",
+     benifit : [
+  "Enhanced decision-making processes",
+  "Improved cross-department collaboration",
+  "Clear accountability at all levels",
+  "Streamlined operational efficiency"
+]
+
   },
 ];
 
@@ -49,7 +65,7 @@ export default function OrganizationalStructuring() {
         <div className="">
           <div className="inline-flex items-center  px-4 py-2 bg-gradient-to-r from-[#115D8E] to-[#0e4a75] text-white rounded-full text-sm font-medium mb-6 shadow-lg">
             <Award className="w-4 h-4 mr-2" />
-            Organizational Excellence
+           Legal & Compliance Excellence
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
@@ -60,7 +76,7 @@ export default function OrganizationalStructuring() {
           </h2>
           
           <p className="mt-4 text-gray-600 text-lg ">
-            Discover how our organization is structured for success, efficiency, and collaboration.
+           Discover how our compliance framework is structured to ensure security, accountability, and regulatory success.
           </p>
         </div>
 
@@ -133,12 +149,7 @@ export default function OrganizationalStructuring() {
                   </div>
                   
                   <ul className="space-y-3">
-                    {[
-                      "Enhanced decision-making processes",
-                      "Improved cross-department collaboration",
-                      "Clear accountability at all levels",
-                      "Streamlined operational efficiency"
-                    ].map((benefit, index) => (
+                    {tab.benifit.map((benefit, index) => (
                       <li key={index} className="flex items-start">
                         <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
                           <ChevronRight className="w-3 h-3 text-[#115D8E]" />

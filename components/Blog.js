@@ -48,9 +48,8 @@ export default function Blog() {
           <p className="heading font-semibold">
             Recent <span className="theme-text">Articles</span>
           </p>
-          <p className="md:max-w-sm pt-4">
-            Stay updated with our latest insights and industry trends. Explore expert articles, tips, and
-            thought leadership.
+          <p className="md:max-w-md pt-4">
+      Stay informed with authoritative insights and sector news. Our latest writing ranges from Switch & Escrow Services to Connected Banking, Legal Compliance, and Utility Services—everything to keep you ahead in this digital world.
           </p>
         </div>
 

@@ -20,55 +20,56 @@ export default function ServiceHeroSection({ sections }) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center max-w-7xl mx-auto">
             {/* Content Section */}
             <div
-              className={`space-y-6 transition-all duration-1000 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`space-y-6 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
             >
               <div className="space-y-1">
                 <div className="inline-flex items-center gap-2 bg-[#44A5E9]/10 border border-[#44A5E9]/20 px-4 py-2 rounded-full">
                   <div className="w-2 h-2 bg-[#0E90C9] rounded-full animate-pulse"></div>
                   <span className="text-[#115D8E] font-medium text-sm uppercase tracking-wide">
-                    Welcome to Financial
+                    {section.tag}
                   </span>
                 </div>
               </div>
 
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
-                  Empowering your{" "}
-                  <span className="text-transparent bg-gradient-to-r from-[#0E90C9] to-[#44A5E9] bg-clip-text">
-                    Financial Success
-                  </span>{" "}
-                  Journey
+                  {section.title.split(" ").map((word, index) => {
+                    if (index === 3) {
+                      return (
+                        <span
+                          key={index}
+                          className="text-transparent bg-gradient-to-r from-[#0E90C9] to-[#44A5E9] bg-clip-text"
+                        >
+                          {word}{" "}
+                        </span>
+                      );
+                    } else {
+                      return word + " ";
+                    }
+                  })}
                 </h1>
 
+
                 <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
-                  Guiding you with expert insights and strategic solutions to achieve financial growth, stability, and
-                  long-term success with our proven methodologies.
+                  {section.description}
                 </p>
               </div>
 
               <div className="grid grid-cols-3 gap-6 py-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#115D8E]">25+</div>
-                  <div className="text-sm text-slate-600">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#115D8E]">1250+</div>
-                  <div className="text-sm text-slate-600">Happy Clients</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#115D8E]">99%</div>
-                  <div className="text-sm text-slate-600">Success Rate</div>
-                </div>
+                {section.features.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-3xl font-bold text-[#115D8E]">{stat.value}</div>
+                    <div className="text-sm text-slate-600">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Image Section */}
             <div
-              className={`relative transition-all duration-1000 delay-300 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`relative transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
             >
               <div className="relative">
                 <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-[#72CAF7]/20">

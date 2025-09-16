@@ -52,7 +52,7 @@ const IntegrationsSection = () => {
           </button>
 
           <h1 className="text-3xl lg:text-4xl font-bold text-[#115D8E] max-w-3xl leading-tight">
-            Partners & Associations
+          Partners & Associations
           </h1>
 
           {/* <button className="flex items-center gap-2 mt-8 bg-[#115D8E]/60 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#115D8E]/70 transition-colors duration-300">
@@ -60,7 +60,7 @@ const IntegrationsSection = () => {
             <ArrowRight size={20} />
           </button> */}
           <p className=" text-gray-700 max-w-lg ">
-          Stay updated with our latest insights and industry trends. Explore expert articles, tips, and thought leadership.
+       Exhibiting our valued customers, partners, and industry associates who deliver innovation and success across industries.
           </p>
         </div>
 

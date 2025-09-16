@@ -35,23 +35,23 @@ const ServiceAccordion = () => {
     })
   })
 
-  const faqs = [
-    {
-      question: "Looking For A Solution To Boost Productivity?",
-      answer:
-        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
-    },
-    {
-      question: "Need An Easy Way To Manage Your Projects?",
-      answer:
-        "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
-    },
-    {
-      question: "Seeking A User-Friendly Solution For Your Team?",
-      answer:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC.",
-    },
-  ];
+ const faqs = [
+  {
+    question: "What do Legal & Compliance Services cover?",
+    answer:
+      "They ensure all financial and business operations follow applicable laws, regulations, and internal policies for secure and transparent transactions.",
+  },
+  {
+    question: "Which industries need these services?",
+    answer:
+      "Industries like Financial Services, Legal Firms, Real Estate, B2B, E-commerce, Healthcare, and Online Platforms benefit from full legal and regulatory compliance.",
+  },
+  {
+    question: "How does Deenita India ensure compliance?",
+    answer:
+      "We follow strict regulatory frameworks, maintain secure processes, and provide transparent reporting for all transactions and operations.",
+  },
+];
 
   return (
     <div className="   flex items-center justify-center font-sans py-8">
@@ -65,8 +65,7 @@ const ServiceAccordion = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-gray-600 text-base mb-8">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form.
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
           </p>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
