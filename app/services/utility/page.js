@@ -13,124 +13,92 @@ import { Library, MessageSquare, BellRing, Share2, Combine, Keyboard } from "luc
 const featuresData = [
   {
     icon: Library,
-    title: "High Usability",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "One-Stop Platform",
+    description: "Pay all utilities in one place.",
     side: 'left',
   },
   {
     icon: MessageSquare,
-    title: "Free Live Chat",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Secure Payments",
+    description: "Banking-grade security on every transaction.",
     side: 'right',
   },
   {
     icon: BellRing,
-    title: "Action Reminder",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "24/7 Access",
+    description: "Make payments anytime, anywhere.",
     side: 'left',
   },
   {
     icon: Share2,
-    title: "Social Share",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Wide Coverage",
+    description: "Electricity, water, gas, mobile, broadband & more.",
     side: 'right',
   },
   {
     icon: Combine,
-    title: "Merge Files",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Easy Tracking",
+    description: "View history and receipts instantly.",
     side: 'left',
   },
   {
     icon: Keyboard,
-    title: "Custom Shortcuts",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Reliable Support",
+    description: "Assistance whenever you need it.",
     side: 'right',
   },
 ];
+
 const sections = [
   {
-    title: "Multi-Utility Payment API",
+    title: "Multi-Utility Payment Solutions – Secure & Efficient",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+      "Simplify utility payments with real-time dashboards, milestone-based fund releases, and full transparency across all transactions.",
     buttonText: "Connect Now",
     imageSrc: "/images/lc3.jpg",
     features: [
-      { icon: "/images/milestone.png", label: "Milestone-based release" },
-      { icon: "/images/dashbord.png", label: "Dashboard" },
-      { icon: "/images/transparency.png", label: "Transparency" },
+      { icon: "/images/milestone.png", label: "Milestone-Based Release" },
+      { icon: "/images/dashbord.png", label: "Real-Time Dashboard" },
+      { icon: "/images/transparency.png", label: "Complete Transparency" },
     ],
   },
 ];
-const sections1 = [
-  {
-    title: "Fully Compliant, Legally Secure",
-    description:
-      "We operate under full legal frameworks, ensuring all our services are compliant with applicable laws and regulations",
-    imageSrc: "/images/us4.jpg",
-    features: [
-      {
-        icon: "/images/legal_paper.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      },
-      {
-        icon: "/images/venture.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      },
-      {
-        icon: "/images/teamwork.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      },
-      {
-        icon: "/images/value_chian.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      },
-    ],
-  },
-];
+
 function page() {
   const EscrowService = [
     {
       tag: "Services",
-      title: "Utility Service",
+      title: "Reliable Utility Services",
       description:
-        "Our escrow service ensures secure transactions by holding funds until both parties meet agreed conditions.",
+        "Streamline your payments and essential services with secure, fast, and hassle-free solutions for everyday convenience and efficiency.",
       ctaText: "Connect",
       ctaLink: "/contact",
       imageSrc: "/images/us1.jpg",
       features: [
         {
-          icon: "/images/precaution.png",
-          label: "Reduce risk",
+          value: "25+",
+          label: "Quick Payments"
         },
         {
-          icon: "/images/precaution.png",
-          label: "Reduce risk",
+          value: "1250+",
+          label: "Seamless Integration"
         },
         {
-          icon: "/images/precaution.png",
-          label: "Reduce risk",
-        },
+          value: "99%",
+          label: "24/7 Availability "
+        }
       ],
     },
   ];
   const section2 = [
     {
-      tag: "Legal & Compliance Services",
+      tag: "About Utility Services ",
       tag1: "hjh hghgjh",
       tag2: "hjh hghgjh",
       title:
-        "We handle licensing, policy drafting, and ongoing compliance checks",
+        "Simplifying Everyday Payments with Ease",
       description:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+        "Deenita India’s Utility Services make bill payments and essential transactions simple, secure, and fast. From electricity, water, and gas to mobile, broadband, and insurance, our platform provides a one-stop solution for managing all your utility needs with ease and transparency.",
       ctaText: "Get started",
       ctaLink: "/get-started",
       imageSrc: "/images/us2.png",
@@ -138,29 +106,54 @@ function page() {
   ];
   const contractData = [
     {
-      title: "PAN-Aadhaar-GST Integration",
+      title: "Industries We Serve – Utility Services",
       subtitle:
-        "From scope to timelines, everything is documented to ensure smooth collaboration",
+        "Enabling secure, transparent, and efficient payment solutions that simplify transactions and build trust across utility services.",
       items: [
         {
-          title: "B2B",
+          title: "Households",
           description:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+            "Manage electricity, water, gas, and broadband payments with ease.",
           image: "/images/b2b.jpg",
         },
         {
-          title: "Real Estate",
+          title: "Businesses / SMEs",
           description:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+            "Handle bulk bill payments and recurring utilities efficiently.",
+          image: "/images/freelancing.jpg",
+        },
+        {
+          title: "Corporates",
+          description:
+            "Streamline office utilities, telecom, and insurance payments securely.",
           image: "/images/real-estate.jpg",
         },
         {
-          title: "Freelancing",
+          title: "Educational Institutions",
           description:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+            "Manage fee collections and campus utility expenses.",
+          image: "/images/b2b.jpg",
+        },
+        {
+          title: "Healthcare Providers",
+          description:
+            "Simplify utility and service payments for hospitals and clinics.",
           image: "/images/freelancing.jpg",
         },
-      ],
+        {
+          title: "E-commerce & Retail",
+          description:
+            "Pay for digital services, internet, and operational utilities.",
+          image: "/images/real-estate.jpg",
+        },
+        {
+          title: "Government & Public Sector",
+          description:
+            "Ensure timely payments of essential services.",
+          image: "/images/b2b.jpg",
+        },
+      ]
+
     },
   ];
   const accordiansections = [
@@ -202,7 +195,7 @@ function page() {
       <ServiceAccordian sections={accordiansections} />
       <ServiceBanner sections={sections} />
       <div className="container">
-   <ServiceAdvantage featuresData={featuresData} />
+        <ServiceAdvantage featuresData={featuresData} title={"Discover the benefits of Deenita India’s"} description={"Utility Services—secure, fast, and reliable solutions that simplify everyday payments and keep your life hassle-free."} />
       </div>
     </>
   );

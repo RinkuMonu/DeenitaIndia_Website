@@ -35,23 +35,24 @@ const ServiceAccordion = () => {
     })
   })
 
- const faqs = [
+const faqs = [
   {
-    question: "What do Legal & Compliance Services cover?",
+    question: "What types of utility payments can I make?",
     answer:
-      "They ensure all financial and business operations follow applicable laws, regulations, and internal policies for secure and transparent transactions.",
+      "You can pay for electricity, water, gas, broadband, mobile, insurance, and more through our secure platform.",
   },
   {
-    question: "Which industries need these services?",
+    question: "Are payments processed instantly?",
     answer:
-      "Industries like Financial Services, Legal Firms, Real Estate, B2B, E-commerce, Healthcare, and Online Platforms benefit from full legal and regulatory compliance.",
+      "Yes, most payments are processed in real-time, with instant confirmation and receipts for your records.",
   },
   {
-    question: "How does Deenita India ensure compliance?",
+    question: "Is my transaction secure?",
     answer:
-      "We follow strict regulatory frameworks, maintain secure processes, and provide transparent reporting for all transactions and operations.",
+      "Absolutely. All payments are encrypted, compliant with regulations, and protected with banking-grade security.",
   },
 ];
+
 
   return (
     <div className="   flex items-center justify-center font-sans py-8">
@@ -65,7 +66,7 @@ const ServiceAccordion = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-gray-600 text-base mb-8">
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+           Find quick answers to common questions about our Utility Services. Learn how we make your everyday bill payments secure, fast, and completely hassle-free.
           </p>
           <div className="space-y-4">
             {faqs.map((faq, index) => (

@@ -90,42 +90,75 @@ import Image from "next/image";
 import Cta from "@/components/Cta";
 import { useState, useRef, useEffect } from "react";
 import {
-  RefreshCcw,
-  CheckCircle2,
-  Ban,
-  Star,
+  XCircle,
+  RotateCcw,
+  AlertTriangle,
+  Scale,
+  Mail,
   ClipboardList,
-  FileText,
 } from "lucide-react";
+
 
 const refundSections = [
   {
     id: "cancellation-process",
-    title: "Cancellation Process",
-    icon: <RefreshCcw className="w-5 h-5" />,
+    title: "Cancellation of Services",
+    icon: <XCircle className="w-5 h-5 " />,
     content:
-      "Our cancellation process is simple and straightforward. You can cancel your service within 7 days of purchase for a full refund. To initiate a cancellation, please contact our support team with your order details. We process cancellation requests within 24-48 hours and will send you a confirmation email once completed.",
+      `Clients of Deenita India Private Limited may request the cancellation of any service at any time. To initiate a cancellation, the client must submit a formal request in writing via email to support@7unique.in. Upon receiving the cancellation request, the Company will review the status of the service, assess the work completed, and evaluate any costs already incurred for third-party vendors, licensing fees, or operational expenses.  
+      
+      The Company reserves the right to deny cancellation requests if the service has been fully completed, delivered, or if cancellation violates contractual obligations agreed upon in the service agreement. Clients should understand that cancellation does not exempt them from fulfilling payment obligations for work that has already been completed or any expenses already incurred by the Company. This policy ensures fairness to both parties and protects the Company from financial loss due to cancellations made after significant work has been performed. Timely submission of a cancellation request is essential to determine eligibility for any potential refund.`,
   },
   {
     id: "refund-eligibility",
-    title: "Refund Eligibility",
-    icon: <CheckCircle2 className="w-5 h-5" />,
+    title: "Refund Policy",
+    icon: <RotateCcw className="w-5 h-5 " />,
     content:
-      "To be eligible for a refund, your request must be made within 7 days of purchase. The service must not have been utilized substantially, and any promotional materials must be returned unused. Refunds are processed to the original payment method within 5-10 business days after approval. Some services may have specific eligibility criteria outlined in their service agreements.",
+      `All service fees charged by Deenita India Private Limited are generally non-refundable, unless explicitly stated in writing or required by applicable law. In cases where a service is only partially delivered and the cancellation request is approved, the Company may provide a pro-rata refund, calculated based on the proportion of work not yet completed relative to the total agreed scope of services.
+
+Refunds, when applicable, will be processed through the same payment method originally used for the transaction. The processing timeline may vary depending on the payment channel and banking procedures but will be completed within a reasonable period after cancellation approval. This policy ensures transparency in financial dealings, clearly outlines the circumstances under which refunds may be issued, and sets clear expectations for clients regarding refund eligibility.
+
+The refund structure protects both the client and the Company, ensuring clients are only charged for work performed while safeguarding the Company from losses due to partial cancellations.
+`
   },
   {
     id: "non-refundable",
-    title: "Non-Refundable Items",
-    icon: <Ban className="w-5 h-5" />,
+    title: "Third-Party Costs",
+    icon: <AlertTriangle className="w-5 h-5 " />,
     content:
-      "Certain services and products are non-refundable once delivered or utilized. These include customized services, digital products that have been downloaded or accessed, and services that have been partially used. Additionally, any promotional items or discounted services marked as 'final sale' are not eligible for refunds. Please review product descriptions carefully before purchasing.",
+      `Some services provided by Deenita India Private Limited involve third-party vendors, partners, or service providers, including banks, licensing authorities, utility providers, or other operational partners. Fees or costs paid to these entities are non-refundable regardless of whether the client cancels services.
+
+Clients are responsible for all third-party charges, even if the Company has already incurred or remitted these payments before receiving the cancellation request. This ensures that the Company is not financially liable for expenses beyond its control. The policy also protects relationships with third-party vendors by guaranteeing timely payment and honoring contractual obligations with these providers.
+
+Clients are advised to review all associated costs and obligations before requesting service initiation. Understanding these third-party obligations ensures transparency and prevents disputes regarding refund eligibility or service cancellations.
+`
   },
   {
     id: "exceptions",
-    title: "Exceptions",
-    icon: <Star className="w-5 h-5" />,
+    title: "Disputes and Legal Recourse",
+    icon: <Scale className="w-5 h-5 " />,
     content:
-      "In exceptional circumstances such as service delivery failures or technical issues on our end, we may offer refunds beyond the standard policy. If you experience consistent service issues or believe your situation warrants special consideration, please contact our customer support team with details. We review each case individually and aim for fair resolutions.",
+      `Any disputes or disagreements related to cancellations or refunds will be addressed in accordance with applicable Indian law and the Company’s Terms & Conditions. The Company encourages clients to first attempt to resolve disputes amicably by contacting support@7unique.in.
+
+If an amicable resolution is not possible, the Company reserves the right to pursue legal action to recover unpaid fees, outstanding balances, or costs incurred as a result of service cancellations. This clause ensures that the Company maintains legal protection while providing a structured framework for dispute resolution.
+
+It also emphasizes that clients are responsible for meeting payment obligations and understanding the cancellation and refund terms before engaging the Company’s services.
+`
+  },
+  {
+    id: "exceptions",
+    title: "Contact for Cancellation & Refund Requests",
+    icon: <Mail className="w-5 h-5 " />,
+    content:
+      `Clients seeking to cancel a service or request a refund may contact the Company through the following channels:
+
+Email: support@7unique.in
+ Phone: 0141-4511098
+
+All requests should include sufficient details about the service, payment reference, and reason for cancellation to enable the Company to respond efficiently. Timely communication ensures proper assessment of the cancellation request and determination of any potential refunds.
+Deenita India Private Limited aims to respond promptly to all requests, providing clear guidance regarding next steps and any applicable financial obligations. Unauthorized attempts to dispute payments or bypass the official process may result in legal action.
+
+`
   },
 ];
 
@@ -183,11 +216,10 @@ export default function RefundPolicy() {
                           <li key={index}>
                             <button
                               onClick={() => scrollToSection(section.id)}
-                              className={`w-full text-left py-2 px-3 rounded-lg transition-all duration-200 flex items-center cursor-pointer gap-2 ${
-                                activeSection === section.id
-                                  ? "bg-[#115D8E] text-white font-medium"
-                                  : "text-gray-600 hover:bg-gray-100"
-                              }`}
+                              className={`w-full text-left py-2 px-3 rounded-lg transition-all duration-200 flex items-center cursor-pointer gap-2 ${activeSection === section.id
+                                ? "bg-[#115D8E] text-white font-medium"
+                                : "text-gray-600 hover:bg-gray-100"
+                                }`}
                             >
                               {section.icon}
                               {section.title}
@@ -201,9 +233,9 @@ export default function RefundPolicy() {
                   {/* Main Content */}
                   <div className="lg:w-3/4">
                     <div className="bg-white p-8 rounded-2xl shadow-sm mb-8">
-                      <div className="text-center mb-10">
+                      <div className=" mb-10">
                         <div className="mb-6">
-                          <div className="w-20 h-20 mx-auto bg-gradient-to-br from-[#115D8E] to-[#777777] rounded-full flex items-center justify-center">
+                          <div className="w-20 h-20  bg-gradient-to-br from-[#115D8E] to-[#777777] rounded-full flex items-center justify-center">
                             <Image
                               src="/Image/refund-img.png"
                               alt="Refund Policy Icon"
@@ -219,7 +251,7 @@ export default function RefundPolicy() {
                         <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 mt-4">
                           You can cancel your service within 7 days of purchase for a refund as per our policy
                         </h1>
-                        <div className="h-1 w-20 bg-gradient-to-r from-[#777777] to-[#115D8E] mx-auto mb-6 rounded-full"></div>
+                        <div className="h-1 w-20 bg-gradient-to-r from-[#777777] to-[#115D8E] mb-6 rounded-full"></div>
                         <p className="text-gray-600 text-lg leading-relaxed">
                           Our refund policy is designed to be fair and transparent. We understand that circumstances may change, and we strive to make the cancellation and refund process as straightforward as possible. Below you'll find detailed information about our policies, eligibility criteria, and processes.
                         </p>
@@ -242,78 +274,16 @@ export default function RefundPolicy() {
                           </h3>
                         </div>
                         <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-4"></div>
-                        <p className="text-gray-600 leading-relaxed">{section.content}</p>
+                        <p className="text-gray-600  whitespace-pre-line">{section.content}</p>
                       </div>
                     ))}
-
-                    {/* Summary Card */}
-                    <div className="bg-gradient-to-r from-[#115D8E] to-[#777777] p-1 rounded-2xl shadow-lg mt-10">
-                      <div className="bg-white rounded-2xl p-6">
-                        <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                          <FileText className="w-5 h-5 mr-2 text-[#115D8E]" /> Policy Summary
-                        </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                          <div className="flex items-center">
-                            <div className="bg-green-100 p-2 rounded-lg mr-3">
-                              <span className="text-green-600">✓</span>
-                            </div>
-                            <span className="text-gray-600">7-day cancellation window</span>
-                          </div>
-                          <div className="flex items-center">
-                            <div className="bg-green-100 p-2 rounded-lg mr-3">
-                              <span className="text-green-600">✓</span>
-                            </div>
-                            <span className="text-gray-600">Full refund for eligible requests</span>
-                          </div>
-                          <div className="flex items-center">
-                            <div className="bg-green-100 p-2 rounded-lg mr-3">
-                              <span className="text-green-600">✓</span>
-                            </div>
-                            <span className="text-gray-600">5-10 business day processing</span>
-                          </div>
-                          <div className="flex items-center">
-                            <div className="bg-green-100 p-2 rounded-lg mr-3">
-                              <span className="text-green-600">✓</span>
-                            </div>
-                            <span className="text-gray-600">Dedicated support team</span>
-                          </div>
-                        </div>
-                        <button className="bg-gradient-to-r from-[#777777] to-[#115D8E] text-white font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-md mt-4">
-                          Contact Support
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* FAQ Section */}
-                    <div className="bg-white p-8 rounded-2xl shadow-sm mt-10">
-                      <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                        <span className="mr-2">❓</span> Frequently Asked Questions
-                      </h3>
-                      <div className="space-y-4">
-                        <div className="border-b border-gray-200 pb-4">
-                          <h4 className="font-medium text-gray-800 mb-2">How long does it take to receive my refund?</h4>
-                          <p className="text-gray-600">Refunds are processed within 5-10 business days after approval. The time it takes for the refund to appear in your account depends on your payment method and financial institution.</p>
-                        </div>
-                        <div className="border-b border-gray-200 pb-4">
-                          <h4 className="font-medium text-gray-800 mb-2">What if I miss the 7-day window?</h4>
-                          <p className="text-gray-600">While our standard policy requires requests within 7 days, we review exceptional circumstances on a case-by-case basis. Contact our support team to discuss your situation.</p>
-                        </div>
-                        <div className="border-b border-gray-200 pb-4">
-                          <h4 className="font-medium text-gray-800 mb-2">Can I cancel part of my order?</h4>
-                          <p className="text-gray-600">Partial cancellations are possible for orders with multiple services. The refund amount will be proportional to the cancelled portion of your order.</p>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
             </section>
           </div>
+          <Cta />
         </section>
-      </div>
-
-      <div className="mb-16">
-        <Cta />
       </div>
     </>
   );
