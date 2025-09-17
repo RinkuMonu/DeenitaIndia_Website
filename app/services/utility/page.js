@@ -202,7 +202,7 @@ function page() {
       <ServiceAccordian sections={accordiansections} />
       <ServiceBanner sections={sections} />
       <div className="container">
-   <ServiceAdvantage featuresData={featuresData} />
+   {/* <ServiceAdvantage featuresData={featuresData} /> */}
       </div>
     </>
   );

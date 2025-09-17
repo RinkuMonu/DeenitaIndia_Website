@@ -1,5 +1,6 @@
 
 "use client"
+import React from 'react'
 import Cta from '@/components/Cta';
 import OrganizationalStructuring from '@/components/Organizational';
 import ServiceAccordian from '@/components/ServiceAccordian';
@@ -10,56 +11,56 @@ import ServiceContracts from '@/components/ServiceContracts';
 import ServiceHeroSection from '@/components/ServiceHeroSection'
 import ServiceSection2 from '@/components/ServiceSection2';
 import ServicesSteper from '@/components/ServicesSteper';
-import React from 'react'
+
 
 const sections = [
   {
-    title: "Secure Escrow Payments",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+    title: "Comprehensive Legal & Compliance",
+    description: "Ensure your business operates smoothly with services that maintain full regulatory compliance, safeguard operations, and provide complete transparency.",
     buttonText: "Connect Now",
     imageSrc: "/images/lc3.jpg",
     features: [
-      { icon: "/images/milestone.png", label: "Milestone-based release" },
-      { icon: "/images/dashbord.png", label: "Dashboard" },
-      { icon: "/images/transparency.png", label: "Transparency" },
+      { icon: "/images/milestone.png", label: "Full Compliance" },
+      { icon: "/images/dashbord.png", label: "Safe & Secure" },
+      { icon: "/images/transparency.png", label: "Transparent Process" },
     ],
   },
 ];
 const featuresData = [
   {
     icon: Library,
-    title: "High Usability",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Secure Operations",
+    description: "Protect your data and transactions.",
     side: 'left',
   },
   {
     icon: MessageSquare,
-    title: "Free Live Chat",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Regulatory Compliance",
+    description: "Fully adhere to laws and standards.",
     side: 'right',
   },
   {
     icon: BellRing,
-    title: "Action Reminder",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Transparency ",
+    description: "Clear processes and reporting for accountability.",
     side: 'left',
   },
   {
     icon: Share2,
-    title: "Social Share",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Risk Reduction",
+    description: "Minimize legal and operational risks.",
     side: 'right',
   },
   {
     icon: Combine,
-    title: "Merge Files",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Expert Guidance ",
+    description: " Professional support for compliance matters.",
     side: 'left',
   },
   {
     icon: Keyboard,
-    title: "Custom Shortcuts",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Real-Time Monitoring",
+    description: "Track processes through dashboards.",
     side: 'right',
   },
 ];
@@ -69,23 +70,23 @@ function page() {
   const EscrowService = [
     {
       tag: "Services",
-      title: "Legal & Compliance Service",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun",
+      title: "Legal & Compliance You Can Trust",
+      description: "All our services follow strict regulatory guidelines, ensuring secure, transparent, and fully compliant operations for your peace of mind.",
       ctaText: "Connect",
       ctaLink: "/contact",
       imageSrc: "/images/lc1.jpg",
       features: [
         {
-          icon: "/images/precaution.png",
-          label: "Reduce risk"
+          value: "25+",
+          label: "Regulatory Compliance"
         },
         {
-          icon: "/images/precaution.png",
-          label: "Reduce risk"
+          value: "1025+",
+          label: "Secure Operations"
         },
         {
-          icon: "/images/precaution.png",
-          label: "Reduce risk"
+          value: "99",
+          label: "Transparent Policies"
         }
       ],
     }
@@ -95,54 +96,79 @@ function page() {
       tag: "Legal & Compliance Services",
       tag1: "hjh hghgjh",
       tag2: "hjh hghgjh",
-      title: "We handle licensing, policy drafting, and ongoing compliance checks",
+      title: "Comprehensive Legal & Compliance Services for Secure Transactions",
       description:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+        "Deenita India ensures all financial services follow strict legal and regulatory standards, providing fully compliant, secure, and transparent solutions that build trust and protect your business and transactions.",
       ctaText: "Get started",
       ctaLink: "/get-started",
       imageSrc: "/images/lc2.png",
     },
   ]
- const contractData = [
-   {
-  title: "Service",
-  subtitle: "From scope to timelines, everything is documented to ensure smooth collaboration",
-  items: [
+  const contractData = [
     {
-      title: "B2B",
-      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      image: "/images/b2b.jpg"
-    },
-    {
-      title: "Real Estate",
-      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      image: "/images/real-estate.jpg"
-    },
-    {
-      title: "Freelancing",
-      description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      image: "/images/freelancing.jpg"
-    },
-  ]
-}
+      title: "Industries We Serve",
+      subtitle: "Tailored escrow and payment solutions built to meet the unique needs of every industry.",
+      items: [
+        {
+          title: "Financial Services / NBFCs",
+          description:
+            "Ensure regulatory compliance for loans, investments, and transactions.",
+          image: "/images/b2b.jpg",
+        },
+        {
+          title: "Legal / Consultancy Firms",
+          description:
+            "Protect client payments and adhere to legal frameworks.",
+          image: "/images/real-estate.jpg"
+        },
+        {
+          title: "Real Estate",
+          description:
+            "Maintain compliance in property deals and financial transactions.",
+          image: "/images/freelancing.jpg",
+        },
+        {
+          title: "B2B Businesses",
+          description:
+            "Secure contracts and payments under regulatory standards.",
+          image: "/images/real-estate.jpg"
+        },
+        {
+          title: "E-commerce / Online Marketplaces",
+          description:
+            "Ensure safe, compliant transactions between buyers and sellers.",
+          image: "/images/b2b.jpg"
+        },
+        {
+          title: "Healthcare / Pharma",
+          description:
+            "Handle sensitive data and payments within legal regulations.",
+          image: "/images/freelancing.jpg",
+        },
+      ]
+
+    }
 
   ];
   const stepperData = {
-    title: "How it works",
+    title: "How It Works – Legal & Compliance",
     subtitle: "Choose your service, complete KYC, and make a secure payment through our platform",
-    description: "Funds are held in escrow and released only when both parties fulfill their commitments",
+    description: "Deenita India ensures all services and operations follow strict legal and regulatory standards, providing secure, transparent, and fully compliant solutions.",
     steps: [
       {
         image: "/images/stepper.png",
-        description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+        title: "Assessment",
+        description: "We evaluate your business processes to identify legal and regulatory requirements.",
       },
       {
         image: "/images/stepper.png",
-        description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+        title: "Implementation",
+        description: "Apply compliance frameworks, policies, and secure procedures to your operations.",
       },
       {
         image: "/images/stepper.png",
-        description: "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+        title: "Monitoring & Reporting",
+        description: "Continuously monitor processes and provide transparent reports to ensure ongoing compliance.",
       },
     ],
   };
@@ -160,7 +186,7 @@ function page() {
           title: "Automated Tax Calculation",
           description: "System calculates CGST, SGST, and IGST automatically."
         },
-         {
+        {
           title: "Real-Time Invoicing",
           description: "Instant invoice generation aligned with GST rules."
         },
@@ -186,11 +212,11 @@ function page() {
       </div>
 
       <ServiceBanner sections={sections} />
-       <div className='container'>
-            <ServiceAdvantage featuresData={featuresData} />
+      <div className='container'>
+        <ServiceAdvantage featuresData={featuresData} title={"Secure, compliant, and transparent solutions you trust"} description={"We deliver reliable services built on integrity and compliance, giving you confidence, peace of mind, and long-term value."} />
       </div>
-      <OrganizationalStructuring/>
-   <Cta/>
+      <OrganizationalStructuring />
+      <Cta />
     </>
   )
 }

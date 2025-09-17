@@ -63,10 +63,10 @@ const Cta = () => {
 
     <div>
       <p className="text-3xl md:text-5xl sm:text-4xl text-gray-200 font-bold mb-4">
-        Let us help you find the perfect fit
+       Let Us Help You Find Your Perfect Match
       </p>
       <p className="text-lg sm:text-2xl text-gray-200 opacity-60">
-        Share your requirements, and our experts will get in touch with tailored recommendations
+        Share your needs, and our experts will provide their solutions.
       </p>
     </div>
 

@@ -13,46 +13,46 @@ import React from "react";
 const featuresData = [
   {
     icon: Library,
-    title: "High Usability",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Seamless Transfers",
+    description: "Move your salary account, savings, or business accounts across banks without disrupting your financial activities.",
     side: 'left',
   },
   {
     icon: MessageSquare,
-    title: "Free Live Chat",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Hassle-Free Process",
+    description: " No more lengthy paperwork and endless visits. We simplify the process for you.",
     side: 'right',
   },
   {
     icon: BellRing,
-    title: "Action Reminder",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "Secure & Reliable",
+    description: "Every switch is backed by strong encryption and compliance with banking and regulatory standards.",
     side: 'left',
   },
   {
     icon: Share2,
-    title: "Social Share",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    title: "One-Stop Solution",
+    description: " Whether you’re shifting for better interest rates, digital banking, or convenience, we make your transition smooth.",
     side: 'right',
   },
-  {
-    icon: Combine,
-    title: "Merge Files",
-    description: "There are many variations of passages of Lorem Ipsum.",
-    side: 'left',
-  },
-  {
-    icon: Keyboard,
-    title: "Custom Shortcuts",
-    description: "There are many variations of passages of Lorem Ipsum.",
-    side: 'right',
-  },
+  // {
+  //   icon: Combine,
+  //   title: "Merge Files",
+  //   description: "There are many variations of passages of Lorem Ipsum.",
+  //   side: 'left',
+  // },
+  // {
+  //   icon: Keyboard,
+  //   title: "Custom Shortcuts",
+  //   description: "There are many variations of passages of Lorem Ipsum.",
+  //   side: 'right',
+  // },
 ];
 const sections = [
   {
     title: "What Makes Us Different?",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+      "Experience easy, secure, reliable transaction management through Switch Service.",
     buttonText: "Connect Now",
     imageSrc: "/images/switchservice.jpg",
     features: [
@@ -62,128 +62,120 @@ const sections = [
     ],
   },
 ];
-const sections1 = [
-  {
-    title: "Safe, Private, Controlled",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,",
-    imageSrc: "/images/switchsecure.jpg",
-    features: [
-      {
-        icon: "/images/legal_paper.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      },
-      {
-        icon: "/images/venture.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      },
-      {
-        icon: "/images/teamwork.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      },
-      {
-        icon: "/images/value_chian.png",
-        label: "bgyg njoj",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
-      },
-    ],
-  },
-];
+
+const data =
+{
+  title: "Let Us Help You Find the Perfect Fit",
+  description:
+    "Tell us your requirements, and our specialists will provide tailored Switch Service solutions for your business.",
+}
+
 function page() {
   const EscrowService = [
     {
       tag: "Services",
-      title: "Switch Service",
+      title: "Switch Service – Seamless, Secure Transactions",
       description:
-        "Our escrow service ensures secure transactions by holding funds until both parties meet agreed conditions.",
+        "Easily manage transactions across channels while enjoying fast, secure, and reliable processing with our Switch Service.",
       ctaText: "Connect",
       ctaLink: "/contact",
       imageSrc: "/images/switch1.jpg",
       features: [
         {
-          icon: "/images/precaution.png",
-          label: "Reduce risk",
+          value: "25+",
+          label: "Minimize errors"
         },
         {
-          icon: "/images/precaution.png",
-          label: "Reduce risk",
+          value: "1250+",
+          label: "Fraud prevention"
         },
         {
-          icon: "/images/precaution.png",
-          label: "Reduce risk",
-        },
+          value: "99%",
+          label: "Reliability "
+        }
       ],
     },
   ];
   const section2 = [
     {
-      tag: "Escrow Service",
+      tag: "Switch Service",
       tag1: "hjh hghgjh",
       tag2: "hjh hghgjh",
       title:
-        "A trusted third party holds funds until both parties meet agreed terms",
+        " Switch Service – Fast, Secure & Reliable Multi-Channel Transactions",
       description:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
-      ctaText: "Get started",
+        "Deenita India’s Switch Service ensures seamless fund routing with top-tier security and speed. Transactions are validated in real-time, processed only when conditions are met, giving businesses and customers complete trust and efficiency.",
+      ctaText: "Ready to get started?",
       ctaLink: "/get-started",
       imageSrc: "/images/switch2.png",
     },
   ];
   const contractData = [
     {
-      title: "Service",
+      title: "Industries We Serve",
       subtitle:
-        "From scope to timelines, everything is documented to ensure smooth collaboration",
+        "Serving diverse sectors with secure, transparent, and efficient escrow and payment solutions tailored to industry needs.",
       items: [
         {
           title: "B2B",
           description:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+            "Understand the standards and safety for parties involved in business-to-business transactions.",
           image: "/images/b2b.jpg",
         },
         {
           title: "Real Estate",
           description:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+            "Control property payments and escrow processes.",
           image: "/images/real-estate.jpg",
         },
         {
           title: "Freelancing",
           description:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+            "Secure and protect payments between freelancers and their clients.",
           image: "/images/freelancing.jpg",
         },
-      ],
+        {
+          title: "E-commerce",
+          description:
+            "Allow payments to take place quickly and wirelessly.",
+          image: "/images/real-estate.jpg",
+        },
+        {
+          title: "Financial Services / NBFCs",
+          description:
+            "Make banking and transaction processing simple.",
+          image: "/images/freelancing.jpg",
+        },
+        {
+          title: "Legal/Consultancy Firms",
+          description:
+            "Safety for your client to make meaningful payments.",
+          image: "/images/b2b.jpg",
+        },
+      ]
+
     },
   ];
   const stepperData = {
-    title: "How it works",
+    title: "How Switch Service works",
     subtitle:
-      "Choose your service, complete KYC, and make a secure payment through our platform",
-    description:
-      "Funds are held in escrow and released only when both parties fulfill their commitments",
+      "Seamless, secure, and smart transaction routing",
+description:      "Every step is validated in real-time, and payments are processed only when both parties meet the agreed conditions.",
     steps: [
       {
         image: "/images/stepper.png",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+        title: "Register & Complete KYC",
+        description: "Create an account and upload your documentation.",
       },
       {
         image: "/images/stepper.png",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+        title: "Choose Service and Make Payment",
+        description: "Select Switch Service and pay securely through our platform.",
       },
       {
         image: "/images/stepper.png",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+        title: "Transaction Processing and Completion",
+        description: "Funds are routed safely and transactions are completed reliably.",
       },
     ],
   };
@@ -194,18 +186,18 @@ function page() {
         <ServiceSection2 sections={section2} />
         <ServiceContracts contracts={contractData} />
       </div>
-      <Cta />
+      <Cta data={data} />
       <div className="">
         <ServicesSteper data={stepperData} />
       </div>
       <ServiceBanner sections={sections} />
-     
+
       {/* <div>
         <BankingPartner />
       </div> */}
       <Partners />
       <div className="container">
-        <ServiceAdvantage featuresData={featuresData} />
+        <ServiceAdvantage featuresData={featuresData} title={"Secure, smart, and trusted transactions"} description={"We deliver reliable, transparent, and compliant payment solutions that protect businesses and build customer confidence."}/>
       </div>
     </>
   );
