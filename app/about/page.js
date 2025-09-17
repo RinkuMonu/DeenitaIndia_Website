@@ -339,10 +339,8 @@ export default function CompanySection() {
                 </span>
               </h3>
               <p className="mt-6 text-gray-600 leading-relaxed text-base md:text-lg max-w-md">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas At vero eos et accusamus et iusto odio
-                dignissimos
+                We take pride in our journey and milestones that reflect our commitment and excellence.
+
               </p>
             </div>
 
@@ -351,22 +349,22 @@ export default function CompanySection() {
                 {
                   value: "9+",
                   label: "Years",
-                  description: "Of excellence and innovation",
+                  description: "Consolidating projects, clients, and teams efficiently",
                 },
                 {
                   value: "99%",
                   label: "Certified",
-                  description: "Quality assurance guaranteed",
+                  description: " Ensuring professional standards and quality",
                 },
                 {
                   value: "80+",
                   label: "Clients",
-                  description: "Satisfied business partners",
+                  description: "Delivering trusted solutions to businesses across sectors",
                 },
                 {
                   value: "100+",
                   label: "Projects",
-                  description: "Successfully delivered",
+                  description: "Successfully executed with precision and innovation",
                 },
               ].map((item, index) => (
                 <div
@@ -405,25 +403,25 @@ export default function CompanySection() {
                   title: "Data Privacy & Protection",
                   icon: "/Image/folder.png",
                   description:
-                    "At vero eos et accusamus et iusto odio dignissimos ducimus odio dignissimos ducimus",
+                    " We ensure all sensitive information is secure while using Switch Service and Connected Banking solutions.",
                 },
                 {
                   title: "Secure Infrastructure",
                   icon: "/Image/folder.png",
                   description:
-                    "Enterprise-grade security measures to protect your sensitive information",
+                    "With Escrow Service and Utility Services, every transaction is protected, transparent, and reliable.",
                 },
                 {
-                  title: "Compliance",
+                  title: "Regulatory Compliance",
                   icon: "/Image/folder.png",
                   description:
-                    "Adherence to global standards and regulations for data protection",
+                    "Our AIGF License Assistance and Legal & Compliance Services guarantee your business stays fully compliant with regulations.",
                 },
                 {
-                  title: "Continuous Monitoring",
+                  title: "Seamless Operations",
                   icon: "/Image/folder.png",
                   description:
-                    "24/7 surveillance and proactive threat detection systems",
+                    "Integrated solutions across all services streamline processes and enhance efficiency for clients",
                 },
               ].map((item, index) => (
                 <div
