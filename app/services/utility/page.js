@@ -195,7 +195,9 @@ function page() {
       <ServiceAccordian sections={accordiansections} />
       <ServiceBanner sections={sections} />
       <div className="container">
+
         <ServiceAdvantage featuresData={featuresData} title={"Discover the benefits of Deenita India’s"} description={"Utility Services—secure, fast, and reliable solutions that simplify everyday payments and keep your life hassle-free."} />
+
       </div>
     </>
   );

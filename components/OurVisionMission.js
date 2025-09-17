@@ -19,14 +19,13 @@ export default function OurVisionMissionPremium() {
                         Our Vision & Mission
                     </span>
                     <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-                        Purpose-led.{" "}
+                        Trusted by businesses.{" "}
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#115D8E] to-[#046eb4]">
-                            Outcome-driven.
+                            Focused on innovators.
                         </span>
                     </h2>
                     <p className="mt-4 max-w-3xl text-gray-600">
-                        We fuse strategy, design, and engineering so every initiative ships
-                        fast, scales safely, and delights customers.
+                       Merging Fintech, Compliance, and Technology to streamline transactions and support businesses.
                     </p>
                 </div>
 
@@ -42,19 +41,11 @@ export default function OurVisionMissionPremium() {
                                 <Badge>Vision</Badge>
                             </div>
 
-                            <h3 className="mt-5 text-2xl sm:text-3xl font-extrabold">
+                            {/* <h3 className="mt-5 text-2xl sm:text-3xl font-extrabold">
                                 Creating connections through impactful experiences
-                            </h3>
+                            </h3> */}
                             <p className="mt-3 text-gray-600">
-                            We prototype, validate, and launch quickly—then iterate with
-                                data and customer insight. We prototype, validate, and launch
-                                quickly—then iterate with data and customer insight. We
-                                prototype, validate, and launch quickly—then iterate with data
-                                and customer insight. We prototype, validate, and launch
-                                quickly—then iterate with data and customer insight. We
-                                prototype, validate, and launch quickly—then iterate with data
-                                and customer insight. We prototype, validate, and launch
-                                quickly—then iterate with data and customer insight.
+                           To empower businesses with secure Switch Services, Escrow, Connected Banking, and Utility Services that simplify financial transactions, create trust, foster transparency, and drive long-term sustainable growth in the digital economy.
                             </p>
 
                             {/* bottom chips */}
@@ -79,19 +70,12 @@ export default function OurVisionMissionPremium() {
                                 <Badge>Mission</Badge>
                             </div>
 
-                            <h3 className="mt-5 text-2xl font-extrabold">
+                            {/* <h3 className="mt-5 text-2xl font-extrabold">
                                 Turn bold ideas into results
-                            </h3>
+                            </h3> */}
                             <p className="mt-3 text-gray-600">
-                                We prototype, validate, and launch quickly—then iterate with
-                                data and customer insight. We prototype, validate, and launch
-                                quickly—then iterate with data and customer insight. We
-                                prototype, validate, and launch quickly—then iterate with data
-                                and customer insight. We prototype, validate, and launch
-                                quickly—then iterate with data and customer insight. We
-                                prototype, validate, and launch quickly—then iterate with data
-                                and customer insight. We prototype, validate, and launch
-                                quickly—then iterate with data and customer insight.
+                              To deliver legal & compliance and technology-enabled Switch, Escrow, Connected Banking and Utility Services to businesses, ensuring reliability, regulatory compliance, and operational efficiency; freeing business owner to focus on innovation and growth, while we manage the security, transparency, and trust that make up their financial technology backbone.
+
                             </p>
                         </GradientCard>
                     </div>
@@ -105,7 +89,7 @@ export default function OurVisionMissionPremium() {
 
 function GradientCard({ children, compact = false }) {
     return (
-        <div className="relative rounded-3xl border border-gray-200 bg-white shadow-sm h-100">
+        <div className="relative rounded-3xl border border-gray-200 bg-white shadow-sm h-full">
             {/* premium gradient top stripe */}
             <div className="absolute inset-x-0 -top-px h-1 rounded-t-3xl bg-gradient-to-r from-[#115D8E] to-[#046eb4]" />
             <div className={`p-6 sm:p-8 ${compact ? "pb-6" : "pb-8"}`}>

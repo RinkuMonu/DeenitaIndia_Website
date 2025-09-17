@@ -104,34 +104,125 @@ import {
 
 const termsSections = [
   {
-    id: "data-security",
-    title: "Data Security",
+    id: "acceptance",
+    title: "1. Acceptance of Terms",
     icon: <Shield className="w-5 h-5" />,
-    content:
-      "Our privacy policy prioritizes the protection of your personal data, ensuring that any information we collect is securely stored and used exclusively for the purpose of delivering and enhancing our services. We are committed to respecting your privacy and will never share your data with third parties without your explicit consent. Additionally, we adhere to all applicable data protection laws and regulations, including GDPR and other relevant frameworks.",
+    content: `By accessing, browsing, or using any services provided by Deenita India Private Limited, including but not limited to Switch Service, Escrow Service, Connected Banking, Legal & Compliance support, and Utility Services (collectively referred to as “Services”), you acknowledge that you have read, understood, and agreed to be bound by these Terms & Conditions (“Terms”). These Terms constitute a legally binding agreement between you, the user, and Deenita India Private Limited (“Company,” “we,” “our,” or “us”). If you do not agree with any part of these Terms, you must immediately discontinue the use of all our Services. Continued use of our platform or Services will be considered as your explicit acceptance of these Terms.
+
+Accessing and using our Services indicates that you understand that the Company provides facilitation, advisory, and support services only, and that use of our Services is subject to compliance with applicable laws, regulations, and third-party requirements. You acknowledge that it is your responsibility to review these Terms periodically, as the Company may update them from time to time. Any changes or modifications will be effective immediately upon posting on our platform or communication through other channels. Your continued use of the Services after such updates constitutes acceptance of the revised Terms.
+
+This clause protects the Company legally by establishing that users cannot claim ignorance of the rules governing the use of our Services. It ensures that all users are aware of their rights and responsibilities and confirms that by using the Services, users agree to comply with the regulations, limitations, and obligations described in these Terms. Essentially, this section forms the foundation for all other provisions in the Terms & Conditions, clarifying the contractual relationship between the user and the Company from the outset.`,
   },
   {
-    id: "user-responsibility",
-    title: "User Responsibility",
+    id: "scope",
+    title: "2. Scope of Services",
     icon: <User className="w-5 h-5" />,
-    content:
-      "By using our services, you agree to use them responsibly and not engage in activities that may harm our platform, misuse data, or violate applicable laws. Any attempt to compromise security or exploit our services will result in termination of access and potential legal action.",
+    content: `Deenita India Private Limited provides a range of facilitation, advisory, and support services designed to assist clients in managing financial, administrative, and utility-related operations efficiently. Our services include, but are not limited to, the following:
+
+- Switch Service – Supports clients in migrating accounts, systems, or services smoothly.
+- Escrow Service – Acts as an intermediary with regulated financial institutions to securely hold and release funds.
+- Connected Banking – Provides API integrations and tools for seamless banking operations.
+- Legal & Compliance Advisory – Helps businesses meet compliance obligations with advisory and documentation support.
+- Utility Services – Facilitates digital payments, bill management, and related services.
+
+These services are facilitation and advisory solutions only. The Company does not act as a bank, financial institution, or legal authority. Clients remain responsible for compliance and decisions.`,
   },
   {
-    id: "limitations",
-    title: "Limitations of Liability",
+    id: "eligibility",
+    title: "3. Eligibility",
     icon: <Scale className="w-5 h-5" />,
-    content:
-      "While we strive to provide reliable and uninterrupted services, we are not liable for disruptions, data loss, or issues beyond our control. Users are encouraged to maintain backups and safeguard their login credentials.",
+    content: `Users must be at least 18 years of age and legally capable of entering into binding contracts.
+Organizations must be duly registered under Indian law and authorized to engage in related transactions.
+
+By using our services, you confirm that you meet these eligibility criteria. Users who fail to meet them must discontinue use immediately.`,
   },
   {
-    id: "policy-changes",
-    title: "Policy Changes",
+    id: "responsibilities",
+    title: "4. User Responsibilities",
+    icon: <User className="w-5 h-5" />,
+    content: `Users must provide accurate and up-to-date information at all times (e.g., KYC, business registration).
+They must comply with all laws and not use services for fraud, money laundering, or unlawful activities.
+
+Users must maintain account confidentiality and are responsible for all activities under their accounts.`,
+  },
+  {
+    id: "fees",
+    title: "5. Fees & Payment",
+    icon: <Scale className="w-5 h-5" />,
+    content: `Services are provided on a fee-for-service basis. Fees will be communicated before initiation and must be paid via approved channels.
+All fees are non-refundable except as required by law.
+
+The Company reserves the right to revise pricing with prior notice. Continued use after notice implies acceptance.`,
+  },
+  {
+    id: "escrow",
+    title: "6. Escrow & Connected Banking Disclaimer",
+    icon: <Shield className="w-5 h-5" />,
+    content: `The Company does not operate as a bank. Escrow funds are held only by partner financial institutions.
+Connected Banking involves third-party systems, and the Company is not liable for errors or delays beyond its control.
+
+Clients must resolve disputes with the respective financial institutions.`,
+  },
+  {
+    id: "liability",
+    title: "7. Limitation of Liability",
+    icon: <Shield className="w-5 h-5" />,
+    content: `Services are provided "as is". The Company is not liable for:
+
+- Failures caused by third-party service providers.
+- Delays from regulatory approvals.
+- Losses due to user negligence or non-compliance.
+
+The maximum liability shall not exceed the service fees paid for the specific service in question.`,
+  },
+  {
+    id: "compliance",
+    title: "8. Compliance & Legal Framework",
+    icon: <Scale className="w-5 h-5" />,
+    content: `Users are responsible for complying with applicable laws and regulations.
+The Company provides facilitation only and does not assume liability for non-compliance.
+
+Services may be suspended or terminated immediately in cases of unlawful use.`,
+  },
+  {
+    id: "intellectual",
+    title: "9. Intellectual Property Rights",
+    icon: <User className="w-5 h-5" />,
+    content: `All intellectual property (software, platform, branding, designs, documents, etc.) belongs to the Company.
+
+Users are granted a limited, non-transferable license for agreed purposes only. Unauthorized reproduction, resale, or distribution is strictly prohibited.`,
+  },
+  {
+    id: "termination",
+    title: "10. Termination of Services",
+    icon: <Shield className="w-5 h-5" />,
+    content: `The Company may suspend or terminate services if a user:
+
+- Violates these Terms.
+- Provides false or fraudulent information.
+- Engages in unlawful use.
+- Fails to comply with regulations.
+
+Termination does not relieve the user of obligations incurred prior.`,
+  },
+  {
+    id: "governing-law",
+    title: "11. Governing Law & Dispute Resolution",
+    icon: <Scale className="w-5 h-5" />,
+    content: `These Terms are governed by Indian law.
+Disputes will first be resolved through negotiation. If unresolved, they fall under the exclusive jurisdiction of the courts in Jaipur, Rajasthan, India.`,
+  },
+  {
+    id: "changes",
+    title: "12. Changes to Terms",
     icon: <Megaphone className="w-5 h-5" />,
-    content:
-      "We reserve the right to update our terms of use as needed. Users will be notified of major changes via email or platform notifications. Continued use of our services after changes implies agreement with the updated terms.",
+    content: `The Company reserves the right to update these Terms at any time.
+Users will be notified of updates, and continued use implies acceptance.
+
+If a user disagrees, they must discontinue use immediately.`,
   },
 ];
+
 
 export default function Privacy() {
   const [activeSection, setActiveSection] = useState("data-security");
@@ -174,7 +265,7 @@ export default function Privacy() {
         <section className="bg-white min-h-screen pt-28 pb-16">
           <div className="bg-[#F4FCFF] rounded-2xl shadow-lg">
             <section>
-              <div className="max-w-6xl mx-auto px-4 py-12">
+              <div className="max-w-6xl px-4 py-12">
                 <div className="flex flex-col lg:flex-row gap-8">
                   {/* Table of Contents */}
                   <div className="lg:w-1/4">
@@ -205,23 +296,25 @@ export default function Privacy() {
                   {/* Main Content */}
                   <div className="lg:w-3/4">
                     <div className="bg-white p-8 rounded-2xl shadow-sm mb-8">
-                      <div className="text-center mb-10">
+                      <div className="mb-10">
                         <div className="mb-6">
-                          <div className="w-20 h-20 mx-auto bg-gradient-to-br from-[#115D8E] to-[#777777] rounded-full flex items-center justify-center">
+                          <div className="w-20 h-20 md:ml-8 bg-gradient-to-br from-[#115D8E] to-[#777777] rounded-full flex items-center justify-center">
                             <FileText className="w-10 h-10 text-white" />
                           </div>
                         </div>
                         <div className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white font-medium px-8 py-2 rounded-full mb-4 shadow-md">
-                          Terms of Use
+                          Terms & Conditions
                         </div>
-                        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 mt-4">
+                        {/* <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 mt-4">
                           By accessing or using our services, you agree to comply with our terms and conditions
                         </h1>
-                        <div className="h-1 w-20 bg-gradient-to-r from-[#777777] to-[#115D8E] mx-auto mb-6 rounded-full"></div>
-                        <p className="text-gray-600 text-lg leading-relaxed">
-                          Our privacy policy ensures your data is collected and stored securely. 
-                          We comply with GDPR and other global standards, aiming for transparency 
-                          and user trust while you interact with our services.
+                        <div className="h-1 w-20 bg-gradient-to-r from-[#777777] to-[#115D8E] mx-auto mb-6 rounded-full"></div> */}
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                           Effective Date:
+Company: Deenita India Private Limited (“Company,” “we,” “our,” or “us”)<br />
+ Registered Office: Plot No 97, Dakshinpuri - I, Shrikishan, Sanganer, Jagatpura, Jaipur Rajasthan, India, 302017<br />
+ Contact: support@7unique.in | 0141-4511098
+
                         </p>
                       </div>
                     </div>
@@ -252,22 +345,32 @@ export default function Privacy() {
                     <div className="bg-gradient-to-r from-[#115D8E] to-[#777777] p-1 rounded-2xl shadow-lg mt-10">
                       <div className="bg-white rounded-2xl p-6">
                         <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                          <FileText className="w-5 h-5 mr-2 text-[#115D8E]" /> Policy Summary
+                          <FileText className="w-5 h-5 mr-2 text-[#115D8E]" /> Contact Information
                         </h3>
-                        <ul className="space-y-2 text-gray-600">
+                        <p className="text-gray-500 mb-6">For any support, queries, feedback, or complaints related to the services provided by Deenita India Private Limited, users may reach out to the Company through the following contact channels:
+</p>
+                        <ul className="space-y-2 text-gray-600 mt-2">
                           <li className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-600" /> Your data is protected under GDPR
+                            <CheckCircle className="w-4 h-4 text-green-600" />Company Name: Deenita India Private Limited
+
                           </li>
                           <li className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-600" /> Responsible usage is required
+                            <CheckCircle className="w-4 h-4 text-green-600" /> Registered Office Address: Plot No 97, Dakshinpuri - I, Shrikishan, Sanganer, Jagatpura, Jaipur, Rajasthan, India, 302017
+
                           </li>
                           <li className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-600" /> We are not liable for external disruptions
+                            <CheckCircle className="w-4 h-4 text-green-600" />  Email: d
+
                           </li>
                           <li className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-600" /> Terms may be updated as needed
+                            <CheckCircle className="w-4 h-4 text-green-600" />   Phone: 0141-4511098
+
                           </li>
                         </ul>
+                        <p className="mt-6 text-gray-500">Users are encouraged to contact the Company for any clarifications regarding services, billing, technical support, compliance, or the Terms & Conditions. The Company will make reasonable efforts to respond to inquiries in a timely manner and resolve issues efficiently.
+All correspondence should include sufficient details to allow the Company to identify the account, service, or transaction in question. Users are responsible for providing accurate contact information to ensure effective communication.
+© 2025 Deenita India Private Limited. All rights reserved.
+</p>
                         <button className="bg-gradient-to-r from-[#777777] to-[#115D8E] text-white font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-md mt-4">
                           Contact Support
                         </button>
@@ -275,7 +378,7 @@ export default function Privacy() {
                     </div>
 
                     {/* FAQ Section */}
-                    <div className="bg-white p-8 rounded-2xl shadow-sm mt-10">
+                    {/* <div className="bg-white p-8 rounded-2xl shadow-sm mt-10">
                       <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
                         <HelpCircle className="w-5 h-5 mr-2 text-[#115D8E]" /> Frequently Asked Questions
                       </h3>
@@ -305,7 +408,7 @@ export default function Privacy() {
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

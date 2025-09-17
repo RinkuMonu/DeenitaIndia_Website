@@ -250,41 +250,84 @@ const InfoIcon = ({ className = "w-5 h-5" }) => (
 
 const privacySections = [
   {
+    id: "introduction",
+    title: "Introduction",
+    icon: SecurityIcon,
+    content:
+      "Deenita India Private Limited (“Company,” “we,” “our,” or “us”) is committed to protecting the privacy and confidentiality of information collected from users (“you” or “user”) while accessing or using our services. This Privacy Policy outlines how we collect, process, store, and protect your personal and business information. It also explains your rights regarding your data and how it may be used.\n\nBy using our services, you acknowledge and consent to the practices described in this Privacy Policy. The policy applies to all interactions with our services, including Switch Service, Escrow Service, Connected Banking, Legal & Compliance support, and Utility Services. It is designed to ensure transparency and build trust by informing users about the data we collect, why it is collected, and the measures taken to protect it. Users are encouraged to review this policy periodically to stay informed of updates or changes.",
+  },
+  {
+    id: "information-we-collect",
+    title: "Information We Collect",
+    icon: CollectionIcon,
+    content:
+      "We collect certain personal, business, and usage information to provide, operate, and improve our services efficiently. Personal information includes details such as your name, email address, phone number, account credentials, and KYC or identification documents required for service verification and compliance purposes. Business information may include company registration details, banking information, and documents necessary for service facilitation.\n\nWe also collect usage information, such as IP addresses, device details, browser type, activity logs, and interactions with the platform. This helps us monitor performance, optimize the user experience, and enhance security. For payment processing, we collect limited financial information provided through approved banking channels, ensuring secure handling via our partners.\n\nAll information is collected in accordance with applicable data protection laws. Users are responsible for providing accurate and complete information, as inaccuracies may affect service delivery.",
+  },
+  {
+    id: "data-usage",
+    title: "How We Use Your Information",
+    icon: UsageIcon,
+    content:
+      "We use the information collected to provide, manage, and improve our services efficiently. Personal and business information is used to facilitate transactions, process payments, verify identities, complete KYC requirements, and ensure regulatory compliance. Usage data helps us monitor system performance, enhance user experience, and improve reliability.\n\nWe also use your information to send important updates, notifications, and service-related messages. Additionally, the data supports internal analytics, reporting, and strategic planning. Your data will not be used for unrelated commercial purposes without explicit consent.",
+  },
+  {
+    id: "data-sharing",
+    title: "Data Sharing and Disclosure",
+    icon: RightsIcon,
+    content:
+      "We do not sell, trade, or rent user information to third parties. Data may be shared only when necessary for service delivery, compliance, or business operations. This includes sharing with licensed financial institutions or trusted service providers under strict confidentiality agreements.\n\nData may also be disclosed when required by law, regulatory authorities, or legal proceedings. Any unauthorized use or access to your data by third parties is strictly prohibited, and we reserve the right to take legal action in such cases.",
+  },
+  {
     id: "data-security",
     title: "Data Security",
     icon: SecurityIcon,
     content:
-      "Our privacy policy prioritizes the protection of your personal data, ensuring that any information we collect is securely stored and used exclusively for the purpose of delivering and enhancing our services. We are committed to respecting your privacy and will never share your data with third parties without your explicit consent. Additionally, we adhere to all applicable data protection laws and regulations, including GDPR and other relevant frameworks.",
-  },
-  {
-    id: "data-collection",
-    title: "Data Collection",
-    icon: CollectionIcon,
-    content:
-      "We collect data that you provide to us directly, such as account details and communication logs, as well as certain technical data automatically, like device and usage information. This allows us to improve our platform and tailor services to your needs.",
-  },
-  {
-    id: "data-usage",
-    title: "Data Usage",
-    icon: UsageIcon,
-    content:
-      "We use collected data to operate, improve, and personalize our services. This includes analyzing trends, enhancing security, and providing customer support. Data may also be used for legal and compliance purposes.",
-  },
-  {
-    id: "cookies",
-    title: "Cookies",
-    icon: CookiesIcon,
-    content:
-      "Our website uses cookies to enhance user experience. These cookies help us understand how visitors interact with our website, allowing us to improve navigation and content. You have the option to accept or decline cookies through your browser settings. Note that disabling cookies may affect the functionality of certain website features.",
+      "We implement industry-standard measures to protect user data from unauthorized access, disclosure, alteration, or destruction. These include encryption, secure servers, access controls, and monitoring.\n\nWhile we strive to maintain the highest level of security, no system is completely risk-free. Users must protect their login credentials and notify us of any suspected breaches immediately.",
   },
   {
     id: "user-rights",
-    title: "Your Rights",
+    title: "User Rights",
     icon: RightsIcon,
     content:
-      "You have the right to access, correct, or delete your personal information at any time. You can also object to the processing of your data or request data portability. To exercise these rights, please contact our data protection officer using the contact information provided in this policy. We will respond to all legitimate requests within one month.",
+      "You have the right to access, correct, update, or delete your personal data. You may also request to withdraw consent or obtain details about how your data is used and shared.\n\nTo exercise these rights, please contact us at support@7unique.in. We will respond within a reasonable timeframe in accordance with applicable laws.",
+  },
+  {
+    id: "data-retention",
+    title: "Data Retention",
+    icon: UsageIcon,
+    content:
+      "We retain user data only as long as necessary to provide services, comply with laws, resolve disputes, or enforce agreements. Afterward, data is securely deleted or anonymized.\n\nRetention periods vary depending on the type of data and legal obligations. Users should maintain their own backups of critical data.",
+  },
+  {
+    id: "cookies",
+    title: "Cookies and Tracking",
+    icon: CookiesIcon,
+    content:
+      "We use cookies and tracking technologies to enhance user experience, analyze performance, and personalize content. Users can manage or disable cookies in their browser settings. Some features may not function properly if cookies are disabled.",
+  },
+  {
+    id: "third-party",
+    title: "Third-Party Services",
+    icon: CollectionIcon,
+    content:
+      "We may engage third-party providers for services such as payment processing, analytics, hosting, or support. These providers may access limited user data under confidentiality agreements.\n\nWe are not responsible for the practices of third parties. Users should review their privacy policies separately.",
+  },
+  {
+    id: "compliance",
+    title: "Compliance with Laws",
+    icon: UsageIcon,
+    content:
+      "Users are responsible for complying with all applicable laws, regulations, and requirements while using our services. Non-compliance may result in suspension or termination of services, and we may take legal action where necessary.",
+  },
+  {
+    id: "changes",
+    title: "Changes to Privacy Policy",
+    icon: RightsIcon,
+    content:
+      "We may update or revise this Privacy Policy from time to time to reflect business, legal, or service changes. Updates will be communicated via our platform or email. Continued use of our services constitutes acceptance of the updated policy.",
   },
 ];
+
 
 export default function Privacy() {
   const [activeSection, setActiveSection] = useState("data-security");
@@ -365,9 +408,9 @@ export default function Privacy() {
                   {/* Main Content */}
                   <div className="lg:w-3/4">
                     <div className="bg-white p-8 rounded-2xl shadow-sm mb-8">
-                      <div className="text-center mb-10">
+                      <div className="text-start mb-10">
                         <div className="mb-6">
-                          <div className="w-20 h-20 mx-auto bg-gradient-to-br from-[#115D8E] to-[#777777] rounded-full flex items-center justify-center">
+                          <div className="w-20 h-20 md:ml-8 bg-gradient-to-br from-[#115D8E] to-[#777777] rounded-full flex items-center justify-center">
                             <Image
                               src="/Image/privacy-img.png"
                               alt="Privacy Icon"
@@ -380,13 +423,26 @@ export default function Privacy() {
                         <div className="inline-block bg-gradient-to-r from-[#777777] to-[#115D8E] text-white font-medium px-8 py-2 rounded-full mb-4 shadow-md">
                           Privacy Policy
                         </div>
-                        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 mt-4">
-                          We value your privacy and are committed to protecting your personal information
+                        <h1 className="text-3xl md:text-sm text-gray-800 mb-6 mt-4">
+                          <ul className="text-start">
+<li>Effective Date: September 16, 2025
+ </li>
+ <li>
+Company: Deenita India Private Limited
+ </li>
+ <li>
+ Registered Office: Plot No 97, Dakshinpuri - I, Shrikishan, Sanganer, Jagatpura, Jaipur, Rajasthan, India, 302017
+ </li>
+ <li>
+Contact: support@7unique.in | 0141-4511098
+ </li>
+                          </ul>
+
                         </h1>
-                        <div className="h-1 w-20 bg-gradient-to-r from-[#777777] to-[#115D8E] mx-auto mb-6 rounded-full"></div>
+                        {/* <div className="h-1 w-20 bg-gradient-to-r from-[#777777] to-[#115D8E] mx-auto mb-6 rounded-full"></div>
                         <p className="text-gray-600 text-lg leading-relaxed">
                           Our privacy policy prioritizes the protection of your personal data, ensuring that any information we collect is securely stored and used exclusively for the purpose of delivering and enhancing our services.
-                        </p>
+                        </p> */}
                       </div>
                     </div>
 
@@ -420,7 +476,15 @@ export default function Privacy() {
                           Need More Information?
                         </h3>
                         <p className="text-gray-600 mb-4">
-                          If you have any questions about our privacy practices or how we handle your data, please don't hesitate to contact our privacy team.
+                         For questions, concerns, or requests regarding this Privacy Policy or the handling of your personal and business data, users may contact Deenita India Private Limited through the following channels:
+                         <div className="my-5">
+                          <ul>
+                          <li><span className="font-bold text-black">Company Name:</span>  Deenita India Private Limited</li>
+                          <li><span className="font-bold text-black">Registered Office:</span>  Plot No 97, Dakshinpuri - I, Shrikishan, Sanganer, Jagatpura, Jaipur, Rajasthan, India, 302017</li>
+                          <li><span className="font-bold text-black"> Email: </span> support@7unique.in</li>
+                          <li> <span className="font-bold text-black">Phone:</span>  0141-4511098</li>
+                         </ul>
+                         </div>
                         </p>
                         <button className="bg-gradient-to-r from-[#777777] to-[#115D8E] text-white font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-md">
                           Contact Privacy Team

@@ -8,7 +8,7 @@ export default function AboutHero() {
     const stats = [
         { value: "2000+", label: "Distributors" },
         { value: "100,000+", label: "Retailers" },
-        { value: "800+", label: "Districts" },
+        { value: "700+", label: "Districts Served" },
     ];
 
     return (
@@ -18,15 +18,15 @@ export default function AboutHero() {
                     {/* LEFT: content */}
                     <div>
                         <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight">
-                            Creating connections <br />
+                            Trust & Innovation  <br />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#115D8E] to-[#046eb4]">
-                                through impactful experiences
+                                for the Business World
                             </span>
                         </h1>
 
                         <p className="mt-6 max-w-2xl text-base sm:text-lg text-gray-600">
-                            We turn bold ideas into impactful results through design,
-                            strategy, and innovation.
+                            We offer Switch, Escrow, Connected Banking, Legal & Compliance, and Utility solutions that help secure transactions and promote sustainable growth.
+
                         </p>
 
                         {/* CTA */}

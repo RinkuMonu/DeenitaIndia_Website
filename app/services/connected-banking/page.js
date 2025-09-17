@@ -209,7 +209,7 @@ function page() {
         </div>
 
         {/* Right Image */}
-        <div className="relative w-full h-80 md:h-[500px] rounded-2xl overflow-hidden ">
+        <div className="relative w-full h-80 md:h-[500px] rounded-2xl overflow-hidden">
           <Image
             src="/images/vector.png"
             alt="Creative process"
