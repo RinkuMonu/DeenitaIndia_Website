@@ -1,3 +1,4 @@
+"use client"
 import Cta from '@/components/Cta';
 import Plans from '@/components/Plans';
 import ServiceAdvantage from '@/components/ServiceAdvantage';
@@ -6,6 +7,7 @@ import ServiceContracts from '@/components/ServiceContracts';
 import ServiceHeroSection from '@/components/ServiceHeroSection'
 import ServiceSection2 from '@/components/ServiceSection2';
 import ServicesSteper from '@/components/ServicesSteper';
+import { Library, MessageSquare, BellRing, Share2, Combine, Keyboard } from "lucide-react";
 import React from 'react'
 const sections = [
   {
@@ -18,6 +20,45 @@ const sections = [
       { icon: "/images/dashbord.png", label: "Dashboard" },
       { icon: "/images/transparency.png", label: "Transparency" },
     ],
+  },
+];
+
+const featuresData = [
+  {
+    icon: Library,
+    title: "High Usability",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: MessageSquare,
+    title: "Free Live Chat",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
+  },
+  {
+    icon: BellRing,
+    title: "Action Reminder",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: Share2,
+    title: "Social Share",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
+  },
+  {
+    icon: Combine,
+    title: "Merge Files",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'left',
+  },
+  {
+    icon: Keyboard,
+    title: "Custom Shortcuts",
+    description: "There are many variations of passages of Lorem Ipsum.",
+    side: 'right',
   },
 ];
 const sections1 = [
@@ -81,8 +122,8 @@ function page() {
   const section2 = [
     {
       tag: "Escrow Service",
-      tag1: "hjh hghgjh",
-      tag2: "hjh hghgjh",
+      tag1: "Secure Transactions",
+      tag2: "GET AIGF accreditation",
       title: "Operate legally and build player trust with AIGF accreditation",
       description:
         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
@@ -190,16 +231,17 @@ function page() {
 
   return (
     <>
-      <div className='container'>
+      <div className=''>
         <ServiceHeroSection sections={EscrowService} />
         <ServiceSection2 sections={section2} />
       </div>
       <ServiceBanner sections={sections} />
-      <div className='container'>
         <ServiceContracts contracts={contractData} />
         <ServicesSteper data={stepperData} />
-            <ServiceAdvantage sections={sections1} />
-      </div>
+        <div className='container'>
+    <ServiceAdvantage featuresData={featuresData} />
+
+        </div>
   
       <Cta />
       <div className='container'>

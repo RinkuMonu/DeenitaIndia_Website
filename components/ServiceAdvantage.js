@@ -1,78 +1,73 @@
-import Image from "next/image";
-import Link from "next/link";
-import { MdArrowOutward } from "react-icons/md";
+import React from 'react';
 
-export default function ServiceAdvantage({ sections }) {
-    return (
-        <section className="w-full py-10 ">
-            {sections.map((section, idx) => (
-                <div
-                    key={idx}
-                    className="flex flex-col md:flex-row items-center lg:items-stretch mb-6"
-                >
-                    <div className="flex-1 flex items-center " data-aos="flip-down">
-                        <Image
-                            src={section.imageSrc}
-                            alt="Section Image"
-                            width={500}
-                            height={500}
-                            className="rounded-2xl max-h-[280px] w-auto mb-3 md:mb-0"
-                        />
-                    </div>
-                    <div className="flex-1 flex flex-col justify-center">
-                        <p className="text-3xl md:text-4xl font-bold max-w-md">
-                            {section.title.split(" ").map((word, i, arr) => {
-                                const shouldHighlight =
-                                    (arr.length === 1 && i === 0) ||
-                                    (arr.length === 2 && i === 0) ||
-                                    (arr.length > 2 && i < 2);
 
-                                return (
-                                    <span
-                                        key={i}
-                                        className={shouldHighlight ? "text-[#115D8E]" : "text-[#0A223D]"}
-                                    >
-                                        {word}{" "}
-                                    </span>
-                                );
-                            })}
-                        </p>
+// Data for the feature items
 
-                        <p className="mt-4 text-[#3A4F66] text-lg leading-relaxed">
-                            {section.description}
-                        </p>
-                        <Link
-                            href="/contact"
-                            className="mt-6 w-fit inline-flex items-center gap-2 bg-[#115D8E] text-white px-3 py-1 rounded-lg hover:bg-[#004e8c] transition-all"
-                        >
-                            Connect <MdArrowOutward />
-                        </Link>
-                    </div>
-                </div>
+// Reusable component for each feature item
+const FeatureItem = ({ icon: Icon, title, description }) => (
+  <div className="flex items-start gap-4">
+    <div className="border border-gray-200 p-3 rounded-lg flex-shrink-0">
+      <Icon className="w-6 h-6 text-[#115D8E]" />
+    </div>
+    <div>
+      <h3 className="font-semibold text-lg text-gray-800">{title}</h3>
+      <p className="text-gray-500 mt-1">{description}</p>
+    </div>
+  </div>
+);
+
+// Main section component
+const ServiceAdvantage = ({featuresData , title , description}) => {
+  const leftFeatures = featuresData.filter(f => f.side === 'left');
+  const rightFeatures = featuresData.filter(f => f.side === 'right');
+   const mid = Math.ceil(title.length / 2); // split in half
+  const firstHalf = title.slice(0, mid);
+  const secondHalf = title.slice(mid);
+
+  return (
+    <section className="bg-white w-full py-16 sm:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p className="inline-block bg-[#115D8E]/10 text-[#115D8E] text-sm font-semibold px-4 py-1 rounded-full">
+            Why choose our service
+          </p>
+          <h2 className="mt-4 text-4xl font-bold tracking-tight">
+      <span className="text-gray-900">{firstHalf}</span>
+      <span className="text-[#115D8E]">{secondHalf}</span>
+    </h2>
+          <p className='text-gray-500 mt-4'>{description}</p>
+        </div>
+
+
+        <div className="mt-16 lg:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-y-16 lg:gap-x-8 lg:items-center">
+
+          {/* Left Features Column */}
+          <div className="space-y-12">
+            {leftFeatures.map((feature) => (
+              <FeatureItem key={feature.title} {...feature} />
             ))}
+          </div>
 
+          <div className="relative lg:flex justify-center items-center lg:px-6 hidden ">
+            <div className="absolute w-[100%] h-auto aspect-square -z-0 bg-[#115d8e]/10 rounded-full"></div>
 
-            <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"  
->
-                {sections[0].features.map((feature, idx) => (
-                    <div
-                        key={idx}
-                        className="flex flex-col md:py-6 "
-                         data-aos="fade-up"
-      data-aos-delay={idx * 100}
-                    >
-                        <Image
-                            src={feature.icon}
-                            alt={feature.label}
-                            width={40}
-                            height={40}
-                            className="border-2 rounded-md p-1 border-gray-200"
-                        />
-                        <h4 className="mt-4 text-lg  text-gray-800 font-semibold">{feature.label}</h4>
-                        <p className="mt-2 text-sm text-gray-600">{feature.description}</p>
-                    </div>
-                ))}
-            </div>
-        </section>
-    );
-}
+            <img
+              src="/images/stepper.png"
+              alt="App interface on two smartphones"
+              className="relative max-w-xs md:max-w-sm mx-auto"
+            />
+          </div>
+
+          <div className="space-y-12">
+            {rightFeatures.map((feature) => (
+              <FeatureItem key={feature.title} {...feature} />
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServiceAdvantage;

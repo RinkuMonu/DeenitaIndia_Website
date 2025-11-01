@@ -49,12 +49,20 @@ export default function CommentsPage() {
         className="border-2 rounded-lg p-4 mb-6 w-full"
         style={{ borderColor: "#CDE5F5" }}
       >
-        <div
+        {/* <div
           ref={editorRef}
           contentEditable
           className="w-full min-h-[100px] max-h-[160px] overflow-y-auto resize-none border-none focus:outline-none text-gray-700 placeholder:text-gray-400"
           placeholder="Add comment..."
-        ></div>
+        ></div> */}
+
+        <div
+  ref={editorRef}
+  contentEditable
+  className="w-full min-h-[100px] max-h-[160px] overflow-y-auto resize-none border-none focus:outline-none text-gray-700 relative before:content-[attr(data-placeholder)] before:text-gray-400 before:pointer-events-none before:block empty:before:block"
+  data-placeholder="Add comment..."
+></div>
+
 
         {/* Formatting Buttons */}
         <div className="flex items-center justify-between mt-4">

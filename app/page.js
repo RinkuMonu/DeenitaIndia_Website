@@ -1,90 +1,133 @@
-import BestChoices from "@/components/BestChoices";
-import Blog from "@/components/Blog";
-import Cta from "@/components/Cta";
-import HomeSteps from "@/components/HomeSteps";
-import Industries from "@/components/Industries";
-import Partners from "@/components/Partners";
-import ProjectCarousel from "@/components/Slider";
-import Testonomials from "@/components/Testonomials";
-import Image from "next/image";
 import Link from "next/link";
-
+import {
+  Shield,
+  TrendingUp,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react";
+import Slider from "../components/Slider";
+import HomeSteps from "../components/HomeSteps";
+import BestChoices from "../components/BestChoices";
+import Industries from "../components/Industries";
+import Testonomials from "../components/Testonomials";
+import Blog from "../components/Blog";
+import Cta from "../components/Cta";
+import Partners from "../components/Partners";
+import Image from "next/image";
 
 export default function Home() {
-
-
   return (
     <>
-      <section className="home-hero-section  pt-10 pb-5 lg:pb-0">
-        <div className="absolute w-72 h-72 bg-[#115D8E] rounded-full opacity-30 blur-3xl top-50 -left-50 z-0"></div>
-       <div className=" container">
-         <div className="grid lg:grid-cols-2">
-          <div className="pt-20 flex flex-col gap-4">
-            <h1 className="theme-text text-4xl lg:text-6xl font-bold">
-              One platform to handle everything
-            </h1>
-            <p className="text-base font-semibold text-[#515151] max-w-md">
-              Consolidate your projects, clients and team into
-              one integrated, easy-to-use platform
-            </p>
-            <div className="flex flex-row gap-4">
-              <Link href="/login" className="text-white shadow-[0_8px_30px_rgba(138,173,187)]  font-semibold bg-[#115D8E] py-2 md:py-3 rounded-lg text-base px-3 md:px-6 text-center w-fit  ">Get started</Link>
-          <Link href="/contact" className="font-semibold bg-white rounded-lg shadow-[0_8px_30px_rgba(138,173,187)] text-base px-3 md:px-6 py-2 md:py-3 text-center text-[#39464F] w-fit">Book a demo</Link>
+      <section className="relative hero-15 min-h-screen overflow-hidden" style={{ backgroundImage: "url(/Newimg/herosection/hero_bg_2.webp)", }}>
+        {/* Background accents */}
+        <div className="absolute inset-0 pointer-events-none z-50">
+          <div
+            className="absolute bottom-0 left-0 w-full"
+            style={{
+              backgroundImage: `url("/Image/Vector 1.png")`,
+              backgroundPosition: "bottom",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              height: "67px",
+            }}
+          />
+          <div className="absolute w-96 h-96 bg-primary/10 rounded-full blur-3xl top-20 -left-20 animate-pulse" />
+          <div className="absolute w-80 h-80 bg-accent/10 rounded-full blur-3xl bottom-20 -right-20 animate-pulse delay-1000" />
+          <div className="absolute w-64 h-64 bg-secondary/5 rounded-full blur-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        </div>
+
+        <div className="relative container mx-auto px-14 pt-32 pb-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-10">
+            {/* Left Section */}
+            <div className="space-y-8 z-10 py-10">
+              <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <Shield className="w-4 h-4 text-[#046eb4]" />
+                  <span>Bank-level Security</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Award className="w-4 h-4 text-[#046eb4]" />
+                  <span>SOC 2 Certified</span>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
+                  <span className="bg-gradient-to-r from-[#115D8E] to-[#046eb4] bg-clip-text text-transparent">
+                    One Platform
+                  </span>
+                  <br />
+                  Infinite <span className="text-[#3B82F6]">Business Solutions.</span>
+                </h1>
+
+                <p className="text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed">
+                From secure transaction delivery services & escrow services through connected banking services and legal compliance, Deenita India is your trusted ally, enabling growth and transparency!
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="group bg-card/80 backdrop-blur-sm hover:bg-card text-card-foreground font-semibold py-4 px-8 rounded-xl border border-border/50 hover:border-border transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105"
+                >
+                  Book a Demo
+                  <Users className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-semibold"><span className="theme-text">100+ </span>Projects</p>
-              <p className="text-sm lg:max-w-32 text-[#515151]">
-                Consolidate your projects, clients and team into
-              </p>
+
+            {/* Right Section */}
+            <div className="absolute top-0 right-0 w-[100%] h-[100%]">
+              <div
+                className="relative w-full h-full p-2"
+                style={{
+                  background: "linear-gradient(135deg,#9FB3F9,#6A8DFF)",
+                  WebkitMaskImage: "url('/Newimg/herosection/hero_shape_4.png')",
+                  WebkitMaskRepeat: "no-repeat",
+                  WebkitMaskPosition: "top right",
+                  WebkitMaskSize: "contain",
+                  maskImage: "url('/Newimg/herosection/hero_shape_4.png')",
+                  maskRepeat: "no-repeat",
+                  maskPosition: "top right",
+                  maskSize: "contain",
+                  borderRadius: 0,
+                }}
+              >
+                <div
+                  className="absolute inset-2"
+                  style={{
+                    WebkitMaskImage: "url('/Newimg/herosection/hero_shape_4.png')",
+                    WebkitMaskRepeat: "no-repeat",
+                    WebkitMaskPosition: "top right",
+                    WebkitMaskSize: "contain",
+                    maskImage: "url('/Newimg/herosection/hero_shape_4.png')",
+                    maskRepeat: "no-repeat",
+                    maskPosition: "top right",
+                    maskSize: "contain",
+                  }}
+                >
+                  <img
+                    src="/Newimg/herosection/hero_img_12_1.jpg"
+                    alt="Hero"
+                    className="w-full h-full object-cover block"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="relative home-img-height hidden lg:block">
-              <div className="absolute w-72 h-72 bg-[#115D8E] rounded-full opacity-10 blur-3xl top-20 -left-30 z-0"></div>
-            <Image className="object-cover rounded-md p-0 w-auto h-full" src="/images/home-main.png" width={400} height={400} alt="banner image" />
           </div>
         </div>
-       </div>
       </section>
-      <div className="relative w-full">
-  <svg
-    viewBox="0 0 100 10"
-    preserveAspectRatio="none"
-    className="w-full h-0 md:h-10 lg:18"
-  >
-    <defs>
-      <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#DDEAF0">
-          <animate attributeName="offset" values="0%;1" dur="2s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="50%" stopColor="#9BB4C3">
-          <animate attributeName="offset" values="0.5;1.5" dur="2s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="100%" stopColor="#D9E7EE">
-          <animate attributeName="offset" values="1;2" dur="2s" repeatCount="indefinite" />
-        </stop>
-      </linearGradient>
-    </defs>
 
-    <path
-      d="M0,0 H30 L35,10 H65 L70,0 H100"
-      fill="#E4EEF480"
-      stroke="url(#animatedGradient)"
-      strokeWidth="0.6"
-    />
-  </svg>
-</div>
-
-      <ProjectCarousel />
+      <Slider />
       <HomeSteps />
-      <BestChoices/>
-      <Industries/>
-      <Testonomials/>
-      <Blog/>
-      <Cta/>
-      <Partners/>
-
-
-
+      <BestChoices />
+      <Industries />
+      <Testonomials />
+      <Partners />
+      <Cta />
+      <Blog />
     </>
   );
 }

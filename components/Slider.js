@@ -11,50 +11,50 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Switch",
-    description: "Consolidate your projects, clients and team intoConsolidate your projects, clients and team into",
+    title: "Switch Service",
+    description: "A fast, secure, and reliable service for transaction routing.",
     image: "/images/expert-service1.jpg",
   },
   {
-    title: "Project Title 2",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Escrow Service",
+    description: "A safe place to hold your funds until the conditions are fully met.",
     image: "/images/expert-service2.jpg",
   },
   {
-    title: "Project Title 3",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Connected Banking",
+    description: "A seamless integration of banking services with real-time payments.",
     image: "/images/expert-service3.jpg",
   },
   {
-    title: "Project Title 4",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "AIGF License Services",
+    description: "We provide complete support for your legal gaming activities.",
     image: "/images/expert-service4.jpg",
   },
   {
-    title: "Project Title 2",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Legal & Compliance Services",
+    description: "Keeping you compliant with our experienced legal services.",
     image: "/images/expert-service2.jpg",
   },
   {
-    title: "Project Title 3",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Utility Services",
+    description: "Pay bills or recharge easily on a secure platform.",
     image: "/images/expert-service3.jpg",
   },
 ];
 
 
-export default function ProjectCarousel() {
+export default function Slider() {
   return (
-    <section className="container pt-10">
-<div>
-        <p className="heading font-semibold mb-8">
-        Delivering Expert <span className="theme-text">Services</span> <br></br> that drive results
-      </p>
-      <Link href="/login" className="text-white shadow-[0_8px_30px_rgba(138,173,187)] me-4 font-semibold bg-[#115D8E] py-3 rounded-lg text-base px-6 text-center">Get in touch</Link>
-</div>
+    <section className="container px-14 pt-32 ">
+      <div>
+        <p className="heading font-semibold mb-8 capitalize">
+        Providing experienced <span className="theme-text">Services</span> <br></br> that drive results
+        </p>
+        
+      </div>
       <Swiper
         modules={[Pagination, Autoplay]}
-        pagination={{ clickable: true }}
+        // pagination={{ clickable: false }}
         autoplay={{ delay: 3000 }}
         loop
         spaceBetween={20}
@@ -70,8 +70,7 @@ export default function ProjectCarousel() {
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <div
-              className={`group relative w-full h-72 overflow-hidden rounded-lg shadow-lg transition-all duration-500 ${index % 2 === 1 ? "md:mt-10" : ""
-                }`}
+              className={`group relative w-full h-72 overflow-hidden shadow-lg transition-all duration-500 `}
             >
               <div className="absolute inset-0 bg-gray-900">
                 <Image

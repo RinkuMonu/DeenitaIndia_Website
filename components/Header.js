@@ -1,209 +1,378 @@
-"use client"
-import Image from 'next/image';
-import Link from 'next/link'
-import React, { useState } from 'react'
-import LoginModal from './Login.js';
-import { usePathname } from 'next/navigation';
+"use client";
 
-function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { LogIn, Mail, MapPin, MoveUpRight, Phone, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+export default function Navbar() {
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <nav className=" fixed top-3 left-0 w-full z-50  container bg-transparent ">
-        <div className=" flex  items-center justify-between mx-auto p-4  bg-[#0423820D] h-[54px] rounded-xl backdrop-blur-2xl">
-          <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <Image src="/images/logo.png" width={50} height={50} className="h-8" alt="Flowbite Logo" />
-          </Link>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-2">
-            <button
-              type="button"
-              className="font-medium hidden md:block bg-white rounded-lg text-xs px-3 text-center text-[#39464F] h-[38px]"
-              onClick={() => setIsModalOpen(true)}
-            >
-              Login
-            </button>
-            <Link
-              href="/contact"
-              type="button"
-              className="text-white bg-[#115D8E] hidden md:flex items-center justify-center rounded-lg text-xs px-4 h-[38px]"
-            >
-              Join
-            </Link>
-
-            <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 " aria-controls="navbar-cta" aria-expanded="false" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" d="M1 1h15M1 7h15M1 13h15" />
-              </svg>
-            </button>
+      <nav
+        className={`fixed left-0 w-full z-[9999] transition-all duration-500 ${
+          scrolled ? "bg-white/90 shadow-xl" : "px-4"
+        }`}
+      >
+        {/* Top Contact Bar */}
+        <div className="bg-[#0D2C5D] text-white text-sm py-2 px-6 flex justify-between items-center mb-3 rounded-b-lg hidden md:flex">
+          <div className="flex space-x-6">
+            <span className="flex items-center">
+              <Mail className="mr-1 w-4 h-4" /> support@7unique.in
+            </span>
+            <span className="flex items-center">
+              <Phone className="mr-1 w-4 h-4" /> 0141-4511098
+            </span>
+            <span className="flex items-center">
+              <MapPin className="mr-1 w-4 h-4" /> 97, Dakshinpuri - I, Shrikishan,
+              Jagatpura, Jaipur
+            </span>
           </div>
-          <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 ">
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
+
+          <div className="flex space-x-4">
+            <Link
+              href="#"
+              className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center"
+            >
+              Instagram <MoveUpRight className="w-4 h-4" />
+            </Link>
+            {/* <div className="w-px h-6 bg-gray-300"></div>
+            <Link
+              href="#"
+              className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center"
+            >
+              Twitter <MoveUpRight className="w-4 h-4" />
+            </Link> */}
+            <div className="w-px h-6 bg-gray-300"></div>
+            <Link
+              href="#"
+              className="hover:text-[#72CAF7] transition-colors flex gap-2 items-center"
+            >
+              Facebook <MoveUpRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Main Navigation */}
+        <div
+          className={`flex items-center justify-between rounded-b-xl px-4 md:px-6 py-3 backdrop-blur-xl transition-all duration-500 ${
+            scrolled
+              ? "bg-white/90 top-0 mx-0 shadow-xl rounded-none"
+              : "bg-white rounded-none shadow-md top-12"
+          }`}
+        >
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <div className="absolute inset-0 bg-[#44A5E9]/30 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+              <Image
+                src="/Image/deenita-logo.png"
+                width={100}
+                height={100}
+                className="relative z-10"
+                alt="Company Logo"
+                priority
+              />
+            </div>
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <ul className="flex items-center space-x-10 font-medium">
               <li>
-                <Link href="/" className="block py-2 px-3 md:p-0  text-xs " aria-current="page">Home</Link>
+                <Link
+                  href="/"
+                  className={`text-[17px] font-medium transition-all duration-300 hover:text-[#0E90C9] hover:scale-105 relative group ${
+                    pathname === "/"
+                      ? "text-[#0E90C9]"
+                      : scrolled
+                      ? "text-zinc-900 hover:text-[#0E90C9]"
+                      : "text-foreground"
+                  }`}
+                >
+                  Home
+                </Link>
               </li>
               <li>
                 <Link
                   href="/about"
-                  className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/about' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
-                    }`}>About</Link>
+                  className={`text-[17px] font-medium transition-all duration-300 hover:text-[#0E90C9] hover:scale-105 relative group ${
+                    pathname === "/about"
+                      ? "text-[#0E90C9]"
+                      : scrolled
+                      ? "text-zinc-900 hover:text-[#0E90C9]"
+                      : "text-foreground"
+                  }`}
+                >
+                  About
+                </Link>
               </li>
-              <li>
-                <div className="relative group">
-                  <div
-                    className={`text-xs flex items-center appearance-none list-none cursor-pointer transition-colors duration-300 ${pathname.startsWith('/services')
-                        ? 'text-[#115D8E]'
-                        : 'text-black hover:text-[#115D8E]'
-                      }`}>
-                    Services
-                    <svg
-                      className="w-3 h-3 ml-1 transition-transform group-hover:rotate-180"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
 
-                  <div
-                    className="absolute mt-3 left-0 bg-white border border-gray-200 rounded-xl shadow-[0_8px_30px_rgba(138,173,187)] 
-    w-96 z-50 grid grid-cols-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
+              {/* Services Dropdown */}
+              <li className="relative group">
+                <div
+                  className={`text-[17px] font-medium flex items-center cursor-pointer transition-all duration-300 hover:text-[#0E90C9] hover:scale-105 relative px-2 py-1 rounded-md ${
+                    pathname.startsWith("/services")
+                      ? "text-[#0E90C9]"
+                      : scrolled
+                      ? "text-zinc-900"
+                      : "text-foreground"
+                  }`}
+                >
+                  Services
+                  <svg
+                    className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <Link href="/services/switch" className="block px-4 py-3 text-xs hover-underline">
-                      Switch Service
-                    </Link>
-                    <Link href="/services/aigf" className="block px-4 py-3 text-xs hover-underline">
-                      AIGF License Assistance
-                    </Link>
-                    <Link href="/services/escrow" className="block px-4 py-3 text-xs hover-underline">
-                      Escrow Service
-                    </Link>
-                    <Link href="/services/legal-compliance" className="block px-4 py-3 text-xs hover-underline">
-                      Legal & Compliance Services
-                    </Link>
-                    <Link href="/services/connected-banking" className="block px-4 py-3 text-xs hover-underline">
-                      Connected Banking
-                    </Link>
-                    <Link href="/services/utility" className="block px-4 py-3 text-xs hover-underline">
-                      Utility Services
-                    </Link>
-                  </div>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </div>
-
+                <div className="absolute top-full left-0 mt-3 bg-white/95 backdrop-blur-xl border-[#44A5E9]/60 rounded-xl shadow-2xl shadow-[#115D8E]/30 w-96 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 scale-95 group-hover:scale-100">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#44A5E9]/5 to-[#0E90C9]/10 rounded-xl border border-[#72CAF7]/20"></div>
+                  <div className="absolute inset-[1px] bg-white/90 rounded-[11px] border border-[#44A5E9]/20"></div>
+                  <div className="relative z-10 grid grid-cols-1 gap-1 p-4">
+                    {[
+                      { href: "/services/switch", title: "Switch Service" },
+                      { href: "/services/aigf", title: "AIGF License Assistance" },
+                      { href: "/services/escrow", title: "Escrow Service" },
+                      { href: "/services/legal-compliance", title: "Legal & Compliance Services" },
+                      { href: "/services/connected-banking", title: "Connected Banking" },
+                      { href: "/services/utility", title: "Utility Services" },
+                    ].map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="block px-4 py-3 text-md text-[#115D8E] font-medium hover:text-black hover:bg-gradient-to-r hover:from-[#44A5E9]/10 hover:to-[#0E90C9]/10 rounded-lg transition-all duration-300 relative group/item hover:scale-105 transform hover:-translate-y-1 border border-transparent hover:border-[#72CAF7]/30 hover:shadow-lg hover:shadow-[#115D8E]/20"
+                      >
+                        <span className="relative z-10">{service.title}</span>
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-transparent via-[#44A5E9]/40 to-transparent rounded-full"></div>
+                </div>
               </li>
+
               <li>
                 <Link
                   href="/blog"
-                  className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/blog' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
-                    }`}
-                >Blog</Link>
+                  className={`text-[17px] font-medium transition-all duration-300 hover:text-[#0E90C9] hover:scale-105 relative group ${
+                    pathname === "/blog"
+                      ? "text-[#0E90C9]"
+                      : scrolled
+                      ? "text-zinc-900 hover:text-[#0E90C9]"
+                      : "text-foreground"
+                  }`}
+                >
+                  Blog
+                </Link>
               </li>
               <li>
                 <Link
                   href="/contact"
-                  className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/contact' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
-                    }`}
-                >Contact us</Link>
+                  className={`text-[17px] font-medium transition-all duration-300 hover:text-[#0E90C9] hover:scale-105 relative group ${
+                    pathname === "/contact"
+                      ? "text-[#0E90C9]"
+                      : scrolled
+                      ? "text-zinc-900 hover:text-[#0E90C9]"
+                      : "text-foreground"
+                  }`}
+                >
+                  Contact us
+                </Link>
               </li>
             </ul>
           </div>
-        </div>
-        <div
-          className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'block' : 'hidden'
-            } bg-white rounded-b-xl shadow-md relative z-0`}
-        >
-          <ul className="flex flex-col font-medium p-4 space-y-2">
-            <li>
-              <Link
-                href="/"
-                 onClick={() => setIsMenuOpen(false)}
-                className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
-                  }`}
-              >Home</Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                 onClick={() => setIsMenuOpen(false)}
-                className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/about' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
-                  }`}
-              >About</Link>
-            </li>
-            <li>
-              <details className="group">
-                <summary
-                  className={`text-xs flex px-3 py-2 items-center appearance-none list-none cursor-pointer transition-colors duration-300 ${pathname.startsWith('/services')
-                      ? 'text-[#115D8E]'
-                      : 'text-black hover:text-[#115D8E]'
-                    }`}
-                >Services
-                  <svg className="w-3 h-3 ml-1 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="pl-4 mt-2 space-y-1 group-open:block hidden">
-                  <Link href="/services/switch"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
-                    Switch Service
-                  </Link>
-                  <Link href="/services/aigf"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
-                    AIGF License Assistance
-                  </Link>
-                  <Link href="/services/escrow"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
-                    Escrow Service
-                  </Link>
-                  <Link href="/services/legal-compliance"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
-                    Legal & Compliance Services
-                  </Link>
-                  <Link href="/services/connected-banking"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
-                    Connected Banking
-                  </Link>
-                  <Link href="/services/utility"  onClick={() => setIsMenuOpen(false)} className="block px-4 py-1 text-xs hover-underline">
-                    Utility Services
-                  </Link>
-                </div>
-              </details>
 
-            </li>
-            <li>
-              <Link
-                href="/blog"
-                className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/blog' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
-                  }`}
-                   onClick={() => setIsMenuOpen(false)}
-              >Blog</Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                 onClick={() => setIsMenuOpen(false)}
-                className={`block py-2 px-3 md:p-0 text-xs ${pathname === '/contact' ? 'text-[#115D8E]' : 'text-black hover:text-[#115D8E]'
-                  }`}
-              >Contact us</Link>
-            </li>
-            <li>
-              <button
-                type="button"
-                onClick={() => {setIsModalOpen(true)
-                   setIsMenuOpen(false);}
-                }
-                className="block text-xs px-3 py-2 hover:text-[#115D8E]"
-              >
-                Login
-              </button>
-            </li>
-            <li>
-              <Link href="/contact" className="block text-xs px-3 py-2 hover:text-[#115D8E]">Join</Link>
-            </li>
-          </ul>
+          {/* Right Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <button
+              onClick={() => setIsLoginOpen(true)}
+              className="inline-flex cursor-pointer items-center bg-[#115d8e] shadow-none rounded-full px-6 py-3 hover:shadow-lg transition-all duration-300"
+            >
+              <span className="text-white font-medium mr-3">Login</span>
+              <span className="flex items-center justify-center w-8 h-8 bg-white rounded-full">
+                <LogIn className="w-4 h-4 text-[#115d8e]" />
+              </span>
+            </button>
+            <Link
+              href="/contact"
+              className="inline-flex items-center bg-[#ededed] shadow-none rounded-full px-6 py-3 hover:shadow-lg transition-all duration-300"
+            >
+              <span className="text-gray-900 font-medium mr-3">Get In Touch</span>
+              <span className="flex items-center justify-center w-8 h-8 bg-[#115d8e] rounded-full">
+                <MoveUpRight className="w-4 h-4 text-white" />
+              </span>
+            </Link>
+          </div>
+
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-200 transition"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden bg-white border-t border-gray-200 shadow-md">
+            <ul className="flex flex-col space-y-2 p-4">
+              <li>
+                <Link
+                  href="/"
+                  className="block py-2 px-4 rounded-md"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="block py-2 px-4 rounded-md"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="block py-2 px-4 rounded-md"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="block py-2 px-4 rounded-md"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="block py-2 px-4 rounded-md"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/login"
+                  className="block py-2 px-4 bg-[#115d8e] text-white rounded-full mt-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="block py-2 px-4 bg-[#ededed] text-gray-900 rounded-full mt-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get In Touch
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </nav>
 
-      {isModalOpen && <LoginModal onClose={() => setIsModalOpen(false)} />}
-    </>
-  )
-}
+      {/* Login Modal */}
+      <AnimatePresence>
+        {isLoginOpen && (
+          <motion.div
+            className="fixed inset-0 flex items-center justify-center bg-black/50 z-[9999]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setIsLoginOpen(false)}
+                className="absolute top-4 cursor-pointer right-4 text-gray-500 hover:text-gray-800"
+              >
+                <X className="w-6 h-6" />
+              </button>
 
-export default Header
+              {/* Heading */}
+              <h2 className="text-3xl font-bold text-[#115d8e] mb-2">
+                Welcome Back to Deenita India
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Your data stays protected while you stay connected.
+              </p>
+
+              {/* Login Form */}
+              <form className="space-y-4">
+                <div>
+                  <label className="block text-gray-700 mb-1 font-medium">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="email@company.com"
+                    className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#115d8e] placeholder-gray-400"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 mb-1 font-medium">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="*"
+                    className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#115d8e] placeholder-gray-400"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-[#115d8e] text-white font-semibold py-3 rounded-xl hover:bg-[#0E90C9] transition"
+                >
+                  Log in
+                </button>
+              </form>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
