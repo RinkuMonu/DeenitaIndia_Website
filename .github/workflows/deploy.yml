@@ -1,4 +1,4 @@
-name: Deploy React App to CWP
+name: Deploy Next.js static site to AWS
 
 on:
   push:
@@ -10,42 +10,64 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      # 1. Code checkout
+      - name: ⬇ Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      # 2. Setup Node
+      - name: 🔧 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install Dependencies & Build
+      # 3. Install deps + Build Next.js (output: 'export')
+      - name: 🏗 Build Next.js static export
         run: |
-          npm install
-          npm run build  # Vite will output to `out/`
+          npm install --legacy-peer-deps
+          npm run build
+          # NOTE:
+          # next.config.js me output: 'export' hona chahiye
+          # build ke baad static site "out/" folder ke andar milegi
 
-      - name: Zip build files
+      # 4. Tar the static build (compress out/ into out.tar.gz)
+      - name: 📦 Create deploy bundle
         run: |
           tar -czvf out.tar.gz -C out .
 
-      - name: Copy Zip to Server via SCP
+      # 5. SCP upload to server (SSH KEY, no password)
+      - name: 🚀 Upload bundle to server
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: 22527
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
           source: "out.tar.gz"
           target: "/home/deenitai/"
 
-      - name: Unzip files on Server via SSH
+      # 6. SSH into server, extract + replace live site
+      - name: 🖥 Deploy on server
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: 22527
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
           script: |
-            rm -rf /home/deenitai/public_html/*
-            mkdir -p /home/deenitai/public_html
-            tar -xzvf /home/deenitai/out.tar.gz -C /home/deenitai/public_html
+            DEPLOY_DIR="/home/deenitaindia.com/public_html"
+
+            # make sure live dir exists
+            mkdir -p $DEPLOY_DIR
+
+            # purge old build
+            rm -rf $DEPLOY_DIR/*
+
+            # extract new build
+            tar -xzvf /home/deenitai/out.tar.gz -C $DEPLOY_DIR
+
+            # cleanup bundle from tmp location
             rm /home/deenitai/out.tar.gz
+
+            # permissions (nginx ko read mile)
+            chmod -R 755 $DEPLOY_DIR
+            find $DEPLOY_DIR -type f -exec chmod 644 {} \;
