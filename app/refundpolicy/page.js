@@ -166,28 +166,32 @@ export default function RefundPolicy() {
   const [activeSection, setActiveSection] = useState("cancellation-process");
   const sectionRefs = useRef([]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: "-20% 0px -60% 0px" }
-    );
+useEffect(() => {
+  const sections = sectionRefs.current; // 👈 snapshot
 
-    sectionRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      sectionRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
       });
-    };
-  }, []);
+    },
+    { rootMargin: "-20% 0px -60% 0px" }
+  );
+
+  sections.forEach((ref) => {
+    if (ref) observer.observe(ref);
+  });
+
+  return () => {
+    sections.forEach((ref) => {
+      if (ref) observer.unobserve(ref);
+    });
+    observer.disconnect(); // ✅ extra safety
+  };
+}, []);
+
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -253,7 +257,7 @@ export default function RefundPolicy() {
                         </h1>
                         <div className="h-1 w-20 bg-gradient-to-r from-[#777777] to-[#115D8E] mb-6 rounded-full"></div>
                         <p className="text-gray-600 text-lg leading-relaxed">
-                          Our refund policy is designed to be fair and transparent. We understand that circumstances may change, and we strive to make the cancellation and refund process as straightforward as possible. Below you'll find detailed information about our policies, eligibility criteria, and processes.
+                          Our refund policy is designed to be fair and transparent. We understand that circumstances may change, and we strive to make the cancellation and refund process as straightforward as possible. Below you&apos;ll find detailed information about our policies, eligibility criteria, and processes.
                         </p>
                       </div>
                     </div>

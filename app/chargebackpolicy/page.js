@@ -189,28 +189,31 @@ export default function ChargebackPolicy() {
   const [activeSection, setActiveSection] = useState("chargeback-process");
   const sectionRefs = useRef([]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: "-20% 0px -60% 0px" }
-    );
+useEffect(() => {
+  const sections = sectionRefs.current; // 👈 snapshot
 
-    sectionRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      sectionRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
       });
-    };
-  }, []);
+    },
+    { rootMargin: "-20% 0px -60% 0px" }
+  );
+
+  sections.forEach((ref) => {
+    if (ref) observer.observe(ref);
+  });
+
+  return () => {
+    sections.forEach((ref) => {
+      if (ref) observer.unobserve(ref);
+    });
+    observer.disconnect(); // ✅ extra safety
+  };
+}, []);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -281,7 +284,7 @@ export default function ChargebackPolicy() {
                         <p className="text-gray-600 text-lg leading-relaxed">
                           Our chargeback and cancellation policy ensures clarity and fairness.
                           We aim to resolve disputes quickly while protecting customers and our platform.
-                          Below you'll find details on chargebacks, cancellations, refunds, and exceptions.
+                          Below you&apos;ll find details on chargebacks, cancellations, refunds, and exceptions.
                         </p>
                       </div>
                     </div>

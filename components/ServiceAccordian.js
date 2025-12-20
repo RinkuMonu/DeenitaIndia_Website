@@ -1,8 +1,9 @@
 "use client";
-import { ChevronDown, ChevronUp , useEffect } from "lucide-react";
-import React, { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import {  useState } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 const FaqItem = ({ question, answer, isOpen, onClick }) => (
   <div
     className="group cursor-pointer bg-blue-50 py-4 px-6 border border-blue-100 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300"
@@ -69,7 +70,7 @@ const faqs = [
            Find quick answers to common questions about our Utility Services. Learn how we make your everyday bill payments secure, fast, and completely hassle-free.
           </p>
           <div className="space-y-4">
-            {faqs.map((faq, index) => (
+            {faqs?.map((faq, index) => (
               <FaqItem
                 key={index}
                 question={faq.question}
@@ -87,7 +88,9 @@ const faqs = [
         <div className="relative flex items-center justify-end ">
 
           <div className="relative w-full max-w-md max-h-lg z-10">
-            <img
+            <Image
+            width={200}
+            height={200}
               src="/images/b2b.jpg"
               alt="BankDash main dashboard interface"
               className="w-full rounded-2xl shadow-2xl  h-[500px]"
@@ -95,7 +98,9 @@ const faqs = [
           </div>
 
           <div className="absolute top-1/2 -translate-y-1/2 left-35 -translate-x-1/4 sm:-translate-x-1/3 w-1/3 max-w-xs z-20">
-            <img
+            <Image
+            width={200}
+            height={200}
               src="/images/b2b.jpg"
               alt="BankDash sidebar view"
               id="image-anime"

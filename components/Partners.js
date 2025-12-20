@@ -3,6 +3,7 @@
 import { ArrowRight, Plus } from "lucide-react";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const integrationIcons = [
   { name: "Axis", src: "/bank/axisbank.png", direction: "left" },
@@ -29,7 +30,9 @@ const IconCard = ({ src, name, direction }) => {
       viewport={{ once: false, amount: 0.3 }}
       className="bg-white p-1 rounded-lg shadow-md flex items-center justify-center"
     >
-      <img
+      <Image
+      width={200}
+      height={200}
         src={src}
         alt={`${name} logo`}
         className="h-12 w-12 sm:h-16 sm:w-16 md:h-24 md:w-24 object-contain"

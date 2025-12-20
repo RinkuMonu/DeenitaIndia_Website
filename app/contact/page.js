@@ -27,7 +27,9 @@ const ThankYouModal = ({ isOpen, onClose }) => {
         {/* Content */}
         <div className="text-center">
           <div className=" bg-[#eaedee] rounded-full flex items-center justify-center mx-auto mb-6">
-            <img
+            <Image
+            width={200}
+            height={200}
               src="/Image/tq.gif"
               alt="Thank you animation"
               className="h-50"
