@@ -333,28 +333,32 @@ export default function Privacy() {
   const [activeSection, setActiveSection] = useState("data-security");
   const sectionRefs = useRef([]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: "-20% 0px -60% 0px" }
-    );
+useEffect(() => {
+  const sections = sectionRefs.current; // 👈 snapshot
 
-    sectionRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      sectionRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
       });
-    };
-  }, []);
+    },
+    { rootMargin: "-20% 0px -60% 0px" }
+  );
+
+  sections.forEach((ref) => {
+    if (ref) observer.observe(ref);
+  });
+
+  return () => {
+    sections.forEach((ref) => {
+      if (ref) observer.unobserve(ref);
+    });
+    observer.disconnect(); // ✅ extra safety
+  };
+}, []);
+
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);

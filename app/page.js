@@ -108,7 +108,8 @@ export default function Home() {
                     maskSize: "contain",
                   }}
                 >
-                  <img
+                  <Image
+                  fill
                     src="/Newimg/herosection/hero_img_12_1.jpg"
                     alt="Hero"
                     className="w-full h-full object-cover block"

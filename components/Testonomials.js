@@ -94,14 +94,14 @@ export default function Testimonials() {
                                 >
                                     {index === activeIndex && (
                                         <span className="absolute -top-4 -left-4 text-[6rem] flex text-[#115d8e] font-serif leading-none">
-                                            <img src="/images/vector6.png" alt="comma" className="w-5 h-8" />
-                                            <img src="/images/vector6.png" alt="comma" className="w-5 h-8" />
+                                            <Image width={100} height={100} src="/images/vector6.png" alt="comma" className="w-5 h-8" />
+                                            <Image width={100} height={100} src="/images/vector6.png" alt="comma" className="w-5 h-8" />
                                         </span>
                                     )}
 
-                                    <p className="mt-4 text-gray-700 text-sm md:text-lg mb-2 md:mb-0">"{testimonial.review}"</p>
+                                    <p className="mt-4 text-gray-700 text-sm md:text-lg mb-2 md:mb-0">&quot;{testimonial.review}&quot;</p>
                                     <div className="lg:flex items-center mt-5 lg:gap-4">
-                                        <img
+                                        <Image width={150} height={150}
                                             src={testimonial.image}
                                             alt={testimonial.name}
                                             className="w-16 h-16 rounded-full object-cover mx-auto md:mx-0 p-1"

@@ -49,7 +49,7 @@ export default function HomeSteps() {
         {/* header */}
         <div>
           <p className="heading font-semibold mb-8 capitalize">
-            Here's how it <span className="theme-text">Works</span> <br /> that drive results
+            Here&apos;s how it <span className="theme-text">Works</span> <br /> that drive results
           </p>
         </div>
 

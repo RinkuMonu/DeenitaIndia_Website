@@ -96,7 +96,7 @@ export default function Plans({ plans }) {
                 </p>
 
                 <div className="border-t border-gray-200 pt-6">
-                  <h4 className="font-semibold text-gray-900 mb-4">What's included:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-4">What&apos;s included:</h4>
                   <ul className="space-y-3">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">

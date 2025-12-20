@@ -298,6 +298,7 @@ import Cta from "@/components/Cta";
 import ServiceBanner from "@/components/ServiceBanner";
 import ServiceAdvantage from "@/components/ServiceAdvantage";
 import OrganizationalStructuring from "@/components/Organizational";
+import { BellRing, Combine, Keyboard, Library, MessageSquare, Share2 } from "lucide-react";
 
 
 const sections = [
@@ -354,40 +355,6 @@ const featuresData = [
   },
 ];
 
-const sections1 = [
-  {
-    title: "Safe, Private, Controlled",
-    description:
-      "We provide a secure and private environment where you stay in control of your data and interactions. Our platform is designed with transparency and trust at its core.",
-    imageSrc: "/images/switchsecure.jpg",
-    features: [
-      {
-        icon: "/images/legal_paper.png",
-        label: "Data Protection",
-        description:
-          "Your personal and professional information is encrypted and safeguarded with the latest security standards.",
-      },
-      {
-        icon: "/images/venture.png",
-        label: "Reliable Platform",
-        description:
-          "Our infrastructure is built to ensure stability, uptime, and consistent performance for all users.",
-      },
-      {
-        icon: "/images/teamwork.png",
-        label: "Collaboration",
-        description:
-          "Work together seamlessly with teams and partners while keeping sensitive data private and secure.",
-      },
-      {
-        icon: "/images/value_chian.png",
-        label: "Transparency",
-        description:
-          "We believe in open communication and provide full visibility into how your data is managed and protected.",
-      },
-    ],
-  },
-];
 
 export default function ServicesPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -571,18 +538,6 @@ const ServiceCard = ({ service, index }) => {
   );
 };
 
-// Benefit Card Component
-const BenefitCard = ({ benefit, index }) => {
-  return (
-    <div className="group bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-      <div className="bg-gradient-to-br from-[#E6F0F9] to-[#D5E5F5] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-        {benefit.icon}
-      </div>
-      <h3 className="text-2xl font-bold text-[#0B4870] mb-4">{benefit.title}</h3>
-      <p className="text-gray-700 leading-relaxed">{benefit.description}</p>
-    </div>
-  );
-};
 
 // Services Data
 const servicesData = [
@@ -627,36 +582,5 @@ const servicesData = [
     description: "Efficient utility management services to optimize your resource allocation and costs.",
     features: ["Cost Optimization", "Resource Management", "Efficiency Tracking"],
     link: "/services/utility"
-  }
-];
-
-// Benefits Data
-const benefitsData = [
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-[#115D8E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-    title: "Security & Trust",
-    description: "Your business operations are protected with our robust security measures and trusted solutions."
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-[#115D8E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-    title: "Efficiency & Speed",
-    description: "Streamline your operations with our efficient processes designed to save you time and resources."
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-[#115D8E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    ),
-    title: "Expert Support",
-    description: "Our team of experts is always ready to provide guidance and support for your business needs."
   }
 ];
